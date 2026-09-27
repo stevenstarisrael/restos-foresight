@@ -14,6 +14,10 @@ Each plan opens as cards an owner can act on: what to expect, what to order and 
 
 ![Plan cards](docs/plan-cards.png)
 
+## The story, then the demo
+
+`/` is a one-minute scroll story: the night the sugar ran out at 7:05pm on Diwali 2024, why no system caught it, how Foresight remembers, and the readiness learning curve. Every number comes from the outlet's history and the saved demo plans. **Watch it live** opens the dashboard at `/live`.
+
 ## The demo in one screen
 
 The Diwali 2026 plan is generated three ways from **the same stock, suppliers and model**:
@@ -26,7 +30,7 @@ The Diwali 2026 plan is generated three ways from **the same stock, suppliers an
 
 Then you **teach it** something new from the floor ("20 regulars asked for sugar-free sweets"), re-run, and the plan adds sugar-free and jaggery sweets, citing that note. `npm run demo:reset` removes live-taught notes so the demo can be repeated.
 
-Open `/?run=1` (or `/?run=1&festival=dussehra`) to plan all three columns on load.
+Open `/live?run=1` (or `/live?run=1&festival=dussehra`) to plan all three columns on load.
 
 ### Would each plan have been enough?
 
@@ -82,7 +86,7 @@ restOS events ──retain──▶  Hindsight bank (per outlet)  ◀──recal
 npm install
 cp .env.example .env        # add HINDSIGHT_BASE_URL, HINDSIGHT_API_KEY, GROQ_API_KEY
 npm run seed                # creates both banks and retains the history (a few minutes)
-npm run dev                 # http://localhost:3000
+npm run dev                 # http://localhost:3000 (story) and /live (dashboard)
 npm run demo:reset          # optional: forget notes taught live from the UI
 ```
 

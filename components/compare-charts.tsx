@@ -3,59 +3,15 @@
 import { useState } from 'react';
 import { ChartBar, Table2 } from 'lucide-react';
 import { lastFestivalActuals, stock } from '@/data/outlet';
+import { buildRows, score, type Row, type Score } from '@/lib/readiness';
 import { ITEM_ICON, rupees } from '@/lib/insights';
-import type { Plan } from '@/lib/plan';
 import { MODE_COLOR, MODES, type ColumnState, type Mode } from './plan-view';
-
-// need = last year's actual use scaled by last year's growth trend.
-type Row = { stockId: string; name: string; unit: string; actual: number; need: number; available: Partial<Record<Mode, number>> };
-
-// "Available" = what is on the shelf after the plan's orders arrive, which is
-// the number that decides whether we run out.
-function availableFor(plan: Plan, stockId: string): number {
-  const onHand = stock.find((s) => s.id === stockId)?.onHand ?? 0;
-  return onHand + plan.orders.filter((o) => o.stockId === stockId).reduce((sum, o) => sum + o.quantity, 0);
-}
-
-function buildRows(festival: string, columns: Record<Mode, ColumnState>): Row[] {
-  const ref = lastFestivalActuals[festival];
-  if (!ref) return [];
-  return Object.entries(ref.items).map(([stockId, actual]) => {
-    const item = stock.find((s) => s.id === stockId)!;
-    const available: Row['available'] = {};
-    for (const { mode } of MODES) {
-      const plan = columns[mode].result?.plan;
-      if (plan) available[mode] = availableFor(plan, stockId);
-    }
-    return { stockId, name: item.name, unit: item.unit, actual, need: Math.round(actual * (1 + ref.growth)), available };
-  });
-}
-
-type Score = { readiness: number; short: string[]; wasteRisk: number };
-
-// Readiness: share of this year's likely need each plan covers (each item
-// capped at 100%). Waste risk: money tied up in stock beyond 125% of that
-// need, which is what tends to expire or sit unsold.
-function score(rows: Row[], mode: Mode): Score | null {
-  const scored = rows.filter((r) => r.available[mode] !== undefined);
-  if (!scored.length) return null;
-  let total = 0;
-  let wasteRisk = 0;
-  const short: string[] = [];
-  for (const r of scored) {
-    const available = r.available[mode]!;
-    total += Math.min(1, available / r.need);
-    if (available < r.need) short.push(r.name);
-    const cost = stock.find((s) => s.id === r.stockId)!.costPerUnit;
-    wasteRisk += Math.max(0, available - r.need * 1.25) * cost;
-  }
-  return { readiness: Math.round((total / scored.length) * 100), short, wasteRisk: Math.round(wasteRisk) };
-}
 
 export function CompareCharts({ festival, columns }: { festival: string; columns: Record<Mode, ColumnState> }) {
   const [asTable, setAsTable] = useState(false);
   const ref = lastFestivalActuals[festival];
-  const rows = buildRows(festival, columns);
+  const plans = Object.fromEntries(MODES.flatMap(({ mode }) => (columns[mode].result ? [[mode, columns[mode].result!.plan]] : [])));
+  const rows = buildRows(festival, plans);
   const planned = MODES.filter((m) => columns[m.mode].result);
   if (!ref || planned.length === 0) return null;
 
