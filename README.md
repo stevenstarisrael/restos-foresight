@@ -24,7 +24,7 @@ The Diwali 2026 plan is generated three ways from **the same stock, suppliers an
 
 | Column | Memory | Diwali 2026 plan (real output) |
 |---|---|---|
-| No memory | an empty Hindsight bank | Forgets sugar entirely before Diwali. Orders 46 kg chicken and 26 kg mutton "for festive dishes". For Dussehra it orders 197 kg mutton and 339 kg chicken, all due today. |
+| No memory | an empty Hindsight bank | Business as usual: a generic 2-day safety stock (20 kg sugar, 10 kg ghee), today's roster of 18 and today's online capacity. It runs short on sugar, ghee, cashew and sweet boxes, and for Dussehra orders mutton the day before, when butchers are sold out. |
 | After 1 season | Dussehra + Diwali 2024 | 45–60 kg sugar a week early, adds kaju katli boxes, cuts paneer, keeps Deccan Wholesale as backup. Right direction, rough numbers. |
 | After 2 years | 53 events, plans and outcomes | Sizes sugar from the 41 kg actually used in 2025, raises ghee to 22 kg because 15 kg ran out, buys cashew from Deccan after Balaji's 18% spike, orders 250 boxes (186 used last year) and says to call last year's corporate clients now. |
 
@@ -38,11 +38,13 @@ The comparison scores every plan against the outlet's **likely need**: what it a
 
 | | Stock readiness | Short on | Staff on peak evening |
 |---|---|---|---|
-| No memory | 37% (spends ₹69k, still short) | sugar, ghee, cashew, sweet boxes |
-| After 1 season | 86% | ghee, sweet boxes |
-| After 2 years | 100% | - |
+| No memory | 68% (spends ₹48.6k, still short) | sugar, ghee, cashew, sweet boxes | 18 (keeps today's roster) |
+| After 1 season | 98% | sweet boxes | 24 |
+| After 2 years | 100% | - | 25 (records say 25 were needed) |
 
-Readiness is computed in the browser from the plan and restOS stock ([`components/compare-charts.tsx`](components/compare-charts.tsx)), not by the model. Plans vary a little between runs, so exact numbers shift.
+On Dussehra, readiness also counts timing: the records say mutton must be pre-booked 3 days ahead because butchers sell out on Dasara, so the no-memory plan's day-before mutton order scores 52%.
+
+Readiness is computed from the plan and restOS stock ([`lib/readiness.ts`](lib/readiness.ts)), not by the model. Plans vary a little between runs, so exact numbers shift.
 
 ## How Hindsight is used
 
