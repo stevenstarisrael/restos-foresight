@@ -564,7 +564,12 @@ function Footer({ memory }: { memory: StoryData['memory'] }) {
             Spice Garden · Banjara Hills is a demo outlet. Its history is synthetic, and every number on this page is consistent with it.
           </p>
           <div className="flex items-center gap-4">
-            <span>Made in Hyderabad</span>
+            <span>
+              Made with ❤️ by{' '}
+              <a href="https://restos.in" target="_blank" rel="noreferrer" className="text-stone-300 underline-offset-2 hover:text-white hover:underline">
+                restOS
+              </a>
+            </span>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="inline-flex items-center gap-1 text-stone-400 hover:text-white"
