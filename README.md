@@ -14,13 +14,15 @@ Foresight is an agent for restOS outlets. It keeps the operational memory of eve
 
 The Diwali 2026 plan is generated three ways from **the same stock, suppliers and model**:
 
-| Column | Memory | What you typically get |
+| Column | Memory | Diwali 2026 plan (real output) |
 |---|---|---|
-| No memory | none (stateless LLM) | "Increase sweets inventory by 30–50%." |
-| After 1 season | Dussehra + Diwali 2024 | Orders sugar a week early, adds kaju katli, cuts paneer |
-| After 2 years | 46 events, plans and outcomes | Also moves cashew to the cheaper backup supplier, raises ghee (short in 2025), opens corporate box bookings early, pre-books Dasara mutton |
+| No memory | none (stateless LLM) | Forgets sugar entirely before Diwali. Orders 46 kg chicken and 26 kg mutton "for festive dishes". For Dussehra it orders 197 kg mutton and 339 kg chicken, all due today. |
+| After 1 season | Dussehra + Diwali 2024 | 45–60 kg sugar a week early, adds kaju katli boxes, cuts paneer, keeps Deccan Wholesale as backup. Right direction, rough numbers. |
+| After 2 years | 46 events, plans and outcomes | Sizes sugar from the 41 kg actually used in 2025, raises ghee to 22 kg because 15 kg ran out, buys cashew from Deccan after Balaji's 18% spike, orders 250 boxes (186 used last year) and says to call last year's corporate clients now. |
 
-Then you **teach it** something new from the floor ("20 regulars asked for sugar-free sweets"), re-run, and see the plan change.
+Then you **teach it** something new from the floor ("20 regulars asked for sugar-free sweets"), re-run, and the plan adds sugar-free and jaggery sweets, citing that note. `npm run demo:reset` removes live-taught notes so the demo can be repeated.
+
+Open `/?run=1` (or `/?run=1&festival=dussehra`) to plan all three columns on load.
 
 ## How Hindsight is used
 
@@ -47,7 +49,7 @@ restOS events ──retain──▶  Hindsight bank (per outlet)  ◀──recal
  plans & outcomes)                                                                         and JSON repair fallback
 ```
 
-- `data/` holds the synthetic restOS snapshot (outlet, stock, suppliers) and 46 historical events across Dussehra, Diwali, New Year's Eve, Sankranti, Ramzan, Bonalu and Ganesh Chaturthi (Oct 2024 – Sep 2026).
+- `data/` holds the synthetic restOS snapshot (outlet, stock, suppliers) and 46 historical events across Dussehra, Diwali, New Year's Eve, Sankranti, Ramzan, Bonalu and Ganesh Chaturthi (Oct 2024 - Sep 2026).
 - `lib/planner.ts` builds the same live context for every mode, then either calls the LLM directly (no memory) or runs Hindsight recall + reflect.
 - `lib/llm.ts` calls Groq with Zod validation and a bounded retry loop that feeds the validation error back to the model.
 
@@ -64,6 +66,7 @@ npm install
 cp .env.example .env        # add HINDSIGHT_BASE_URL, HINDSIGHT_API_KEY, GROQ_API_KEY
 npm run seed                # creates both banks and retains the history (a few minutes)
 npm run dev                 # http://localhost:3000
+npm run demo:reset          # optional: forget notes taught live from the UI
 ```
 
 Hindsight can be [Hindsight Cloud](https://ui.hindsight.vectorize.io) or [self-hosted](https://github.com/vectorize-io/hindsight). `npm run seed -- --reset` rebuilds the banks from scratch.

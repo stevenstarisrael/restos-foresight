@@ -58,3 +58,13 @@ export function eventContext(e: HistoryEvent): string {
 export function toIST(at: string): string {
   return at.length === 16 ? `${at}:00+05:30` : at;
 }
+
+// A mental model Hindsight keeps rewritten from memory. Reflect consults it
+// first, so it has to carry concrete numbers, not just lessons.
+export const PLAYBOOK = {
+  id: 'diwali-playbook',
+  name: 'Diwali playbook',
+  sourceQuery:
+    'Diwali playbook for Spice Garden. For each Diwali on record, list per ingredient and packaging item: quantity planned or stocked, quantity actually used, and whether it ran out or was wasted. ' +
+    'Then cover order timing, supplier reliability and prices, corporate orders, menu additions, revenue trend year on year, and mistakes to avoid. Keep every number and year.',
+};

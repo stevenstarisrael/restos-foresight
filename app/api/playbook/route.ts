@@ -1,6 +1,6 @@
-import { BANKS, hindsight } from '@/lib/hindsight';
+import { BANKS, hindsight, PLAYBOOK } from '@/lib/hindsight';
 
-const MODEL_ID = 'diwali-playbook';
+const MODEL_ID = PLAYBOOK.id;
 
 export async function GET() {
   try {

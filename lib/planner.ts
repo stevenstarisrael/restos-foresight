@@ -30,6 +30,11 @@ const TASK =
   'Produce a festival prep plan: what to order (quantity, unit, order-by date, supplier), menu changes, and the main risks with mitigations. ' +
   'Be specific with numbers. In each "why", explain the reasoning in one sentence.';
 
+// Only given to the memory modes: how to use history, not what the history says.
+const MEMORY_GUIDANCE =
+  'Size each quantity from the most recent actual usage on record for this festival (not the plan), adjusted for the year-on-year trend, ' +
+  'and check the latest supplier prices and reliability before choosing a supplier.';
+
 export async function runPlan(mode: MemoryMode, festivalId: string): Promise<PlanResult> {
   const started = Date.now();
   const festival = findFestival(festivalId);
@@ -46,7 +51,7 @@ export async function runPlan(mode: MemoryMode, festivalId: string): Promise<Pla
   const client = hindsight();
   const bank = BANKS[mode];
   const notes: string[] = [];
-  const query = `Plan ${festival.name} (${festival.date}) for Spice Garden. ${TASK}`;
+  const query = `Plan ${festival.name} (${festival.date}) for Spice Garden. ${TASK} ${MEMORY_GUIDANCE}`;
 
   // Recall runs alongside reflect purely so the UI can show what the memory
   // layer surfaced; reflect does its own retrieval internally.
@@ -79,12 +84,17 @@ export async function runPlan(mode: MemoryMode, festivalId: string): Promise<Pla
     );
   }
 
-  const evidence: Evidence[] = (reflect.based_on?.memories ?? []).map((m) => ({
-    id: m.id ?? undefined,
-    text: m.text,
-    type: m.type ?? undefined,
-    when: m.occurred_start ?? undefined,
-  }));
+  const evidence: Evidence[] = [
+    ...(reflect.based_on?.mental_models ?? []).map((m) => ({ id: m.id, text: m.text, type: 'mental model' })),
+    ...(reflect.based_on?.memories ?? []).map((m) => ({
+      id: m.id ?? undefined,
+      text: m.text,
+      type: m.type ?? undefined,
+      when: m.occurred_start ?? undefined,
+    })),
+  ];
+  const directives = reflect.based_on?.directives ?? [];
+  if (directives.length) notes.push(`Directives applied: ${directives.map((d) => d.name).join(', ')}`);
   const recalled: Evidence[] = recall.results.map((r) => ({
     id: r.id,
     text: r.text,

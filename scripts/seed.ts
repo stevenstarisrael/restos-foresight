@@ -12,6 +12,7 @@ import {
   eventContext,
   eventTags,
   hindsight,
+  PLAYBOOK,
   RETAIN_MISSION,
   toIST,
 } from '../lib/hindsight';
@@ -85,14 +86,13 @@ async function main() {
   // A mental model is a living summary Hindsight keeps up to date. It is the
   // "Diwali playbook" the demo shows evolving.
   const models = await client.listMentalModels(BANKS.full);
-  if (!(models.items ?? []).some((m) => m.id === 'diwali-playbook')) {
-    await client.createMentalModel(
-      BANKS.full,
-      'Diwali playbook',
-      'What have we learned about running Diwali at Spice Garden: ingredient quantities, order timing, suppliers, packaging, menu additions, corporate orders and mistakes to avoid?',
-      { id: 'diwali-playbook' },
-    );
-    console.log('\ncreated mental model: diwali-playbook');
+  if ((models.items ?? []).some((m) => m.id === PLAYBOOK.id)) {
+    await client.updateMentalModel(BANKS.full, PLAYBOOK.id, { name: PLAYBOOK.name, sourceQuery: PLAYBOOK.sourceQuery });
+    await client.refreshMentalModel(BANKS.full, PLAYBOOK.id);
+    console.log(`\nrefreshing mental model: ${PLAYBOOK.id}`);
+  } else {
+    await client.createMentalModel(BANKS.full, PLAYBOOK.name, PLAYBOOK.sourceQuery, { id: PLAYBOOK.id });
+    console.log(`\ncreated mental model: ${PLAYBOOK.id}`);
   }
   console.log('\nDone.');
 }

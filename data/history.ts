@@ -38,7 +38,7 @@ export const history: HistoryEvent[] = [
   { id: 'dus24-4', at: '2024-10-13T10:00', kind: 'summary', festival: 'dussehra',
     text: 'Dussehra 2024 summary: revenue ₹1.86L vs ₹1.1L on a normal Saturday. Mutton biryani 64 plates vs 25 normal. Chicken demand normal. Double ka meetha 30 portions.' },
 
-  // ── Diwali 2024 (31 Oct – 2 Nov) ──────────────────────────────────────────
+  // ── Diwali 2024 (31 Oct - 2 Nov) ──────────────────────────────────────────
   { id: 'diw24-1', at: '2024-10-25T12:00', kind: 'staff_note', festival: 'diwali', items: ['sugar'], supplier: 'balaji-traders',
     text: 'Imran (store keeper): ordered 25 kg sugar for Diwali week from Balaji Traders — a normal week plus 5 kg.' },
   { id: 'diw24-2', at: '2024-10-28T18:00', kind: 'lost_demand', festival: 'diwali', items: ['sweet-boxes'],
@@ -60,7 +60,7 @@ export const history: HistoryEvent[] = [
   { id: 'diw24-10', at: '2024-11-04T11:00', kind: 'waste', festival: 'diwali', items: ['paneer'],
     text: 'Paneer waste after Diwali 2024: 8 kg expired (~₹2,700). We bought 26 kg expecting a rush, but during Diwali customers ordered sweets and biryani and paneer mains actually fell 15%.' },
   { id: 'diw24-11', at: '2024-11-04T12:00', kind: 'summary', festival: 'diwali',
-    text: 'Diwali 2024 summary (29 Oct – 2 Nov): revenue ₹6.4L vs ₹4.1L for a normal 5 days. Desserts +210%, biryani +60%, paneer mains −15%. Biggest misses: sugar stock-out, no kaju katli, sweet boxes ran out.' },
+    text: 'Diwali 2024 summary (29 Oct - 2 Nov): revenue ₹6.4L vs ₹4.1L for a normal 5 days. Desserts +210%, biryani +60%, paneer mains −15%. Biggest misses: sugar stock-out, no kaju katli, sweet boxes ran out.' },
   { id: 'diw24-12', at: '2024-11-05T10:00', kind: 'staff_note', festival: 'diwali', items: ['sugar', 'ghee', 'khoya'],
     text: 'Ravi (head chef): next Diwali we must order sugar, ghee and khoya a full week early, keep a backup dry-goods supplier, and add kaju katli boxes to the menu.' },
 
@@ -94,7 +94,7 @@ export const history: HistoryEvent[] = [
   { id: 'bon25-1', at: '2025-07-28T11:00', kind: 'summary', festival: 'bonalu',
     text: 'Bonalu Sundays (July 2025): Old City road closures cut delivery orders by about 20%. Dine-in at Banjara Hills was unaffected. No stock changes needed.' },
 
-  // ── Ganesh Chaturthi 2025 (27 Aug – 6 Sep) ────────────────────────────────
+  // ── Ganesh Chaturthi 2025 (27 Aug - 6 Sep) ────────────────────────────────
   { id: 'gan25-1', at: '2025-08-20T10:00', kind: 'plan', festival: 'ganesh-chaturthi',
     text: 'Foresight plan for Ganesh Chaturthi 2025: no memory of this festival yet, so I recommended normal stock levels.' },
   { id: 'gan25-2', at: '2025-08-30T21:00', kind: 'lost_demand', festival: 'ganesh-chaturthi',
@@ -134,7 +134,7 @@ export const history: HistoryEvent[] = [
   { id: 'san26-1', at: '2026-01-17T11:00', kind: 'outcome', festival: 'sankranti', items: ['chicken', 'paneer'],
     text: 'Sankranti 2026: cut perishables 35% per the 2025 lesson. Waste only 2 kg; revenue down 33%, as expected.' },
 
-  // ── Ramzan 2026 (18 Feb – 19 Mar) ─────────────────────────────────────────
+  // ── Ramzan 2026 (18 Feb - 19 Mar) ─────────────────────────────────────────
   { id: 'ram26-1', at: '2026-02-10T10:00', kind: 'plan', festival: 'ramzan', items: ['mutton'], supplier: 'hyderabad-meat-house',
     text: 'Foresight plan for Ramzan 2026: 90 haleem portions on weekdays and 110 on weekends from day 1, family packs from day 1, and a fixed ₹800/kg mutton contract for the month with Hyderabad Meat House.' },
   { id: 'ram26-2', at: '2026-03-22T11:00', kind: 'outcome', festival: 'ramzan', items: ['mutton'],

@@ -1,6 +1,8 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { outlet, stock, TODAY, upcomingFestivals } from '@/data/outlet';
 import { history } from '@/data/history';
 import type { PlanResult } from '@/lib/plan';
@@ -75,7 +77,14 @@ export default function Home() {
   useEffect(() => {
     loadMemory();
     loadPlaybook();
-  }, [loadMemory, loadPlaybook]);
+    // ?run=1 plans all three columns on load (handy for recording the demo).
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('run')) {
+      const fest = params.get('festival') ?? 'diwali';
+      setFestival(fest);
+      COLUMNS.forEach((c) => runColumn(c.mode, fest));
+    }
+  }, [loadMemory, loadPlaybook, runColumn]);
 
   const current = upcomingFestivals.find((f) => f.id === festival)!;
   const daysAway = Math.round((Date.parse(current.date) - Date.parse(TODAY)) / 86_400_000);
@@ -270,9 +279,7 @@ function PlanColumn({
         <div className="border-t border-line p-3 text-xs text-muted">
           <div className="flex items-center justify-between">
             <span>
-              {mode === 'none'
-                ? 'No memories used'
-                : `Grounded in ${state.result.evidence.length || state.result.recalled.length} memories`}{' '}
+              {mode === 'none' ? 'No memories used' : groundingLabel(state.result)}{' '}
               · confidence {plan?.confidence} · {(state.result.ms / 1000).toFixed(1)}s
             </span>
             {evidence.length > 0 && (
@@ -450,8 +457,12 @@ function PlaybookPanel({
         </button>
       </div>
       {playbook.error && <p className="mt-3 rounded-md bg-chili-soft p-3 text-xs text-chili">{playbook.error}</p>}
-      <div className="mt-3 max-h-96 overflow-y-auto whitespace-pre-wrap text-sm leading-relaxed">
-        {playbook.content || (!playbook.error && <span className="text-xs text-muted">Generating…</span>)}
+      <div className="playbook mt-3 max-h-[28rem] overflow-y-auto text-sm leading-relaxed">
+        {playbook.content ? (
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{playbook.content}</ReactMarkdown>
+        ) : (
+          !playbook.error && <span className="text-xs text-muted">Generating…</span>
+        )}
       </div>
     </div>
   );
@@ -505,6 +516,12 @@ function Skeleton() {
       ))}
     </div>
   );
+}
+
+function groundingLabel(result: PlanResult) {
+  const models = result.evidence.filter((e) => e.type === 'mental model').length;
+  const memories = result.evidence.length - models || result.recalled.length;
+  return [models ? 'Used the Diwali playbook' : null, `${memories} memories recalled`].filter(Boolean).join(' + ');
 }
 
 function formatDate(iso: string) {

@@ -42,6 +42,7 @@ export async function POST(request: Request) {
       timestamp: `${TODAY}T${new Date().toTimeString().slice(0, 8)}+05:30`,
       context: kind === 'lost_demand' ? 'Customer demand we could not serve (not visible in sales data)' : `restOS ${kind.replace('_', ' ')} log for Spice Garden · Banjara Hills`,
       tags,
+      documentId: `live-${Date.now()}`,
       metadata: { kind, source: 'live-demo' },
     });
     return Response.json({ ok: result.success, bank: BANKS.full });
