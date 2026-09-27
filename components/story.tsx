@@ -1,6 +1,7 @@
 'use client';
 
-import Link from 'next/link';
+import { HeroSim } from './hero-sim';
+import { LiveButton } from './live-button';
 import { useEffect, useRef, useState } from 'react';
 import {
   animate,
@@ -13,7 +14,7 @@ import {
   useTransform,
   type MotionValue,
 } from 'motion/react';
-import { ArrowDown, ArrowRight, Brain, CalendarRange, MessageSquareOff, Play, RotateCcw, Search, Sparkles, UserX } from 'lucide-react';
+import { Brain, CalendarRange, MessageSquareOff, RotateCcw, Search, Sparkles, UserX } from 'lucide-react';
 import type { PlanResult } from '@/lib/plan';
 
 type Mode = PlanResult['mode'];
@@ -31,7 +32,7 @@ export function Story({ data }: { data: StoryData }) {
     <MotionConfig reducedMotion="user">
       <div className="bg-[#0c0a09] text-stone-100">
         <Nav />
-        <Hero />
+        <HeroSim />
         <TheNight />
         <WhyMissed />
         <HowItWorks sample={data.sampleOrder} />
@@ -55,114 +56,6 @@ function Nav() {
         <LiveButton size="sm" />
       </div>
     </header>
-  );
-}
-
-function LiveButton({ size = 'lg' }: { size?: 'sm' | 'lg' }) {
-  const cls =
-    size === 'sm'
-      ? 'px-3.5 py-1.5 text-sm'
-      : 'px-6 py-3 text-base';
-  return (
-    <Link
-      href="/live"
-      className={`group inline-flex items-center gap-2 rounded-full bg-saffron font-medium text-white shadow-[0_0_40px_-8px_rgba(217,119,6,0.8)] transition hover:brightness-110 ${cls}`}
-    >
-      <Play size={size === 'sm' ? 14 : 18} className="fill-white" aria-hidden />
-      Watch it live
-      <ArrowRight size={size === 'sm' ? 14 : 18} className="transition group-hover:translate-x-0.5" aria-hidden />
-    </Link>
-  );
-}
-
-// ── 1. Hero ─────────────────────────────────────────────────────────────────
-
-// Fixed positions so server and client render identically.
-const DIYAS = [
-  { x: 8, y: 72, s: 10, d: 0 }, { x: 18, y: 38, s: 6, d: 1.2 }, { x: 27, y: 82, s: 8, d: 0.6 },
-  { x: 41, y: 24, s: 5, d: 2.1 }, { x: 52, y: 88, s: 9, d: 1.6 }, { x: 63, y: 30, s: 7, d: 0.3 },
-  { x: 74, y: 76, s: 6, d: 2.4 }, { x: 83, y: 44, s: 10, d: 1.1 }, { x: 92, y: 84, s: 7, d: 0.8 },
-  { x: 35, y: 58, s: 4, d: 2.8 }, { x: 68, y: 58, s: 5, d: 1.9 }, { x: 12, y: 18, s: 5, d: 2.6 },
-];
-
-function Hero() {
-  const words = ['Last', 'Diwali,', 'the', 'sugar', 'ran', 'out', 'at'];
-  return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden">
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute left-1/2 top-[65%] h-[70vh] w-[90vw] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(217,119,6,0.28),transparent)]" />
-        {DIYAS.map((d, i) => (
-          <motion.span
-            key={i}
-            className="absolute rounded-full bg-amber-300"
-            style={{ left: `${d.x}%`, top: `${d.y}%`, width: d.s, height: d.s, boxShadow: `0 0 ${d.s * 3}px ${d.s}px rgba(251,191,36,0.45)` }}
-            animate={{ opacity: [0.35, 1, 0.35], y: [0, -14, 0] }}
-            transition={{ duration: 4 + (i % 3), repeat: Infinity, delay: d.d, ease: 'easeInOut' }}
-          />
-        ))}
-      </div>
-
-      <div className="relative mx-auto w-full max-w-6xl px-4 pt-20 sm:px-6">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="text-sm uppercase tracking-[0.2em] text-amber-400/90"
-        >
-          Spice Garden · Banjara Hills · 1 Nov 2024
-        </motion.p>
-        <h1 className="mt-5 max-w-4xl font-display text-5xl leading-[1.02] tracking-tight sm:text-7xl md:text-8xl">
-          {words.map((w, i) => (
-            <motion.span
-              key={i}
-              className="mr-[0.22em] inline-block"
-              initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
-              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-              transition={{ duration: 0.7, delay: 0.15 + i * 0.07, ease: EASE }}
-            >
-              {w}
-            </motion.span>
-          ))}
-          <motion.span
-            className="inline-block italic text-amber-400"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.75, ease: EASE }}
-          >
-            7:05 pm.
-          </motion.span>
-        </h1>
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.1, ease: EASE }}
-          className="mt-6 max-w-xl text-lg leading-relaxed text-stone-300"
-        >
-          55 desserts turned away. ₹9,500 lost on the busiest night of the year.
-          <span className="text-stone-100"> And the next year, nobody remembered why.</span>
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.35, ease: EASE }}
-          className="mt-9 flex flex-wrap items-center gap-4"
-        >
-          <LiveButton />
-          <a href="#the-night" className="inline-flex items-center gap-2 text-sm text-stone-400 hover:text-stone-100">
-            <ArrowDown size={16} aria-hidden /> See what happened
-          </a>
-        </motion.div>
-      </div>
-
-      <motion.div
-        aria-hidden
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-stone-500"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <ArrowDown size={20} />
-      </motion.div>
-    </section>
   );
 }
 
