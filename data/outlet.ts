@@ -11,6 +11,9 @@ export const outlet = {
   city: 'Hyderabad',
   covers: 80,
   cuisine: 'Hyderabadi & North Indian, in-house sweets counter',
+  // From restOS Payroll & Attendance and the online store.
+  team: { rostered: 18, cooks: 9, deliveryRiders: 4 },
+  onlineOrdersPerHourNormalPeak: 30,
 };
 
 export type Supplier = {
@@ -79,7 +82,9 @@ export const upcomingFestivals: Festival[] = [
 // planner never sees it directly (only the memory banks hold history).
 // growth = last year's festival revenue growth (Diwali ₹6.4L → ₹8.9L), used to
 // project this year's need from last year's use. 0 where we have no trend.
-export const lastFestivalActuals: Record<string, { label: string; growth: number; items: Record<string, number> }> = {
-  diwali: { label: 'Diwali 2025', growth: 0.39, items: { sugar: 41, ghee: 15, cashew: 8, 'sweet-boxes': 186 } },
+// staffNeeded = people on the floor the peak evening actually needed (Diwali 2025
+// outcome: 22 was still short, 25 would have been right).
+export const lastFestivalActuals: Record<string, { label: string; growth: number; items: Record<string, number>; staffNeeded?: number }> = {
+  diwali: { label: 'Diwali 2025', growth: 0.39, items: { sugar: 41, ghee: 15, cashew: 8, 'sweet-boxes': 186 }, staffNeeded: 25 },
   dussehra: { label: 'Dussehra 2025', growth: 0, items: { mutton: 27 } },
 };

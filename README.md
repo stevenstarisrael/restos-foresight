@@ -6,7 +6,7 @@ In Hyderabad, a restaurant's biggest days are festivals: Dasara, Diwali, Ramzan,
 
 Next year nobody remembers any of it. Sales data only records what sold, not what you couldn't sell. Festivals also move every year on the lunar calendar, so "same week last year" queries miss.
 
-Foresight is an agent for restOS outlets. It keeps the operational memory of every festival: stock-outs, waste, supplier delays, unmet customer requests, and its own past plans with how they turned out. It then uses that memory to write the next festival's prep plan.
+Foresight is an agent for restOS outlets. It keeps the operational memory of every festival: stock-outs, waste, supplier delays, unmet customer requests, staff shortfalls, online store outages, and its own past plans with how they turned out. It then uses that memory to write the next festival's prep plan.
 
 ![Foresight dashboard: what to order and why to trust it](docs/screenshot.png)
 
@@ -26,7 +26,7 @@ The Diwali 2026 plan is generated three ways from **the same stock, suppliers an
 |---|---|---|
 | No memory | none (stateless LLM) | Forgets sugar entirely before Diwali. Orders 46 kg chicken and 26 kg mutton "for festive dishes". For Dussehra it orders 197 kg mutton and 339 kg chicken, all due today. |
 | After 1 season | Dussehra + Diwali 2024 | 45–60 kg sugar a week early, adds kaju katli boxes, cuts paneer, keeps Deccan Wholesale as backup. Right direction, rough numbers. |
-| After 2 years | 46 events, plans and outcomes | Sizes sugar from the 41 kg actually used in 2025, raises ghee to 22 kg because 15 kg ran out, buys cashew from Deccan after Balaji's 18% spike, orders 250 boxes (186 used last year) and says to call last year's corporate clients now. |
+| After 2 years | 53 events, plans and outcomes | Sizes sugar from the 41 kg actually used in 2025, raises ghee to 22 kg because 15 kg ran out, buys cashew from Deccan after Balaji's 18% spike, orders 250 boxes (186 used last year) and says to call last year's corporate clients now. |
 
 Then you **teach it** something new from the floor ("20 regulars asked for sugar-free sweets"), re-run, and the plan adds sugar-free and jaggery sweets, citing that note. `npm run demo:reset` removes live-taught notes so the demo can be repeated.
 
@@ -36,8 +36,8 @@ Open `/live?run=1` (or `/live?run=1&festival=dussehra`) to plan all three column
 
 The comparison scores every plan against the outlet's **likely need**: what it actually used last Diwali, plus last year's festival revenue growth (+39%), both from restOS records.
 
-| | Readiness | Short on |
-|---|---|---|
+| | Stock readiness | Short on | Staff on peak evening |
+|---|---|---|---|
 | No memory | 37% (spends ₹69k, still short) | sugar, ghee, cashew, sweet boxes |
 | After 1 season | 86% | ghee, sweet boxes |
 | After 2 years | 100% | - |
@@ -69,12 +69,14 @@ restOS events ──retain──▶  Hindsight bank (per outlet)  ◀──recal
  plans & outcomes)                                                                         and JSON repair fallback
 ```
 
-- `data/` holds the synthetic restOS snapshot (outlet, stock, suppliers) and 46 historical events across Dussehra, Diwali, New Year's Eve, Sankranti, Ramzan, Bonalu and Ganesh Chaturthi (Oct 2024 - Sep 2026).
+- `data/` holds the synthetic restOS snapshot (outlet, stock, suppliers) and 53 historical events across Dussehra, Diwali, New Year's Eve, Sankranti, Ramzan, Bonalu and Ganesh Chaturthi (Oct 2024 - Sep 2026).
 - `lib/planner.ts` builds the same live context for every mode, then either calls the LLM directly (no memory) or runs Hindsight recall + reflect.
 - `lib/llm.ts` calls Groq with Zod validation and a bounded retry loop that feeds the validation error back to the model.
 
 ### Edge cases handled
-- Groq returns malformed JSON or drops fields → schema validation, error fed back, up to 3 attempts.
+- Groq returns malformed JSON or drops fields → schema validation, error fed back, up to 3 attempts. Groq's own `json_validate_failed` rejections and free-tier rate limits are retried too (honouring its "try again in Xs" hint).
+- The no-memory baseline can't have a "last time"; anything it writes there is blanked rather than shown as history.
+- Reflect is scoped to the festival being planned (festival tags plus untagged memories), and the Diwali playbook is excluded from other festivals so their plans don't borrow Diwali numbers.
 - Reflect returns prose without `structured_output` → the text is converted to the plan schema instead of failing the request. The UI notes that this happened.
 - Hindsight or Groq unavailable / keys missing → each panel shows the error; the rest of the page keeps working.
 - Repeat views never re-spend credits: results are cached per plan and festival, and invalidated when memory changes.

@@ -69,6 +69,8 @@ const NIGHT = [
   { when: '31 Oct', time: '21:00', text: '40 customers ask for kaju katli. It isn’t on the menu, so the POS never hears about it.', tag: 'Unseen demand', sugar: 13 },
   { when: '1 Nov', time: '15:30', text: 'Sweet boxes run out. 12 takeaway orders refused.', tag: 'Stock-out', sugar: 6 },
   { when: '1 Nov', time: '19:05', text: 'Sugar hits zero. Kheer, gulab jamun and double ka meetha come off the menu.', tag: 'Stock-out', sugar: 0 },
+  { when: '1 Nov', time: '19:30', text: 'Online orders hit 6× normal. The online store goes down for 42 minutes; about 60 orders are lost.', tag: 'Online', sugar: 0 },
+  { when: '1 Nov', time: '21:30', text: 'Only 16 of 18 staff turned up. Tables wait 50 minutes and 14 groups walk out.', tag: 'Staff', sugar: 0 },
   { when: '4 Nov', time: '11:00', text: '8 kg of paneer expires. We stocked for a rush that went to sweets instead.', tag: 'Waste', sugar: 0 },
 ];
 
@@ -93,7 +95,7 @@ function TheNight() {
   const fillColor = useTransform(sugar, [0, 6, 13, 25], ['#b91c1c', '#dc2626', '#f59e0b', '#fbbf24']);
 
   return (
-    <section id="the-night" ref={ref} className="relative h-[420vh]">
+    <section id="the-night" ref={ref} className="relative h-[520vh]">
       <div className="sticky top-0 flex h-[100svh] items-center overflow-hidden">
         <div className="mx-auto grid w-full max-w-6xl items-center gap-5 px-4 pt-14 sm:px-6 md:grid-cols-[0.9fr_1.1fr] md:gap-10 md:pt-0">
           <div>
@@ -137,7 +139,7 @@ function TheNight() {
                   <div className="flex items-baseline gap-2 text-xs text-stone-400">
                     <span className="font-medium text-stone-200">{n.when}</span>
                     <span>{n.time}</span>
-                    <span className={`rounded-full px-2 py-0.5 ${n.tag === 'Stock-out' || n.tag === 'Waste' ? 'bg-red-950 text-red-300' : 'bg-stone-800 text-stone-300'}`}>{n.tag}</span>
+                    <span className={`rounded-full px-2 py-0.5 ${['Stock-out', 'Waste', 'Online', 'Staff'].includes(n.tag) ? 'bg-red-950 text-red-300' : 'bg-stone-800 text-stone-300'}`}>{n.tag}</span>
                   </div>
                   <p className={`mt-1 leading-snug ${state === 'now' ? 'text-base text-stone-50 sm:text-xl' : 'line-clamp-1 text-sm text-stone-300 md:line-clamp-none md:text-base'}`}>{n.text}</p>
                 </motion.li>

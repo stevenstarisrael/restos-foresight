@@ -1,7 +1,7 @@
 // Seeds two Hindsight banks from data/history.ts:
 //   season1 - only what happened before 2025 (one festival season of memory)
 //   full    - the full two years
-// Usage: npm run seed            (idempotent: events are keyed by document id)
+// Usage: npm run seed            (only retains events the bank doesn't have yet)
 //        npm run seed -- --reset (delete both banks first)
 import 'dotenv/config';
 import { FIRST_SEASON_CUTOFF, history, type HistoryEvent } from '../data/history';
@@ -76,10 +76,15 @@ async function main() {
   ];
 
   for (const [bankId, events] of plan) {
-    console.log(`\n${bankId}: ${events.length} events`);
     await setupBank(bankId);
-    await retainAll(bankId, events);
-    await waitForProcessing(bankId, events.length);
+    // Only retain what the bank doesn't have yet, so adding history is cheap.
+    const existing = new Set((await client.listDocuments(bankId, { limit: 500 })).items.map((d) => d.id));
+    const fresh = events.filter((e) => !existing.has(e.id));
+    console.log(`\n${bankId}: ${events.length} events, ${fresh.length} new`);
+    if (fresh.length) {
+      await retainAll(bankId, fresh);
+      await waitForProcessing(bankId, events.length);
+    }
     console.log(`\n  ready`);
   }
 

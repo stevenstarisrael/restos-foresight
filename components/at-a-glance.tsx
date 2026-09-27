@@ -1,9 +1,10 @@
 'use client';
 
 import { ArrowRight, Brain, CheckCircle2, ShieldCheck, XCircle } from 'lucide-react';
-import { ITEM_ICON, rupees, summarize, tidy, type Urgency } from '@/lib/insights';
+import { daysFromToday, ITEM_ICON, rupees, summarize, tidy, type Urgency } from '@/lib/insights';
+import { lastFestivalActuals } from '@/data/outlet';
 import { buildRows, score } from '@/lib/readiness';
-import { MODE_COLOR, MODES, type ColumnState, type Mode } from './plan-view';
+import { AREA_ICON, MODE_COLOR, MODES, type ColumnState, type Mode } from './plan-view';
 
 // The first screen of the dashboard: what to do (from the full-memory plan)
 // and why to trust it (how each plan would have fared). Everything below it on
@@ -51,8 +52,34 @@ export function AtAGlance({
 
   const plan = full.result.plan;
   const summary = summarize(plan, festival);
-  const actions = summary.orders.slice(0, 4);
-  const more = summary.orders.length - actions.length;
+  // Top 3 orders plus up to 2 staff / online actions, soonest first.
+  type Row = { key: string; icon: React.ReactNode; title: string; meta: string; reason: string; fromMemory: boolean; by: string; urgency: Urgency };
+  const urgencyOf = (d: number | null): Urgency => (d === null ? 'later' : d < 0 ? 'late' : d <= 3 ? 'now' : d <= 10 ? 'soon' : 'later');
+  const orderRows: Row[] = summary.orders.slice(0, 3).map((o, i) => ({
+    key: `o${i}`,
+    icon: ITEM_ICON[o.stockId] ?? ITEM_ICON.other,
+    title: `Order ${fmt(o.quantity)} ${o.unit} ${o.item}`,
+    meta: `${o.supplierName.replace(/\s*\(.*\)$/, '')}${o.cost !== null ? ` · ${rupees(o.cost)}` : ''}`,
+    reason: tidy(o.lastTime.trim() || o.why),
+    fromMemory: Boolean(o.lastTime.trim()),
+    by: o.orderBy,
+    urgency: o.urgency,
+  }));
+  const capacityRows: Row[] = (plan.capacity ?? []).slice(0, 2).map((c, i) => {
+    const Icon = AREA_ICON[c.area] ?? AREA_ICON.other;
+    return {
+      key: `c${i}`,
+      icon: <Icon size={16} className="text-violet-700" aria-hidden />,
+      title: tidy(c.action),
+      meta: tidy(c.target),
+      reason: tidy(c.lastTime.trim() || c.why),
+      fromMemory: Boolean(c.lastTime.trim()),
+      by: c.by,
+      urgency: urgencyOf(daysFromToday(c.by)),
+    };
+  });
+  const actions = [...orderRows, ...capacityRows];
+  const more = summary.orders.length - orderRows.length + Math.max(0, (plan.capacity ?? []).length - capacityRows.length);
   const topMenu = plan.menu[0];
   const none = columns.none.result ? { s: score(rows, 'none'), spend: summarize(columns.none.result.plan, festival).totalCost } : null;
   const memories = full.result.evidence.filter((e) => e.type !== 'mental model').length || full.result.recalled.length;
@@ -67,37 +94,27 @@ export function AtAGlance({
             <CheckCircle2 size={18} className="text-leaf" aria-hidden /> Do this
           </h2>
           <span className="text-sm text-muted">
-            {summary.itemCount} orders · <b className="text-ink">{rupees(summary.totalCost)}</b> total
+            {summary.itemCount} orders · <b className="text-ink">{rupees(summary.totalCost)}</b>
+            {(plan.capacity ?? []).length > 0 && ` · ${(plan.capacity ?? []).length} staff & systems`}
           </span>
         </div>
 
         <ul className="mt-3 divide-y divide-line">
-          {actions.map((o, i) => (
-            <li key={i} className="flex items-start gap-3 py-2.5">
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-paper text-base">{ITEM_ICON[o.stockId] ?? ITEM_ICON.other}</span>
+          {actions.map((a) => (
+            <li key={a.key} className="flex items-start gap-3 py-2.5">
+              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-paper text-base">{a.icon}</span>
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-baseline gap-x-2">
-                  <span className="font-semibold">
-                    Order {fmt(o.quantity)} {o.unit} {o.item}
-                  </span>
-                  <span className="text-xs text-muted">
-                    {o.supplierName.replace(/\s*\(.*\)$/, '')}
-                    {o.cost !== null && ` · ${rupees(o.cost)}`}
-                  </span>
+                  <span className="font-semibold">{a.title}</span>
+                  <span className="text-xs text-muted">{a.meta}</span>
                 </div>
-                <p className="mt-0.5 line-clamp-1 text-xs text-leaf">
-                  {o.lastTime.trim() ? (
-                    <>
-                      <Brain size={11} className="mr-1 inline" aria-hidden />
-                      {tidy(o.lastTime)}
-                    </>
-                  ) : (
-                    <span className="text-muted">{tidy(o.why)}</span>
-                  )}
+                <p className={`mt-0.5 line-clamp-1 text-xs ${a.fromMemory ? 'text-leaf' : 'text-muted'}`}>
+                  {a.fromMemory && <Brain size={11} className="mr-1 inline" aria-hidden />}
+                  {a.reason}
                 </p>
               </div>
-              <span className={`shrink-0 whitespace-nowrap rounded-full px-2 py-0.5 text-[11px] font-medium ${URGENCY_CHIP[o.urgency]}`}>
-                by {shortDate(o.orderBy)}
+              <span className={`shrink-0 whitespace-nowrap rounded-full px-2 py-0.5 text-[11px] font-medium ${URGENCY_CHIP[a.urgency]}`}>
+                by {shortDate(a.by)}
               </span>
             </li>
           ))}
@@ -153,6 +170,8 @@ export function AtAGlance({
           })}
         </div>
 
+        <StaffLine festival={festival} columns={columns} />
+
         {none?.s && none.s.short.length > 0 && (
           <p className="mt-4 rounded-lg bg-chili-soft/60 p-3 text-sm leading-snug text-ink">
             Without memory, the AI spends <b>{rupees(none.spend)}</b> and still runs short on{' '}
@@ -166,6 +185,32 @@ export function AtAGlance({
           {memories} past events in Hindsight memory
         </p>
       </section>
+    </div>
+  );
+}
+
+// Peak-night headcount each plan asks for, against what records say was needed.
+function StaffLine({ festival, columns }: { festival: string; columns: Record<Mode, ColumnState> }) {
+  const needed = lastFestivalActuals[festival]?.staffNeeded;
+  const counts = MODES.map(({ mode, title }) => {
+    const staff = columns[mode].result?.plan.capacity?.find((c) => c.area === 'staff');
+    const n = staff ? Number(staff.target.match(/\d+/)?.[0]) : NaN;
+    return { mode, title, n: Number.isFinite(n) && n >= 10 ? n : null };
+  });
+  if (!needed || counts.every((c) => c.n === null)) return null;
+  return (
+    <div className="mt-4 rounded-lg border border-line p-3">
+      <div className="text-xs text-muted">
+        Staff on the peak evening · <span className="text-ink">{needed} needed</span> ({lastFestivalActuals[festival].label} records)
+      </div>
+      <div className="mt-2 grid grid-cols-3 gap-2 text-center">
+        {counts.map((c) => (
+          <div key={c.mode} className="rounded-md bg-paper px-2 py-1.5">
+            <div className={`text-lg font-semibold tabular-nums ${c.n === null ? 'text-muted' : c.n >= needed ? 'text-leaf' : 'text-chili'}`}>{c.n ?? '—'}</div>
+            <div className="text-[11px] text-muted">{c.title}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

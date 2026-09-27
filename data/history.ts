@@ -11,7 +11,8 @@ export type EventKind =
   | 'staff_note'
   | 'summary'
   | 'plan'
-  | 'outcome';
+  | 'outcome'
+  | 'capacity'; // staffing and online-ordering capacity
 
 export type HistoryEvent = {
   id: string;
@@ -37,6 +38,8 @@ export const history: HistoryEvent[] = [
     text: 'Hyderabad Meat House could not do a same-day mutton top-up on Dussehra - every butcher in the city is sold out on Dasara. Festival mutton has to be pre-booked at least 3 days ahead.' },
   { id: 'dus24-4', at: '2024-10-13T10:00', kind: 'summary', festival: 'dussehra',
     text: 'Dussehra 2024 summary: revenue ₹1.86L vs ₹1.1L on a normal Saturday. Mutton biryani 64 plates vs 25 normal. Chicken demand normal. Double ka meetha 30 portions.' },
+  { id: 'dus24-5', at: '2024-10-13T11:00', kind: 'capacity', festival: 'dussehra', items: ['staff'],
+    text: 'Dussehra 2024: 3 of our 9 cooks were on leave for Dasara. Biryani ticket times hit 35 minutes at 8pm on 12 Oct.' },
 
   // ── Diwali 2024 (31 Oct - 2 Nov) ──────────────────────────────────────────
   { id: 'diw24-1', at: '2024-10-25T12:00', kind: 'staff_note', festival: 'diwali', items: ['sugar'], supplier: 'balaji-traders',
@@ -51,6 +54,10 @@ export const history: HistoryEvent[] = [
     text: 'Sweet boxes and takeaway dessert containers ran out on the afternoon of 1 Nov 2024; 12 takeaway sweet orders were refused.' },
   { id: 'diw24-6', at: '2024-11-01T19:05', kind: 'stockout', festival: 'diwali', items: ['sugar'],
     text: 'Sugar hit zero at 7:05pm on 1 Nov 2024, the second day of Diwali. We used about 32 kg between 29 Oct and 1 Nov versus 8 kg in a normal 4 days. Kheer, gulab jamun and double ka meetha came off the menu for the night.' },
+  { id: 'diw24-13', at: '2024-11-01T19:30', kind: 'capacity', festival: 'diwali', items: ['online-orders'],
+    text: 'Our online store went down for 42 minutes (7:30 to 8:12pm) on 1 Nov 2024 when online orders hit 6x normal. About 60 online orders were lost, roughly ₹38,000.' },
+  { id: 'diw24-14', at: '2024-11-01T21:30', kind: 'capacity', festival: 'diwali', items: ['staff'],
+    text: 'Only 16 of 18 rostered staff turned up on 1 Nov 2024 (two travelled home for Diwali). The wait for a table reached 50 minutes and 14 walk-in groups left.' },
   { id: 'diw24-7', at: '2024-11-01T22:30', kind: 'lost_demand', festival: 'diwali', items: ['sugar'],
     text: 'After sugar ran out on 1 Nov 2024, about 55 dessert orders (kheer, gulab jamun, double ka meetha) were turned away - roughly ₹9,500 of lost revenue.' },
   { id: 'diw24-8', at: '2024-11-01T23:00', kind: 'stockout', festival: 'diwali', items: ['ghee'],
@@ -63,6 +70,8 @@ export const history: HistoryEvent[] = [
     text: 'Diwali 2024 summary (29 Oct - 2 Nov): revenue ₹6.4L vs ₹4.1L for a normal 5 days. Desserts +210%, biryani +60%, paneer mains −15%. Biggest misses: sugar stock-out, no kaju katli, sweet boxes ran out.' },
   { id: 'diw24-12', at: '2024-11-05T10:00', kind: 'staff_note', festival: 'diwali', items: ['sugar', 'ghee', 'khoya'],
     text: 'Ravi (head chef): next Diwali we must order sugar, ghee and khoya a full week early, keep a backup dry-goods supplier, and add kaju katli boxes to the menu.' },
+  { id: 'diw24-15', at: '2024-11-05T11:00', kind: 'staff_note', festival: 'diwali', items: ['staff', 'online-orders'],
+    text: 'Priya (manager): for Diwali we need at least 24 people on the floor on the two peak evenings, plus 2 extra delivery riders, and restOS must pre-scale our online store before the rush.' },
 
   // ── New Year's Eve 2024 ───────────────────────────────────────────────────
   { id: 'nye24-1', at: '2025-01-01T01:00', kind: 'stockout', festival: 'new-year', items: ['chicken'],
@@ -109,10 +118,14 @@ export const history: HistoryEvent[] = [
     text: 'Foresight plan for Dussehra 2025, based on the Dussehra 2024 stock-out: pre-book 28 kg mutton with Hyderabad Meat House 3 days ahead and add one evening cook.' },
   { id: 'dus25-2', at: '2025-10-03T10:00', kind: 'outcome', festival: 'dussehra', items: ['mutton'],
     text: 'Dussehra 2025 outcome: 27 kg of the 28 kg pre-booked mutton used, no stock-out - first Dasara without turning away biryani orders. 71 mutton biryani plates.' },
+  { id: 'dus25-3', at: '2025-10-03T11:00', kind: 'outcome', festival: 'dussehra', items: ['staff'],
+    text: 'Dussehra 2025: approved Dasara leave two weeks early and kept all 9 cooks on 2 Oct. Biryani ticket times stayed under 18 minutes.' },
 
   // ── Diwali 2025 (18–22 Oct, main day 20 Oct) ──────────────────────────────
   { id: 'diw25-1', at: '2025-10-08T10:00', kind: 'plan', festival: 'diwali', items: ['sugar', 'ghee', 'khoya', 'sweet-boxes', 'paneer', 'cashew'],
     text: 'Foresight plan for Diwali 2025, based on Diwali 2024: order 45 kg sugar, 12 kg ghee and 10 kg khoya by 11 Oct (a week early); keep Deccan Wholesale Mart as backup; add 500g kaju katli boxes; order 200 sweet boxes from PackRight; cut paneer by 20%.' },
+  { id: 'diw25-8', at: '2025-10-08T10:30', kind: 'plan', festival: 'diwali', items: ['staff', 'online-orders'],
+    text: 'Foresight plan for Diwali 2025 capacity: roster 22 staff on the peak evenings (18 regular plus 4 temporary hires), ask restOS to pre-scale the online store for 18 to 22 Oct, and turn on scheduled pre-orders to spread the peak.' },
   { id: 'diw25-2', at: '2025-10-14T17:00', kind: 'supplier', festival: 'diwali', items: ['sugar'], supplier: 'balaji-traders',
     text: 'Balaji Traders was late again before Diwali 2025 (ordered 10 Oct, arrived 14 Oct), but it did not matter because we ordered a week early.' },
   { id: 'diw25-3', at: '2025-10-16T12:00', kind: 'supplier', festival: 'diwali', items: ['cashew'], supplier: 'balaji-traders',
@@ -123,6 +136,8 @@ export const history: HistoryEvent[] = [
     text: 'Ghee ran out at 9:30pm on Diwali, 20 Oct 2025. We used 15 kg over 4 days against 12 kg stocked; jalebi was paused for the last hour.' },
   { id: 'diw25-6', at: '2025-10-23T11:00', kind: 'outcome', festival: 'diwali', items: ['sugar', 'cashew', 'sweet-boxes', 'paneer', 'ghee'],
     text: 'Diwali 2025 outcome vs plan: 41 of 45 kg sugar used - no sugar stock-out (2024 ran out). Kaju katli: 38 walk-in boxes plus 120 corporate. 186 of 200 sweet boxes used. The 20% paneer cut was right: zero paneer waste. Miss: ghee short by about 3 kg.' },
+  { id: 'diw25-9', at: '2025-10-23T11:30', kind: 'outcome', festival: 'diwali', items: ['staff', 'online-orders'],
+    text: 'Diwali 2025 capacity outcome: 22 staff on 20 Oct was still short between 8 and 10pm; the wait peaked at 30 minutes (50 in 2024) and 5 groups left. The online store stayed up at 7x normal orders, and 310 scheduled pre-orders spread the peak. Priya: 25 on the floor would have been right.' },
   { id: 'diw25-7', at: '2025-10-23T12:00', kind: 'summary', festival: 'diwali',
     text: 'Diwali 2025 revenue ₹8.9L vs ₹6.4L in Diwali 2024 (+39%). Dessert revenue +62% year on year, driven by kaju katli boxes.' },
 

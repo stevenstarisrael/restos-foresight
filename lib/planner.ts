@@ -1,5 +1,7 @@
 import { outlet, stock, suppliers, TODAY, upcomingFestivals, type Festival } from '@/data/outlet';
-import { BANKS, hindsight, type MemoryMode } from './hindsight';
+import { BANKS, hindsight, PLAYBOOK, type MemoryMode } from './hindsight';
+
+const PLAYBOOK_FESTIVAL = 'diwali';
 import { planFromLLM } from './llm';
 import { PlanSchema, planJsonSchema, type Evidence, type PlanResult } from './plan';
 
@@ -19,6 +21,7 @@ function situation(festival: Festival): string {
   return [
     `Today is ${TODAY}. Outlet: ${outlet.name}, ${outlet.city} (${outlet.covers} covers, ${outlet.cuisine}).`,
     `Upcoming festival: ${festival.name} on ${festival.date}. ${festival.note}.`,
+    `Team: ${outlet.team.rostered} staff on the regular roster (${outlet.team.cooks} cooks, ${outlet.team.deliveryRiders} delivery riders). Online store: about ${outlet.onlineOrdersPerHourNormalPeak} orders/hour at a normal peak, hosted on restOS.`,
     'Current stock:',
     ...stockLines,
     'Suppliers:',
@@ -27,14 +30,16 @@ function situation(festival: Festival): string {
 }
 
 const TASK =
-  'Produce a festival prep plan: what to order (quantity, unit, order-by date, supplier), menu changes, and the main risks with mitigations. ' +
+  'Produce a festival prep plan: what to order (quantity, unit, order-by date, supplier), staff and online-ordering capacity actions, menu changes, and the main risks with mitigations. ' +
   'Be specific with numbers. Write for a restaurant owner with no technical background: short plain sentences, no jargon. ' +
   'Use supplier ids and stock ids exactly as listed. Dates as YYYY-MM-DD.';
 
 // Only given to the memory modes: how to use history, not what the history says.
 const MEMORY_GUIDANCE =
   'Size each quantity from the most recent actual usage on record for this festival (not the plan), adjusted for the year-on-year trend, ' +
-  'and check the latest supplier prices and reliability before choosing a supplier.';
+  'and check the latest supplier prices and reliability before choosing a supplier. ' +
+  'For staffing and the online store, start from the most recent outcome for this festival: keep what worked, and fix what still fell short. ' +
+  'Only include capacity actions that address something on record, with dates before the festival.';
 
 export async function runPlan(mode: MemoryMode, festivalId: string): Promise<PlanResult> {
   const started = Date.now();
@@ -46,7 +51,10 @@ export async function runPlan(mode: MemoryMode, festivalId: string): Promise<Pla
       'You are an inventory planner for a restaurant. You have no history for this outlet.',
       `${context}\n\n${TASK}`,
     );
-    return { mode, plan, evidence: [], recalled: [], ms: Date.now() - started, notes: ['Stateless LLM call - no memory'] };
+    // With no memory there is no "last time"; anything the model writes there is invented.
+    const blank = <T extends { lastTime: string }>(x: T) => ({ ...x, lastTime: '' });
+    const honest = { ...plan, orders: plan.orders.map(blank), capacity: (plan.capacity ?? []).map(blank) };
+    return { mode, plan: honest, evidence: [], recalled: [], ms: Date.now() - started, notes: ['Stateless LLM call - no memory'] };
   }
 
   const client = hindsight();
@@ -68,6 +76,11 @@ export async function runPlan(mode: MemoryMode, festivalId: string): Promise<Pla
       budget: 'mid',
       responseSchema: planJsonSchema,
       includeFacts: true,
+      // Plan from this festival's memories (plus untagged ones), and don't let
+      // the Diwali playbook leak Diwali numbers into other festivals.
+      tags: [`festival:${festival.id}`],
+      tagsMatch: 'any',
+      ...(festival.id === PLAYBOOK_FESTIVAL ? {} : { excludeMentalModelIds: [PLAYBOOK.id] }),
     }),
   ]);
 

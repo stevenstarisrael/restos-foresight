@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Brain, CircleOff, Eye, EyeOff, History, Loader2, Play, RotateCw, type LucideIcon } from 'lucide-react';
-import type { PlanResult } from '@/lib/plan';
-import { ITEM_ICON, rupees, summarize, tidy, type OrderInsight, type Urgency } from '@/lib/insights';
+import { Brain, CircleOff, Eye, EyeOff, Globe, History, Loader2, Play, RotateCw, Settings2, Users, type LucideIcon } from 'lucide-react';
+import { outlet } from '@/data/outlet';
+import type { Plan, PlanResult } from '@/lib/plan';
+import { daysFromToday, ITEM_ICON, rupees, summarize, tidy, type OrderInsight, type Urgency } from '@/lib/insights';
 
 export type Mode = PlanResult['mode'];
 export type ColumnState = { loading: boolean; result?: PlanResult; error?: string };
@@ -114,7 +115,8 @@ function Stat({ value, label, tone }: { value: string; label: string; tone?: 'mu
 }
 
 function lessonCount(result: PlanResult) {
-  return result.plan.orders.filter((o) => o.lastTime.trim()).length + (result.evidence.some((e) => e.type === 'mental model') ? 1 : 0);
+  const fromMemory = [...result.plan.orders, ...(result.plan.capacity ?? [])].filter((o) => o.lastTime.trim()).length;
+  return fromMemory + (result.evidence.some((e) => e.type === 'mental model') ? 1 : 0);
 }
 
 // ── Detailed plan ───────────────────────────────────────────────────────────
@@ -183,6 +185,16 @@ export function PlanDetail({ state, mode, festival }: { state: ColumnState; mode
           ))}
         </div>
       </Section>
+
+      {(plan.capacity ?? []).length > 0 && (
+        <Section title="Staff & systems" hint="People on shift and online ordering capacity">
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+            {(plan.capacity ?? []).map((c, i) => (
+              <CapacityCard key={i} item={c} noMemory={noMemory} />
+            ))}
+          </div>
+        </Section>
+      )}
 
       <div className="grid gap-6 lg:grid-cols-2">
         {plan.menu.length > 0 && (
@@ -304,6 +316,44 @@ function OrderCard({ order: o, noMemory }: { order: OrderInsight; noMemory: bool
           <div className="rounded-lg bg-stone-100 p-2 text-xs text-muted">
             {noMemory ? '🤷 No history - this is a guess' : 'No past record for this item'}
           </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export const AREA_ICON: Record<string, LucideIcon> = { staff: Users, online: Globe, other: Settings2 };
+
+function CapacityCard({ item: c, noMemory }: { item: NonNullable<Plan['capacity']>[number]; noMemory: boolean }) {
+  const Icon = AREA_ICON[c.area] ?? Settings2;
+  const days = daysFromToday(c.by);
+  const urgency: Urgency = days === null ? 'later' : days < 0 ? 'late' : days <= 3 ? 'now' : days <= 10 ? 'soon' : 'later';
+  const chip = URGENCY[urgency];
+  return (
+    <div className="flex flex-col rounded-xl border border-line bg-white p-4">
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <span className="grid h-9 w-9 place-items-center rounded-lg bg-violet-50 text-violet-700">
+            <Icon size={18} aria-hidden />
+          </span>
+          <div className="text-[11px] font-medium uppercase tracking-wide text-muted">{c.area === 'online' ? 'Online store' : c.area === 'staff' ? 'Staff' : 'Operations'}</div>
+        </div>
+        <span className={`whitespace-nowrap rounded-full px-2 py-0.5 text-[11px] font-medium ${chip.className}`}>
+          {urgency === 'late' || urgency === 'now' || days === null ? chip.label(days) : `Due in ${days} days`}
+        </span>
+      </div>
+      <div className="mt-3 text-sm font-semibold leading-snug">{tidy(c.action)}</div>
+      <div className="mt-1 text-2xl font-semibold tracking-tight">{tidy(c.target)}</div>
+      {c.area === 'staff' && <div className="text-[11px] text-muted">{outlet.team.rostered} on the regular roster today</div>}
+      <p className="mt-2 text-xs leading-relaxed">{tidy(c.why)}</p>
+      <div className="mt-auto pt-3">
+        {c.lastTime.trim() ? (
+          <div className="rounded-lg bg-leaf-soft/60 p-2 text-xs text-leaf">
+            <span className="font-semibold">🧠 Last time: </span>
+            {tidy(c.lastTime)}
+          </div>
+        ) : (
+          <div className="rounded-lg bg-stone-100 p-2 text-xs text-muted">{noMemory ? '🤷 No history - this is a guess' : 'No past record'}</div>
         )}
       </div>
     </div>

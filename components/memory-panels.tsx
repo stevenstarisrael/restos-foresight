@@ -97,8 +97,8 @@ export function TeachPanel({ festival, onTaught, onReplan }: { festival: string;
 
 // Words that make a learned belief relevant to the festival being planned.
 const FESTIVAL_TERMS: Record<string, RegExp> = {
-  diwali: /diwali|kaju|sweet box|sugar|ghee|khoya|balaji|cashew|corporate/i,
-  dussehra: /dussehra|dasara|mutton|meat house|biryani/i,
+  diwali: /diwali|kaju|sweet box|sugar|ghee|khoya|balaji|cashew|corporate|staff|online|pre-order|wait/i,
+  dussehra: /dussehra|dasara|mutton|meat house|biryani|cooks?\b|leave/i,
 };
 
 export function BeliefsPanel({ memory, onReload, festival }: { memory: MemoryState; onReload: () => void; festival: string }) {
@@ -213,6 +213,7 @@ const KIND_STYLE: Record<string, string> = {
   outcome: 'bg-leaf-soft text-leaf',
   staff_note: 'bg-stone-100 text-stone-700',
   summary: 'bg-stone-100 text-stone-700',
+  capacity: 'bg-violet-100 text-violet-800',
 };
 
 export function TimelinePanel({ festival, festivalName }: { festival: string; festivalName: string }) {

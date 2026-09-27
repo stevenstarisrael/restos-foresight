@@ -30,6 +30,19 @@ export const PlanSchema = z.object({
       lastTime: z.string().describe('What happened with this item at this festival before, in one short sentence with the year. Empty string if unknown.'),
     }),
   ),
+  capacity: z
+    .array(
+      z.object({
+        area: z.enum(['staff', 'online', 'other']).describe('staff = people on shift; online = online store / ordering capacity'),
+        // Examples stay neutral: the no-memory baseline sees this schema too.
+        action: z.string().describe('Short imperative, e.g. "Roster N staff for the peak evenings"'),
+        target: z.string().describe('The number or setting to hit, e.g. "N people", "Nx normal orders", "pre-orders on"'),
+        by: z.string().describe('Date to have it done, YYYY-MM-DD'),
+        why: z.string().describe('One plain sentence'),
+        lastTime: z.string().describe('What happened at this festival before, with the year. Empty string if unknown.'),
+      }),
+    )
+    .describe('1-3 staffing and online-ordering capacity actions'),
   menu: z.array(z.object({ change: z.string(), why: z.string() })),
   risks: z.array(z.object({ risk: z.string(), mitigation: z.string() })),
   confidence: z.enum(['low', 'medium', 'high']),
