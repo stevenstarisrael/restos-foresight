@@ -97,7 +97,7 @@ export function TeachPanel({ festival, onTaught, onReplan }: { festival: string;
 
 // Words that make a learned belief relevant to the festival being planned.
 const FESTIVAL_TERMS: Record<string, RegExp> = {
-  diwali: /diwali|kaju|sweet box|sugar|ghee|khoya|balaji|cashew|corporate|staff|online|pre-order|wait/i,
+  diwali: /diwali|kaju|sweet box|sugar|ghee|khoya|balaji|cashew|corporate|pre-order/i,
   dussehra: /dussehra|dasara|mutton|meat house|biryani|cooks?\b|leave/i,
 };
 
@@ -159,9 +159,11 @@ export function BeliefsPanel({ memory, onReload, festival }: { memory: MemorySta
 export function PlaybookPanel({
   playbook,
   onReload,
+  festival,
 }: {
   playbook: PlaybookState;
   onReload: () => void;
+  festival: string;
 }) {
   const [refreshing, setRefreshing] = useState(false);
   async function refresh() {
@@ -181,6 +183,7 @@ export function PlaybookPanel({
           <p className="mt-0.5 text-xs text-muted">
             A Hindsight mental model: a living summary rewritten from memory.
             {playbook.refreshedAt && ` Last refreshed ${new Date(playbook.refreshedAt).toLocaleString('en-IN')}.`}
+            {festival !== 'diwali' && ' Used for Diwali plans only; other festivals plan from their own memories.'}
           </p>
         </div>
         <button

@@ -3,7 +3,7 @@ import { BANKS, hindsight, PLAYBOOK, type MemoryMode } from './hindsight';
 
 const PLAYBOOK_FESTIVAL = 'diwali';
 import { planFromLLM } from './llm';
-import { PlanSchema, planJsonSchema, type Evidence, type PlanResult } from './plan';
+import { PlanSchema, planJsonSchema, type Evidence, type Plan, type PlanResult } from './plan';
 
 export function findFestival(id: string): Festival {
   const festival = upcomingFestivals.find((f) => f.id === id);
@@ -39,23 +39,14 @@ const MEMORY_GUIDANCE =
   'Size each quantity from the most recent actual usage on record for this festival (not the plan), adjusted for the year-on-year trend, ' +
   'and check the latest supplier prices and reliability before choosing a supplier. ' +
   'For staffing and the online store, start from the most recent outcome for this festival: keep what worked, and fix what still fell short. ' +
-  'Only include capacity actions that address something on record, with dates before the festival.';
+  'Only include capacity actions that address something on record, with dates before the festival. ' +
+  'In each lastTime, state one specific remembered fact about that item or action at this festival (a quantity, time, price or event, with the year). ' +
+  'If memory has nothing specific about it at this festival, leave lastTime empty rather than writing something general.';
 
 export async function runPlan(mode: MemoryMode, festivalId: string): Promise<PlanResult> {
   const started = Date.now();
   const festival = findFestival(festivalId);
   const context = situation(festival);
-
-  if (mode === 'none') {
-    const plan = await planFromLLM(
-      'You are an inventory planner for a restaurant. You have no history for this outlet.',
-      `${context}\n\n${TASK}`,
-    );
-    // With no memory there is no "last time"; anything the model writes there is invented.
-    const blank = <T extends { lastTime: string }>(x: T) => ({ ...x, lastTime: '' });
-    const honest = { ...plan, orders: plan.orders.map(blank), capacity: (plan.capacity ?? []).map(blank) };
-    return { mode, plan: honest, evidence: [], recalled: [], ms: Date.now() - started, notes: ['Stateless LLM call - no memory'] };
-  }
 
   const client = hindsight();
   const bank = BANKS[mode];
@@ -84,7 +75,7 @@ export async function runPlan(mode: MemoryMode, festivalId: string): Promise<Pla
     }),
   ]);
 
-  let plan;
+  let plan: Plan;
   const structured = PlanSchema.safeParse(reflect.structured_output);
   if (structured.success) {
     plan = structured.data;
@@ -107,6 +98,12 @@ export async function runPlan(mode: MemoryMode, festivalId: string): Promise<Pla
       when: m.occurred_start ?? undefined,
     })),
   ];
+  if (mode === 'none') {
+    // An empty bank has no "last time"; anything the model writes there is invented.
+    const blank = <T extends { lastTime: string }>(x: T) => ({ ...x, lastTime: '' });
+    plan = { ...plan, orders: plan.orders.map(blank), capacity: (plan.capacity ?? []).map(blank) };
+    notes.push('Empty memory bank - same agent, nothing remembered');
+  }
   const directives = reflect.based_on?.directives ?? [];
   if (directives.length) notes.push(`Directives applied: ${directives.map((d) => d.name).join(', ')}`);
   const recalled: Evidence[] = recall.results.map((r) => ({

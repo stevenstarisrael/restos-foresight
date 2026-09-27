@@ -71,6 +71,7 @@ async function waitForProcessing(bankId: string, expectedDocs: number) {
 async function main() {
   const firstSeason = history.filter((e) => e.at < FIRST_SEASON_CUTOFF);
   const plan: [string, HistoryEvent[]][] = [
+    [BANKS.none, []], // the no-memory baseline: same mission and directives, nothing retained
     [BANKS.firstSeason, firstSeason],
     [BANKS.full, history],
   ];

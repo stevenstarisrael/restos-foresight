@@ -352,7 +352,7 @@ function Step({ n, icon, title, text, children }: { n: number; icon: React.React
 // ── 5. Learning curve ───────────────────────────────────────────────────────
 
 const CURVE_META: Record<Mode, { title: string; sub: string; color: string }> = {
-  none: { title: 'No memory', sub: 'A plain AI with today’s stock', color: '#7cc190' },
+  none: { title: 'No memory', sub: 'Same agent, empty memory', color: '#7cc190' },
   firstSeason: { title: 'After 1 season', sub: 'Remembers Diwali 2024', color: '#2b9a50' },
   full: { title: 'After 2 years', sub: 'Remembers every festival', color: '#0f5f32' },
 };

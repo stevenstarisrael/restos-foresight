@@ -88,8 +88,15 @@ const NAMES: [RegExp, string][] = [
   ...stock.filter((s) => s.id.includes('-')).map((s): [RegExp, string] => [new RegExp(`\\b${s.id}\\b`, 'gi'), s.name.toLowerCase()]),
 ];
 
+const ISO_DATE = /\b(20\d{2})-(\d{2})-(\d{2})\b/g;
+
 export function tidy(text: string): string {
-  return NAMES.reduce((t, [re, name]) => t.replace(re, name), text);
+  const named = NAMES.reduce((t, [re, name]) => t.replace(re, name), text);
+  // "by 2026-10-25" reads better as "by 25 Oct".
+  return named.replace(ISO_DATE, (m) => {
+    const d = new Date(`${m}T00:00:00`);
+    return Number.isNaN(d.getTime()) ? m : d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+  });
 }
 
 export function rupees(n: number): string {

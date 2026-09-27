@@ -24,7 +24,7 @@ The Diwali 2026 plan is generated three ways from **the same stock, suppliers an
 
 | Column | Memory | Diwali 2026 plan (real output) |
 |---|---|---|
-| No memory | none (stateless LLM) | Forgets sugar entirely before Diwali. Orders 46 kg chicken and 26 kg mutton "for festive dishes". For Dussehra it orders 197 kg mutton and 339 kg chicken, all due today. |
+| No memory | an empty Hindsight bank | Forgets sugar entirely before Diwali. Orders 46 kg chicken and 26 kg mutton "for festive dishes". For Dussehra it orders 197 kg mutton and 339 kg chicken, all due today. |
 | After 1 season | Dussehra + Diwali 2024 | 45–60 kg sugar a week early, adds kaju katli boxes, cuts paneer, keeps Deccan Wholesale as backup. Right direction, rough numbers. |
 | After 2 years | 53 events, plans and outcomes | Sizes sugar from the 41 kg actually used in 2025, raises ghee to 22 kg because 15 kg ran out, buys cashew from Deccan after Balaji's 18% spike, orders 250 boxes (186 used last year) and says to call last year's corporate clients now. |
 
@@ -50,7 +50,7 @@ Hindsight is the core of the agent. Without it there is only the left-hand colum
 
 | Hindsight feature | Where | Why |
 |---|---|---|
-| **Memory banks** | [`lib/hindsight.ts`](lib/hindsight.ts) | One bank per outlet. A second snapshot bank (`season1`) holds only the first season, to show the learning curve. |
+| **Memory banks** | [`lib/hindsight.ts`](lib/hindsight.ts) | Three banks for the same outlet with the same mission and directives: empty (the no-memory baseline), `season1` (only the first festival season) and the full history. All three plans go through the same `reflect` call, so memory is the only variable. |
 | **Retain with timestamps + tags** | [`scripts/seed.ts`](scripts/seed.ts), [`app/api/memory/route.ts`](app/api/memory/route.ts) | Every restOS event is retained with its real date and tags (`festival:diwali`, `item:sugar`, `supplier:balaji-traders`, `kind:stockout`), so temporal recall works ("last Diwali") even though Diwali's date moves. |
 | **Experience vs world facts** | `eventContext()` | Foresight's own plans and outcomes are retained as *its* experience. It learns whether its own advice worked, not just what happened. |
 | **Reflect with structured output** | [`lib/planner.ts`](lib/planner.ts) | `reflect()` reasons over the memories, applies the bank's directives and returns a plan matching a Zod-derived JSON Schema. `includeFacts` returns the memories it relied on, which the UI shows as evidence. |
@@ -70,12 +70,13 @@ restOS events ──retain──▶  Hindsight bank (per outlet)  ◀──recal
 ```
 
 - `data/` holds the synthetic restOS snapshot (outlet, stock, suppliers) and 53 historical events across Dussehra, Diwali, New Year's Eve, Sankranti, Ramzan, Bonalu and Ganesh Chaturthi (Oct 2024 - Sep 2026).
-- `lib/planner.ts` builds the same live context for every mode, then either calls the LLM directly (no memory) or runs Hindsight recall + reflect.
+- `lib/planner.ts` builds the same live context and prompt for every mode and runs Hindsight recall + reflect against that mode's bank (empty, first season, or full).
 - `lib/llm.ts` calls Groq with Zod validation and a bounded retry loop that feeds the validation error back to the model.
 
 ### Edge cases handled
 - Groq returns malformed JSON or drops fields → schema validation, error fed back, up to 3 attempts. Groq's own `json_validate_failed` rejections and free-tier rate limits are retried too (honouring its "try again in Xs" hint).
-- The no-memory baseline can't have a "last time"; anything it writes there is blanked rather than shown as history.
+- The no-memory baseline (empty bank) can't have a "last time"; anything it writes there is blanked rather than shown as history. "Last time" notes must cite a specific remembered fact or stay empty.
+- A plan that finishes after you switch festival is ignored rather than shown under the wrong festival.
 - Reflect is scoped to the festival being planned (festival tags plus untagged memories), and the Diwali playbook is excluded from other festivals so their plans don't borrow Diwali numbers.
 - Reflect returns prose without `structured_output` → the text is converted to the plan schema instead of failing the request. The UI notes that this happened.
 - Hindsight or Groq unavailable / keys missing → each panel shows the error; the rest of the page keeps working.

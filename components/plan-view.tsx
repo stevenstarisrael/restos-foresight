@@ -10,7 +10,7 @@ export type Mode = PlanResult['mode'];
 export type ColumnState = { loading: boolean; result?: PlanResult; error?: string };
 
 export const MODES: { mode: Mode; title: string; subtitle: string; badge: string }[] = [
-  { mode: 'none', title: 'No memory', subtitle: 'A plain AI with today’s stock', badge: 'bg-stone-100 text-stone-700' },
+  { mode: 'none', title: 'No memory', subtitle: 'Same agent, empty memory', badge: 'bg-stone-100 text-stone-700' },
   { mode: 'firstSeason', title: 'After 1 season', subtitle: 'Remembers Dussehra & Diwali 2024', badge: 'bg-saffron-soft text-amber-800' },
   { mode: 'full', title: 'After 2 years', subtitle: 'Remembers every festival since 2024', badge: 'bg-leaf-soft text-leaf' },
 ];
@@ -143,6 +143,7 @@ export function PlanDetail({ state, mode, festival }: { state: ColumnState; mode
   const { plan } = state.result;
   const summary = summarize(plan, festival);
   const noMemory = mode === 'none';
+  const staffTarget = (plan.capacity ?? []).find((c) => c.area === 'staff')?.target.match(/\d+/)?.[0];
 
   return (
     <div className="space-y-6">
@@ -173,11 +174,15 @@ export function PlanDetail({ state, mode, festival }: { state: ColumnState; mode
             label="First order due"
             value={summary.firstOrderDays === null ? '—' : summary.firstOrderDays <= 0 ? 'Today' : `in ${summary.firstOrderDays} days`}
           />
-          <BudgetTile
-            label="Need action this week"
-            value={String(summary.urgentCount + summary.orders.filter((o) => o.urgency === 'soon').length)}
-            tone={summary.urgentCount ? 'chili' : undefined}
-          />
+          {staffTarget ? (
+            <BudgetTile label="Staff on peak evenings" value={staffTarget} note={`${outlet.team.rostered} on the roster today`} />
+          ) : (
+            <BudgetTile
+              label="Need action this week"
+              value={String(summary.urgentCount + summary.orders.filter((o) => o.urgency === 'soon').length)}
+              tone={summary.urgentCount ? 'chili' : undefined}
+            />
+          )}
         </div>
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {summary.orders.map((o, i) => (
@@ -382,7 +387,7 @@ function MemoryFooter({ result }: { result: PlanResult }) {
       <div className="flex flex-wrap items-center justify-between gap-2">
         <span className="text-muted">
           🧠 Built from memory: {usedPlaybook && <b className="text-ink">the Diwali playbook + </b>}
-          <b className="text-ink">{items.filter((e) => e.type !== 'mental model').length || result.recalled.length} past events</b>
+          <b className="text-ink">{items.filter((e) => e.type !== 'mental model').length || result.recalled.length} recalled memories</b>
           {result.notes.length > 0 && ` · ${result.notes.join(' · ')}`} · {(result.ms / 1000).toFixed(1)}s
         </span>
         <button onClick={() => setOpen((v) => !v)} className="inline-flex items-center gap-1 underline underline-offset-2">

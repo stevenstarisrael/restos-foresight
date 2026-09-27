@@ -41,6 +41,8 @@ export type StockItem = {
   normalDailyUse: number;
   costPerUnit: number;
   supplierId: string;
+  /** Restocked every day, so low days-of-cover is normal, not an alarm. */
+  daily?: boolean;
 };
 
 export const stock: StockItem[] = [
@@ -49,9 +51,9 @@ export const stock: StockItem[] = [
   { id: 'khoya', name: 'Khoya (mawa)', unit: 'kg', onHand: 3, normalDailyUse: 0.6, costPerUnit: 380, supplierId: 'sri-lakshmi-dairy' },
   { id: 'cashew', name: 'Cashew', unit: 'kg', onHand: 4, normalDailyUse: 0.5, costPerUnit: 1040, supplierId: 'deccan-wholesale' },
   { id: 'paneer', name: 'Paneer', unit: 'kg', onHand: 12, normalDailyUse: 4, costPerUnit: 340, supplierId: 'sri-lakshmi-dairy' },
-  { id: 'milk', name: 'Milk', unit: 'L', onHand: 40, normalDailyUse: 25, costPerUnit: 58, supplierId: 'sri-lakshmi-dairy' },
-  { id: 'mutton', name: 'Mutton', unit: 'kg', onHand: 14, normalDailyUse: 7, costPerUnit: 800, supplierId: 'hyderabad-meat-house' },
-  { id: 'chicken', name: 'Chicken', unit: 'kg', onHand: 22, normalDailyUse: 12, costPerUnit: 240, supplierId: 'hyderabad-meat-house' },
+  { id: 'milk', name: 'Milk', unit: 'L', onHand: 40, normalDailyUse: 25, costPerUnit: 58, supplierId: 'sri-lakshmi-dairy', daily: true },
+  { id: 'mutton', name: 'Mutton', unit: 'kg', onHand: 14, normalDailyUse: 7, costPerUnit: 800, supplierId: 'hyderabad-meat-house', daily: true },
+  { id: 'chicken', name: 'Chicken', unit: 'kg', onHand: 22, normalDailyUse: 12, costPerUnit: 240, supplierId: 'hyderabad-meat-house', daily: true },
   { id: 'basmati', name: 'Basmati rice', unit: 'kg', onHand: 60, normalDailyUse: 14, costPerUnit: 115, supplierId: 'balaji-traders' },
   { id: 'sweet-boxes', name: 'Sweet boxes (500g)', unit: 'pcs', onHand: 40, normalDailyUse: 3, costPerUnit: 18, supplierId: 'packright' },
 ];

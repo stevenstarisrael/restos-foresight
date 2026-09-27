@@ -15,7 +15,7 @@ export async function GET(request: Request) {
   try {
     const client = hindsight();
     const [observations, world, experience] = await Promise.all([
-      client.listMemories(bank, { type: 'observation', limit: 60 }),
+      client.listMemories(bank, { type: 'observation', limit: 300 }),
       client.listMemories(bank, { type: 'world', limit: 1 }),
       client.listMemories(bank, { type: 'experience', limit: 1 }),
     ]);

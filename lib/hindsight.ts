@@ -9,9 +9,12 @@ export function hindsight() {
 
 const prefix = process.env.HINDSIGHT_BANK_PREFIX ?? 'foresight';
 
-// Two snapshots of the same outlet's memory, so the demo can show the
-// learning curve side by side: after one festival season, and today.
+// Three snapshots of the same outlet's memory, so the demo can show the
+// learning curve side by side: an empty bank (no memory), after one festival
+// season, and today. All three have the same mission and directives and go
+// through the same reflect call, so memory is the only variable.
 export const BANKS = {
+  none: `${prefix}-spice-garden-empty`,
   firstSeason: `${prefix}-spice-garden-season1`,
   full: `${prefix}-spice-garden`,
 } as const;

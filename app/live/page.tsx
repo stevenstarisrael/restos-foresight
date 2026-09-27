@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Flame, RefreshCw, Sparkles, WandSparkles, type LucideIcon } from 'lucide-react';
 import { outlet, stock, TODAY, upcomingFestivals } from '@/data/outlet';
 import { AtAGlance } from '@/components/at-a-glance';
@@ -32,6 +32,9 @@ export default function Home() {
   const [selected, setSelected] = useState<Mode>('full');
   const [memory, setMemory] = useState<MemoryState>({ beliefs: [] });
   const [playbook, setPlaybook] = useState<PlaybookState>({});
+  // Which festival is on screen, so a plan that finishes after a switch isn't
+  // shown under the wrong festival.
+  const festivalRef = useRef(festival);
 
   // force=false returns the saved plan when there is one (no API usage);
   // force=true always regenerates (Re-run / Hard refresh).
@@ -45,8 +48,10 @@ export default function Home() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+      if (festivalRef.current !== fest) return;
       setColumns((c) => ({ ...c, [mode]: { loading: false, result: data } }));
     } catch (err) {
+      if (festivalRef.current !== fest) return;
       setColumns((c) => ({ ...c, [mode]: { loading: false, error: err instanceof Error ? err.message : String(err) } }));
     }
   }, []);
@@ -63,6 +68,7 @@ export default function Home() {
     try {
       const res = await fetch(`/api/plan?festival=${fest}`);
       const saved = (await res.json()) as Partial<Record<Mode, PlanResult>>;
+      if (festivalRef.current !== fest) return;
       setColumns({
         none: saved.none ? { loading: false, result: saved.none } : { loading: false },
         firstSeason: saved.firstSeason ? { loading: false, result: saved.firstSeason } : { loading: false },
@@ -101,6 +107,7 @@ export default function Home() {
     // ?run=1 plans all three on load (handy for recording the demo).
     const params = new URLSearchParams(window.location.search);
     const fest = params.get('festival') ?? 'diwali';
+    festivalRef.current = fest;
     setFestival(fest);
     if (params.has('run')) runAll(fest);
     else loadSaved(fest);
@@ -108,6 +115,7 @@ export default function Home() {
 
   function switchFestival(id: string) {
     if (id === festival) return;
+    festivalRef.current = id;
     setFestival(id);
     loadSaved(id); // plans are per festival; show that festival's saved plans, if any
   }
@@ -245,7 +253,7 @@ export default function Home() {
         <BeliefsPanel memory={memory} onReload={() => loadMemory(true)} festival={festival} />
       </section>
       <section className="mt-4 grid gap-4 lg:grid-cols-[1.2fr_1fr]">
-        <PlaybookPanel playbook={playbook} onReload={() => loadPlaybook(true)} />
+        <PlaybookPanel playbook={playbook} onReload={() => loadPlaybook(true)} festival={festival} />
         <TimelinePanel festival={festival} festivalName={current.name} />
       </section>
     </main>
@@ -267,7 +275,9 @@ function SectionHead({ title, hint, children }: { title: string; hint?: string; 
 // Today's stock, collapsed to the one thing that matters: what is running low.
 function StockSummary() {
   const withCover = stock.map((s) => ({ ...s, cover: s.onHand / s.normalDailyUse }));
-  const low = withCover.filter((s) => s.cover < 3).sort((a, b) => a.cover - b.cover);
+  // Daily deliveries (milk, meat) always look low on days of cover; that's normal.
+  const low = withCover.filter((s) => !s.daily && s.cover < 3).sort((a, b) => a.cover - b.cover);
+  const daily = withCover.filter((s) => s.daily).map((s) => s.name.toLowerCase());
   return (
     <details className="group mb-4 rounded-xl border border-line bg-white px-4 py-3 text-sm">
       <summary className="flex cursor-pointer list-none flex-wrap items-center gap-x-2 gap-y-1">
@@ -280,18 +290,20 @@ function StockSummary() {
           ) : (
             '· nothing under 3 days of cover'
           )}
+          {daily.length > 0 && ` · ${daily.join(', ')} delivered daily`}
         </span>
         <span className="ml-auto text-xs text-muted underline underline-offset-2 group-open:hidden">Show all {stock.length}</span>
         <span className="ml-auto hidden text-xs text-muted underline underline-offset-2 group-open:inline">Hide</span>
       </summary>
       <div className="mt-3 flex flex-wrap gap-2">
         {withCover.map((s) => {
-          const tone = s.cover < 3 ? 'text-chili' : s.cover < 6 ? 'text-saffron' : 'text-leaf';
+          const tone = s.daily ? 'text-muted' : s.cover < 3 ? 'text-chili' : s.cover < 6 ? 'text-saffron' : 'text-leaf';
           return (
             <div key={s.id} className="rounded-lg border border-line px-3 py-2">
               <div className="text-xs text-muted">{s.name}</div>
               <div className="text-sm font-medium">
-                {s.onHand} {s.unit} <span className={`text-xs font-normal ${tone}`}>· {s.cover.toFixed(1)} days left</span>
+                {s.onHand} {s.unit}{' '}
+                <span className={`text-xs font-normal ${tone}`}>· {s.daily ? 'delivered daily' : `${s.cover.toFixed(1)} days left`}</span>
               </div>
             </div>
           );

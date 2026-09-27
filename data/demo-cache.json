@@ -680,109 +680,718 @@
             "kind:summary",
             "festival:bonalu"
           ]
+        },
+        {
+          "id": "accc1d90-61bf-4f4b-8643-430d41b92b33",
+          "text": "Weekend demand for haleem at Spice Garden reached 110 portions per day during Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "4a3b0d12-9f50-45b7-b32d-60e1bfbaa465",
+          "text": "Spice Garden used approximately 430 kg of mutton during Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "12aec04b-7219-4458-9204-5301346cd3e6",
+          "text": "Spice Garden's monthly revenue increased by 48% during Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "11557e5f-0ebb-4795-91e9-9dadca6b7a05",
+          "text": "Spice Garden sold 2,480 portions of haleem and 310 family packs during Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "c0f791ed-cf17-481a-86c5-4d6b8931e4fd",
+          "text": "A fixed-price contract for Ramzan 2025 would have prevented the mutton price increase at Hyderabad Meat House.",
+          "proofCount": 1,
+          "tags": [
+            "kind:supplier",
+            "festival:ramzan",
+            "supplier:hyderabad-meat-house",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "fe390967-9db9-4fae-a9cf-605c7d275615",
+          "text": "Hyderabad Meat House increased the price of mutton from ₹780 to ₹860 per kg during mid-Ramzan 2025, citing high city-wide demand.",
+          "proofCount": 1,
+          "tags": [
+            "kind:supplier",
+            "festival:ramzan",
+            "supplier:hyderabad-meat-house",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "ae1fbc17-9851-460a-9493-bdedbe0a1e88",
+          "text": "Spice Garden daily mutton usage is approximately 16 kg for Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:staff_note",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "dc2006c4-a9ab-426b-8403-d8cf72b1cc9b",
+          "text": "Spice Garden introduced a 1 kg haleem family pack priced at ₹850 for Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:staff_note",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "fffb826d-9e3a-4ed0-837d-01144ff023b8",
+          "text": "Spice Garden increased daily haleem production to 90 portions for Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:staff_note",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "7a00f528-5a1c-4a40-b21a-9c0db9301f87",
+          "text": "During the first week of Ramzan 2025, 25 customers requested 1 kg haleem family packs for takeaway, but the demand was lost due to stock-out or unavailability.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:lost_demand"
+          ]
+        },
+        {
+          "id": "b1cd0ea3-2a49-44ee-ab84-3b0e07ea9a9d",
+          "text": "During Ramzan 2025, daily production of Haleem is 60 portions, while demand is approximately 85 portions.",
+          "proofCount": 1,
+          "tags": [
+            "kind:stockout",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "f9e5dabf-a610-4a4d-8cce-842ac1f4693b",
+          "text": "The Iftar rush for Haleem peaks between 6:30pm and 7:30pm during Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:stockout",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "f5a1fc9b-0348-416e-9f6d-5a115105af61",
+          "text": "Haleem sold out by 8:10pm on 4 of the first 5 days of Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:stockout",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "9c0ff3b6-34c0-463b-97e8-68c6acf2c89f",
+          "text": "Foresight recommended booking mutton daily with Hyderabad Meat House for the duration of Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:plan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "a8957318-b7d3-4b0a-ab8c-931f9d915f0b",
+          "text": "Foresight recommended starting haleem production for Ramzan 2025 at 60 portions per day, beginning on the first day of the month.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:plan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "d4a5eb5a-88d5-42c2-93c5-1715bd6753e2",
+          "text": "A recommendation was made to reduce perishable stock by approximately one-third during the Sankranti 2025 week to prevent future waste.",
+          "proofCount": 1,
+          "tags": [
+            "item:chicken",
+            "item:paneer",
+            "festival:sankranti",
+            "kind:waste"
+          ]
+        },
+        {
+          "id": "c9e320e3-ad19-4555-8537-340ad2b62dc4",
+          "text": "During Sankranti 2025, 11 kg of chicken and 6 kg of paneer were wasted due to overstocking for a normal week instead of adjusting for the festival.",
+          "proofCount": 1,
+          "tags": [
+            "item:chicken",
+            "item:paneer",
+            "festival:sankranti",
+            "kind:waste"
+          ]
+        },
+        {
+          "id": "cad3c09e-9f5c-425b-9083-0c9741547673",
+          "text": "The population of Hyderabad decreased between January 13 and January 16, 2025, as residents traveled home for the Sankranti festival.",
+          "proofCount": 1,
+          "tags": [
+            "festival:sankranti",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "673e03eb-9e37-43bd-80c9-2cd187ca6932",
+          "text": "During the Sankranti 2025 festival period (January 13-16, 2025), dine-in covers decreased by 40%.",
+          "proofCount": 1,
+          "tags": [
+            "festival:sankranti",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "5ed64a9c-d4c0-4728-94cc-93aee9c5f864",
+          "text": "During the Sankranti 2025 festival period (January 13-16, 2025), revenue decreased by 35% compared to normal periods.",
+          "proofCount": 1,
+          "tags": [
+            "festival:sankranti",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "73d20153-f261-49d7-8864-62a50c9500ff",
+          "text": "5 of 14 kitchen staff are on leave for the Sankranti festival from January 12 to January 16, 2025, to travel to villages in Andhra Pradesh and Telangana.",
+          "proofCount": 1,
+          "tags": [
+            "kind:staff_note",
+            "festival:sankranti"
+          ]
+        },
+        {
+          "id": "025d35d3-66fa-49aa-bc75-d0a9a5ff3ff0",
+          "text": "Chicken stock was depleted at 11:40 PM on New Year's Eve 2024; the restaurant had 20 kg available but required 30 kg.",
+          "proofCount": 1,
+          "tags": [
+            "festival:new-year",
+            "kind:stockout",
+            "item:chicken"
+          ]
+        },
+        {
+          "id": "684b9cb7-a635-4863-b19f-e94ffffd579a",
+          "text": "Chicken 65 and starters were in high demand during New Year's Eve 2024.",
+          "proofCount": 1,
+          "tags": [
+            "festival:new-year",
+            "kind:stockout",
+            "item:chicken"
+          ]
+        },
+        {
+          "id": "c2185f5e-d96d-48b3-9705-0547650cd5d2",
+          "text": "New Year's Eve 2024 saw 2.3x normal dinner covers, with peak demand occurring between 10:00 PM and 12:30 AM.",
+          "proofCount": 1,
+          "tags": [
+            "festival:new-year",
+            "kind:stockout",
+            "item:chicken"
+          ]
+        },
+        {
+          "id": "5eccc1e5-ea03-4063-9b5a-36f7509e394a",
+          "text": "Priya (manager) requested that restOS pre-scale the online store for Diwali 2024 to handle the expected rush.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "kind:staff_note",
+            "item:online-orders",
+            "item:staff"
+          ]
+        },
+        {
+          "id": "fe79abcd-c0dc-460a-adf0-92d0f970e0e9",
+          "text": "Priya (manager) requires 2 extra delivery riders for the two peak Diwali evenings in 2024.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "kind:staff_note",
+            "item:online-orders",
+            "item:staff"
+          ]
+        },
+        {
+          "id": "7fc42264-74bf-4d21-9bec-e22724b4a9a0",
+          "text": "Priya (manager) requires 24 staff members on the floor for the two peak Diwali evenings in 2024.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "kind:staff_note",
+            "item:online-orders",
+            "item:staff"
+          ]
+        },
+        {
+          "id": "0a447dfc-1128-48e0-bb9c-8d2eb95a4ad1",
+          "text": "Ravi, the head chef, is planning for Diwali 2025 by securing a backup dry-goods supplier, adding kaju katli boxes to the menu, and scheduling orders for sugar, ghee, and khoya for the week of October 20-27, 2025.",
+          "proofCount": 1,
+          "tags": [
+            "item:ghee",
+            "kind:staff_note",
+            "item:khoya",
+            "item:sugar",
+            "festival:diwali"
+          ]
+        },
+        {
+          "id": "cc38a64e-21ba-4e6e-8e42-0df57dcafb2f",
+          "text": "During Diwali 2024, inventory shortages included sugar stock-outs and a lack of kaju katli and sweet boxes.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "b6c7754b-4f45-4812-9f1a-603e10bfe786",
+          "text": "Diwali 2024 sales performance saw a 210% increase in desserts, 60% in biryani, and a 15% decrease in paneer mains.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "58379425-7895-4ded-bfef-1ead08467405",
+          "text": "Diwali 2024 revenue was ₹6.4L, compared to ₹4.1L for a normal 5-day period.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "e70bdc99-7082-4806-b917-7097676a2995",
+          "text": "Customer demand for paneer mains decreased by 15% during Diwali 2024, as customers shifted their preference toward sweets and biryani.",
+          "proofCount": 1,
+          "tags": [
+            "item:paneer",
+            "kind:waste",
+            "festival:diwali"
+          ]
+        },
+        {
+          "id": "525a619e-3eca-4e4f-a1bb-2a1ffec78653",
+          "text": "Spice Garden purchased 26 kg of paneer for Diwali 2024.",
+          "proofCount": 1,
+          "tags": [
+            "item:paneer",
+            "kind:waste",
+            "festival:diwali"
+          ]
+        },
+        {
+          "id": "84edce3b-36f3-425f-8c0a-9235b8fda728",
+          "text": "Spice Garden wasted 8 kg of expired paneer valued at approximately ₹2,700 following Diwali 2024.",
+          "proofCount": 1,
+          "tags": [
+            "item:paneer",
+            "kind:waste",
+            "festival:diwali"
+          ]
+        },
+        {
+          "id": "f0ce8419-6465-423c-bc48-fb1f0c14c916",
+          "text": "Imran purchased 10 kg of sugar for ₹58/kg from a local kirana as an emergency top-up for Diwali 2024, noting that his regular supplier Balaji Traders charges ₹44/kg.",
+          "proofCount": 1,
+          "tags": [
+            "item:sugar",
+            "festival:diwali",
+            "kind:supplier"
+          ]
+        },
+        {
+          "id": "2c881d50-32f9-4017-9df1-321e041d530f",
+          "text": "During Diwali 2024, head chef Ravi rationed Ghee for jalebi preparation as stock reached a low of 1.5 kg, with total consumption reaching approximately 2.5 times the normal usage.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "item:ghee",
+            "kind:stockout"
+          ]
+        },
+        {
+          "id": "48b2b44a-955a-42dd-888f-0fe88cec1d6e",
+          "text": "A sugar stock-out occurred during Diwali 2024, resulting in 55 unserved dessert orders and approximately ₹9,500 in lost revenue.",
+          "proofCount": 1,
+          "tags": [
+            "kind:lost_demand",
+            "item:sugar",
+            "festival:diwali"
+          ]
+        },
+        {
+          "id": "278152e3-a752-4811-a289-f5b0de7a6660",
+          "text": "During the 2024 Diwali festival on November 1, 2024, 14 walk-in groups left the restaurant due to the 50-minute wait time.",
+          "proofCount": 1,
+          "tags": [
+            "kind:capacity",
+            "festival:diwali",
+            "item:staff"
+          ]
+        },
+        {
+          "id": "15d17a16-48ee-49a7-95cc-a7715ffa8c4e",
+          "text": "During the 2024 Diwali festival on November 1, 2024, customers experienced a 50-minute wait time for a table due to staff shortages.",
+          "proofCount": 1,
+          "tags": [
+            "kind:capacity",
+            "festival:diwali",
+            "item:staff"
+          ]
+        },
+        {
+          "id": "3dc26e95-d56a-4046-8c30-3a6a62d0c496",
+          "text": "During the 2024 Diwali festival on November 1, 2024, only 16 of 18 rostered staff were present because two staff members travelled home.",
+          "proofCount": 1,
+          "tags": [
+            "kind:capacity",
+            "festival:diwali",
+            "item:staff"
+          ]
+        },
+        {
+          "id": "fd6d57a7-44e3-4939-859f-d6f322c360c2",
+          "text": "The Diwali 2024 outage at Spice Garden resulted in the loss of approximately 60 online orders and a financial impact of roughly ₹38,000.",
+          "proofCount": 1,
+          "tags": [
+            "kind:capacity",
+            "festival:diwali",
+            "item:online-orders"
+          ]
+        },
+        {
+          "id": "b752f6d6-eaac-46d2-add7-89017a548384",
+          "text": "Spice Garden experienced a 42-minute online store outage on Diwali 2024 (November 1, 2024) caused by a 6x surge in order volume.",
+          "proofCount": 1,
+          "tags": [
+            "kind:capacity",
+            "festival:diwali",
+            "item:online-orders"
+          ]
+        },
+        {
+          "id": "9cf0c49a-424f-4e09-b881-7c163b5cfd02",
+          "text": "Sugar stock reached zero at 7:05pm on November 1, 2024, during Diwali, leading to the removal of kheer, gulab jamun, and double ka meetha from the menu.",
+          "proofCount": 1,
+          "tags": [
+            "item:sugar",
+            "kind:stockout",
+            "festival:diwali"
+          ]
+        },
+        {
+          "id": "150382b9-992d-4c2e-b04a-44c5109665a5",
+          "text": "During Diwali 2024, sugar consumption reached 32 kg between October 29 and November 1, significantly exceeding the typical 8 kg for a 4-day period.",
+          "proofCount": 1,
+          "tags": [
+            "item:sugar",
+            "kind:stockout",
+            "festival:diwali"
+          ]
+        },
+        {
+          "id": "7451d665-d42c-4b33-b4ae-5ca2f1e62875",
+          "text": "During Diwali 2024, sweet boxes and takeaway dessert containers ran out of stock, leading to the refusal of 12 takeaway sweet orders.",
+          "proofCount": 1,
+          "tags": [
+            "item:sweet-boxes",
+            "supplier:packright",
+            "kind:stockout",
+            "festival:diwali"
+          ]
+        },
+        {
+          "id": "94934ee1-9fbf-4b92-b9dc-f2c4be91832a",
+          "text": "During the 2024 Diwali festival, 40 customers requested kaju katli, which is not on the menu, specifically in 500g to 1kg box sizes.",
+          "proofCount": 1,
+          "tags": [
+            "kind:lost_demand",
+            "item:cashew",
+            "festival:diwali"
+          ]
+        },
+        {
+          "id": "153d3742-46a1-4246-8649-3153ae18c556",
+          "text": "Begum Bazar wholesalers experience high order volumes and are overloaded during the week leading up to Diwali 2024.",
+          "proofCount": 1,
+          "tags": [
+            "supplier:balaji-traders",
+            "item:sugar",
+            "item:cashew",
+            "kind:supplier",
+            "festival:diwali"
+          ]
+        },
+        {
+          "id": "3ea730e0-16c0-4c93-b2ad-75d31365498f",
+          "text": "The business experienced lost demand during Diwali 2024, with 15 walk-in and phone customers requesting corporate Diwali sweet gift boxes that the business does not offer.",
+          "proofCount": 1,
+          "tags": [
+            "kind:lost_demand",
+            "festival:diwali",
+            "item:sweet-boxes"
+          ]
+        },
+        {
+          "id": "649ee0c9-46f6-46ff-80ed-185b11df6ad3",
+          "text": "Imran ordered 25 kg of sugar from Balaji Traders for Diwali 2024, which is 5 kg more than his normal weekly order.",
+          "proofCount": 1,
+          "tags": [
+            "supplier:balaji-traders",
+            "kind:staff_note",
+            "festival:diwali",
+            "item:sugar"
+          ]
+        },
+        {
+          "id": "05834d7f-99a2-4b4d-adc6-174b570b4a68",
+          "text": "On October 12, 2024, during Dussehra, biryani ticket wait times reached 35 minutes due to staffing shortages.",
+          "proofCount": 1,
+          "tags": [
+            "kind:capacity",
+            "festival:dussehra",
+            "item:staff"
+          ]
+        },
+        {
+          "id": "a2acf777-b6e5-4265-8371-ca7451020bd8",
+          "text": "During Dussehra 2024, the kitchen experienced a staffing shortage with 3 out of 9 cooks on leave on October 13, 2024.",
+          "proofCount": 1,
+          "tags": [
+            "kind:capacity",
+            "festival:dussehra",
+            "item:staff"
+          ]
+        },
+        {
+          "id": "0d5fdf7b-032d-4ba9-9ad6-67eb9eedead1",
+          "text": "Dussehra 2024 demand for Double ka meetha was 30 portions.",
+          "proofCount": 1,
+          "tags": [
+            "kind:summary",
+            "festival:dussehra"
+          ]
+        },
+        {
+          "id": "d5c3fad9-5b3b-4a43-b460-69de0da98414",
+          "text": "Dussehra 2024 demand for Chicken was normal.",
+          "proofCount": 1,
+          "tags": [
+            "kind:summary",
+            "festival:dussehra"
+          ]
+        },
+        {
+          "id": "64ff5585-2f21-48fe-b3c3-d31dc9503a5d",
+          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates, compared to 25 plates on a normal Saturday.",
+          "proofCount": 1,
+          "tags": [
+            "kind:summary",
+            "festival:dussehra"
+          ]
+        },
+        {
+          "id": "69a7cc0e-a272-4ea3-a3a7-86b57f2a917b",
+          "text": "Dussehra 2024 revenue reached ₹1.86L, exceeding the ₹1.1L typical for a Saturday.",
+          "proofCount": 1,
+          "tags": [
+            "kind:summary",
+            "festival:dussehra"
+          ]
+        },
+        {
+          "id": "4bdfb5f0-44d7-4ad0-bd80-0218d97368bd",
+          "text": "Mutton for Dussehra requires pre-booking at least 3 days in advance due to high festival demand.",
+          "proofCount": 1,
+          "tags": [
+            "supplier:hyderabad-meat-house",
+            "kind:supplier",
+            "festival:dussehra",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "281a137e-5473-4123-90b5-cd73cc8d40f9",
+          "text": "Hyderabad Meat House was unable to provide same-day mutton for Dussehra 2024 due to city-wide shortages caused by high festival demand.",
+          "proofCount": 1,
+          "tags": [
+            "supplier:hyderabad-meat-house",
+            "kind:supplier",
+            "festival:dussehra",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "7a197589-56e2-48ca-b1c5-15fc0a58ac45",
+          "text": "For Dussehra 2024, 18 kg of mutton was available, but the stock ran out on October 12, 2024, resulting in 22 mutton biryani orders being turned away or switched to chicken.",
+          "proofCount": 1,
+          "tags": [
+            "kind:stockout",
+            "festival:dussehra",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "c85e0148-45cb-48bf-bbcc-c9b6c7bd07ae",
+          "text": "Customers have requested mutton biryani and mutton curry for the Dasara feast during the Dussehra 2024 festival.",
+          "proofCount": 1,
+          "tags": [
+            "kind:staff_note",
+            "festival:dussehra",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "df2ff4da-ed4a-4dbd-9219-e00e0aa035b4",
+          "text": "There are 14 family reservations confirmed for the Dasara feast during the Dussehra 2024 festival.",
+          "proofCount": 1,
+          "tags": [
+            "kind:staff_note",
+            "festival:dussehra",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "2fc336bd-22f7-480f-96eb-993db990e8c5",
+          "text": "Dasara weekend bookings for the Dussehra 2024 festival are double normal levels.",
+          "proofCount": 1,
+          "tags": [
+            "kind:staff_note",
+            "festival:dussehra",
+            "item:mutton"
+          ]
         }
       ]
     },
-    "savedAt": "2026-09-27T13:55:18.385Z"
+    "savedAt": "2026-09-27T14:12:15.674Z"
   },
   "plan:none:diwali": {
     "value": {
       "mode": "none",
       "plan": {
-        "headline": "Order extra stock, add staff and boost online capacity for the Diwali rush.",
+        "headline": "Maintain a two-day safety stock for all ingredients and monitor order inflow closely to manage the Diwali festival rush.",
         "expectations": [
           {
-            "title": "Sweet demand",
-            "value": "3x normal",
-            "detail": "Customers will buy about three times more sweets than usual."
+            "title": "Increased footfall",
+            "value": "4-day window",
+            "detail": "Expect higher customer traffic around November 8th."
           },
           {
-            "title": "Online orders",
-            "value": "45/hr",
-            "detail": "Peak online orders will rise to around 45 orders per hour."
+            "title": "Sweets demand",
+            "value": "High",
+            "detail": "Sweets are traditional for this period and require full stock."
           },
           {
-            "title": "Footfall",
-            "value": "200 covers/day",
-            "detail": "You can expect roughly 200 covers each day of the 4‑day Diwali period."
+            "title": "Consumption spikes",
+            "value": "Unpredictable",
+            "detail": "Usage may exceed normal rates due to the festival nature."
           }
         ],
         "orders": [
           {
             "stockId": "sugar",
             "item": "Sugar",
-            "quantity": 5,
+            "quantity": 50,
             "unit": "kg",
-            "expectedUse": 20,
+            "expectedUse": 50,
             "orderBy": "2026-11-04",
             "supplierId": "balaji-traders",
-            "why": "Needed to meet the three‑fold increase in sweets and desserts.",
+            "why": "Maintain two-day safety stock levels.",
             "lastTime": ""
           },
           {
             "stockId": "ghee",
             "item": "Ghee",
-            "quantity": 5,
+            "quantity": 20,
             "unit": "kg",
-            "expectedUse": 12,
+            "expectedUse": 20,
             "orderBy": "2026-11-04",
             "supplierId": "sri-lakshmi-dairy",
-            "why": "Higher fry and sweet preparation volumes require more ghee.",
+            "why": "Maintain two-day safety stock levels.",
             "lastTime": ""
           },
           {
             "stockId": "khoya",
-            "item": "Khoya (Mawa)",
-            "quantity": 4,
+            "item": "Khoya",
+            "quantity": 15,
             "unit": "kg",
-            "expectedUse": 6,
+            "expectedUse": 15,
             "orderBy": "2026-11-04",
             "supplierId": "sri-lakshmi-dairy",
-            "why": "Special Diwali sweets use a lot of khoya.",
+            "why": "Maintain two-day safety stock levels.",
             "lastTime": ""
           },
           {
             "stockId": "cashew",
             "item": "Cashew",
-            "quantity": 2,
+            "quantity": 10,
             "unit": "kg",
-            "expectedUse": 4,
-            "orderBy": "2026-11-04",
-            "supplierId": "balaji-traders",
-            "why": "Cashews are a key garnish for festive dishes and sweets.",
+            "expectedUse": 10,
+            "orderBy": "2026-11-05",
+            "supplierId": "deccan-wholesale",
+            "why": "Maintain two-day safety stock levels.",
             "lastTime": ""
           },
           {
             "stockId": "paneer",
             "item": "Paneer",
-            "quantity": 25,
+            "quantity": 30,
             "unit": "kg",
-            "expectedUse": 32,
-            "orderBy": "2026-11-04",
+            "expectedUse": 30,
+            "orderBy": "2026-11-05",
             "supplierId": "sri-lakshmi-dairy",
-            "why": "Paneer‑based curries and snacks will be ordered heavily.",
+            "why": "Maintain two-day safety stock levels.",
             "lastTime": ""
           },
           {
             "stockId": "milk",
             "item": "Milk",
-            "quantity": 180,
+            "quantity": 150,
             "unit": "L",
-            "expectedUse": 200,
+            "expectedUse": 150,
             "orderBy": "2026-11-05",
             "supplierId": "sri-lakshmi-dairy",
-            "why": "Milk is needed for sweets, gravies and tea for the larger crowd.",
+            "why": "Maintain two-day safety stock levels.",
             "lastTime": ""
           },
           {
             "stockId": "mutton",
             "item": "Mutton",
-            "quantity": 45,
+            "quantity": 50,
             "unit": "kg",
-            "expectedUse": 56,
+            "expectedUse": 50,
             "orderBy": "2026-11-05",
             "supplierId": "hyderabad-meat-house",
-            "why": "Mutton biryani and kebabs are popular festive mains.",
+            "why": "Maintain two-day safety stock levels.",
             "lastTime": ""
           },
           {
@@ -790,95 +1399,88 @@
             "item": "Chicken",
             "quantity": 80,
             "unit": "kg",
-            "expectedUse": 96,
+            "expectedUse": 80,
             "orderBy": "2026-11-05",
             "supplierId": "hyderabad-meat-house",
-            "why": "Chicken dishes will see double the usual demand.",
+            "why": "Maintain two-day safety stock levels.",
             "lastTime": ""
           },
           {
             "stockId": "basmati",
-            "item": "Basmati rice",
-            "quantity": 60,
+            "item": "Basmati Rice",
+            "quantity": 100,
             "unit": "kg",
-            "expectedUse": 112,
-            "orderBy": "2026-11-04",
+            "expectedUse": 100,
+            "orderBy": "2026-11-05",
             "supplierId": "balaji-traders",
-            "why": "More biryani and pulao servings are needed for the festival crowd.",
+            "why": "Maintain two-day safety stock levels.",
             "lastTime": ""
           },
           {
             "stockId": "sweet-boxes",
-            "item": "Sweet boxes (500g)",
-            "quantity": 30,
+            "item": "Sweet Boxes",
+            "quantity": 200,
             "unit": "pcs",
-            "expectedUse": 36,
+            "expectedUse": 200,
             "orderBy": "2026-11-02",
             "supplierId": "packright",
-            "why": "Special Diwali sweet boxes will be sold as gifts.",
+            "why": "Supplier requires 4-day lead time.",
             "lastTime": ""
           }
         ],
         "capacity": [
           {
             "area": "staff",
-            "action": "Roster 4 extra kitchen staff and 2 floor staff for the Diwali period",
-            "target": "22 staff on shift",
-            "by": "2026-11-04",
-            "why": "Additional hands are needed to handle the higher footfall and kitchen load.",
+            "action": "Maintain current team size",
+            "target": "18 staff members",
+            "by": "2026-11-06",
+            "why": "No historical data available to justify scaling.",
             "lastTime": ""
           },
           {
             "area": "online",
-            "action": "Enable pre‑order window and raise online limit to 45 orders per hour",
-            "target": "45 orders/hr",
-            "by": "2026-11-04",
-            "why": "Online demand will surge; pre‑orders smooth kitchen flow.",
+            "action": "Monitor order inflow",
+            "target": "30 orders per hour",
+            "by": "2026-11-06",
+            "why": "Determine if temporary assistance is required due to lack of historical data.",
             "lastTime": ""
           }
         ],
         "menu": [
           {
-            "change": "Add a Diwali Sweet Platter (5 assorted sweets) for ₹299",
-            "why": "Festive sweets are a top seller during Diwali."
+            "change": "Stock in-house sweets counter",
+            "why": "Sweets are traditional for the Diwali period."
           },
           {
-            "change": "Introduce a special Mutton Biryani with extra cashew garnish",
-            "why": "Customers look for richer festive mains."
-          },
-          {
-            "change": "Offer a combo of Paneer tikka + Sweet box at a discounted price",
-            "why": "Combines popular veg and sweet items to boost average spend."
+            "change": "Continue standard menu",
+            "why": "No recorded customer requests or feedback regarding past Diwali menus."
           }
         ],
         "risks": [
           {
-            "risk": "Delay in sweet‑box delivery (4‑day lead time)",
-            "mitigation": "Place order on 2026-11-02 and keep 10 extra boxes as buffer."
+            "risk": "Inventory Shortages",
+            "mitigation": "Maintain the two-day safety stock at all times."
           },
           {
-            "risk": "Power outage during cooking",
-            "mitigation": "Arrange a generator rental and test it before 2026-11-06."
+            "risk": "Packaging Delays",
+            "mitigation": "Place sweet box orders by 2026-11-02 to meet the 4-day lead time."
           },
           {
-            "risk": "Staff absenteeism on peak days",
-            "mitigation": "Confirm extra staff availability and have a standby pool of 3 part‑time workers."
-          },
-          {
-            "risk": "Higher than expected demand causing stockouts",
-            "mitigation": "Monitor sales hourly and have a rapid‑reorder plan with suppliers for last‑minute top‑ups."
+            "risk": "Data Gaps",
+            "mitigation": "Be prepared for increased footfall during the four-day window around 2026-11-08."
           }
         ],
-        "confidence": "medium"
+        "confidence": "low"
       },
       "evidence": [],
       "recalled": [],
-      "ms": 7766,
+      "ms": 23024,
       "notes": [
-        "Stateless LLM call - no memory"
+        "Empty memory bank - same agent, nothing remembered",
+        "Directives applied: safety-stock, admit-gaps, cite-evidence"
       ]
     },
-    "savedAt": "2026-09-27T13:58:27.594Z"
+    "savedAt": "2026-09-27T14:12:33.259Z"
   },
   "plan:firstSeason:diwali": {
     "value": {
@@ -2499,106 +3101,172 @@
     "value": {
       "mode": "full",
       "plan": {
-        "headline": "Secure all essential ingredients and finalize the staffing roster early to ensure a smooth Dussehra service.",
+        "headline": "Pre-book 28 kg of mutton by October 17th and confirm the full kitchen staff roster to ensure smooth festival operations.",
         "expectations": [
           {
-            "title": "Festival peak",
-            "value": "2026-10-20",
-            "detail": "The restaurant expects high demand during the Dussehra festival on October 20th."
+            "title": "High Mutton Demand",
+            "value": "28 kg",
+            "detail": "Mutton is in high demand and requires pre-booking to avoid stock-outs."
           },
           {
-            "title": "Mutton demand",
-            "value": "High",
-            "detail": "Mutton dishes are specifically requested by customers during the festival."
+            "title": "Kitchen Speed",
+            "value": "35 minutes",
+            "detail": "Staffing shortages in 2024 caused long ticket times, which we must avoid."
           },
           {
-            "title": "Staffing needs",
-            "value": "10 cooks",
-            "detail": "We will retain 9 regular cooks and add one temporary evening cook to handle the peak."
+            "title": "Menu Focus",
+            "value": "Mutton dishes",
+            "detail": "Customers specifically request mutton biryani and mutton curry during the festival."
           }
         ],
         "orders": [
           {
             "stockId": "mutton",
             "item": "Mutton",
-            "quantity": 30,
+            "quantity": 28,
             "unit": "kg",
-            "expectedUse": 30,
+            "expectedUse": 28,
             "orderBy": "2026-10-17",
             "supplierId": "hyderabad-meat-house",
-            "why": "To prevent city-wide shortages and meet festival demand.",
-            "lastTime": "We used 27 kg in 2025."
+            "why": "High city-wide demand requires pre-booking to guarantee supply.",
+            "lastTime": "27 kg used in 2025 with no stock-out."
+          },
+          {
+            "stockId": "chicken",
+            "item": "Chicken",
+            "quantity": 22,
+            "unit": "kg",
+            "expectedUse": 22,
+            "orderBy": "2026-10-18",
+            "supplierId": "hyderabad-meat-house",
+            "why": "Standard festival requirement based on previous demand.",
+            "lastTime": "Normal demand in 2024."
           },
           {
             "stockId": "ghee",
             "item": "Ghee",
-            "quantity": 15,
+            "quantity": 9,
             "unit": "kg",
-            "expectedUse": 15,
+            "expectedUse": 9,
             "orderBy": "2026-10-18",
             "supplierId": "sri-lakshmi-dairy",
-            "why": "To cover festival peaks and maintain safety stock levels.",
-            "lastTime": "Standard usage was recorded in 2025."
+            "why": "Standard festival requirement.",
+            "lastTime": ""
           },
           {
             "stockId": "khoya",
-            "item": "Khoya",
-            "quantity": 10,
+            "item": "Khoya (mawa)",
+            "quantity": 3,
             "unit": "kg",
-            "expectedUse": 10,
+            "expectedUse": 3,
             "orderBy": "2026-10-18",
             "supplierId": "sri-lakshmi-dairy",
-            "why": "To ensure sufficient supply for festival sweets.",
-            "lastTime": "Standard usage was recorded in 2025."
+            "why": "Standard festival requirement.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "paneer",
+            "item": "Paneer",
+            "quantity": 12,
+            "unit": "kg",
+            "expectedUse": 12,
+            "orderBy": "2026-10-19",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Standard festival requirement.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "milk",
+            "item": "Milk",
+            "quantity": 40,
+            "unit": "L",
+            "expectedUse": 40,
+            "orderBy": "2026-10-19",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Standard festival requirement.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "sugar",
+            "item": "Sugar",
+            "quantity": 18,
+            "unit": "kg",
+            "expectedUse": 18,
+            "orderBy": "2026-10-18",
+            "supplierId": "balaji-traders",
+            "why": "Standard festival requirement.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "cashew",
+            "item": "Cashew",
+            "quantity": 4,
+            "unit": "kg",
+            "expectedUse": 4,
+            "orderBy": "2026-10-19",
+            "supplierId": "deccan-wholesale",
+            "why": "Standard festival requirement.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "basmati",
+            "item": "Basmati rice",
+            "quantity": 60,
+            "unit": "kg",
+            "expectedUse": 60,
+            "orderBy": "2026-10-18",
+            "supplierId": "balaji-traders",
+            "why": "Standard festival requirement.",
+            "lastTime": ""
           },
           {
             "stockId": "sweet-boxes",
             "item": "Sweet boxes",
-            "quantity": 100,
+            "quantity": 40,
             "unit": "pcs",
-            "expectedUse": 100,
+            "expectedUse": 40,
             "orderBy": "2026-10-16",
             "supplierId": "packright",
-            "why": "To ensure packaging is available for festival orders.",
-            "lastTime": "Standard usage was recorded in 2025."
+            "why": "Packaging requirement for festival sales.",
+            "lastTime": ""
           }
         ],
         "capacity": [
           {
             "area": "staff",
-            "action": "Finalize and approve all staff leave",
-            "target": "Full attendance",
+            "action": "Confirm shift schedule for all 9 cooks",
+            "target": "9 cooks",
             "by": "2026-10-06",
-            "why": "To ensure we have enough staff to handle the festival rush.",
-            "lastTime": "Staffing shortages occurred in 2024."
+            "why": "Prevent staffing shortages that caused slow ticket times in 2024.",
+            "lastTime": "Shortages in 2024 led to 35-minute ticket times."
           },
           {
-            "area": "staff",
-            "action": "Add one temporary evening cook",
-            "target": "10 total cooks",
+            "area": "online",
+            "action": "Maintain current online ordering settings",
+            "target": "Stable performance",
             "by": "2026-10-20",
-            "why": "To handle the festival peak effectively.",
-            "lastTime": "This strategy was successful in 2025."
+            "why": "Current settings were sufficient for performance in 2025.",
+            "lastTime": "Stable performance in 2025."
           }
         ],
         "menu": [
           {
-            "change": "Prioritize Mutton Biryani and Mutton Curry",
-            "why": "These items were specifically requested by customers during the 2024 feast."
+            "change": "Focus on high-demand items",
+            "why": "Customers specifically requested mutton biryani and mutton curry in past festivals."
           }
         ],
         "risks": [
           {
-            "risk": "Mutton shortage",
-            "mitigation": "Pre-book 30 kg of mutton 3 days in advance."
+            "risk": "Mutton stock-out due to high city-wide demand",
+            "mitigation": "Pre-book 28 kg of mutton with hyderabad-meat-house no later than 2026-10-17."
           },
           {
-            "risk": "Staffing shortage",
-            "mitigation": "Mandatory 9-cook roster locked in early."
+            "risk": "Staffing shortages affecting kitchen speed",
+            "mitigation": "Confirm shift schedule for all 9 cooks by 2026-10-06."
           },
           {
-            "risk": "Supply delays",
-            "mitigation": "Order packaging 4 days in advance."
+            "risk": "Packaging delays",
+            "mitigation": "Order printed sweet boxes from packright by 2026-10-16."
           }
         ],
         "confidence": "high"
@@ -2609,12 +3277,6 @@
           "text": "Dussehra 2025 mutton usage was 27 kg out of 28 kg pre-booked, with no stock-out. | When: 2025-10-03",
           "type": "world",
           "when": "2025-10-03T00:00:00+00:00"
-        },
-        {
-          "id": "b5a1d414-1175-4d45-9e98-50a4e670ab3d",
-          "text": "18 kg of mutton was available for Dussehra 2024. | When: 2024-10-12",
-          "type": "world",
-          "when": "2024-10-12T00:00:00.010000+00:00"
         },
         {
           "id": "ab538a8b-bff2-46f8-8ce7-42956aa2f95b",
@@ -2629,86 +3291,16 @@
           "when": "2025-10-02T00:00:00.010000+00:00"
         },
         {
-          "id": "c46a9821-8f1f-49a8-99b1-0a4b1806df2b",
-          "text": "Approved Dasara leave two weeks before Dussehra 2025 | When: 2025-09-19 | Dussehra 2025 planning",
-          "type": "world",
-          "when": "2025-09-19T00:00:00+00:00"
-        },
-        {
           "id": "839feedf-857d-4ef2-9889-5827c9e7822e",
           "text": "Biryani ticket times remained under 18 minutes during Dussehra 2025 | When: 2025-10-03 | Dussehra 2025 performance",
           "type": "world",
           "when": "2025-10-03T00:00:00.020000+00:00"
         },
         {
-          "id": "f1d6cf1d-67c1-4515-a34a-e09d123dd3fa",
-          "text": "22 mutton biryani orders were turned away or switched to chicken during Dussehra 2024. | When: 2024-10-12 | Mutton stockout",
+          "id": "c46a9821-8f1f-49a8-99b1-0a4b1806df2b",
+          "text": "Approved Dasara leave two weeks before Dussehra 2025 | When: 2025-09-19 | Dussehra 2025 planning",
           "type": "world",
-          "when": "2024-10-12T20:00:00.020000+00:00"
-        },
-        {
-          "id": "6b90c003-92e0-4fb4-bd69-bb7d721a5ae1",
-          "text": "Dussehra 2024 demand for Double ka meetha was 30 portions. | When: 2024-10-13 | Dussehra 2024 festival demand",
-          "type": "world",
-          "when": "2024-10-13T00:00:00.030000+00:00"
-        },
-        {
-          "id": "a7f3cfd5-606f-4a68-a0e1-f1545cb35956",
-          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates compared to 25 plates on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival demand",
-          "type": "world",
-          "when": "2024-10-13T00:00:00.010000+00:00"
-        },
-        {
-          "id": "96aa86fa-7793-425d-b52a-8f290a22530a",
-          "text": "Mutton stock ran out during Dussehra 2024. | When: 2024-10-12",
-          "type": "world",
-          "when": "2024-10-12T20:00:00+00:00"
-        },
-        {
-          "id": "6a5407f6-7533-4c0f-9350-57148b4d3f7e",
-          "text": "Hyderabad Meat House could not provide same-day mutton top-up for Dussehra 2024. | When: 2024-10-12 | Involving: Hyderabad Meat House | Every butcher in the city was sold out due to the festival.",
-          "type": "world",
-          "when": "2024-10-12T00:00:00+00:00"
-        },
-        {
-          "id": "5f3a34ce-4e53-45fb-b4ee-67811172ec6a",
-          "text": "Customers are requesting mutton biryani and mutton curry for the Dasara feast during Dussehra 2024. | When: 2024-10-12 | Involving: Priya (manager) | Dussehra 2024 festival",
-          "type": "world"
-        },
-        {
-          "id": "88a4612f-bbe8-43eb-950c-a6bca8e44ef1",
-          "text": "Mutton for Dussehra 2024 must be pre-booked at least 3 days in advance. | High demand during the festival.",
-          "type": "world"
-        },
-        {
-          "id": "2b8a7625-ba33-4bf2-bd63-10ad590bb6e4",
-          "text": "Dussehra 2024 demand for Chicken was normal. | When: 2024-10-13 | Dussehra 2024 festival demand",
-          "type": "world",
-          "when": "2024-10-13T00:00:00.020000+00:00"
-        },
-        {
-          "id": "1d14f1b5-f637-47ca-a872-ac79991436c6",
-          "text": "Dussehra 2024 revenue reached ₹1.86L compared to ₹1.1L on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival performance",
-          "type": "world",
-          "when": "2024-10-13T00:00:00+00:00"
-        },
-        {
-          "id": "b01450b1-7176-4050-9dc4-d603ca64cefe",
-          "text": "14 family reservations confirmed for the Dasara feast during Dussehra 2024. | When: 2024-10-12 | Involving: Priya (manager) | Dussehra 2024 festival",
-          "type": "world",
-          "when": "2024-10-12T00:00:00.010000+00:00"
-        },
-        {
-          "id": "3140d067-e0f8-4a31-a457-5e9dd45a1dca",
-          "text": "Dasara weekend bookings are double normal levels for the Dussehra 2024 festival. | When: 2024-10-12 to 2024-10-13 | Involving: Priya (manager) | Dussehra 2024 festival",
-          "type": "world",
-          "when": "2024-10-12T00:00:00+00:00"
-        },
-        {
-          "id": "01c5887c-0be9-4834-808c-689956b809b0",
-          "text": "Dussehra 2024: 3 of 9 cooks were on leave. | When: 2024-10-13 | Involving: cooks | Staffing shortage during festival.",
-          "type": "world",
-          "when": "2024-10-13T00:00:00+00:00"
+          "when": "2025-09-19T00:00:00+00:00"
         },
         {
           "id": "b1b5602e-40c3-488f-ad22-2197b261b52a",
@@ -2717,37 +3309,21 @@
           "when": "2024-10-12T20:00:00.010000+00:00"
         },
         {
-          "id": "ca0a9449-465e-40df-bb07-22238ce8d82e",
-          "text": "Foresight recommended pre-booking 28 kg of mutton with Hyderabad Meat House 3 days before the festival. | When: Dussehra 2025 | Involving: Foresight | Based on stock-out during Dussehra 2024.",
-          "type": "experience"
+          "id": "f1d6cf1d-67c1-4515-a34a-e09d123dd3fa",
+          "text": "22 mutton biryani orders were turned away or switched to chicken during Dussehra 2024. | When: 2024-10-12 | Mutton stockout",
+          "type": "world",
+          "when": "2024-10-12T20:00:00.020000+00:00"
         },
         {
-          "id": "eb93e4d3-d701-4b60-b662-5b03c739150c",
-          "text": "Foresight recommended adding one evening cook for the festival. | When: Dussehra 2025 | Involving: Foresight",
-          "type": "experience"
-        },
-        {
-          "id": "7a197589-56e2-48ca-b1c5-15fc0a58ac45",
-          "text": "For Dussehra 2024, 18 kg of mutton was available, but the stock ran out on October 12, 2024, resulting in 22 mutton biryani orders being turned away or switched to chicken.",
-          "type": "observation",
-          "when": "2024-10-12T00:00:00.010000+00:00"
-        },
-        {
-          "id": "69a7cc0e-a272-4ea3-a3a7-86b57f2a917b",
-          "text": "Dussehra 2024 revenue reached ₹1.86L, exceeding the ₹1.1L typical for a Saturday.",
-          "type": "observation",
+          "id": "01c5887c-0be9-4834-808c-689956b809b0",
+          "text": "Dussehra 2024: 3 of 9 cooks were on leave. | When: 2024-10-13 | Involving: cooks | Staffing shortage during festival.",
+          "type": "world",
           "when": "2024-10-13T00:00:00+00:00"
         },
         {
-          "id": "7a0f6509-f909-4a55-a91e-fb630dbd94c2",
-          "text": "During Dussehra 2025, 27 kg of mutton was used out of 28 kg pre-booked, with no stock-out.",
-          "type": "observation",
-          "when": "2025-10-03T00:00:00+00:00"
-        },
-        {
-          "id": "6723b8b7-4f63-4d76-9292-2d7e269da0a0",
-          "text": "Foresight recommended pre-booking 28 kg of mutton with Hyderabad Meat House 3 days before Dussehra 2025 to avoid the stock-out experienced during Dussehra 2024.",
-          "type": "observation"
+          "id": "ca0a9449-465e-40df-bb07-22238ce8d82e",
+          "text": "Foresight recommended pre-booking 28 kg of mutton with Hyderabad Meat House 3 days before the festival. | When: Dussehra 2025 | Involving: Foresight | Based on stock-out during Dussehra 2024.",
+          "type": "experience"
         },
         {
           "id": "4bdfb5f0-44d7-4ad0-bd80-0218d97368bd",
@@ -2755,14 +3331,8 @@
           "type": "observation"
         },
         {
-          "id": "0d5fdf7b-032d-4ba9-9ad6-67eb9eedead1",
-          "text": "Dussehra 2024 demand for Double ka meetha was 30 portions.",
-          "type": "observation",
-          "when": "2024-10-13T00:00:00.030000+00:00"
-        },
-        {
-          "id": "a2acf777-b6e5-4265-8371-ca7451020bd8",
-          "text": "During Dussehra 2024, the kitchen experienced a staffing shortage with 3 out of 9 cooks on leave on October 13, 2024.",
+          "id": "69a7cc0e-a272-4ea3-a3a7-86b57f2a917b",
+          "text": "Dussehra 2024 revenue reached ₹1.86L, exceeding the ₹1.1L typical for a Saturday.",
           "type": "observation",
           "when": "2024-10-13T00:00:00+00:00"
         },
@@ -2773,21 +3343,21 @@
           "when": "2024-10-12T00:00:00+00:00"
         },
         {
-          "id": "cdcbfeb1-1d00-41fe-8050-aa233902dfe3",
-          "text": "During Dussehra 2025, 71 mutton biryani plates were sold with no orders turned away.",
+          "id": "7a197589-56e2-48ca-b1c5-15fc0a58ac45",
+          "text": "For Dussehra 2024, 18 kg of mutton was available, but the stock ran out on October 12, 2024, resulting in 22 mutton biryani orders being turned away or switched to chicken.",
           "type": "observation",
-          "when": "2025-10-03T00:00:00.010000+00:00"
+          "when": "2024-10-12T00:00:00.010000+00:00"
         },
         {
-          "id": "c85e0148-45cb-48bf-bbcc-c9b6c7bd07ae",
-          "text": "Customers have requested mutton biryani and mutton curry for the Dasara feast during the Dussehra 2024 festival.",
+          "id": "6723b8b7-4f63-4d76-9292-2d7e269da0a0",
+          "text": "Foresight recommended pre-booking 28 kg of mutton with Hyderabad Meat House 3 days before Dussehra 2025 to avoid the stock-out experienced during Dussehra 2024.",
           "type": "observation"
         },
         {
-          "id": "d5c3fad9-5b3b-4a43-b460-69de0da98414",
-          "text": "Dussehra 2024 demand for Chicken was normal.",
+          "id": "0d5fdf7b-032d-4ba9-9ad6-67eb9eedead1",
+          "text": "Dussehra 2024 demand for Double ka meetha was 30 portions.",
           "type": "observation",
-          "when": "2024-10-13T00:00:00.020000+00:00"
+          "when": "2024-10-13T00:00:00.030000+00:00"
         },
         {
           "id": "2fc336bd-22f7-480f-96eb-993db990e8c5",
@@ -2796,16 +3366,10 @@
           "when": "2024-10-12T00:00:00+00:00"
         },
         {
-          "id": "98ace157-38ac-42dd-8dfc-b4a982e157a5",
-          "text": "All 9 cooks were retained for the Dussehra 2025 event.",
+          "id": "7a0f6509-f909-4a55-a91e-fb630dbd94c2",
+          "text": "During Dussehra 2025, 27 kg of mutton was used out of 28 kg pre-booked, with no stock-out.",
           "type": "observation",
-          "when": "2025-10-02T00:00:00.010000+00:00"
-        },
-        {
-          "id": "64ff5585-2f21-48fe-b3c3-d31dc9503a5d",
-          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates, compared to 25 plates on a normal Saturday.",
-          "type": "observation",
-          "when": "2024-10-13T00:00:00.010000+00:00"
+          "when": "2025-10-03T00:00:00+00:00"
         },
         {
           "id": "df2ff4da-ed4a-4dbd-9219-e00e0aa035b4",
@@ -2814,9 +3378,39 @@
           "when": "2024-10-12T00:00:00.010000+00:00"
         },
         {
+          "id": "cdcbfeb1-1d00-41fe-8050-aa233902dfe3",
+          "text": "During Dussehra 2025, 71 mutton biryani plates were sold with no orders turned away.",
+          "type": "observation",
+          "when": "2025-10-03T00:00:00.010000+00:00"
+        },
+        {
           "id": "a090bfa9-a4ed-4e66-ad39-9e136954ce2b",
           "text": "Foresight recommended adding one evening cook for Dussehra 2025.",
           "type": "observation"
+        },
+        {
+          "id": "64ff5585-2f21-48fe-b3c3-d31dc9503a5d",
+          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates, compared to 25 plates on a normal Saturday.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.010000+00:00"
+        },
+        {
+          "id": "a2acf777-b6e5-4265-8371-ca7451020bd8",
+          "text": "During Dussehra 2024, the kitchen experienced a staffing shortage with 3 out of 9 cooks on leave on October 13, 2024.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "d5c3fad9-5b3b-4a43-b460-69de0da98414",
+          "text": "Dussehra 2024 demand for Chicken was normal.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "05834d7f-99a2-4b4d-adc6-174b570b4a68",
+          "text": "On October 12, 2024, during Dussehra, biryani ticket wait times reached 35 minutes due to staffing shortages.",
+          "type": "observation",
+          "when": "2024-10-12T20:00:00.010000+00:00"
         },
         {
           "id": "4ce8b7d8-9993-46df-8bf9-b7031a2a1f00",
@@ -2825,10 +3419,15 @@
           "when": "2025-09-19T00:00:00+00:00"
         },
         {
-          "id": "05834d7f-99a2-4b4d-adc6-174b570b4a68",
-          "text": "On October 12, 2024, during Dussehra, biryani ticket wait times reached 35 minutes due to staffing shortages.",
+          "id": "98ace157-38ac-42dd-8dfc-b4a982e157a5",
+          "text": "All 9 cooks were retained for the Dussehra 2025 event.",
           "type": "observation",
-          "when": "2024-10-12T20:00:00.010000+00:00"
+          "when": "2025-10-02T00:00:00.010000+00:00"
+        },
+        {
+          "id": "c85e0148-45cb-48bf-bbcc-c9b6c7bd07ae",
+          "text": "Customers have requested mutton biryani and mutton curry for the Dasara feast during the Dussehra 2024 festival.",
+          "type": "observation"
         },
         {
           "id": "a91b8abb-68e1-4b7d-a889-107b2648f7d2",
@@ -3145,16 +3744,16 @@
           "when": "2024-10-12T00:00:00+00:00"
         },
         {
-          "id": "2b8a7625-ba33-4bf2-bd63-10ad590bb6e4",
-          "text": "Dussehra 2024 demand for Chicken was normal. | When: 2024-10-13 | Dussehra 2024 festival demand",
-          "type": "world",
-          "when": "2024-10-13T00:00:00.020000+00:00"
-        },
-        {
           "id": "1d14f1b5-f637-47ca-a872-ac79991436c6",
           "text": "Dussehra 2024 revenue reached ₹1.86L compared to ₹1.1L on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival performance",
           "type": "world",
           "when": "2024-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "2b8a7625-ba33-4bf2-bd63-10ad590bb6e4",
+          "text": "Dussehra 2024 demand for Chicken was normal. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.020000+00:00"
         },
         {
           "id": "b01450b1-7176-4050-9dc4-d603ca64cefe",
@@ -3187,33 +3786,33 @@
           "when": "2025-03-01T00:00:00+00:00"
         }
       ],
-      "ms": 15839,
+      "ms": 18157,
       "notes": [
         "Directives applied: safety-stock, admit-gaps, cite-evidence"
       ]
     },
-    "savedAt": "2026-09-27T14:00:01.216Z"
+    "savedAt": "2026-09-27T14:13:18.816Z"
   },
   "plan:firstSeason:dussehra": {
     "value": {
       "mode": "firstSeason",
       "plan": {
-        "headline": "Increase mutton procurement and enforce full staff attendance to prevent the stockouts and service delays experienced in 2024.",
+        "headline": "Increase mutton inventory and enforce a no-leave policy for all staff to prevent stockouts and service delays during Dussehra 2026.",
         "expectations": [
           {
             "title": "Mutton demand",
-            "value": "30 kg",
-            "detail": "We expect high demand for mutton based on 2024 consumption and missed orders."
+            "value": "High",
+            "detail": "We expect high demand for mutton biryani based on previous festival trends."
           },
           {
-            "title": "Sweet box volume",
-            "value": "100 units",
-            "detail": "We are stocking 100 units of 500g sweet boxes to meet festival volume requirements."
+            "title": "Reservation volume",
+            "value": "2x",
+            "detail": "We are preparing for a doubling of reservations compared to normal periods."
           },
           {
-            "title": "Peak order volume",
+            "title": "Kitchen load",
             "value": "25 orders/hr",
-            "detail": "We are limiting online orders to 25 per hour to maintain kitchen quality and service times."
+            "detail": "We are capping online orders to maintain quality and prevent kitchen overload."
           }
         ],
         "orders": [
@@ -3225,61 +3824,112 @@
             "expectedUse": 30,
             "orderBy": "2026-10-17",
             "supplierId": "hyderabad-meat-house",
-            "why": "We need to cover both standard consumption and the 22 orders we missed in 2024.",
-            "lastTime": "We ran out of mutton at 8:00 PM in 2024 and had to turn away 22 orders."
+            "why": "To avoid the stockout that caused lost sales in 2024.",
+            "lastTime": "18 kg was fully consumed by 8:00 PM in 2024, causing 22 lost orders."
+          },
+          {
+            "stockId": "chicken",
+            "item": "Chicken",
+            "quantity": 20,
+            "unit": "kg",
+            "expectedUse": 20,
+            "orderBy": "2026-10-18",
+            "supplierId": "hyderabad-meat-house",
+            "why": "To meet expected festival demand.",
+            "lastTime": "Chicken demand remained normal during the 2024 festival."
           },
           {
             "stockId": "sweet-boxes",
-            "item": "Sweet Boxes (500g)",
+            "item": "Sweet Boxes",
             "quantity": 100,
-            "unit": "units",
+            "unit": "pcs",
             "expectedUse": 100,
             "orderBy": "2026-10-16",
             "supplierId": "packright",
-            "why": "This provides a necessary buffer for high festival volume.",
+            "why": "To package sweets for festival customers.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "milk",
+            "item": "Milk",
+            "quantity": 80,
+            "unit": "L",
+            "expectedUse": 80,
+            "orderBy": "2026-10-18",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Required for festival sweet production.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "ghee",
+            "item": "Ghee",
+            "quantity": 5,
+            "unit": "kg",
+            "expectedUse": 5,
+            "orderBy": "2026-10-18",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Essential ingredient for festival preparations.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "khoya",
+            "item": "Khoya",
+            "quantity": 4,
+            "unit": "kg",
+            "expectedUse": 4,
+            "orderBy": "2026-10-18",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Required for sweet production.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "basmati",
+            "item": "Basmati Rice",
+            "quantity": 30,
+            "unit": "kg",
+            "expectedUse": 30,
+            "orderBy": "2026-10-18",
+            "supplierId": "balaji-traders",
+            "why": "To support increased biryani production.",
             "lastTime": ""
           }
         ],
         "capacity": [
           {
             "area": "staff",
-            "action": "Roster all 9 cooks for the festival",
-            "target": "9 cooks",
-            "by": "2026-10-19",
-            "why": "We need full staff to avoid the 33% shortage we faced in 2024.",
-            "lastTime": "3 of 9 cooks were on leave during the 2024 festival."
+            "action": "Mandate no-leave policy for all 9 cooks",
+            "target": "9 cooks present",
+            "by": "2026-10-15",
+            "why": "To prevent service delays caused by understaffing.",
+            "lastTime": "3 out of 9 cooks were on leave in 2024, resulting in 35-minute wait times."
           },
           {
             "area": "online",
-            "action": "Limit peak online ordering",
-            "target": "25 orders per hour",
-            "by": "2026-10-19",
-            "why": "This ensures the kitchen can maintain quality and avoid long wait times.",
-            "lastTime": "We experienced 35-minute ticket times in 2024 due to high volume."
+            "action": "Cap online orders",
+            "target": "25 orders/hour",
+            "by": "2026-10-15",
+            "why": "To maintain quality and prevent kitchen overload.",
+            "lastTime": "Wait times were excessive during the 2024 festival."
           }
         ],
         "menu": [
           {
-            "change": "Feature Mutton Biryani and Mutton Curry",
-            "why": "These were the most requested items in 2024."
+            "change": "Prioritize mutton biryani production",
+            "why": "To ensure we serve the expected high demand."
           },
           {
-            "change": "Remove complex, slow-prep items",
-            "why": "Simplifying the menu helps prioritize high-demand dishes and reduces ticket times."
+            "change": "Limit other high-prep items",
+            "why": "To manage kitchen capacity if strained."
           }
         ],
         "risks": [
           {
-            "risk": "Mutton Shortage",
-            "mitigation": "Pre-ordering 30 kg and confirming with the supplier by 2026-10-17."
+            "risk": "Mutton stockout",
+            "mitigation": "Increase order to 30 kg and pre-book 3 days in advance."
           },
           {
-            "risk": "Staff Absences",
-            "mitigation": "Implementing a mandatory attendance policy for the core kitchen team."
-          },
-          {
-            "risk": "Service Delays",
-            "mitigation": "Throttling online store orders to 25 per hour to match kitchen throughput."
+            "risk": "Service delays",
+            "mitigation": "Require all cooks to be present for the full festival shift."
           }
         ],
         "confidence": "high"
@@ -3292,62 +3942,10 @@
           "when": "2024-10-12T20:00:00.010000+00:00"
         },
         {
-          "id": "7f618de6-c7b7-452a-bc84-5e2611ec6461",
-          "text": "Dussehra 2024 sales for Double ka meetha reached 30 portions. | When: 2024-10-13 | Dussehra 2024 festival demand",
-          "type": "world",
-          "when": "2024-10-13T00:00:00.030000+00:00"
-        },
-        {
           "id": "2571037f-a366-4d22-a1ba-1dbacee65191",
           "text": "22 mutton biryani orders were turned away or switched to chicken during Dussehra 2024. | When: 2024-10-12 | Mutton stockout",
           "type": "world",
           "when": "2024-10-12T20:15:00.020000+00:00"
-        },
-        {
-          "id": "577d7086-59fb-4a95-8f63-41021d74fc6c",
-          "text": "Hyderabad Meat House could not provide same-day mutton top-up for Dussehra 2024. | When: 2024-10-12 | Involving: Hyderabad Meat House | Every butcher in the city was sold out due to the festival.",
-          "type": "world",
-          "when": "2024-10-12T00:00:00+00:00"
-        },
-        {
-          "id": "535ada45-9326-4165-bd00-d6992b14e10b",
-          "text": "Dussehra 2024 revenue reached ₹1.86L compared to ₹1.1L on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival performance",
-          "type": "world",
-          "when": "2024-10-13T00:00:00+00:00"
-        },
-        {
-          "id": "d575eab7-fcea-4978-873b-8e574df77b52",
-          "text": "Mutton stock ran out during Dussehra 2024. | When: 2024-10-12",
-          "type": "world",
-          "when": "2024-10-12T20:15:00+00:00"
-        },
-        {
-          "id": "7bc564cf-0852-489d-9296-2bc27a1a6630",
-          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates compared to 25 plates on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival demand",
-          "type": "world",
-          "when": "2024-10-13T00:00:00.010000+00:00"
-        },
-        {
-          "id": "74876842-4cd3-4642-98e8-35aeb69ccb12",
-          "text": "Mutton for Dussehra 2024 must be pre-booked at least 3 days in advance. | High demand during the festival.",
-          "type": "world"
-        },
-        {
-          "id": "c1c4b12f-5495-43fc-bf0e-a7486f24d58a",
-          "text": "Customers are requesting mutton biryani and mutton curry for the 2024 Dussehra feast. | When: 2024-10-12",
-          "type": "world"
-        },
-        {
-          "id": "a6916a39-0d84-48a0-a6ee-d368e006630f",
-          "text": "14 family reservations confirmed for 12 Oct 2024 for the 2024 Dussehra festival. | When: 2024-10-12 | Involving: Priya (manager)",
-          "type": "world",
-          "when": "2024-10-12T00:00:00.010000+00:00"
-        },
-        {
-          "id": "11844eca-f875-4404-8e90-b2143e436813",
-          "text": "Dussehra 2024 demand for Chicken was normal. | When: 2024-10-13 | Dussehra 2024 festival demand",
-          "type": "world",
-          "when": "2024-10-13T00:00:00.020000+00:00"
         },
         {
           "id": "670dc50c-98f4-4cb2-b917-93ef3d9552a8",
@@ -3356,14 +3954,19 @@
           "when": "2024-10-13T00:00:00+00:00"
         },
         {
+          "id": "74876842-4cd3-4642-98e8-35aeb69ccb12",
+          "text": "Mutton for Dussehra 2024 must be pre-booked at least 3 days in advance. | High demand during the festival.",
+          "type": "world"
+        },
+        {
           "id": "22bd9098-b79f-4157-a0c8-917b7b1811b3",
           "text": "Dussehra 2024: Biryani ticket times reached 35 minutes. | When: 2024-10-12 | Service delay at 8pm",
           "type": "world",
           "when": "2024-10-12T20:00:00.010000+00:00"
         },
         {
-          "id": "4e9563d2-9896-4768-86be-207d8d1bd4af",
-          "text": "Dasara weekend bookings are double normal levels for the 2024 Dussehra festival. | When: 2024-10-12 | Involving: Priya (manager)",
+          "id": "577d7086-59fb-4a95-8f63-41021d74fc6c",
+          "text": "Hyderabad Meat House could not provide same-day mutton top-up for Dussehra 2024. | When: 2024-10-12 | Involving: Hyderabad Meat House | Every butcher in the city was sold out due to the festival.",
           "type": "world",
           "when": "2024-10-12T00:00:00+00:00"
         },
@@ -3373,10 +3976,10 @@
           "type": "observation"
         },
         {
-          "id": "b989feb5-be37-4b48-bf6a-695d66f65ace",
-          "text": "Dussehra 2024 sales for Double ka meetha reached 30 portions.",
+          "id": "d23c75bd-a0bb-4898-b5b9-adf3cef474ed",
+          "text": "Hyderabad Meat House was unable to provide same-day mutton for Dussehra 2024 because all city butchers were sold out due to high festival demand.",
           "type": "observation",
-          "when": "2024-10-13T00:00:00.030000+00:00"
+          "when": "2024-10-12T00:00:00+00:00"
         },
         {
           "id": "8f359e69-cd12-4b41-b331-e4bb718d3cdd",
@@ -3391,25 +3994,14 @@
           "when": "2024-10-12T00:00:00+00:00"
         },
         {
+          "id": "b7f93c07-6607-4932-9f92-b890ffee13e3",
+          "text": "During Dussehra 2024, 18 kg of mutton was fully consumed by 8:00 PM, leading to a stockout by 8:15 PM that resulted in 22 mutton biryani orders being turned away or switched to chicken.",
+          "type": "observation",
+          "when": "2024-10-12T20:00:00.010000+00:00"
+        },
+        {
           "id": "92ab4725-414e-40f8-b657-9559dc3a8e59",
           "text": "Dussehra 2024 revenue was ₹1.86L, compared to the ₹1.1L typically earned on a normal Saturday.",
-          "type": "observation",
-          "when": "2024-10-13T00:00:00+00:00"
-        },
-        {
-          "id": "7e40659a-bf01-4041-a363-5ade9ead1212",
-          "text": "Customers are requesting mutton biryani and mutton curry for the 2024 Dussehra feast on October 12, 2024.",
-          "type": "observation"
-        },
-        {
-          "id": "d23c75bd-a0bb-4898-b5b9-adf3cef474ed",
-          "text": "Hyderabad Meat House was unable to provide same-day mutton for Dussehra 2024 because all city butchers were sold out due to high festival demand.",
-          "type": "observation",
-          "when": "2024-10-12T00:00:00+00:00"
-        },
-        {
-          "id": "cdb12031-ce75-469d-bc66-606a453fc10b",
-          "text": "During Dussehra 2024, 3 out of 9 cooks were on leave.",
           "type": "observation",
           "when": "2024-10-13T00:00:00+00:00"
         },
@@ -3420,22 +4012,33 @@
           "when": "2024-10-13T00:00:00.010000+00:00"
         },
         {
-          "id": "12c9aed0-23a0-46f8-8e8d-2019c5aa6a12",
-          "text": "Chicken demand remained normal during the Dussehra 2024 festival.",
-          "type": "observation",
-          "when": "2024-10-13T00:00:00.020000+00:00"
+          "id": "7e40659a-bf01-4041-a363-5ade9ead1212",
+          "text": "Customers are requesting mutton biryani and mutton curry for the 2024 Dussehra feast on October 12, 2024.",
+          "type": "observation"
         },
         {
-          "id": "b7f93c07-6607-4932-9f92-b890ffee13e3",
-          "text": "During Dussehra 2024, 18 kg of mutton was fully consumed by 8:00 PM, leading to a stockout by 8:15 PM that resulted in 22 mutton biryani orders being turned away or switched to chicken.",
+          "id": "cdb12031-ce75-469d-bc66-606a453fc10b",
+          "text": "During Dussehra 2024, 3 out of 9 cooks were on leave.",
           "type": "observation",
-          "when": "2024-10-12T20:00:00.010000+00:00"
+          "when": "2024-10-13T00:00:00+00:00"
         },
         {
           "id": "1e0d6043-8f2e-40a5-9214-88c234094c55",
           "text": "On October 12, 2024, at 8pm during Dussehra, biryani ticket times reached 35 minutes.",
           "type": "observation",
           "when": "2024-10-12T20:00:00.010000+00:00"
+        },
+        {
+          "id": "12c9aed0-23a0-46f8-8e8d-2019c5aa6a12",
+          "text": "Chicken demand remained normal during the Dussehra 2024 festival.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "b989feb5-be37-4b48-bf6a-695d66f65ace",
+          "text": "Dussehra 2024 sales for Double ka meetha reached 30 portions.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.030000+00:00"
         }
       ],
       "recalled": [
@@ -3776,193 +4379,199 @@
           "when": "2024-11-05T00:00:00.020000+00:00"
         }
       ],
-      "ms": 10655,
+      "ms": 14990,
       "notes": [
         "Directives applied: safety-stock, admit-gaps, cite-evidence"
       ]
     },
-    "savedAt": "2026-09-27T14:00:30.008Z"
+    "savedAt": "2026-09-27T14:13:15.647Z"
   },
   "plan:none:dussehra": {
     "value": {
       "mode": "none",
       "plan": {
-        "headline": "Stock enough ingredients and add staff to handle the Dasara feast rush.",
+        "headline": "Maintain a two-day safety stock of all essential ingredients to ensure operational continuity during the Dussehra festival.",
         "expectations": [
           {
-            "title": "Footfall surge",
-            "value": "2x normal",
-            "detail": "Dussehra weekend will see double the usual diners."
+            "title": "Inventory usage",
+            "value": "2 days buffer",
+            "detail": "We expect to maintain at least two days of normal usage for all key ingredients."
           },
           {
-            "title": "Online orders",
-            "value": "45/hr",
-            "detail": "Expect 50% more online orders than the normal peak."
+            "title": "Staffing levels",
+            "value": "18 staff",
+            "detail": "The current roster of 9 cooks and 4 delivery riders will remain on their standard schedule."
           },
           {
-            "title": "Revenue boost",
-            "value": "₹12L",
-            "detail": "Higher spend per table should lift festival revenue to about twelve lakh rupees."
+            "title": "Online capacity",
+            "value": "30 orders/hour",
+            "detail": "The online store will maintain its current capacity limit throughout the festival."
           }
         ],
         "orders": [
           {
-            "stockId": "khoya",
-            "item": "Khoya (mawa)",
-            "quantity": 2,
+            "stockId": "sugar",
+            "item": "Sugar",
+            "quantity": 20,
             "unit": "kg",
-            "expectedUse": 4.32,
-            "orderBy": "2026-10-18",
+            "expectedUse": 20,
+            "orderBy": "2026-10-15",
+            "supplierId": "balaji-traders",
+            "why": "Ensure we do not fall below two days of normal usage.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "ghee",
+            "item": "Ghee",
+            "quantity": 15,
+            "unit": "kg",
+            "expectedUse": 15,
+            "orderBy": "2026-10-16",
             "supplierId": "sri-lakshmi-dairy",
-            "why": "Needed for extra sweets and desserts",
+            "why": "Ensure we do not fall below two days of normal usage.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "khoya",
+            "item": "Khoya",
+            "quantity": 10,
+            "unit": "kg",
+            "expectedUse": 10,
+            "orderBy": "2026-10-16",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Ensure we do not fall below two days of normal usage.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "cashew",
+            "item": "Cashew",
+            "quantity": 5,
+            "unit": "kg",
+            "expectedUse": 5,
+            "orderBy": "2026-10-16",
+            "supplierId": "balaji-traders",
+            "why": "Ensure we do not fall below two days of normal usage.",
             "lastTime": ""
           },
           {
             "stockId": "paneer",
             "item": "Paneer",
-            "quantity": 18,
+            "quantity": 20,
             "unit": "kg",
-            "expectedUse": 28.8,
-            "orderBy": "2026-10-19",
+            "expectedUse": 20,
+            "orderBy": "2026-10-17",
             "supplierId": "sri-lakshmi-dairy",
-            "why": "More paneer for special thali and kebabs",
+            "why": "Ensure we do not fall below two days of normal usage.",
             "lastTime": ""
           },
           {
             "stockId": "milk",
             "item": "Milk",
-            "quantity": 140,
+            "quantity": 100,
             "unit": "L",
-            "expectedUse": 180,
-            "orderBy": "2026-10-19",
+            "expectedUse": 100,
+            "orderBy": "2026-10-18",
             "supplierId": "sri-lakshmi-dairy",
-            "why": "Needed for sweets, gravies and drinks",
+            "why": "Ensure we do not fall below two days of normal usage.",
             "lastTime": ""
           },
           {
             "stockId": "mutton",
             "item": "Mutton",
-            "quantity": 38,
+            "quantity": 30,
             "unit": "kg",
-            "expectedUse": 50.4,
-            "orderBy": "2026-10-19",
+            "expectedUse": 30,
+            "orderBy": "2026-10-18",
             "supplierId": "hyderabad-meat-house",
-            "why": "Extra mutton for festive biryani and curries",
+            "why": "Ensure we do not fall below two days of normal usage.",
             "lastTime": ""
           },
           {
             "stockId": "chicken",
             "item": "Chicken",
-            "quantity": 66,
+            "quantity": 40,
             "unit": "kg",
-            "expectedUse": 86.4,
-            "orderBy": "2026-10-19",
+            "expectedUse": 40,
+            "orderBy": "2026-10-18",
             "supplierId": "hyderabad-meat-house",
-            "why": "More chicken for tikkas and biryani",
+            "why": "Ensure we do not fall below two days of normal usage.",
             "lastTime": ""
           },
           {
             "stockId": "basmati",
             "item": "Basmati rice",
-            "quantity": 42,
+            "quantity": 50,
             "unit": "kg",
-            "expectedUse": 100.8,
-            "orderBy": "2026-10-18",
+            "expectedUse": 50,
+            "orderBy": "2026-10-16",
             "supplierId": "balaji-traders",
-            "why": "Extra rice for large biryanis",
+            "why": "Ensure we do not fall below two days of normal usage.",
             "lastTime": ""
           },
           {
             "stockId": "sweet-boxes",
-            "item": "Sweet boxes (500g)",
-            "quantity": 80,
+            "item": "Sweet boxes",
+            "quantity": 100,
             "unit": "pcs",
-            "expectedUse": 120,
-            "orderBy": "2026-10-16",
+            "expectedUse": 100,
+            "orderBy": "2026-10-14",
             "supplierId": "packright",
-            "why": "More sweet boxes for takeaway desserts",
+            "why": "Ensure we do not fall below two days of normal usage.",
             "lastTime": ""
           }
         ],
         "capacity": [
           {
             "area": "staff",
-            "action": "Add 4 kitchen helpers for the festival weekend",
-            "target": "4 extra staff",
-            "by": "2026-10-15",
-            "why": "Kitchen will be busier with larger menus",
-            "lastTime": ""
-          },
-          {
-            "area": "staff",
-            "action": "Schedule 2 additional floor servers for peak evenings",
-            "target": "2 extra servers",
-            "by": "2026-10-15",
-            "why": "More diners need prompt service",
+            "action": "Maintain current roster",
+            "target": "18 staff",
+            "by": "2026-10-20",
+            "why": "No historical data on festival peak traffic exists to justify changes.",
             "lastTime": ""
           },
           {
             "area": "online",
-            "action": "Increase rider pool to 6 for deliveries",
-            "target": "6 riders on shift",
-            "by": "2026-10-15",
-            "why": "Online orders expected to rise 50%",
-            "lastTime": ""
-          },
-          {
-            "area": "online",
-            "action": "Boost order handling capacity to 45 per hour",
-            "target": "45 orders/hour",
-            "by": "2026-10-15",
-            "why": "Prepare system for higher online traffic",
+            "action": "Keep capacity limit",
+            "target": "30 orders/hour",
+            "by": "2026-10-20",
+            "why": "No record of system failures or volume spikes during previous festivals.",
             "lastTime": ""
           }
         ],
         "menu": [
           {
-            "change": "Add Dashera Special Thali with mutton, chicken, paneer and festive sweets",
-            "why": "High‑spending guests look for a complete feast"
-          },
-          {
-            "change": "Introduce saffron‑infused kheer and pistachio barfi",
-            "why": "Premium desserts increase per‑ticket spend"
-          },
-          {
-            "change": "Offer a limited‑time spicy pumpkin curry for veg guests",
-            "why": "Broaden appeal and use existing pantry stock"
+            "change": "No changes",
+            "why": "We have no record of past customer requests or popular items."
           }
         ],
         "risks": [
           {
-            "risk": "Delay in sweet‑box delivery (4‑day lead time)",
-            "mitigation": "Place order by 2026-10-16 and keep 20 pcs as buffer"
+            "risk": "Lack of historical sales data to predict demand surge.",
+            "mitigation": "Enforcing a safety-stock policy ensuring two days of inventory on hand."
           },
           {
-            "risk": "Staff absenteeism during holiday weekend",
-            "mitigation": "Confirm availability and have 2 on‑call temps ready"
-          },
-          {
-            "risk": "Higher than expected meat consumption causing stockout",
-            "mitigation": "Order 10% extra and monitor usage hourly on the day"
+            "risk": "Supplier delays or stock-outs.",
+            "mitigation": "Identified backup suppliers and placed orders well in advance."
           }
         ],
-        "confidence": "high"
+        "confidence": "low"
       },
       "evidence": [],
       "recalled": [],
-      "ms": 10755,
+      "ms": 26949,
       "notes": [
-        "Stateless LLM call - no memory"
+        "Empty memory bank - same agent, nothing remembered",
+        "Directives applied: safety-stock, admit-gaps, cite-evidence"
       ]
     },
-    "savedAt": "2026-09-27T13:56:48.055Z"
+    "savedAt": "2026-09-27T14:12:35.520Z"
   },
   "playbook": {
     "value": {
       "name": "Diwali playbook",
-      "content": "## Diwali Playbook: Spice Garden\n\nThis playbook synthesizes historical performance data from the Diwali festivals of 2024 and 2025 to optimize future operations.\n\n### Ingredient and Packaging Inventory Performance\n\n| Item | Year | Planned/Stocked | Actual Used | Status |\n| :--- | :--- | :--- | :--- | :--- |\n| **Sugar** | 2024 | 25 kg | 32 kg | Ran out (1 Nov) |\n| **Sugar** | 2025 | 45 kg | 41 kg | Sufficient |\n| **Paneer** | 2024 | 26 kg | 18 kg* | 8 kg wasted |\n| **Paneer** | 2025 | Reduced plan | N/A | No waste |\n| **Ghee** | 2024 | N/A | 2.5x normal | Stock-out (1.5 kg left) |\n| **Ghee** | 2025 | 12 kg | 15 kg | 3 kg shortage |\n| **Sweet Boxes** | 2024 | N/A | N/A | Ran out |\n| **Sweet Boxes** | 2025 | 200 boxes | 186 boxes | Sufficient |\n\n*\\*Calculated by subtracting 8 kg waste from 26 kg stock.*\n\n### Staffing and Service Levels (Peak Evenings)\n\n*   **2024 Performance:** 16 staff present of 18 rostered (2 travelled home). Wait times reached 50 minutes, causing 14 walk-in groups to leave. Priya identified a need for 24 floor staff and 2 extra delivery riders.\n*   **2025 Performance:** 22 staff rostered (18 regular, 4 temporary). Wait times reached 30 minutes, causing 5 groups to leave. Staffing was noted as insufficient between 8pm and 10pm. Priya estimated a need for 25 staff.\n\n### Online Store Capacity and Performance\n\n*   **2024:** Suffered a 42-minute outage on 1 November 2024 due to 6x surge in volume, losing approximately 60 orders and ₹38,000.\n*   **2025:** Maintained 7x normal volume with 310 scheduled pre-orders. Pre-scaling occurred from 18 October to 22 October 2025.\n\n### Procurement and Supplier Reliability\n\n*   **Balaji Traders:** Exhibited a recurring pattern of late deliveries in both 2024 and 2025.\n*   **Cashew Pricing:** Price increased 18% (from ₹980 to ₹1,160/kg) in the week before Diwali 2025.\n*   **Strategy:** Ordered supplies one week early for Diwali 2025 (3 October) to mitigate delivery delays.\n\n### Revenue Trends and Menu Additions\n\n*   **Revenue:** ₹6.4L (Diwali 2024) vs ₹8.9L (Diwali 2025), a 39% year-on-year increase.\n*   **Menu Additions:** Kaju katli was introduced for Diwali 2025. Demand for these boxes was high, with 38 walk-in and 120 corporate boxes sold.\n*   **Customer Preferences:** 2024 saw a 210% increase in dessert demand, 60% in biryani, and a 15% decrease in paneer mains.\n\n### Corporate Orders\n\n*   **2024:** 15 customers requested corporate sweet boxes, which were not available.\n*   **2025:** Three companies ordered 120 boxes of kaju katli. Due to late booking, one company had to split its order with another shop. Companies have requested earlier booking windows for future years.\n\n### Mistakes to Avoid (Key Lessons)\n\n1.  **Safety Stock:** Never allow inventory levels to fall below two days of normal usage. The 2024 sugar stock-out on 1 November and the 2025 ghee shortage (3 kg short) demonstrate that consumption spikes require higher safety margins.\n2.  **Supplier Management:** Balaji Traders has proven unreliable for timely deliveries during festival peaks since at least 2024. Plan for at least one week of lead time or identify secondary local suppliers.\n3.  **Staffing:** 22 staff were insufficient in 2025; adopt the manager's recommendation of 25 staff to prevent walk-outs.\n4.  **Waste Management:** The 8 kg of paneer waste in 2024 (valued at ₹2,700) confirms that over-ordering paneer is a financial risk; follow the 2025 strategy of adjusting quantities based on the clear preference shift toward desserts and biryani.\n5.  **Corporate Booking:** Formalize an early booking process for corporate clients to prevent the split-order issues encountered in 2025.\n",
-      "refreshedAt": "2026-09-27T13:53:42.742949+00:00"
+      "content": "## Diwali Playbook Overview\n\nThe Diwali playbook for Spice Garden details historical performance to optimize future inventory, staffing, and menu planning. We have records for Diwali 2024 and Diwali 2025.\n\n## Ingredient and Packaging Performance\n\n| Ingredient/Item | 2024 Stock/Planned | 2024 Actual Used | 2024 Status | 2025 Stock/Planned | 2025 Actual Used | 2025 Status |\n| --- | --- | --- | --- | --- | --- | --- |\n| Sugar | 25 kg | ~32 kg | Ran Out | 45 kg | 41 kg | OK |\n| Ghee | N/A | 2.5x normal | Shortage | 12 kg | 15 kg | Ran Out |\n| Paneer | 26 kg | <26 kg | Wasted (8kg) | Reduced 20% | N/A | No Waste |\n| Sweet Boxes | N/A | N/A | Ran Out | 200 | 186 | OK |\n\n## Operational Insights and Recommendations\n\n- Staffing: Diwali 2024 had 16/18 rostered staff present, resulting in 50-minute wait times and 14 walk-in group walk-outs. For Diwali 2025, 22 staff were rostered, but demand still peaked 8pm-10pm, leading to 30-minute waits and 5 group walk-outs. Priya estimated 25 staff were needed for 2025.\n- Online Store Capacity: Diwali 2024 had 6x normal volume, causing a 42-minute outage and ₹38,000 loss. Diwali 2025 sustained 7x volume with 310 scheduled pre-orders, avoiding outages.\n- Supplier Reliability & Prices: Balaji Traders delivered 2 days late for Diwali 2024. Emergency sugar was bought at ₹58/kg (compared to standard ₹44/kg). Cashew prices from Balaji Traders increased 18% (₹980 to ₹1,160/kg) during the week before Diwali 2025.\n- Corporate Orders: 15 lost requests for corporate gift boxes in 2024. In 2025, 120 boxes were sold for corporate gifts, but late confirmations caused split orders.\n- Menu Additions: Kaju katli was added for Diwali 2025 following 40 requests in 2024; 158 boxes were sold.\n- Revenue Trend: Diwali 2024 revenue was ₹6.4L. Diwali 2025 revenue was ₹8.9L, a 39% year-on-year increase.\n- Mistakes to Avoid: \n  - Ensure supplier orders are placed at least one week early to avoid Begum Bazar overloads (experienced 2024).\n  - Do not underestimate sugar and ghee requirements; use 2025 consumption data (41 kg sugar, 15 kg ghee) as the new baseline.\n  - Do not ignore requests for corporate gift boxes; introduce them early to capture lost demand (seen 2024).\n  - Ensure staff rostering accounts for local travel (experienced 2024/2025).\n",
+      "refreshedAt": "2026-09-27T14:09:19.446829+00:00"
     },
-    "savedAt": "2026-09-27T13:55:19.621Z"
+    "savedAt": "2026-09-27T14:12:15.538Z"
   }
 }

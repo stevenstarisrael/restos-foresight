@@ -38,6 +38,13 @@ export function AtAGlance({
       <div className="grid place-items-center rounded-2xl border border-dashed border-line bg-white p-10 text-center">
         {anyLoading ? (
           <p className="text-sm text-muted">Planning from memory…</p>
+        ) : full.error ? (
+          <>
+            <p className="max-w-lg text-sm text-chili">The 2-year memory plan failed: {full.error}</p>
+            <button onClick={onPlan} className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-saffron px-4 py-2 text-sm font-medium text-white">
+              Try again <ArrowRight size={15} aria-hidden />
+            </button>
+          </>
         ) : (
           <>
             <p className="text-sm text-muted">No plan yet for this festival.</p>
@@ -191,7 +198,7 @@ export function AtAGlance({
         <p className="mt-auto flex items-center gap-1.5 pt-4 text-xs text-muted">
           <Brain size={13} aria-hidden />
           Built from {usedPlaybook ? 'the Diwali playbook + ' : ''}
-          {memories} past events in Hindsight memory
+          {memories} recalled memories in Hindsight
         </p>
       </section>
     </div>
