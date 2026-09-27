@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { ChartBar, Table2 } from 'lucide-react';
 import { lastFestivalActuals, stock } from '@/data/outlet';
 import { ITEM_ICON, rupees } from '@/lib/insights';
 import type { Plan } from '@/lib/plan';
@@ -68,7 +69,8 @@ export function CompareCharts({ festival, columns }: { festival: string; columns
             {ref.growth > 0 ? ` + ${Math.round(ref.growth * 100)}% growth (last year's festival revenue trend)` : ''}, from restOS records.
           </p>
         </div>
-        <button onClick={() => setAsTable((v) => !v)} className="text-xs text-muted underline underline-offset-2">
+        <button onClick={() => setAsTable((v) => !v)} className="inline-flex items-center gap-1 text-xs text-muted underline underline-offset-2">
+          {asTable ? <ChartBar size={13} aria-hidden /> : <Table2 size={13} aria-hidden />}
           {asTable ? 'Show as chart' : 'Show as table'}
         </button>
       </div>

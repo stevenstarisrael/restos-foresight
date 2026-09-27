@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Brain, CircleOff, Eye, EyeOff, History, Loader2, Play, RotateCw, type LucideIcon } from 'lucide-react';
 import type { PlanResult } from '@/lib/plan';
 import { ITEM_ICON, rupees, summarize, type OrderInsight, type Urgency } from '@/lib/insights';
 
@@ -20,6 +21,8 @@ export const MODE_COLOR: Record<Mode, string> = {
   firstSeason: '#2b9a50',
   full: '#0f5f32',
 };
+
+export const MODE_ICON: Record<Mode, LucideIcon> = { none: CircleOff, firstSeason: History, full: Brain };
 
 // ── Comparison strip ────────────────────────────────────────────────────────
 
@@ -65,8 +68,10 @@ export function CompareCard({
             onRun();
           }}
           disabled={state.loading}
-          className="rounded-md border border-line px-2.5 py-1 text-xs hover:bg-stone-50 disabled:opacity-50"
+          title={result ? 'Regenerate this plan (uses API credits)' : undefined}
+          className="inline-flex items-center gap-1 rounded-md border border-line px-2.5 py-1 text-xs hover:bg-stone-50 disabled:opacity-50"
         >
+          {state.loading ? <Loader2 size={13} className="animate-spin" aria-hidden /> : result ? <RotateCw size={13} aria-hidden /> : <Play size={13} aria-hidden />}
           {state.loading ? 'Thinking…' : result ? 'Re-run' : 'Run'}
         </button>
       </div>
@@ -325,7 +330,8 @@ function MemoryFooter({ result }: { result: PlanResult }) {
           <b className="text-ink">{items.filter((e) => e.type !== 'mental model').length || result.recalled.length} past events</b>
           {result.notes.length > 0 && ` · ${result.notes.join(' · ')}`} · {(result.ms / 1000).toFixed(1)}s
         </span>
-        <button onClick={() => setOpen((v) => !v)} className="underline underline-offset-2">
+        <button onClick={() => setOpen((v) => !v)} className="inline-flex items-center gap-1 underline underline-offset-2">
+          {open ? <EyeOff size={13} aria-hidden /> : <Eye size={13} aria-hidden />}
           {open ? 'Hide' : 'Show'} what it remembered
         </button>
       </div>

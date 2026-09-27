@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import { Flame, RefreshCw, Sparkles, WandSparkles, type LucideIcon } from 'lucide-react';
 import { outlet, stock, TODAY, upcomingFestivals } from '@/data/outlet';
 import { CompareCharts } from '@/components/compare-charts';
 import {
@@ -12,8 +13,10 @@ import {
   type MemoryState,
   type PlaybookState,
 } from '@/components/memory-panels';
-import { CompareCard, MODES, PlanDetail, type ColumnState, type Mode } from '@/components/plan-view';
+import { CompareCard, MODE_ICON, MODES, PlanDetail, type ColumnState, type Mode } from '@/components/plan-view';
 import type { PlanResult } from '@/lib/plan';
+
+const FESTIVAL_ICON: Record<string, LucideIcon> = { dussehra: Flame, diwali: Sparkles };
 
 const EMPTY: Record<Mode, ColumnState> = {
   none: { loading: false },
@@ -145,30 +148,36 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <div className="flex rounded-lg border border-line bg-white p-1 text-sm">
-            {upcomingFestivals.map((f) => (
-              <button
-                key={f.id}
-                onClick={() => switchFestival(f.id)}
-                className={`rounded-md px-3 py-1.5 ${festival === f.id ? 'bg-ink text-white' : 'text-muted hover:text-ink'}`}
-              >
-                {f.name}
-              </button>
-            ))}
+            {upcomingFestivals.map((f) => {
+              const Icon = FESTIVAL_ICON[f.id] ?? Sparkles;
+              return (
+                <button
+                  key={f.id}
+                  onClick={() => switchFestival(f.id)}
+                  className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 ${festival === f.id ? 'bg-ink text-white' : 'text-muted hover:text-ink'}`}
+                >
+                  <Icon size={15} aria-hidden />
+                  {f.name}
+                </button>
+              );
+            })}
           </div>
           <button
             onClick={() => runAll(festival)}
             disabled={busy}
-            className="rounded-lg bg-saffron px-4 py-2 text-sm font-medium text-white hover:brightness-110 disabled:opacity-60"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-saffron px-4 py-2 text-sm font-medium text-white hover:brightness-110 disabled:opacity-60"
           >
+            <WandSparkles size={16} aria-hidden />
             Plan all three
           </button>
           <button
             onClick={hardRefresh}
             disabled={busy}
             title="Ignore saved results and regenerate everything (uses API credits)"
-            className="rounded-lg border border-line bg-white px-3 py-2 text-sm text-muted hover:text-ink disabled:opacity-60"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-white px-3 py-2 text-sm text-muted hover:text-ink disabled:opacity-60"
           >
-            ↻ Hard refresh
+            <RefreshCw size={15} className={busy ? 'animate-spin' : ''} aria-hidden />
+            Hard refresh
           </button>
         </div>
       </section>
@@ -195,15 +204,19 @@ export default function Home() {
       <div className="mt-8">
         <div className="mb-3 flex flex-wrap items-center gap-2 text-sm">
           <span className="text-muted">Showing plan:</span>
-          {MODES.map(({ mode, title }) => (
-            <button
-              key={mode}
-              onClick={() => setSelected(mode)}
-              className={`rounded-full border px-3 py-1 ${selected === mode ? 'border-ink bg-ink text-white' : 'border-line bg-white text-muted hover:text-ink'}`}
-            >
-              {title}
-            </button>
-          ))}
+          {MODES.map(({ mode, title }) => {
+            const Icon = MODE_ICON[mode];
+            return (
+              <button
+                key={mode}
+                onClick={() => setSelected(mode)}
+                className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 ${selected === mode ? 'border-ink bg-ink text-white' : 'border-line bg-white text-muted hover:text-ink'}`}
+              >
+                <Icon size={14} aria-hidden />
+                {title}
+              </button>
+            );
+          })}
         </div>
         <PlanDetail mode={selected} state={columns[selected]} />
       </div>

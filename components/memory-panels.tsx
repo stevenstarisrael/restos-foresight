@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { BrainCircuit, Lightbulb, Loader2, PenLine, RefreshCw, WandSparkles } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { history } from '@/data/history';
@@ -52,8 +53,9 @@ export function TeachPanel({ festival, onTaught, onReplan }: { festival: string;
               setText(s.text);
               setKind(s.kind);
             }}
-            className="rounded-full border border-line px-2.5 py-1 text-left text-xs text-muted hover:border-saffron hover:text-ink"
+            className="inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-1 text-left text-xs text-muted hover:border-saffron hover:text-ink"
           >
+            <Lightbulb size={13} className="shrink-0" aria-hidden />
             {s.text.slice(0, 48)}…
           </button>
         ))}
@@ -76,11 +78,13 @@ export function TeachPanel({ festival, onTaught, onReplan }: { festival: string;
         <button
           onClick={submit}
           disabled={text.trim().length < 10 || status?.tone === 'busy'}
-          className="rounded-md bg-ink px-3 py-1.5 text-sm text-white disabled:opacity-40"
+          className="inline-flex items-center gap-1.5 rounded-md bg-ink px-3 py-1.5 text-sm text-white disabled:opacity-40"
         >
+          {status?.tone === 'busy' ? <Loader2 size={15} className="animate-spin" aria-hidden /> : <BrainCircuit size={15} aria-hidden />}
           Remember this
         </button>
-        <button onClick={onReplan} className="rounded-md border border-line px-3 py-1.5 text-sm hover:bg-stone-50">
+        <button onClick={onReplan} className="inline-flex items-center gap-1.5 rounded-md border border-line px-3 py-1.5 text-sm hover:bg-stone-50">
+          <WandSparkles size={15} aria-hidden />
           Re-plan with full memory
         </button>
       </div>
@@ -102,7 +106,8 @@ export function BeliefsPanel({ memory, onReload }: { memory: MemoryState; onRelo
             Observations Hindsight consolidated from raw events. The bar shows how many memories back each one.
           </p>
         </div>
-        <button onClick={onReload} className="text-xs text-muted underline underline-offset-2">
+        <button onClick={onReload} className="inline-flex items-center gap-1 text-xs text-muted underline underline-offset-2">
+          <RefreshCw size={12} aria-hidden />
           Refresh
         </button>
       </div>
@@ -159,7 +164,12 @@ export function PlaybookPanel({
             {playbook.refreshedAt && ` Last refreshed ${new Date(playbook.refreshedAt).toLocaleString('en-IN')}.`}
           </p>
         </div>
-        <button onClick={refresh} disabled={refreshing} className="rounded-md border border-line px-3 py-1 text-xs hover:bg-stone-50 disabled:opacity-50">
+        <button
+          onClick={refresh}
+          disabled={refreshing}
+          className="inline-flex shrink-0 items-center gap-1 rounded-md border border-line px-3 py-1 text-xs hover:bg-stone-50 disabled:opacity-50"
+        >
+          {refreshing ? <Loader2 size={13} className="animate-spin" aria-hidden /> : <PenLine size={13} aria-hidden />}
           {refreshing ? 'Rewriting…' : 'Rewrite from memory'}
         </button>
       </div>
