@@ -139,7 +139,7 @@ export function AtAGlance({
         <h2 className="flex items-center gap-2 text-base font-semibold">
           <ShieldCheck size={18} className="text-leaf" aria-hidden /> Why trust it
         </h2>
-        <p className="mt-1 text-xs text-muted">Share of this festival’s likely need each plan covers (restOS records).</p>
+        <p className="mt-1 text-xs text-muted">Share of this festival’s likely need each plan covers, counting only orders placed in time (restOS records).</p>
 
         <div className="mt-4 space-y-3">
           {MODES.map(({ mode, title }) => {
@@ -175,7 +175,16 @@ export function AtAGlance({
         {none?.s && none.s.short.length > 0 && (
           <p className="mt-4 rounded-lg bg-chili-soft/60 p-3 text-sm leading-snug text-ink">
             Without memory, the AI spends <b>{rupees(none.spend)}</b> and still runs short on{' '}
-            <b>{none.s.short.map((x) => x.replace(/\s*\(.*\)$/, '').toLowerCase()).join(', ')}</b>.
+            <b>{none.s.short.map((x) => x.replace(/\s*\(.*\)$/, '').toLowerCase()).join(', ')}</b>
+            {none.s.tooLate.length > 0 ? (
+              <>
+                {' '}
+                because it orders too late: {lastFestivalActuals[festival]?.preBookReason}, so {none.s.tooLate.map((x) => x.toLowerCase()).join(', ')} must be
+                pre-booked {rows.find((r) => r.name === none.s!.tooLate[0])?.preBookDays} days ahead.
+              </>
+            ) : (
+              '.'
+            )}
           </p>
         )}
 

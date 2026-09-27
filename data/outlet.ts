@@ -84,7 +84,26 @@ export const upcomingFestivals: Festival[] = [
 // project this year's need from last year's use. 0 where we have no trend.
 // staffNeeded = people on the floor the peak evening actually needed (Diwali 2025
 // outcome: 22 was still short, 25 would have been right).
-export const lastFestivalActuals: Record<string, { label: string; growth: number; items: Record<string, number>; staffNeeded?: number }> = {
+// preBookDays = minimum days before the festival an order must be placed to
+// actually arrive (Dussehra 2024: every butcher sold out on Dasara, so mutton
+// has to be pre-booked 3 days ahead).
+export const lastFestivalActuals: Record<
+  string,
+  {
+    label: string;
+    growth: number;
+    items: Record<string, number>;
+    staffNeeded?: number;
+    preBookDays?: Record<string, number>;
+    preBookReason?: string;
+  }
+> = {
   diwali: { label: 'Diwali 2025', growth: 0.39, items: { sugar: 41, ghee: 15, cashew: 8, 'sweet-boxes': 186 }, staffNeeded: 25 },
-  dussehra: { label: 'Dussehra 2025', growth: 0, items: { mutton: 27 } },
+  dussehra: {
+    label: 'Dussehra 2025',
+    growth: 0,
+    items: { mutton: 27 },
+    preBookDays: { mutton: 3 },
+    preBookReason: 'on Dussehra 2024 every butcher in the city was sold out',
+  },
 };

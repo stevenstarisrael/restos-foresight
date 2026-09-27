@@ -23,6 +23,10 @@ export function CompareCharts({ festival, columns }: { festival: string; columns
           <p className="mt-0.5 text-xs text-muted">
             Likely need = what we actually used at {ref.label}
             {ref.growth > 0 ? ` + ${Math.round(ref.growth * 100)}% growth (last year's festival revenue trend)` : ''}, from restOS records.
+            {ref.preBookDays &&
+              ` Orders count only if placed ${Object.entries(ref.preBookDays)
+                .map(([id, d]) => `${d}+ days ahead for ${id}`)
+                .join(', ')}, as the records require.`}
           </p>
         </div>
         <button onClick={() => setAsTable((v) => !v)} className="inline-flex items-center gap-1 text-xs text-muted underline underline-offset-2">
@@ -95,7 +99,11 @@ function ReadinessRing({ title, color, score: s }: { title: string; color: strin
             <div className="mt-1 font-medium">
               {icon} {verdict}
             </div>
-            {s.short.length > 0 && <div className="mt-0.5 text-muted">Short on: {s.short.join(', ')}</div>}
+            {s.short.length > 0 && (
+              <div className="mt-0.5 text-muted">
+                Short on: {s.short.map((n) => (s.tooLate.includes(n) ? `${n} (ordered too late)` : n)).join(', ')}
+              </div>
+            )}
             <div className="mt-0.5 text-muted">
               Over-stock at risk: <b className="text-ink">{s.wasteRisk ? rupees(s.wasteRisk) : 'none'}</b>
             </div>
@@ -164,6 +172,7 @@ function ItemBars({ row }: { row: Row }) {
                   <span className={`ml-1.5 text-[11px] tabular-nums ${v < row.need ? 'font-semibold text-chili' : 'text-muted'}`}>
                     {v}
                     {v < row.need ? ' ✕ short' : ''}
+                    {row.late[mode] ? ` · ${row.late[mode]} ordered too late to arrive` : ''}
                   </span>
                 </>
               ) : (
