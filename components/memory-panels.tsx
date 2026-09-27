@@ -30,7 +30,7 @@ export function TeachPanel({ festival, onTaught, onReplan }: { festival: string;
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
-      setStatus({ tone: 'ok', msg: 'Retained. Re-run “After 2 years” to see it change the plan.' });
+      setStatus({ tone: 'ok', msg: 'Retained. Press “Re-plan with full memory” to see it change the plan.' });
       setText('');
       onTaught();
     } catch (err) {

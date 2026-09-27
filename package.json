@@ -8,7 +8,9 @@
     "start": "next start",
     "seed": "tsx scripts/seed.ts",
     "typecheck": "tsc --noEmit",
-    "demo:reset": "tsx scripts/reset-demo.ts"
+    "demo:reset": "tsx scripts/reset-demo.ts",
+    "cache:snapshot": "node -e \"require('fs').copyFileSync('.cache/foresight.json','data/demo-cache.json');console.log('saved data/demo-cache.json')\"",
+    "cache:clear": "node -e \"require('fs').rmSync('.cache',{recursive:true,force:true});console.log('cache cleared — restart the dev server')\""
   },
   "dependencies": {
     "@vectorize-io/hindsight-client": "^0.10.1",

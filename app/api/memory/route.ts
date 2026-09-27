@@ -1,11 +1,17 @@
+import { cacheDelete, cacheGet, cacheKeys, cacheSet } from '@/lib/cache';
 import { BANKS, hindsight } from '@/lib/hindsight';
 import { TODAY } from '@/data/outlet';
 
 // What the agent has learned: consolidated observations (with how many raw
 // memories back each one) plus counts per memory type.
 export async function GET(request: Request) {
-  const bankKey = new URL(request.url).searchParams.get('bank') === 'firstSeason' ? 'firstSeason' : 'full';
+  const params = new URL(request.url).searchParams;
+  const bankKey = params.get('bank') === 'firstSeason' ? 'firstSeason' : 'full';
   const bank = BANKS[bankKey];
+  if (!params.has('force')) {
+    const hit = await cacheGet<object>(cacheKeys.memory(bank));
+    if (hit) return Response.json({ ...hit.value, cachedAt: hit.savedAt });
+  }
   try {
     const client = hindsight();
     const [observations, world, experience] = await Promise.all([
@@ -16,11 +22,13 @@ export async function GET(request: Request) {
     const beliefs = observations.items
       .map((o) => ({ id: o.id, text: o.text ?? '', proofCount: o.proof_count ?? 1, tags: o.tags ?? [] }))
       .sort((a, b) => b.proofCount - a.proofCount);
-    return Response.json({
+    const payload = {
       bank,
       counts: { observation: observations.total, world: world.total, experience: experience.total },
       beliefs,
-    });
+    };
+    await cacheSet(cacheKeys.memory(bank), payload);
+    return Response.json(payload);
   } catch (err) {
     console.error('[memory:get]', err);
     return Response.json({ error: err instanceof Error ? err.message : String(err) }, { status: 502 });
@@ -45,6 +53,8 @@ export async function POST(request: Request) {
       documentId: `live-${Date.now()}`,
       metadata: { kind, source: 'live-demo' },
     });
+    // Memory changed: saved full-memory plans and the learned list are stale.
+    await cacheDelete('plan:full:', cacheKeys.memory(BANKS.full));
     return Response.json({ ok: result.success, bank: BANKS.full });
   } catch (err) {
     console.error('[memory:post]', err);

@@ -73,6 +73,7 @@ restOS events ──retain──▶  Hindsight bank (per outlet)  ◀──recal
 - Groq returns malformed JSON or drops fields → schema validation, error fed back, up to 3 attempts.
 - Reflect returns prose without `structured_output` → the text is converted to the plan schema instead of failing the request. The UI notes that this happened.
 - Hindsight or Groq unavailable / keys missing → each panel shows the error; the rest of the page keeps working.
+- Repeat views never re-spend credits: results are cached per plan and festival, and invalidated when memory changes.
 - Seeding is idempotent: every event has a stable `document_id`, so re-running replaces rather than duplicates.
 
 ## Run it
@@ -84,6 +85,13 @@ npm run seed                # creates both banks and retains the history (a few 
 npm run dev                 # http://localhost:3000
 npm run demo:reset          # optional: forget notes taught live from the UI
 ```
+
+### Saved results (no credits spent on repeat views)
+
+Plans, the learned-memory list and the playbook are cached in `.cache/foresight.json` ([`lib/cache.ts`](lib/cache.ts)). Opening the page or pressing **Plan all three** serves saved results instantly; **↻ Hard refresh** (or a card's **Re-run**) regenerates and uses API credits. Teaching a note clears the saved full-memory plans automatically.
+
+- `npm run cache:snapshot` copies the current cache to `data/demo-cache.json`, which a fresh deployment starts from, so visitors see complete plans without spending credits.
+- `npm run cache:clear` empties the local cache (restart the dev server afterwards).
 
 Hindsight can be [Hindsight Cloud](https://ui.hindsight.vectorize.io) or [self-hosted](https://github.com/vectorize-io/hindsight). `npm run seed -- --reset` rebuilds the banks from scratch.
 

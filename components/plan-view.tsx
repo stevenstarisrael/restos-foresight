@@ -89,6 +89,9 @@ export function CompareCard({
             <Stat value={String(summary.itemCount)} label="items" />
             <Stat value={mode === 'none' ? '0' : String(lessons)} label="past lessons" tone={mode === 'none' ? 'muted' : 'leaf'} />
           </div>
+          <div className="mt-2 text-[11px] text-muted" title={result.cachedAt ? 'Served from saved results — no API credits used. Re-run to regenerate.' : undefined}>
+            {result.cachedAt ? `💾 Saved result · ${timeAgo(result.cachedAt)}` : `⚡ Fresh · generated in ${(result.ms / 1000).toFixed(1)}s`}
+          </div>
         </>
       )}
     </div>
@@ -351,6 +354,14 @@ function Section({ title, hint, children }: { title: string; hint?: string; chil
       {children}
     </section>
   );
+}
+
+function timeAgo(iso: string) {
+  const mins = Math.round((Date.now() - Date.parse(iso)) / 60_000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins} min ago`;
+  const hours = Math.round(mins / 60);
+  return hours < 24 ? `${hours} h ago` : `${Math.round(hours / 24)} d ago`;
 }
 
 function fmt(n: number) {

@@ -13,6 +13,7 @@ import {
   type PlaybookState,
 } from '@/components/memory-panels';
 import { CompareCard, MODES, PlanDetail, type ColumnState, type Mode } from '@/components/plan-view';
+import type { PlanResult } from '@/lib/plan';
 
 const EMPTY: Record<Mode, ColumnState> = {
   none: { loading: false },
@@ -27,13 +28,15 @@ export default function Home() {
   const [memory, setMemory] = useState<MemoryState>({ beliefs: [] });
   const [playbook, setPlaybook] = useState<PlaybookState>({});
 
-  const runColumn = useCallback(async (mode: Mode, fest: string) => {
+  // force=false returns the saved plan when there is one (no API usage);
+  // force=true always regenerates (Re-run / Hard refresh).
+  const runColumn = useCallback(async (mode: Mode, fest: string, force = false) => {
     setColumns((c) => ({ ...c, [mode]: { loading: true } }));
     try {
       const res = await fetch('/api/plan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mode, festival: fest }),
+        body: JSON.stringify({ mode, festival: fest, force }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
@@ -44,15 +47,30 @@ export default function Home() {
   }, []);
 
   const runAll = useCallback(
-    (fest: string) => {
-      MODES.forEach((m) => runColumn(m.mode, fest));
+    (fest: string, force = false) => {
+      MODES.forEach((m) => runColumn(m.mode, fest, force));
     },
     [runColumn],
   );
 
-  const loadMemory = useCallback(async () => {
+  // Fill the columns from saved plans only — never triggers a model call.
+  const loadSaved = useCallback(async (fest: string) => {
     try {
-      const res = await fetch('/api/memory?bank=full');
+      const res = await fetch(`/api/plan?festival=${fest}`);
+      const saved = (await res.json()) as Partial<Record<Mode, PlanResult>>;
+      setColumns({
+        none: saved.none ? { loading: false, result: saved.none } : { loading: false },
+        firstSeason: saved.firstSeason ? { loading: false, result: saved.firstSeason } : { loading: false },
+        full: saved.full ? { loading: false, result: saved.full } : { loading: false },
+      });
+    } catch {
+      setColumns(EMPTY);
+    }
+  }, []);
+
+  const loadMemory = useCallback(async (force = false) => {
+    try {
+      const res = await fetch(`/api/memory?bank=full${force ? '&force=1' : ''}`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
       setMemory({ counts: data.counts, beliefs: data.beliefs });
@@ -61,9 +79,9 @@ export default function Home() {
     }
   }, []);
 
-  const loadPlaybook = useCallback(async () => {
+  const loadPlaybook = useCallback(async (force = false) => {
     try {
-      const res = await fetch('/api/playbook');
+      const res = await fetch(`/api/playbook${force ? '?force=1' : ''}`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
       setPlaybook(data);
@@ -77,18 +95,25 @@ export default function Home() {
     loadPlaybook();
     // ?run=1 plans all three on load (handy for recording the demo).
     const params = new URLSearchParams(window.location.search);
-    if (params.has('run')) {
-      const fest = params.get('festival') ?? 'diwali';
-      setFestival(fest);
-      runAll(fest);
-    }
-  }, [loadMemory, loadPlaybook, runAll]);
+    const fest = params.get('festival') ?? 'diwali';
+    setFestival(fest);
+    if (params.has('run')) runAll(fest);
+    else loadSaved(fest);
+  }, [loadMemory, loadPlaybook, runAll, loadSaved]);
 
   function switchFestival(id: string) {
     if (id === festival) return;
     setFestival(id);
-    setColumns(EMPTY); // plans are per festival; don't show Diwali numbers under Dussehra
+    loadSaved(id); // plans are per festival; show that festival's saved plans, if any
   }
+
+  function hardRefresh() {
+    runAll(festival, true);
+    loadMemory(true);
+    loadPlaybook(true);
+  }
+
+  const busy = MODES.some((m) => columns[m.mode].loading);
 
   const current = upcomingFestivals.find((f) => f.id === festival)!;
   const daysAway = Math.round((Date.parse(current.date) - Date.parse(TODAY)) / 86_400_000);
@@ -130,8 +155,20 @@ export default function Home() {
               </button>
             ))}
           </div>
-          <button onClick={() => runAll(festival)} className="rounded-lg bg-saffron px-4 py-2 text-sm font-medium text-white hover:brightness-110">
+          <button
+            onClick={() => runAll(festival)}
+            disabled={busy}
+            className="rounded-lg bg-saffron px-4 py-2 text-sm font-medium text-white hover:brightness-110 disabled:opacity-60"
+          >
             Plan all three
+          </button>
+          <button
+            onClick={hardRefresh}
+            disabled={busy}
+            title="Ignore saved results and regenerate everything (uses API credits)"
+            className="rounded-lg border border-line bg-white px-3 py-2 text-sm text-muted hover:text-ink disabled:opacity-60"
+          >
+            ↻ Hard refresh
           </button>
         </div>
       </section>
@@ -146,7 +183,7 @@ export default function Home() {
             state={columns[mode]}
             selected={selected === mode}
             onSelect={() => setSelected(mode)}
-            onRun={() => runColumn(mode, festival)}
+            onRun={() => runColumn(mode, festival, true)}
           />
         ))}
       </section>
@@ -173,11 +210,11 @@ export default function Home() {
 
       <h2 className="mt-12 text-lg font-semibold">The memory behind it</h2>
       <section className="mt-3 grid gap-4 lg:grid-cols-[1fr_1.2fr]">
-        <TeachPanel festival={festival} onTaught={loadMemory} onReplan={() => runColumn('full', festival)} />
-        <BeliefsPanel memory={memory} onReload={loadMemory} />
+        <TeachPanel festival={festival} onTaught={() => loadMemory(true)} onReplan={() => runColumn('full', festival, true)} />
+        <BeliefsPanel memory={memory} onReload={() => loadMemory(true)} />
       </section>
       <section className="mt-4 grid gap-4 lg:grid-cols-[1.2fr_1fr]">
-        <PlaybookPanel playbook={playbook} onReload={loadPlaybook} />
+        <PlaybookPanel playbook={playbook} onReload={() => loadPlaybook(true)} />
         <TimelinePanel />
       </section>
     </main>

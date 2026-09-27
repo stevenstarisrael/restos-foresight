@@ -49,4 +49,6 @@ export type PlanResult = {
   recalled: Evidence[];
   ms: number;
   notes: string[];
+  /** Set when served from the cache instead of freshly generated. */
+  cachedAt?: string;
 };

@@ -1,0 +1,3969 @@
+{
+  "playbook": {
+    "value": {
+      "name": "Diwali playbook",
+      "content": "## Diwali Playbook Overview\n\nThis playbook consolidates performance data and lessons learned from the Diwali festivals of 2024 and 2025. No records exist for Diwali at Spice Garden prior to 2024.\n\n## Ingredient and Packaging Performance\n\n| Item | 2024 Planned | 2024 Used | 2024 Outcome | 2025 Planned | 2025 Used | 2025 Outcome |\n| --- | --- | --- | --- | --- | --- | --- |\n| Sugar (kg) | 25 | ~32+ | Stock-out (Nov 1) | 45 | 41 | No stock-out |\n| Ghee (kg) | N/A | ~2.5x normal | Stock-out (Nov 1) | 12 | 15 | Stock-out (Oct 20) |\n| Paneer (kg) | 26 | 18 | 8 kg wasted | 20% reduction | - | No waste |\n| Kaju Katli (boxes) | 0 | 0 | 40 orders lost | - | 158 | Goal met |\n| Sweet Boxes | N/A | N/A | Stock-out (Nov 1) | 200 | 186 | Goal met |\n\n## Strategic Planning and Lessons Learned\n\n- **Order Timing**: Order at least one week before Diwali. In 2024, ordering 4 days prior (Oct 25) led to a 2-day delivery delay from Balaji Traders. In 2025, ordering one week early (Oct 3) successfully mitigated delivery delays.\n- **Supplier Reliability**: Balaji Traders is prone to delays during the pre-Diwali rush in Begum Bazar (2024, 2025). Always maintain Deccan Wholesale Mart as a backup supplier, as done in 2025.\n- **Prices**: Balaji Traders increased cashew prices by 18% (₹980 to ₹1,160/kg) one week before Diwali 2025. Procuring from Deccan Wholesale Mart at ₹1,040/kg saved costs (2025).\n- **Corporate Orders**: 120 boxes of kaju katli were sold for corporate gifts in 2025. Late confirmation in 2025 caused some companies to split their orders with other vendors.\n- **Menu Additions**: Adding kaju katli boxes in 2025 drove a 62% year-on-year increase in dessert revenue.\n- **Revenue Trends**: Revenue grew from ₹6.4L (2024) to ₹8.9L (2025), a 39% increase.\n- **Mistakes to Avoid**: \n  - Never allow sugar levels to fall below a 2-day supply: 55 dessert orders were lost in 2024 due to a total sugar stock-out.\n  - Do not overstock paneer: Demand for paneer mains decreased by 15% in 2024, resulting in 8 kg of waste.\n  - Ensure sufficient Ghee supply: 2025 Ghee consumption (15 kg) exceeded stock (12 kg), forcing a pause in jalebi preparation.\n",
+      "refreshedAt": "2026-09-27T12:26:08.016083+00:00"
+    },
+    "savedAt": "2026-09-27T13:14:03.520Z"
+  },
+  "memory:foresight-spice-garden": {
+    "value": {
+      "bank": "foresight-spice-garden",
+      "counts": {
+        "observation": 99,
+        "world": 106,
+        "experience": 11
+      },
+      "beliefs": [
+        {
+          "id": "695dcbb9-4655-4419-b991-0c29d80c67fa",
+          "text": "Balaji Traders has a recurring pattern of late deliveries for Diwali, occurring in both 2024 and 2025.",
+          "proofCount": 2,
+          "tags": [
+            "item:cashew",
+            "supplier:balaji-traders",
+            "item:sugar",
+            "festival:diwali",
+            "kind:supplier"
+          ]
+        },
+        {
+          "id": "59d04c8a-5df3-4a28-8b29-0b2e276a2705",
+          "text": "The establishment closed at 5pm on the immersion day of Ganesh Chaturthi 2026 with no staff issues.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ganesh-chaturthi",
+            "kind:outcome",
+            "item:chicken",
+            "item:paneer"
+          ]
+        },
+        {
+          "id": "7670f855-e8d8-4608-b74c-2205c8b25d57",
+          "text": "140 modaks were sold during Ganesh Chaturthi 2026.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ganesh-chaturthi",
+            "kind:outcome",
+            "item:chicken",
+            "item:paneer"
+          ]
+        },
+        {
+          "id": "b956d539-8d46-44f6-b233-930eed8ac8c5",
+          "text": "No paneer stock-out occurred during Ganesh Chaturthi 2026.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ganesh-chaturthi",
+            "kind:outcome",
+            "item:chicken",
+            "item:paneer"
+          ]
+        },
+        {
+          "id": "62c54ad0-2664-47b2-8421-43f2db114fbf",
+          "text": "During Ganesh Chaturthi 2026, chicken waste was 3 kg, down from 14 kg in 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ganesh-chaturthi",
+            "kind:outcome",
+            "item:chicken",
+            "item:paneer"
+          ]
+        },
+        {
+          "id": "c7315a48-aebb-452d-a627-f34be0aba5cc",
+          "text": "Foresight recommended a preparation plan for Ganesh Chaturthi 2026, spanning September 5 to September 15, 2026, which includes cutting chicken by 40%, cutting mutton by 30%, raising paneer stock by 35%, adding modak to the menu on Chaturthi day (September 7), and closing early on the immersion day (September 15).",
+          "proofCount": 1,
+          "tags": [
+            "kind:plan",
+            "item:paneer",
+            "festival:ganesh-chaturthi",
+            "item:mutton",
+            "item:chicken"
+          ]
+        },
+        {
+          "id": "ff0e9c72-9600-4e00-bd17-86db16f9bf81",
+          "text": "A total of 420 family packs of haleem were sold during Ramzan 2026.",
+          "proofCount": 1,
+          "tags": [
+            "kind:outcome",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "ca2200e9-c4cd-44d2-9aee-af5a742b80bb",
+          "text": "The mutton contract for Ramzan 2026 saved approximately ₹26,000 against a spot price of ₹880/kg.",
+          "proofCount": 1,
+          "tags": [
+            "kind:outcome",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "8c383985-8549-4c37-9c71-f3695e38cc5a",
+          "text": "During Ramzan 2026, haleem sold out on 2 days, compared to 4 out of the first 5 days in 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:outcome",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "80f5c249-6894-4134-8d63-5d0341873ecd",
+          "text": "Hyderabad Meat House is contracted to supply mutton at a fixed price of ₹800/kg for the duration of Ramzan 2026.",
+          "proofCount": 1,
+          "tags": [
+            "supplier:hyderabad-meat-house",
+            "kind:plan",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "fd4a59d6-9889-455b-af46-979c3318fbe1",
+          "text": "Foresight recommended a preparation plan for Ramzan 2026 consisting of 90 haleem portions on weekdays and 110 on weekends, with family packs offered starting from day 1.",
+          "proofCount": 1,
+          "tags": [
+            "supplier:hyderabad-meat-house",
+            "kind:plan",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "4e9126ce-9224-419f-89bc-5963cce46364",
+          "text": "During Sankranti 2026, revenue decreased by 33%.",
+          "proofCount": 1,
+          "tags": [
+            "kind:outcome",
+            "item:chicken",
+            "item:paneer",
+            "festival:sankranti"
+          ]
+        },
+        {
+          "id": "66dcb1eb-a6f0-4d2e-a6ad-fbda8fc0be21",
+          "text": "During Sankranti 2026, 2 kg of perishables were wasted.",
+          "proofCount": 1,
+          "tags": [
+            "kind:outcome",
+            "item:chicken",
+            "item:paneer",
+            "festival:sankranti"
+          ]
+        },
+        {
+          "id": "53e3543a-aa60-4fdd-b00b-b3acc66e3d52",
+          "text": "During Sankranti 2026, perishable stock was reduced by 35% based on lessons from 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:outcome",
+            "item:chicken",
+            "item:paneer",
+            "festival:sankranti"
+          ]
+        },
+        {
+          "id": "b8f62db2-57bc-45b3-bd65-f7de135d934e",
+          "text": "Used 30 kg of chicken for New Year's Eve 2025 without experiencing a stock-out.",
+          "proofCount": 1,
+          "tags": [
+            "festival:new-year",
+            "kind:outcome",
+            "item:chicken"
+          ]
+        },
+        {
+          "id": "38c31f8e-c84d-404e-b3e5-30b3c2003392",
+          "text": "Stocked 32 kg of chicken for New Year's Eve 2025 to prevent a recurrence of the 2024 shortage.",
+          "proofCount": 1,
+          "tags": [
+            "festival:new-year",
+            "kind:outcome",
+            "item:chicken"
+          ]
+        },
+        {
+          "id": "507e7dca-8692-4c29-9003-399a8ff5c65a",
+          "text": "During Diwali 2025, dessert revenue increased by 62% year-on-year, driven by kaju katli box sales.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "c30cc9f9-73ee-4a50-b80b-d78e07754df5",
+          "text": "Diwali 2025 revenue reached ₹8.9L, a 39% increase from the ₹6.4L revenue recorded during Diwali 2024.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "4d79d22b-bbb3-4c80-aef5-c56a99ebe0a0",
+          "text": "Diwali 2025 ghee shortage of approximately 3 kg.",
+          "proofCount": 1,
+          "tags": [
+            "item:paneer",
+            "item:cashew",
+            "item:sugar",
+            "festival:diwali",
+            "item:sweet-boxes",
+            "kind:outcome",
+            "item:ghee"
+          ]
+        },
+        {
+          "id": "5bb0b060-8a0b-4f26-857f-9ed05030d0cf",
+          "text": "Diwali 2025 paneer waste was zero, following a 20% reduction in planned quantity.",
+          "proofCount": 1,
+          "tags": [
+            "item:paneer",
+            "item:cashew",
+            "item:sugar",
+            "festival:diwali",
+            "item:sweet-boxes",
+            "kind:outcome",
+            "item:ghee"
+          ]
+        },
+        {
+          "id": "d22d0229-5922-43ce-9591-331fec443d08",
+          "text": "Diwali 2025 sweet box usage was 186 boxes out of 200 planned.",
+          "proofCount": 1,
+          "tags": [
+            "item:paneer",
+            "item:cashew",
+            "item:sugar",
+            "festival:diwali",
+            "item:sweet-boxes",
+            "kind:outcome",
+            "item:ghee"
+          ]
+        },
+        {
+          "id": "0a8e460d-815e-4681-bd14-47b0199f7258",
+          "text": "Diwali 2025 Kaju katli sales totaled 158 boxes, consisting of 38 walk-in boxes and 120 corporate boxes.",
+          "proofCount": 1,
+          "tags": [
+            "item:paneer",
+            "item:cashew",
+            "item:sugar",
+            "festival:diwali",
+            "item:sweet-boxes",
+            "kind:outcome",
+            "item:ghee"
+          ]
+        },
+        {
+          "id": "44d34d01-2bda-41c1-9697-302c79eadb0e",
+          "text": "Diwali 2025 sugar usage was 41 kg out of 45 kg planned.",
+          "proofCount": 1,
+          "tags": [
+            "item:paneer",
+            "item:cashew",
+            "item:sugar",
+            "festival:diwali",
+            "item:sweet-boxes",
+            "kind:outcome",
+            "item:ghee"
+          ]
+        },
+        {
+          "id": "2cd1de3e-5269-43c3-8c89-f01f35e5a7a3",
+          "text": "Jalebi production was paused for the last hour of Diwali 2025 due to a Ghee stockout, with 15 kg of Ghee consumed over 4 days exceeding the 12 kg stock.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "item:ghee",
+            "kind:stockout"
+          ]
+        },
+        {
+          "id": "ba9bb7e7-cacf-486e-a6b1-57122c29251e",
+          "text": "Three companies requested to book orders earlier for Diwali 2026 to avoid the late confirmation issues experienced in 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "item:cashew",
+            "kind:lost_demand",
+            "item:sweet-boxes"
+          ]
+        },
+        {
+          "id": "a66c0a09-7542-4acc-b48b-0fb728792ca1",
+          "text": "One company had to split its Diwali 2025 order with another shop due to a late booking confirmation.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "item:cashew",
+            "kind:lost_demand",
+            "item:sweet-boxes"
+          ]
+        },
+        {
+          "id": "55e627a8-acd8-495a-8e3b-61f7d81a53f6",
+          "text": "Three companies, including a Hitec City IT firm, ordered 120 boxes of kaju katli for Diwali 2025 employee gifts.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "item:cashew",
+            "kind:lost_demand",
+            "item:sweet-boxes"
+          ]
+        },
+        {
+          "id": "57b1000c-6b64-4105-ac28-4f6932e6bed6",
+          "text": "Spice Garden purchased 8 kg of cashew from Deccan Wholesale Mart at ₹1,040 per kg for Diwali 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "supplier:balaji-traders",
+            "kind:supplier",
+            "item:cashew"
+          ]
+        },
+        {
+          "id": "55c8a96c-1448-41a1-add6-e20f88f74274",
+          "text": "Balaji Traders increased the price of cashew by 18%, from ₹980 to ₹1,160 per kg, during the week before Diwali 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "supplier:balaji-traders",
+            "kind:supplier",
+            "item:cashew"
+          ]
+        },
+        {
+          "id": "6f15e771-d3e5-4f6b-9cdd-d9a20683545b",
+          "text": "Spice Garden ordered supplies one week early for Diwali 2025 to mitigate potential delivery delays.",
+          "proofCount": 1,
+          "tags": [
+            "festival:diwali",
+            "supplier:balaji-traders",
+            "item:sugar",
+            "kind:supplier"
+          ]
+        },
+        {
+          "id": "a1eb521c-9922-4a94-8410-e55cc5e4eb85",
+          "text": "For Diwali 2025, the paneer order is to be reduced by 20%.",
+          "proofCount": 1,
+          "tags": [
+            "kind:plan",
+            "item:paneer",
+            "item:cashew",
+            "item:sugar",
+            "item:khoya",
+            "festival:diwali",
+            "item:sweet-boxes",
+            "item:ghee"
+          ]
+        },
+        {
+          "id": "776d633e-a095-404c-a5a2-510f2beb1f03",
+          "text": "An order of 200 sweet boxes has been placed with PackRight for Diwali 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:plan",
+            "item:paneer",
+            "item:cashew",
+            "item:sugar",
+            "item:khoya",
+            "festival:diwali",
+            "item:sweet-boxes",
+            "item:ghee"
+          ]
+        },
+        {
+          "id": "632b9100-66bb-4a78-a0e3-7d45a47fd5dd",
+          "text": "The Diwali 2025 inventory will include 500g kaju katli boxes.",
+          "proofCount": 1,
+          "tags": [
+            "kind:plan",
+            "item:paneer",
+            "item:cashew",
+            "item:sugar",
+            "item:khoya",
+            "festival:diwali",
+            "item:sweet-boxes",
+            "item:ghee"
+          ]
+        },
+        {
+          "id": "3e72c06e-7cec-4e7e-86ef-59c2d3d7a211",
+          "text": "Deccan Wholesale Mart is designated as a backup supplier for Diwali 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:plan",
+            "item:paneer",
+            "item:cashew",
+            "item:sugar",
+            "item:khoya",
+            "festival:diwali",
+            "item:sweet-boxes",
+            "item:ghee"
+          ]
+        },
+        {
+          "id": "a7a13f43-671a-40f5-9d1e-955efb3af29e",
+          "text": "The procurement plan for Diwali 2025 includes ordering 45 kg of sugar, 12 kg of ghee, and 10 kg of khoya by October 11, 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:plan",
+            "item:paneer",
+            "item:cashew",
+            "item:sugar",
+            "item:khoya",
+            "festival:diwali",
+            "item:sweet-boxes",
+            "item:ghee"
+          ]
+        },
+        {
+          "id": "cdcbfeb1-1d00-41fe-8050-aa233902dfe3",
+          "text": "During Dussehra 2025, 71 mutton biryani plates were sold with no orders turned away.",
+          "proofCount": 1,
+          "tags": [
+            "kind:outcome",
+            "festival:dussehra",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "7a0f6509-f909-4a55-a91e-fb630dbd94c2",
+          "text": "During Dussehra 2025, 27 kg of mutton was used out of 28 kg pre-booked, with no stock-out.",
+          "proofCount": 1,
+          "tags": [
+            "kind:outcome",
+            "festival:dussehra",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "a090bfa9-a4ed-4e66-ad39-9e136954ce2b",
+          "text": "Foresight recommended adding one evening cook for Dussehra 2025.",
+          "proofCount": 1,
+          "tags": [
+            "supplier:hyderabad-meat-house",
+            "festival:dussehra",
+            "kind:plan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "6723b8b7-4f63-4d76-9292-2d7e269da0a0",
+          "text": "Foresight recommended pre-booking 28 kg of mutton with Hyderabad Meat House 3 days before Dussehra 2025 to avoid the stock-out experienced during Dussehra 2024.",
+          "proofCount": 1,
+          "tags": [
+            "supplier:hyderabad-meat-house",
+            "festival:dussehra",
+            "kind:plan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "ef0ae5b5-5f7a-4005-b23f-5ef14c41fc69",
+          "text": "Management has decided to close the outlet early on the Ganesh Chaturthi immersion day in 2026.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ganesh-chaturthi",
+            "kind:staff_note"
+          ]
+        },
+        {
+          "id": "d3b2934b-b294-4e27-85ad-af18de833060",
+          "text": "On September 6, 2025, Ganesh Chaturthi immersion day caused Tank Bund closures, prevented three staff members from reaching the outlet, and resulted in the cancellation of all delivery orders after 16:00.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ganesh-chaturthi",
+            "kind:staff_note"
+          ]
+        },
+        {
+          "id": "83b6cddd-7ae7-438b-b5db-b85a1a0b8e75",
+          "text": "During the 10 days of Ganesh Chaturthi 2025, regular customers adopted vegetarian diets, causing non-veg sales to fall by 40% and veg thali and paneer sales to rise by 35%.",
+          "proofCount": 1,
+          "tags": [
+            "item:mutton",
+            "item:chicken",
+            "item:paneer",
+            "festival:ganesh-chaturthi",
+            "kind:waste"
+          ]
+        },
+        {
+          "id": "99b26a79-21e2-4603-8d23-b2faaabebbda",
+          "text": "Paneer stock-out occurred twice during Ganesh Chaturthi 2025, specifically on August 29 and August 31.",
+          "proofCount": 1,
+          "tags": [
+            "item:mutton",
+            "item:chicken",
+            "item:paneer",
+            "festival:ganesh-chaturthi",
+            "kind:waste"
+          ]
+        },
+        {
+          "id": "ee869706-ec87-4b4c-939a-d0de40f40e2f",
+          "text": "During Ganesh Chaturthi 2025, 14 kg of chicken and 6 kg of mutton were wasted.",
+          "proofCount": 1,
+          "tags": [
+            "item:mutton",
+            "item:chicken",
+            "item:paneer",
+            "festival:ganesh-chaturthi",
+            "kind:waste"
+          ]
+        },
+        {
+          "id": "66b66b66-8326-4475-9573-29424c15b908",
+          "text": "Approximately 20 customers requested modak during Ganesh Chaturthi 2025, but the item was out of stock.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ganesh-chaturthi",
+            "kind:lost_demand"
+          ]
+        },
+        {
+          "id": "9e239d5a-4b15-4a2a-9d69-298c6efc3b6b",
+          "text": "Foresight recommended maintaining normal stock levels for Ganesh Chaturthi 2025, citing a lack of historical data.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ganesh-chaturthi",
+            "kind:plan"
+          ]
+        },
+        {
+          "id": "74ceb6c2-62d0-46d5-8f0e-8017206ac3b8",
+          "text": "Spice Garden dine-in operations at Banjara Hills were unaffected by Bonalu festival 2025 road closures.",
+          "proofCount": 1,
+          "tags": [
+            "kind:summary",
+            "festival:bonalu"
+          ]
+        },
+        {
+          "id": "f29de9e6-72d9-40f0-8613-47ac0386d8ee",
+          "text": "Bonalu festival 2025 road closures in the Old City caused a 20% reduction in delivery orders.",
+          "proofCount": 1,
+          "tags": [
+            "kind:summary",
+            "festival:bonalu"
+          ]
+        },
+        {
+          "id": "accc1d90-61bf-4f4b-8643-430d41b92b33",
+          "text": "Weekend demand for haleem at Spice Garden reached 110 portions per day during Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "4a3b0d12-9f50-45b7-b32d-60e1bfbaa465",
+          "text": "Spice Garden used approximately 430 kg of mutton during Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "12aec04b-7219-4458-9204-5301346cd3e6",
+          "text": "Spice Garden's monthly revenue increased by 48% during Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "11557e5f-0ebb-4795-91e9-9dadca6b7a05",
+          "text": "Spice Garden sold 2,480 portions of haleem and 310 family packs during Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:summary"
+          ]
+        },
+        {
+          "id": "c0f791ed-cf17-481a-86c5-4d6b8931e4fd",
+          "text": "A fixed-price contract for Ramzan 2025 would have prevented the mutton price increase at Hyderabad Meat House.",
+          "proofCount": 1,
+          "tags": [
+            "kind:supplier",
+            "festival:ramzan",
+            "supplier:hyderabad-meat-house",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "fe390967-9db9-4fae-a9cf-605c7d275615",
+          "text": "Hyderabad Meat House increased the price of mutton from ₹780 to ₹860 per kg during mid-Ramzan 2025, citing high city-wide demand.",
+          "proofCount": 1,
+          "tags": [
+            "kind:supplier",
+            "festival:ramzan",
+            "supplier:hyderabad-meat-house",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "ae1fbc17-9851-460a-9493-bdedbe0a1e88",
+          "text": "Spice Garden daily mutton usage is approximately 16 kg for Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:staff_note",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "dc2006c4-a9ab-426b-8403-d8cf72b1cc9b",
+          "text": "Spice Garden introduced a 1 kg haleem family pack priced at ₹850 for Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:staff_note",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "fffb826d-9e3a-4ed0-837d-01144ff023b8",
+          "text": "Spice Garden increased daily haleem production to 90 portions for Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:staff_note",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "7a00f528-5a1c-4a40-b21a-9c0db9301f87",
+          "text": "During the first week of Ramzan 2025, 25 customers requested 1 kg haleem family packs for takeaway, but the demand was lost due to stock-out or unavailability.",
+          "proofCount": 1,
+          "tags": [
+            "festival:ramzan",
+            "kind:lost_demand"
+          ]
+        },
+        {
+          "id": "b1cd0ea3-2a49-44ee-ab84-3b0e07ea9a9d",
+          "text": "During Ramzan 2025, daily production of Haleem is 60 portions, while demand is approximately 85 portions.",
+          "proofCount": 1,
+          "tags": [
+            "kind:stockout",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        },
+        {
+          "id": "f9e5dabf-a610-4a4d-8cce-842ac1f4693b",
+          "text": "The Iftar rush for Haleem peaks between 6:30pm and 7:30pm during Ramzan 2025.",
+          "proofCount": 1,
+          "tags": [
+            "kind:stockout",
+            "festival:ramzan",
+            "item:mutton"
+          ]
+        }
+      ]
+    },
+    "savedAt": "2026-09-27T13:14:10.180Z"
+  },
+  "plan:none:diwali": {
+    "value": {
+      "mode": "none",
+      "plan": {
+        "headline": "Order extra ingredients now to meet the Diwali rush",
+        "expectations": [
+          {
+            "title": "Sweets demand",
+            "value": "3x normal",
+            "detail": "Sweet box sales will triple during Diwali."
+          },
+          {
+            "title": "Meat consumption",
+            "value": "2.5x normal",
+            "detail": "Mutton and chicken orders will rise sharply."
+          },
+          {
+            "title": "Rice usage",
+            "value": "1.9x normal",
+            "detail": "Basmati rice needed for special biryani."
+          },
+          {
+            "title": "Cash flow",
+            "value": "₹2.5L extra",
+            "detail": "Higher ingredient spend this week."
+          }
+        ],
+        "orders": [
+          {
+            "stockId": "sugar",
+            "item": "Sugar",
+            "quantity": 2,
+            "unit": "kg",
+            "expectedUse": 16,
+            "orderBy": "2026-11-06",
+            "supplierId": "balaji-traders",
+            "why": "Keep a safety buffer for high sweet demand.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "ghee",
+            "item": "Ghee",
+            "quantity": 1,
+            "unit": "kg",
+            "expectedUse": 9.6,
+            "orderBy": "2026-11-06",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Needed for sweets and richer gravies.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "khoya",
+            "item": "Khoya (mawa)",
+            "quantity": 2,
+            "unit": "kg",
+            "expectedUse": 4.8,
+            "orderBy": "2026-11-06",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Core ingredient for Diwali sweets.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "paneer",
+            "item": "Paneer",
+            "quantity": 20,
+            "unit": "kg",
+            "expectedUse": 32,
+            "orderBy": "2026-11-06",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "High demand for paneer tikka and sweets.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "milk",
+            "item": "Milk",
+            "quantity": 160,
+            "unit": "L",
+            "expectedUse": 200,
+            "orderBy": "2026-11-06",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Needed for sweets, gravies and drinks.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "mutton",
+            "item": "Mutton",
+            "quantity": 42,
+            "unit": "kg",
+            "expectedUse": 56,
+            "orderBy": "2026-11-07",
+            "supplierId": "hyderabad-meat-house",
+            "why": "Special mutton biryani for Diwali.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "chicken",
+            "item": "Chicken",
+            "quantity": 74,
+            "unit": "kg",
+            "expectedUse": 96,
+            "orderBy": "2026-11-07",
+            "supplierId": "hyderabad-meat-house",
+            "why": "High demand for chicken dishes and kebabs.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "basmati",
+            "item": "Basmati rice",
+            "quantity": 52,
+            "unit": "kg",
+            "expectedUse": 112,
+            "orderBy": "2026-11-06",
+            "supplierId": "balaji-traders",
+            "why": "Needed for festive biryani and pulao.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "sweet-boxes",
+            "item": "Sweet boxes (500g)",
+            "quantity": 20,
+            "unit": "pcs",
+            "expectedUse": 24,
+            "orderBy": "2026-11-04",
+            "supplierId": "packright",
+            "why": "Extra packaging for Diwali sweet hampers.",
+            "lastTime": ""
+          }
+        ],
+        "menu": [
+          {
+            "change": "Add Diwali Sweet Platter with assorted mithai",
+            "why": "Guests expect festive sweets and it boosts sweet counter sales."
+          },
+          {
+            "change": "Introduce Special Hyderabadi Mutton Biryani for Diwali",
+            "why": "Biryani is a crowd‑pleaser and fits the festive theme."
+          }
+        ],
+        "risks": [
+          {
+            "risk": "Supplier delay on sweet ingredients",
+            "mitigation": "Place orders early and keep a small safety stock of sugar and khoya."
+          },
+          {
+            "risk": "Power outage during cooking",
+            "mitigation": "Arrange backup generator for kitchen equipment."
+          },
+          {
+            "risk": "Higher than expected footfall",
+            "mitigation": "Monitor bookings daily and be ready to extend kitchen shifts."
+          },
+          {
+            "risk": "Staff shortage on peak day",
+            "mitigation": "Confirm extra staff roster a week before and have on‑call helpers."
+          }
+        ],
+        "confidence": "medium"
+      },
+      "evidence": [],
+      "recalled": [],
+      "ms": 4904,
+      "notes": [
+        "Stateless LLM call — no memory"
+      ]
+    },
+    "savedAt": "2026-09-27T13:14:21.273Z"
+  },
+  "plan:firstSeason:diwali": {
+    "value": {
+      "mode": "firstSeason",
+      "plan": {
+        "headline": "Place all ingredient and packaging orders by October 30th to ensure sufficient stock for the high Diwali demand.",
+        "expectations": [
+          {
+            "title": "Sweet demand",
+            "value": "210% increase",
+            "detail": "Demand for sweets like khoya-based items will significantly rise during the festival."
+          },
+          {
+            "title": "Ghee usage",
+            "value": "2.5x normal",
+            "detail": "Consumption of ghee will be much higher than usual due to increased jalebi production."
+          },
+          {
+            "title": "Takeaway volume",
+            "value": "High demand",
+            "detail": "Expect a surge in takeaway orders requiring sufficient packaging boxes."
+          }
+        ],
+        "orders": [
+          {
+            "stockId": "sugar",
+            "item": "Sugar",
+            "quantity": 50,
+            "unit": "kg",
+            "expectedUse": 50,
+            "orderBy": "2026-10-30",
+            "supplierId": "balaji-traders",
+            "why": "Need to maintain safety stock to avoid running out during the festival.",
+            "lastTime": "We used 32 kg in 4 days during Diwali 2024."
+          },
+          {
+            "stockId": "ghee",
+            "item": "Ghee",
+            "quantity": 20,
+            "unit": "kg",
+            "expectedUse": 20,
+            "orderBy": "2026-10-30",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Need a buffer for increased jalebi production.",
+            "lastTime": "Consumption was 2.5x normal in 2024."
+          },
+          {
+            "stockId": "khoya",
+            "item": "Khoya",
+            "quantity": 15,
+            "unit": "kg",
+            "expectedUse": 15,
+            "orderBy": "2026-10-30",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Higher demand for sweets during the festival.",
+            "lastTime": "Demand increased by 210% in 2024."
+          },
+          {
+            "stockId": "cashew",
+            "item": "Cashew",
+            "quantity": 10,
+            "unit": "kg",
+            "expectedUse": 10,
+            "orderBy": "2026-10-30",
+            "supplierId": "balaji-traders",
+            "why": "Required for the new Kaju Katli menu item.",
+            "lastTime": "There were 40 unfulfilled requests in 2024."
+          },
+          {
+            "stockId": "sweet-boxes",
+            "item": "Sweet Boxes",
+            "quantity": 200,
+            "unit": "pcs",
+            "expectedUse": 200,
+            "orderBy": "2026-10-25",
+            "supplierId": "packright",
+            "why": "Ensure supply for takeaway orders to avoid stockouts.",
+            "lastTime": "A stockout occurred in 2024."
+          }
+        ],
+        "menu": [
+          {
+            "change": "Add Kaju Katli gift boxes",
+            "why": "We had 40 unfulfilled customer requests for this item in 2024."
+          },
+          {
+            "change": "Reduce paneer prep by 15%",
+            "why": "Customer preference shifts heavily toward sweets and biryani during Diwali."
+          }
+        ],
+        "risks": [
+          {
+            "risk": "Late supplier deliveries",
+            "mitigation": "Place orders by 2026-10-30 and use deccan-wholesale as a backup if not confirmed by 2026-11-01."
+          },
+          {
+            "risk": "Sugar and ghee stockout",
+            "mitigation": "Order 50 kg of sugar and 20 kg of ghee to maintain at least two days of normal usage."
+          },
+          {
+            "risk": "Packaging shortage",
+            "mitigation": "Order 200 boxes from packright by 2026-10-25."
+          }
+        ],
+        "confidence": "high"
+      },
+      "evidence": [
+        {
+          "id": "3198e435-7c44-4367-a4c8-fa69b1a84a58",
+          "text": "Sugar consumption was 32 kg between October 29 and November 1, 2024, compared to 8 kg in a normal 4-day period during Diwali 2024. | When: 2024-10-29 to 2024-11-01 | Increased demand during Diwali 2024.",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "1758899f-57e7-4767-8aa9-3f9ecc9c0579",
+          "text": "Ghee consumption during Diwali 2024 was approximately 2.5 times the normal usage. | When: 2024-11-01",
+          "type": "world"
+        },
+        {
+          "id": "1a819e8d-77fc-4ee6-a8a2-9b94ef7ec7a5",
+          "text": "Customers requested 500g to 1kg boxes of kaju katli during the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: customers",
+          "type": "world",
+          "when": "2024-10-28T00:00:00.010000+00:00"
+        },
+        {
+          "id": "88b8647f-d91f-4cfd-a951-9b718aba760d",
+          "text": "Diwali 2024 revenue was ₹6.4L compared to ₹4.1L for a normal 5-day period. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "cbe540dd-a9bb-4679-a84d-91a23e471078",
+          "text": "Spice Garden purchased 26 kg of paneer for Diwali 2024 expecting high demand. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T00:00:00.010000+00:00"
+        },
+        {
+          "id": "728941d9-e73b-4c08-9969-667b10057064",
+          "text": "Imran ordered 25 kg of sugar for Diwali 2024 from Balaji Traders, which is 5 kg more than a normal week. | When: 2024-10-25 | Involving: Imran (store keeper), Balaji Traders | Preparation for Diwali 2024",
+          "type": "world",
+          "when": "2024-10-25T00:00:00+00:00"
+        },
+        {
+          "id": "ec81499f-41ce-472f-bf82-a5ccf6f1b5e1",
+          "text": "18 kg of mutton was fully consumed by 8:00pm during Dussehra 2024. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-12T20:00:00.010000+00:00"
+        },
+        {
+          "id": "b4e17131-3b76-40e2-9f99-46182c6e5830",
+          "text": "Spice Garden wasted 8 kg of expired paneer valued at approximately ₹2,700 after Diwali 2024. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T00:00:00+00:00"
+        },
+        {
+          "id": "38707789-e40c-4207-ac84-59b1238ee864",
+          "text": "Ghee stock reached 1.5 kg during Diwali 2024, causing head chef Ravi to ration it for jalebi. | When: 2024-11-01 | Involving: Ravi (head chef)",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "b8c9525c-9dda-4733-8b72-7a823f9a897c",
+          "text": "Sugar stock-out occurred during Diwali 2024, leading to 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "a66a6403-c66a-4c7f-84c1-285555afeaf9",
+          "text": "Sugar was purchased at ₹58/kg from a local kirana, compared to the Balaji supplier price of ₹44/kg for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency top-up for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00.010000+00:00"
+        },
+        {
+          "id": "2714ccd2-f43e-402d-9687-dd49f29f3295",
+          "text": "Imran purchased 10 kg of sugar as an emergency top-up for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency top-up for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00+00:00"
+        },
+        {
+          "id": "f6a64422-2291-4029-8ea8-589f35ef30e6",
+          "text": "Sugar stock reached zero at 7:05pm during Diwali 2024. | When: 2024-11-01 | High consumption during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T19:05:00+00:00"
+        },
+        {
+          "id": "d796e70c-b4e9-4561-aed6-0317200e0031",
+          "text": "12 takeaway sweet orders were refused due to stockout during the Diwali 2024 festival. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00.010000+00:00"
+        },
+        {
+          "id": "ab6c0d41-63a1-45bc-8f08-6caad7e8d5d4",
+          "text": "40 customers requested kaju katli, which is not on the menu, during the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: 40 customers | Customer demand not served due to item not being on the menu.",
+          "type": "world",
+          "when": "2024-10-28T00:00:00+00:00"
+        },
+        {
+          "id": "1a422c52-e4bb-4ff0-917f-b7f083d9bbd0",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during the Diwali 2024 festival. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "b5de7d51-7b84-49d0-a0a3-857f3b2edfda",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu due to sugar stockout during Diwali 2024. | When: 2024-11-01 | Sugar stockout during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "4a512eb4-0de1-4d32-ad41-5a37c1dc9fc0",
+          "text": "Stock-out of sugar, kaju katli, and sweet boxes occurred during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.030000+00:00"
+        },
+        {
+          "id": "13dd81d0-a1da-4b98-b776-27c9f990a963",
+          "text": "Customer demand for paneer mains fell by 15% during Diwali 2024 as customers preferred sweets and biryani. | When: 2024-11-04",
+          "type": "world"
+        },
+        {
+          "id": "9a235e0b-35cc-4f73-8624-bcc9de75bcf0",
+          "text": "Balaji Traders delivered sugar and cashew order 2 days late for Diwali 2024. | When: 2024-10-29 | Involving: Balaji Traders",
+          "type": "world",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "cfd5c31b-134f-4d95-8f47-4cd7c7eb7313",
+          "text": "Dessert sales increased by 210% and biryani sales increased by 60% during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "535ada45-9326-4165-bd00-d6992b14e10b",
+          "text": "Dussehra 2024 revenue reached ₹1.86L compared to ₹1.1L on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival performance",
+          "type": "world",
+          "when": "2024-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "268efc49-8802-4b4d-8778-cb7644fa4473",
+          "text": "15 walk-in and phone customers requested Diwali sweet gift boxes for corporate gifting, which the business does not offer. | When: 2024-10-28 | Involving: 15 walk-in and phone customers | Lost demand during Diwali 2024 festival.",
+          "type": "world",
+          "when": "2024-10-28T12:30:00+00:00"
+        },
+        {
+          "id": "7bc564cf-0852-489d-9296-2bc27a1a6630",
+          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates compared to 25 plates on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.010000+00:00"
+        },
+        {
+          "id": "2571037f-a366-4d22-a1ba-1dbacee65191",
+          "text": "22 mutton biryani orders were turned away or switched to chicken during Dussehra 2024. | When: 2024-10-12 | Mutton stockout",
+          "type": "world",
+          "when": "2024-10-12T20:15:00.020000+00:00"
+        },
+        {
+          "id": "7f618de6-c7b7-452a-bc84-5e2611ec6461",
+          "text": "Dussehra 2024 sales for Double ka meetha reached 30 portions. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.030000+00:00"
+        },
+        {
+          "id": "c1c4b12f-5495-43fc-bf0e-a7486f24d58a",
+          "text": "Customers are requesting mutton biryani and mutton curry for the 2024 Dussehra feast. | When: 2024-10-12",
+          "type": "world"
+        },
+        {
+          "id": "0d0ab8b1-bcaa-4d33-97c7-6c4b4eb948e3",
+          "text": "Paneer main course sales decreased by 15% during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "2552970c-91fb-484b-bb49-7c14ef480486",
+          "text": "Begum Bazar wholesalers are overloaded during the week before Diwali 2024. | When: 2024-10-22 to 2024-10-29 | Involving: Begum Bazar wholesalers",
+          "type": "world"
+        },
+        {
+          "id": "d575eab7-fcea-4978-873b-8e574df77b52",
+          "text": "Mutton stock ran out during Dussehra 2024. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-12T20:15:00+00:00"
+        },
+        {
+          "id": "11844eca-f875-4404-8e90-b2143e436813",
+          "text": "Dussehra 2024 demand for Chicken was normal. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "577d7086-59fb-4a95-8f63-41021d74fc6c",
+          "text": "Hyderabad Meat House could not provide same-day mutton top-up for Dussehra 2024. | When: 2024-10-12 | Involving: Hyderabad Meat House | Every butcher in the city was sold out due to the festival.",
+          "type": "world",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "a6916a39-0d84-48a0-a6ee-d368e006630f",
+          "text": "14 family reservations confirmed for 12 Oct 2024 for the 2024 Dussehra festival. | When: 2024-10-12 | Involving: Priya (manager)",
+          "type": "world",
+          "when": "2024-10-12T00:00:00.010000+00:00"
+        },
+        {
+          "id": "74876842-4cd3-4642-98e8-35aeb69ccb12",
+          "text": "Mutton for Dussehra 2024 must be pre-booked at least 3 days in advance. | High demand during the festival.",
+          "type": "world"
+        },
+        {
+          "id": "4e9563d2-9896-4768-86be-207d8d1bd4af",
+          "text": "Dasara weekend bookings are double normal levels for the 2024 Dussehra festival. | When: 2024-10-12 | Involving: Priya (manager)",
+          "type": "world",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "2c79c029-b6cc-4422-bb90-cfbcac53c452",
+          "text": "Ravi (head chef) plans to order sugar, ghee, and khoya one week before Diwali 2025. | When: 2025-10-20 to 2025-10-26 | Involving: Ravi (head chef) | Preparation for Diwali 2025",
+          "type": "world"
+        },
+        {
+          "id": "64206cc9-78fa-4914-a2a8-48597313bb4a",
+          "text": "Ravi (head chef) plans to secure a backup dry-goods supplier for Diwali 2025. | When: 2025-10-01 to 2025-10-31 | Involving: Ravi (head chef) | Supply chain contingency for Diwali 2025",
+          "type": "world"
+        },
+        {
+          "id": "90f826aa-d6ca-433e-a37f-894863623185",
+          "text": "Ravi (head chef) plans to add kaju katli boxes to the menu for Diwali 2025. | When: 2025-10-01 to 2025-10-31 | Involving: Ravi (head chef) | Menu expansion for Diwali 2025",
+          "type": "world"
+        },
+        {
+          "id": "554e60ae-7936-42a7-b18f-0fe741d5b648",
+          "text": "Spice Garden wasted 8 kg of expired paneer valued at approximately ₹2,700 following Diwali 2024.",
+          "type": "observation",
+          "when": "2024-11-04T00:00:00+00:00"
+        },
+        {
+          "id": "d13b4c44-4fa3-4e65-855c-0107c0471550",
+          "text": "Customer demand for paneer mains at Spice Garden fell by 15% during Diwali 2024 due to a preference for sweets and biryani.",
+          "type": "observation"
+        },
+        {
+          "id": "fdefd5a3-01bf-4d85-b28d-81d5335a1d60",
+          "text": "Spice Garden purchased 26 kg of paneer for Diwali 2024.",
+          "type": "observation",
+          "when": "2024-11-04T00:00:00.010000+00:00"
+        },
+        {
+          "id": "691e1654-654a-42e4-9c3b-63af8da78e9b",
+          "text": "During Diwali 2024, dessert sales increased by 210% and biryani sales increased by 60%.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "70606614-c246-43dc-a3e1-e291be109b8c",
+          "text": "The business experienced lost demand during the 2024 Diwali festival, with 15 walk-in and phone customers requesting corporate Diwali sweet gift boxes that the business does not offer.",
+          "type": "observation",
+          "when": "2024-10-28T12:30:00+00:00"
+        },
+        {
+          "id": "d624e9ea-d3ed-432c-92a3-7d4fa21181a6",
+          "text": "Ghee consumption during Diwali 2024 was approximately 2.5 times the normal usage.",
+          "type": "observation"
+        },
+        {
+          "id": "1d165c0c-7bb1-4496-a7a5-1a1565412d52",
+          "text": "Diwali 2024 revenue (Oct 29 - Nov 2) was ₹6.4L, compared to ₹4.1L for a normal 5-day period.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "65ee7baa-14ae-4afe-9eb7-312706deca36",
+          "text": "12 takeaway sweet orders were refused due to a stockout of containers during the Diwali 2024 festival.",
+          "type": "observation",
+          "when": "2024-11-01T12:00:00.010000+00:00"
+        },
+        {
+          "id": "1178e5b4-dedc-4932-a4d5-c370e2f3995b",
+          "text": "During the 2024 Diwali festival, 40 customers requested kaju katli in 500g to 1kg boxes, but the item was not on the menu.",
+          "type": "observation",
+          "when": "2024-10-28T00:00:00+00:00"
+        },
+        {
+          "id": "b8318b74-6de5-4671-8c7c-80465bea71a6",
+          "text": "Sugar stock-out during Diwali 2024 resulted in 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "2ea914dc-7eed-4307-b18d-d24a939ef559",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during the Diwali 2024 festival.",
+          "type": "observation",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "47b9bf21-15ff-4052-8aba-12bda4970fb9",
+          "text": "Paneer main course sales decreased by 15% during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "5f57e6d0-0e23-47a1-b642-7bfc2e604854",
+          "text": "Stock-outs of sugar, kaju katli, and sweet boxes occurred during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.030000+00:00"
+        },
+        {
+          "id": "e4043b6a-5e3d-4709-ba41-e77020e1bef7",
+          "text": "Begum Bazar wholesalers experience high order volumes and are overloaded during the week leading up to Diwali 2024.",
+          "type": "observation"
+        },
+        {
+          "id": "709c35af-a506-461d-9879-673ba547489c",
+          "text": "Sugar consumption totaled 32 kg between October 29 and November 1, 2024, significantly higher than the normal 8 kg for a 4-day period during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "19b64575-29f2-4bbb-b3b6-bbbcb7a0f468",
+          "text": "Sugar stock reached zero at 7:05pm on November 1, 2024, due to high consumption during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-11-01T19:05:00+00:00"
+        },
+        {
+          "id": "2744c515-8111-46ac-ac7c-935a31923c77",
+          "text": "Imran, a store keeper, ordered 25 kg of sugar from Balaji Traders for Diwali 2024, which is 5 kg more than his typical weekly order.",
+          "type": "observation",
+          "when": "2024-10-25T00:00:00+00:00"
+        },
+        {
+          "id": "3f953a84-265c-4166-ad8d-4083c58a1ceb",
+          "text": "Ravi, the head chef, plans to secure a backup dry-goods supplier for Diwali 2025.",
+          "type": "observation"
+        },
+        {
+          "id": "51450a1c-76a4-4e38-8aba-86047ab26145",
+          "text": "Imran purchased 10 kg of sugar at ₹58/kg from a local kirana as an emergency top-up for Diwali 2024, noting that the regular Balaji supplier price was ₹44/kg.",
+          "type": "observation",
+          "when": "2024-11-02T04:00:00+00:00"
+        },
+        {
+          "id": "320456e9-2927-4ae1-a28f-03e30dca8e81",
+          "text": "Balaji Traders delivered a sugar and cashew order 2 days late for Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "1deaccd5-9ee7-4b32-8f63-942c17ce38e6",
+          "text": "Ravi, the head chef, plans to order sugar, ghee, and khoya one week before Diwali 2025.",
+          "type": "observation"
+        },
+        {
+          "id": "92ab4725-414e-40f8-b657-9559dc3a8e59",
+          "text": "Dussehra 2024 revenue was ₹1.86L, compared to the ₹1.1L typically earned on a normal Saturday.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "a66d4730-057b-4d89-bfcb-36de8797256a",
+          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates, significantly higher than the 25 plates sold on a normal Saturday.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.010000+00:00"
+        },
+        {
+          "id": "7e40659a-bf01-4041-a363-5ade9ead1212",
+          "text": "Customers are requesting mutton biryani and mutton curry for the 2024 Dussehra feast on October 12, 2024.",
+          "type": "observation"
+        },
+        {
+          "id": "efbc5e76-0217-44b2-803f-e1816a5f896f",
+          "text": "Ghee stock reached 1.5 kg during Diwali 2024, leading head chef Ravi to ration it for jalebi.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "a6ed1e04-e560-44f8-aed3-5be79383c554",
+          "text": "Mutton for Dussehra must be pre-booked at least 3 days in advance due to high festival demand.",
+          "type": "observation"
+        },
+        {
+          "id": "d23c75bd-a0bb-4898-b5b9-adf3cef474ed",
+          "text": "Hyderabad Meat House was unable to provide same-day mutton for Dussehra 2024 because all city butchers were sold out due to high festival demand.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "b989feb5-be37-4b48-bf6a-695d66f65ace",
+          "text": "Dussehra 2024 sales for Double ka meetha reached 30 portions.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.030000+00:00"
+        },
+        {
+          "id": "7461da27-ddf1-4a4e-9892-891efb382c65",
+          "text": "Ravi, the head chef, plans to add kaju katli boxes to the menu for Diwali 2025.",
+          "type": "observation"
+        },
+        {
+          "id": "12c9aed0-23a0-46f8-8e8d-2019c5aa6a12",
+          "text": "Chicken demand remained normal during the Dussehra 2024 festival.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "be4c4add-f023-497a-a1e4-cb098beb0af9",
+          "text": "For the 2024 Dussehra festival on October 12, 2024, manager Priya reports that weekend bookings are double normal levels.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "8f359e69-cd12-4b41-b331-e4bb718d3cdd",
+          "text": "Manager Priya confirmed 14 family reservations for the 2024 Dussehra festival on October 12, 2024.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00.010000+00:00"
+        },
+        {
+          "id": "b7f93c07-6607-4932-9f92-b890ffee13e3",
+          "text": "During Dussehra 2024, 18 kg of mutton was fully consumed by 8:00 PM, leading to a stockout by 8:15 PM that resulted in 22 mutton biryani orders being turned away or switched to chicken.",
+          "type": "observation",
+          "when": "2024-10-12T20:00:00.010000+00:00"
+        },
+        {
+          "id": "77589098-c367-452e-a5cf-5ebbc39e1718",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu on November 1, 2024, due to a sugar stockout.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        }
+      ],
+      "recalled": [
+        {
+          "id": "b8c9525c-9dda-4733-8b72-7a823f9a897c",
+          "text": "Sugar stock-out occurred during Diwali 2024, leading to 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "b8318b74-6de5-4671-8c7c-80465bea71a6",
+          "text": "Sugar stock-out during Diwali 2024 resulted in 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "1a819e8d-77fc-4ee6-a8a2-9b94ef7ec7a5",
+          "text": "Customers requested 500g to 1kg boxes of kaju katli during the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: customers",
+          "type": "world",
+          "when": "2024-10-28T00:00:00.010000+00:00"
+        },
+        {
+          "id": "b5de7d51-7b84-49d0-a0a3-857f3b2edfda",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu due to sugar stockout during Diwali 2024. | When: 2024-11-01 | Sugar stockout during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "268efc49-8802-4b4d-8778-cb7644fa4473",
+          "text": "15 walk-in and phone customers requested Diwali sweet gift boxes for corporate gifting, which the business does not offer. | When: 2024-10-28 | Involving: 15 walk-in and phone customers | Lost demand during Diwali 2024 festival.",
+          "type": "world",
+          "when": "2024-10-28T12:30:00+00:00"
+        },
+        {
+          "id": "ab6c0d41-63a1-45bc-8f08-6caad7e8d5d4",
+          "text": "40 customers requested kaju katli, which is not on the menu, during the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: 40 customers | Customer demand not served due to item not being on the menu.",
+          "type": "world",
+          "when": "2024-10-28T00:00:00+00:00"
+        },
+        {
+          "id": "5f57e6d0-0e23-47a1-b642-7bfc2e604854",
+          "text": "Stock-outs of sugar, kaju katli, and sweet boxes occurred during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.030000+00:00"
+        },
+        {
+          "id": "1a422c52-e4bb-4ff0-917f-b7f083d9bbd0",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during the Diwali 2024 festival. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "d796e70c-b4e9-4561-aed6-0317200e0031",
+          "text": "12 takeaway sweet orders were refused due to stockout during the Diwali 2024 festival. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00.010000+00:00"
+        },
+        {
+          "id": "f6a64422-2291-4029-8ea8-589f35ef30e6",
+          "text": "Sugar stock reached zero at 7:05pm during Diwali 2024. | When: 2024-11-01 | High consumption during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T19:05:00+00:00"
+        },
+        {
+          "id": "4a512eb4-0de1-4d32-ad41-5a37c1dc9fc0",
+          "text": "Stock-out of sugar, kaju katli, and sweet boxes occurred during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.030000+00:00"
+        },
+        {
+          "id": "38707789-e40c-4207-ac84-59b1238ee864",
+          "text": "Ghee stock reached 1.5 kg during Diwali 2024, causing head chef Ravi to ration it for jalebi. | When: 2024-11-01 | Involving: Ravi (head chef)",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "3198e435-7c44-4367-a4c8-fa69b1a84a58",
+          "text": "Sugar consumption was 32 kg between October 29 and November 1, 2024, compared to 8 kg in a normal 4-day period during Diwali 2024. | When: 2024-10-29 to 2024-11-01 | Increased demand during Diwali 2024.",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "70606614-c246-43dc-a3e1-e291be109b8c",
+          "text": "The business experienced lost demand during the 2024 Diwali festival, with 15 walk-in and phone customers requesting corporate Diwali sweet gift boxes that the business does not offer.",
+          "type": "observation",
+          "when": "2024-10-28T12:30:00+00:00"
+        },
+        {
+          "id": "65ee7baa-14ae-4afe-9eb7-312706deca36",
+          "text": "12 takeaway sweet orders were refused due to a stockout of containers during the Diwali 2024 festival.",
+          "type": "observation",
+          "when": "2024-11-01T12:00:00.010000+00:00"
+        },
+        {
+          "id": "64206cc9-78fa-4914-a2a8-48597313bb4a",
+          "text": "Ravi (head chef) plans to secure a backup dry-goods supplier for Diwali 2025. | When: 2025-10-01 to 2025-10-31 | Involving: Ravi (head chef) | Supply chain contingency for Diwali 2025",
+          "type": "world",
+          "when": "2024-11-05T04:30:00.010000+00:00"
+        },
+        {
+          "id": "3f953a84-265c-4166-ad8d-4083c58a1ceb",
+          "text": "Ravi, the head chef, plans to secure a backup dry-goods supplier for Diwali 2025.",
+          "type": "observation",
+          "when": "2024-11-05T04:30:00.010000+00:00"
+        },
+        {
+          "id": "2ea914dc-7eed-4307-b18d-d24a939ef559",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during the Diwali 2024 festival.",
+          "type": "observation",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "1758899f-57e7-4767-8aa9-3f9ecc9c0579",
+          "text": "Ghee consumption during Diwali 2024 was approximately 2.5 times the normal usage. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T17:30:00.010000+00:00"
+        },
+        {
+          "id": "13dd81d0-a1da-4b98-b776-27c9f990a963",
+          "text": "Customer demand for paneer mains fell by 15% during Diwali 2024 as customers preferred sweets and biryani. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T05:30:00.020000+00:00"
+        },
+        {
+          "id": "1178e5b4-dedc-4932-a4d5-c370e2f3995b",
+          "text": "During the 2024 Diwali festival, 40 customers requested kaju katli in 500g to 1kg boxes, but the item was not on the menu.",
+          "type": "observation",
+          "when": "2024-10-28T00:00:00+00:00"
+        },
+        {
+          "id": "a66a6403-c66a-4c7f-84c1-285555afeaf9",
+          "text": "Sugar was purchased at ₹58/kg from a local kirana, compared to the Balaji supplier price of ₹44/kg for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency top-up for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00.010000+00:00"
+        },
+        {
+          "id": "9a235e0b-35cc-4f73-8624-bcc9de75bcf0",
+          "text": "Balaji Traders delivered sugar and cashew order 2 days late for Diwali 2024. | When: 2024-10-29 | Involving: Balaji Traders",
+          "type": "world",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "2714ccd2-f43e-402d-9687-dd49f29f3295",
+          "text": "Imran purchased 10 kg of sugar as an emergency top-up for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency top-up for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00+00:00"
+        },
+        {
+          "id": "cbe540dd-a9bb-4679-a84d-91a23e471078",
+          "text": "Spice Garden purchased 26 kg of paneer for Diwali 2024 expecting high demand. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T00:00:00.010000+00:00"
+        },
+        {
+          "id": "51450a1c-76a4-4e38-8aba-86047ab26145",
+          "text": "Imran purchased 10 kg of sugar at ₹58/kg from a local kirana as an emergency top-up for Diwali 2024, noting that the regular Balaji supplier price was ₹44/kg.",
+          "type": "observation",
+          "when": "2024-11-02T04:00:00+00:00"
+        },
+        {
+          "id": "1d165c0c-7bb1-4496-a7a5-1a1565412d52",
+          "text": "Diwali 2024 revenue (Oct 29 - Nov 2) was ₹6.4L, compared to ₹4.1L for a normal 5-day period.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "efbc5e76-0217-44b2-803f-e1816a5f896f",
+          "text": "Ghee stock reached 1.5 kg during Diwali 2024, leading head chef Ravi to ration it for jalebi.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "b4e17131-3b76-40e2-9f99-46182c6e5830",
+          "text": "Spice Garden wasted 8 kg of expired paneer valued at approximately ₹2,700 after Diwali 2024. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T00:00:00+00:00"
+        },
+        {
+          "id": "e4043b6a-5e3d-4709-ba41-e77020e1bef7",
+          "text": "Begum Bazar wholesalers experience high order volumes and are overloaded during the week leading up to Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T10:30:00.010000+00:00"
+        },
+        {
+          "id": "ec81499f-41ce-472f-bf82-a5ccf6f1b5e1",
+          "text": "18 kg of mutton was fully consumed by 8:00pm during Dussehra 2024. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-12T20:00:00.010000+00:00"
+        },
+        {
+          "id": "7e40659a-bf01-4041-a363-5ade9ead1212",
+          "text": "Customers are requesting mutton biryani and mutton curry for the 2024 Dussehra feast on October 12, 2024.",
+          "type": "observation",
+          "when": "2024-10-10T05:30:00.020000+00:00"
+        },
+        {
+          "id": "2571037f-a366-4d22-a1ba-1dbacee65191",
+          "text": "22 mutton biryani orders were turned away or switched to chicken during Dussehra 2024. | When: 2024-10-12 | Mutton stockout",
+          "type": "world",
+          "when": "2024-10-12T20:15:00.020000+00:00"
+        },
+        {
+          "id": "d13b4c44-4fa3-4e65-855c-0107c0471550",
+          "text": "Customer demand for paneer mains at Spice Garden fell by 15% during Diwali 2024 due to a preference for sweets and biryani.",
+          "type": "observation",
+          "when": "2024-11-04T05:30:00.020000+00:00"
+        },
+        {
+          "id": "cfd5c31b-134f-4d95-8f47-4cd7c7eb7313",
+          "text": "Dessert sales increased by 210% and biryani sales increased by 60% during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "47b9bf21-15ff-4052-8aba-12bda4970fb9",
+          "text": "Paneer main course sales decreased by 15% during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "19b64575-29f2-4bbb-b3b6-bbbcb7a0f468",
+          "text": "Sugar stock reached zero at 7:05pm on November 1, 2024, due to high consumption during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-11-01T19:05:00+00:00"
+        },
+        {
+          "id": "88b8647f-d91f-4cfd-a951-9b718aba760d",
+          "text": "Diwali 2024 revenue was ₹6.4L compared to ₹4.1L for a normal 5-day period. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "2552970c-91fb-484b-bb49-7c14ef480486",
+          "text": "Begum Bazar wholesalers are overloaded during the week before Diwali 2024. | When: 2024-10-22 to 2024-10-29 | Involving: Begum Bazar wholesalers",
+          "type": "world",
+          "when": "2024-10-29T10:30:00.010000+00:00"
+        },
+        {
+          "id": "0d0ab8b1-bcaa-4d33-97c7-6c4b4eb948e3",
+          "text": "Paneer main course sales decreased by 15% during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "554e60ae-7936-42a7-b18f-0fe741d5b648",
+          "text": "Spice Garden wasted 8 kg of expired paneer valued at approximately ₹2,700 following Diwali 2024.",
+          "type": "observation",
+          "when": "2024-11-04T00:00:00+00:00"
+        },
+        {
+          "id": "320456e9-2927-4ae1-a28f-03e30dca8e81",
+          "text": "Balaji Traders delivered a sugar and cashew order 2 days late for Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "77589098-c367-452e-a5cf-5ebbc39e1718",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu on November 1, 2024, due to a sugar stockout.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "fdefd5a3-01bf-4d85-b28d-81d5335a1d60",
+          "text": "Spice Garden purchased 26 kg of paneer for Diwali 2024.",
+          "type": "observation",
+          "when": "2024-11-04T00:00:00.010000+00:00"
+        },
+        {
+          "id": "d575eab7-fcea-4978-873b-8e574df77b52",
+          "text": "Mutton stock ran out during Dussehra 2024. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-12T20:15:00+00:00"
+        },
+        {
+          "id": "b7f93c07-6607-4932-9f92-b890ffee13e3",
+          "text": "During Dussehra 2024, 18 kg of mutton was fully consumed by 8:00 PM, leading to a stockout by 8:15 PM that resulted in 22 mutton biryani orders being turned away or switched to chicken.",
+          "type": "observation",
+          "when": "2024-10-12T20:00:00.010000+00:00"
+        },
+        {
+          "id": "691e1654-654a-42e4-9c3b-63af8da78e9b",
+          "text": "During Diwali 2024, dessert sales increased by 210% and biryani sales increased by 60%.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "d624e9ea-d3ed-432c-92a3-7d4fa21181a6",
+          "text": "Ghee consumption during Diwali 2024 was approximately 2.5 times the normal usage.",
+          "type": "observation",
+          "when": "2024-11-01T17:30:00.010000+00:00"
+        },
+        {
+          "id": "728941d9-e73b-4c08-9969-667b10057064",
+          "text": "Imran ordered 25 kg of sugar for Diwali 2024 from Balaji Traders, which is 5 kg more than a normal week. | When: 2024-10-25 | Involving: Imran (store keeper), Balaji Traders | Preparation for Diwali 2024",
+          "type": "world",
+          "when": "2024-10-25T00:00:00+00:00"
+        },
+        {
+          "id": "7461da27-ddf1-4a4e-9892-891efb382c65",
+          "text": "Ravi, the head chef, plans to add kaju katli boxes to the menu for Diwali 2025.",
+          "type": "observation",
+          "when": "2024-11-05T04:30:00.020000+00:00"
+        },
+        {
+          "id": "90f826aa-d6ca-433e-a37f-894863623185",
+          "text": "Ravi (head chef) plans to add kaju katli boxes to the menu for Diwali 2025. | When: 2025-10-01 to 2025-10-31 | Involving: Ravi (head chef) | Menu expansion for Diwali 2025",
+          "type": "world",
+          "when": "2024-11-05T04:30:00.020000+00:00"
+        },
+        {
+          "id": "2744c515-8111-46ac-ac7c-935a31923c77",
+          "text": "Imran, a store keeper, ordered 25 kg of sugar from Balaji Traders for Diwali 2024, which is 5 kg more than his typical weekly order.",
+          "type": "observation",
+          "when": "2024-10-25T00:00:00+00:00"
+        },
+        {
+          "id": "709c35af-a506-461d-9879-673ba547489c",
+          "text": "Sugar consumption totaled 32 kg between October 29 and November 1, 2024, significantly higher than the normal 8 kg for a 4-day period during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "2c79c029-b6cc-4422-bb90-cfbcac53c452",
+          "text": "Ravi (head chef) plans to order sugar, ghee, and khoya one week before Diwali 2025. | When: 2025-10-20 to 2025-10-26 | Involving: Ravi (head chef) | Preparation for Diwali 2025",
+          "type": "world",
+          "when": "2024-11-05T04:30:00+00:00"
+        },
+        {
+          "id": "1deaccd5-9ee7-4b32-8f63-942c17ce38e6",
+          "text": "Ravi, the head chef, plans to order sugar, ghee, and khoya one week before Diwali 2025.",
+          "type": "observation",
+          "when": "2024-11-05T04:30:00+00:00"
+        }
+      ],
+      "ms": 21512,
+      "notes": [
+        "Directives applied: safety-stock, admit-gaps, cite-evidence"
+      ]
+    },
+    "savedAt": "2026-09-27T13:14:48.062Z"
+  },
+  "plan:full:diwali": {
+    "value": {
+      "mode": "full",
+      "plan": {
+        "headline": "Place all ingredient and packaging orders by November 1st to avoid supply chain delays and stock-outs during the Diwali rush.",
+        "expectations": [
+          {
+            "title": "Revenue growth",
+            "value": "39% YoY",
+            "detail": "We expect continued high demand for sweets and biryani based on year-on-year growth."
+          },
+          {
+            "title": "Dessert demand",
+            "value": "62% increase",
+            "detail": "Kaju katli boxes are expected to drive significant dessert revenue as they did in 2025."
+          },
+          {
+            "title": "Peak usage",
+            "value": "15kg Ghee",
+            "detail": "We expect high consumption of core ingredients like ghee, requiring a safety stock buffer."
+          }
+        ],
+        "orders": [
+          {
+            "stockId": "sugar",
+            "item": "Sugar",
+            "quantity": 45,
+            "unit": "kg",
+            "expectedUse": 45,
+            "orderBy": "2026-11-01",
+            "supplierId": "balaji-traders",
+            "why": "We need to maintain a reserve to prevent a total stock-out like the one in 2024.",
+            "lastTime": "A total sugar stock-out in 2024 caused the loss of 55 dessert orders."
+          },
+          {
+            "stockId": "ghee",
+            "item": "Ghee",
+            "quantity": 20,
+            "unit": "kg",
+            "expectedUse": 15,
+            "orderBy": "2026-11-01",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "The order is increased to cover peak usage plus a safety stock to prevent production pauses.",
+            "lastTime": "In 2025, 15 kg was consumed in 4 days, causing a production pause for jalebis."
+          },
+          {
+            "stockId": "khoya",
+            "item": "Khoya",
+            "quantity": 10,
+            "unit": "kg",
+            "expectedUse": 10,
+            "orderBy": "2026-11-01",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "This is required to meet the high demand for sweets.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "cashew",
+            "item": "Cashew",
+            "quantity": 12,
+            "unit": "kg",
+            "expectedUse": 12,
+            "orderBy": "2026-11-01",
+            "supplierId": "deccan-wholesale",
+            "why": "We are using this supplier to ensure price stability after 2025 price hikes.",
+            "lastTime": "Cashew prices spiked 18% in 2025 at balaji-traders."
+          },
+          {
+            "stockId": "sweet-boxes",
+            "item": "Sweet Boxes",
+            "quantity": 250,
+            "unit": "pcs",
+            "expectedUse": 250,
+            "orderBy": "2026-11-01",
+            "supplierId": "packright",
+            "why": "The supplier requires 4 days lead time for printed boxes.",
+            "lastTime": ""
+          }
+        ],
+        "menu": [
+          {
+            "change": "Continue Kaju Katli",
+            "why": "It drove a 62% increase in dessert revenue in 2025."
+          },
+          {
+            "change": "Reduce Paneer stock",
+            "why": "Maintaining a 20% reduction helps avoid the waste experienced in 2024."
+          }
+        ],
+        "risks": [
+          {
+            "risk": "Delivery delays from balaji-traders",
+            "mitigation": "Ordering one week early by November 1st to avoid the pre-Diwali rush."
+          },
+          {
+            "risk": "Stock-outs of core ingredients",
+            "mitigation": "Maintaining at least two days of normal usage as safety stock for all core items."
+          },
+          {
+            "risk": "Price fluctuations for cashews",
+            "mitigation": "Using deccan-wholesale as a confirmed backup supplier to ensure price stability."
+          }
+        ],
+        "confidence": "high"
+      },
+      "evidence": [
+        {
+          "id": "diwali-playbook",
+          "text": "Diwali playbook: ## Diwali Playbook Overview\n\nThis playbook consolidates performance data and lessons learned from the Diwali festivals of 2024 and 2025. No records exist for Diwali at Spice Garden prior to 2024.\n\n## Ingredient and Packaging Performance\n\n| Item | 2024 Planned | 2024 Used | 2024 Outcome | 2025 Planned | 2025 Used | 2025 Outcome |\n| --- | --- | --- | --- | --- | --- | --- |\n| Sugar (kg) | 25 | ~32+ | Stock-out (Nov 1) | 45 | 41 | No stock-out |\n| Ghee (kg) | N/A | ~2.5x normal | Stock-out (Nov 1) | 12 | 15 | Stock-out (Oct 20) |\n| Paneer (kg) | 26 | 18 | 8 kg wasted | 20% reduction | - | No waste |\n| Kaju Katli (boxes) | 0 | 0 | 40 orders lost | - | 158 | Goal met |\n| Sweet Boxes | N/A | N/A | Stock-out (Nov 1) | 200 | 186 | Goal met |\n\n## Strategic Planning and Lessons Learned\n\n- **Order Timing**: Order at least one week before Diwali. In 2024, ordering 4 days prior (Oct 25) led to a 2-day delivery delay from Balaji Traders. In 2025, ordering one week early (Oct 3) successfully mitigated delivery delays.\n- **Supplier Reliability**: Balaji Traders is prone to delays during the pre-Diwali rush in Begum Bazar (2024, 2025). Always maintain Deccan Wholesale Mart as a backup supplier, as done in 2025.\n- **Prices**: Balaji Traders increased cashew prices by 18% (₹980 to ₹1,160/kg) one week before Diwali 2025. Procuring from Deccan Wholesale Mart at ₹1,040/kg saved costs (2025).\n- **Corporate Orders**: 120 boxes of kaju katli were sold for corporate gifts in 2025. Late confirmation in 2025 caused some companies to split their orders with other vendors.\n- **Menu Additions**: Adding kaju katli boxes in 2025 drove a 62% year-on-year increase in dessert revenue.\n- **Revenue Trends**: Revenue grew from ₹6.4L (2024) to ₹8.9L (2025), a 39% increase.\n- **Mistakes to Avoid**: \n  - Never allow sugar levels to fall below a 2-day supply: 55 dessert orders were lost in 2024 due to a total sugar stock-out.\n  - Do not overstock paneer: Demand for paneer mains decreased by 15% in 2024, resulting in 8 kg of waste.\n  - Ensure sufficient Ghee supply: 2025 Ghee consumption (15 kg) exceeded stock (12 kg), forcing a pause in jalebi preparation.\n",
+          "type": "mental model"
+        },
+        {
+          "id": "3950d125-a868-4925-8f8c-289a55c20f0e",
+          "text": "Spice Garden daily mutton usage is approximately 16 kg for Ramzan 2025. | When: 2025-03-08",
+          "type": "world",
+          "when": "2025-03-08T00:00:00.020000+00:00"
+        },
+        {
+          "id": "8f391f99-a2eb-4549-8a84-355aab212886",
+          "text": "15 kg of Ghee was consumed over 4 days during Diwali 2025, exceeding the 12 kg stock. | When: 2025-10-17 to 2025-10-20",
+          "type": "world",
+          "when": "2025-10-17T00:00:00.010000+00:00"
+        },
+        {
+          "id": "1693bffe-f26a-4c60-a046-73a878d8177e",
+          "text": "Diwali 2025 revenue reached ₹8.9L, compared to ₹6.4L in Diwali 2024, representing a 39% increase. | When: 2025-10-23",
+          "type": "world",
+          "when": "2025-10-23T00:00:00+00:00"
+        },
+        {
+          "id": "65715763-e1f3-43c3-9cd6-f6eb7d3eeadb",
+          "text": "Dessert revenue increased by 62% year on year during Diwali 2025, primarily driven by sales of kaju katli boxes. | When: 2025-10-23",
+          "type": "world",
+          "when": "2025-10-23T00:00:00.010000+00:00"
+        },
+        {
+          "id": "4fc9eac5-eb15-44d0-adfe-ab31ad478ec2",
+          "text": "Spice Garden ordered supplies one week early for Diwali 2025 to mitigate potential delivery delays. | When: 2025-10-03 | Involving: Spice Garden",
+          "type": "world",
+          "when": "2025-10-03T00:00:00.010000+00:00"
+        },
+        {
+          "id": "a3c51aea-b178-4539-a2eb-28d60e70f01b",
+          "text": "Jalebi production was paused for the last hour of Diwali 2025 due to Ghee stockout. | When: 2025-10-20",
+          "type": "world",
+          "when": "2025-10-20T15:00:00.020000+00:00"
+        },
+        {
+          "id": "fec3b9f7-461d-4f26-8d4c-93b6e66eed83",
+          "text": "Ghee stockout occurred during Diwali 2025. | When: 2025-10-20",
+          "type": "world",
+          "when": "2025-10-20T16:00:00+00:00"
+        },
+        {
+          "id": "1d1d4236-703a-4ec8-96f2-e402836b83d7",
+          "text": "Purchased 8 kg of cashew from Deccan Wholesale Mart at ₹1,040 per kg for Diwali 2025. | When: 2025-10-16 | Involving: Deccan Wholesale Mart, Spice Garden | Cheaper price compared to Balaji Traders during Diwali 2025",
+          "type": "world",
+          "when": "2025-10-16T00:00:00.010000+00:00"
+        },
+        {
+          "id": "e94ac48c-86e6-43d3-8b17-0a23a8756daa",
+          "text": "Ravi (head chef) plans to secure a backup dry-goods supplier for Diwali 2025. | When: 2025-10-01 to 2025-10-31 | Involving: Ravi (head chef) | Supply chain contingency for Diwali 2025",
+          "type": "world",
+          "when": "2025-10-01T00:00:00.010000+00:00"
+        },
+        {
+          "id": "a91ab5ca-4c19-47d4-ac17-5ad2e2331ca9",
+          "text": "Spice Garden increased daily haleem production to 90 portions for Ramzan 2025. | When: 2025-03-08",
+          "type": "world",
+          "when": "2025-03-08T00:00:00+00:00"
+        },
+        {
+          "id": "9146b5e9-8fbd-4b6f-84da-68d267195680",
+          "text": "Approximately 430 kg of mutton was used during Ramzan 2025. | When: 2025-04-01 to 2025-04-30",
+          "type": "world",
+          "when": "2025-04-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "af69ebb5-062b-4c75-b7f8-f85d204f16fd",
+          "text": "Balaji Traders increased the price of cashew by 18%, from ₹980 to ₹1,160 per kg, during the week before Diwali 2025. | When: 2025-10-13 to 2025-10-19 | Involving: Balaji Traders | Price adjustment before Diwali 2025",
+          "type": "world",
+          "when": "2025-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "ba334d85-6d69-4683-bfd3-d3c37fb14820",
+          "text": "Ravi (head chef) plans to order sugar, ghee, and khoya one week before Diwali 2025. | When: 2025-10-20 to 2025-10-27 | Involving: Ravi (head chef) | Preparation for Diwali 2025",
+          "type": "world",
+          "when": "2025-10-20T00:00:00+00:00"
+        },
+        {
+          "id": "32a6fab1-df9c-43c8-b737-d62379c0a3a4",
+          "text": "Ravi (head chef) plans to add kaju katli boxes to the menu for Diwali 2025. | When: 2025-10-01 to 2025-10-31 | Involving: Ravi (head chef) | Menu expansion for Diwali 2025",
+          "type": "world",
+          "when": "2025-10-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "35f0b75a-6854-457e-9609-4063e1fe187a",
+          "text": "Balaji Traders delivered order late for Diwali 2025, arriving on October 14, 2025 after being ordered on October 10, 2025. | When: 2025-10-14 | Involving: Balaji Traders",
+          "type": "world",
+          "when": "2025-10-14T00:00:00+00:00"
+        },
+        {
+          "id": "a807baf4-6ca1-4b0a-b845-36723785a58c",
+          "text": "Iftar rush peaks between 6:30pm and 7:30pm during Ramzan 2025.",
+          "type": "world"
+        },
+        {
+          "id": "0877d286-c1ca-4a18-a493-20bc71ba5220",
+          "text": "32 kg of sugar was consumed between October 29 and November 1, 2024, compared to the normal 8 kg for a 4-day period during Diwali 2024. | When: 2024-10-29 to 2024-11-01 | Increased demand during Diwali 2024.",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "bae3aabb-0968-4fe7-b23d-dc2fccdfe0d1",
+          "text": "Sankranti 2025 waste: 11 kg chicken and 6 kg paneer thrown away due to overstocking for a normal week. | When: 2025-01-17 | Stocked for a normal week instead of adjusting for the festival.",
+          "type": "world",
+          "when": "2025-01-17T05:30:00+00:00"
+        },
+        {
+          "id": "b9ff3352-58b6-498c-8cea-c9ab10d609b9",
+          "text": "During Ganesh Chaturthi 2025, non-veg sales fell 40% while veg thali and paneer sales rose 35% due to regulars adopting vegetarian diets. | When: 2025-08-27 to 2025-09-05 | Regulars go vegetarian for the 10 days of the festival.",
+          "type": "world"
+        },
+        {
+          "id": "1b9bd3af-b6d3-46a2-812b-0adbcd44d0a8",
+          "text": "Spice Garden sold 2,480 portions of haleem and 310 family packs during Ramzan 2025. | When: 2025-04-01 to 2025-04-30",
+          "type": "world",
+          "when": "2025-04-01T00:00:00+00:00"
+        },
+        {
+          "id": "dab1613f-7288-4a00-a581-379101adcb80",
+          "text": "Sugar stock reached zero at 7:05pm during Diwali 2024. | When: 2024-11-01 | High consumption during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T19:05:00+00:00"
+        },
+        {
+          "id": "b57654af-60e6-4332-9dd6-2eec5ebd12a7",
+          "text": "Haleem sold out by 8:10pm on 4 of the first 5 days of Ramzan 2025. | When: 2025-03-01 to 2025-03-05",
+          "type": "world",
+          "when": "2025-03-01T00:00:00+00:00"
+        },
+        {
+          "id": "feb1f90c-fabf-49ba-8320-8883045fbade",
+          "text": "Diwali 2025 sweet box usage: 186 boxes used out of 200 planned. | When: 2025-10-23",
+          "type": "world",
+          "when": "2025-10-23T05:30:00.020000+00:00"
+        },
+        {
+          "id": "a02cbeea-4da7-4428-a30e-e3070c8aa96f",
+          "text": "Diwali 2025 sugar usage: 41 kg used out of 45 kg planned, no stock-out occurred. | When: 2025-10-23",
+          "type": "world",
+          "when": "2025-10-23T05:30:00+00:00"
+        },
+        {
+          "id": "e06251ec-db0a-4cf3-870e-9cddec1c1236",
+          "text": "Monthly revenue increased by 48% during Ramzan 2025. | When: 2025-04-01 to 2025-04-30",
+          "type": "world",
+          "when": "2025-04-01T00:00:00.010000+00:00"
+        },
+        {
+          "id": "d1ca291e-dcf6-4165-b016-44a0424c5417",
+          "text": "Hyderabad Meat House increased mutton price from ₹780 to ₹860/kg during Ramzan 2025 due to high city-wide demand. | When: mid-Ramzan 2025 | Involving: Hyderabad Meat House (supplier) | city-wide demand",
+          "type": "world",
+          "when": "2025-03-15T00:00:00+00:00"
+        },
+        {
+          "id": "4c1d203b-fc3c-4086-9248-f877498abaf3",
+          "text": "Ganesh Chaturthi 2025 waste: 14 kg chicken and 6 kg mutton. | When: 2025-09-02",
+          "type": "world",
+          "when": "2025-09-02T00:00:00+00:00"
+        },
+        {
+          "id": "4ae92d36-a053-4f77-bc40-4bbc5706d6c8",
+          "text": "Daily production is 60 portions of Haleem, while demand is approximately 85 portions during Ramzan 2025.",
+          "type": "world"
+        },
+        {
+          "id": "3c9d35fe-074d-41fc-99e2-39fffeb183a8",
+          "text": "Sankranti 2025 revenue decreased by 35% compared to normal periods. | When: 2025-01-13 to 2025-01-16",
+          "type": "world",
+          "when": "2025-01-13T00:00:00+00:00"
+        },
+        {
+          "id": "f5b9bc2a-a688-4d00-a57e-6872ffdc1153",
+          "text": "Diwali 2024 sales performance: desserts increased by 210%, biryani increased by 60%, and paneer mains decreased by 15%. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "53a149a8-dbf1-4901-9ee1-403ab554d38c",
+          "text": "Sankranti 2025 dine-in covers decreased by 40%. | When: 2025-01-13 to 2025-01-16",
+          "type": "world",
+          "when": "2025-01-13T00:00:00.010000+00:00"
+        },
+        {
+          "id": "d836e411-0d9f-4b28-a9bd-938ef593280c",
+          "text": "Paneer stock-out occurred twice during Ganesh Chaturthi 2025. | When: 2025-08-29 and 2025-08-31",
+          "type": "world",
+          "when": "2025-08-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "8d733110-892d-4a97-b05d-6031f6bc6815",
+          "text": "Hyderabad population decreased as people traveled home for Sankranti 2025. | When: 2025-01-13 to 2025-01-16 | People traveling home for the festival.",
+          "type": "world",
+          "when": "2025-01-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "e61f8804-51a9-4db4-8bd2-7e93f72e8814",
+          "text": "Spice Garden introduced a 1 kg haleem family pack priced at ₹850 for Ramzan 2025. | When: 2025-03-08",
+          "type": "world",
+          "when": "2025-03-08T00:00:00.010000+00:00"
+        },
+        {
+          "id": "eaf4de29-83b2-482e-95fa-b723a1e300d2",
+          "text": "Bonalu festival 2025 Old City road closures caused a 20% reduction in delivery orders. | When: 2025-07-06, 2025-07-13, 2025-07-20, 2025-07-27 | Bonalu festival 2025",
+          "type": "world",
+          "when": "2025-07-06T00:00:00+00:00"
+        },
+        {
+          "id": "ae6aaee1-e3b7-40b0-9507-459246290af3",
+          "text": "Weekend demand reached 110 portions of haleem per day during Ramzan 2025. | When: 2025-04-01 to 2025-04-30",
+          "type": "world",
+          "when": "2025-04-01T00:00:00.030000+00:00"
+        },
+        {
+          "id": "8fc06f15-d332-46b2-aebd-461f078759b4",
+          "text": "Ganesh Chaturthi 2025 immersion day caused Tank Bund closures and cancellation of all delivery orders after 16:00. | When: 2025-09-06",
+          "type": "world",
+          "when": "2025-09-06T16:00:00+00:00"
+        },
+        {
+          "id": "4b958840-b6a1-46d3-b623-cbd0dec25972",
+          "text": "Ghee consumption during Diwali 2024 was approximately 2.5 times the normal usage. | When: 2024-11-01",
+          "type": "world"
+        },
+        {
+          "id": "3e3b38e5-735e-4d68-aeb0-83557c351144",
+          "text": "Spice Garden purchased 26 kg of paneer for Diwali 2024 in anticipation of high demand. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T00:00:00.010000+00:00"
+        },
+        {
+          "id": "2763b1e0-3018-494a-981b-736e7a9a9583",
+          "text": "Three staff members were unable to reach the outlet due to Ganesh Chaturthi 2025 immersion day closures. | When: 2025-09-06 | Involving: three staff members",
+          "type": "world",
+          "when": "2025-09-06T00:00:00.010000+00:00"
+        },
+        {
+          "id": "412d8d9c-db48-4767-96a6-d7893f57e6c5",
+          "text": "Diwali 2024 inventory shortages: sugar stock-out, no kaju katli available, and sweet boxes ran out. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "31635954-b35d-4644-95fe-c838ca4aec01",
+          "text": "Recommendation to cut perishables by about a third for Sankranti 2025 week to avoid waste. | When: 2025-01-17 | Prevent future overstocking waste during the festival.",
+          "type": "world"
+        },
+        {
+          "id": "de66f5ae-7ea4-44f4-a35c-42240a5b40ba",
+          "text": "Bonalu festival 2025 dine-in operations at Banjara Hills remained unaffected by road closures. | When: 2025-07-06, 2025-07-13, 2025-07-20, 2025-07-27 | Involving: Spice Garden | Bonalu festival 2025",
+          "type": "world",
+          "when": "2025-07-06T00:00:00.010000+00:00"
+        },
+        {
+          "id": "e65c25b8-f4d1-4c17-817d-48fee1181b3f",
+          "text": "Ravi rationed ghee specifically for jalebi preparation during Diwali 2024. | When: 2024-11-01 | Involving: Ravi (head chef) | Ghee stock was low",
+          "type": "world",
+          "when": "2024-11-01T00:00:00.010000+00:00"
+        },
+        {
+          "id": "692a7348-a6b9-49ff-a180-432dd372c4f2",
+          "text": "Ghee stock reached a low of 1.5 kg during Diwali 2024. | When: 2024-11-01 | Involving: Ravi (head chef)",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "1875de5f-bbde-471b-953a-97e172511456",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu for the night due to sugar stockout during Diwali 2024. | When: 2024-11-01 | Sugar stockout during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "ef1d8a4f-1533-431e-8796-a1459f4b1d03",
+          "text": "Sugar was purchased at ₹58/kg from a local kirana, compared to the Balaji supplier price of ₹44/kg for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency purchase for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00.010000+00:00"
+        },
+        {
+          "id": "38bb2ba1-a2ea-4633-b82f-cfe7a1f8a296",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during Diwali 2024. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00+00:00"
+        }
+      ],
+      "recalled": [
+        {
+          "id": "090aad82-1355-45c4-890d-15838bf94a8a",
+          "text": "Sugar stock-out occurred during Diwali 2024, leading to 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "48b2b44a-955a-42dd-888f-0fe88cec1d6e",
+          "text": "A sugar stock-out occurred during Diwali 2024, resulting in 55 unserved dessert orders and approximately ₹9,500 in lost revenue.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "af3f0ee6-4f01-4d8d-be5b-a791d10e640b",
+          "text": "40 customers requested kaju katli, which is not on the menu, during the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: 40 customers | Customer demand for Diwali 2024 that could not be served.",
+          "type": "world",
+          "when": "2024-10-28T00:00:00+00:00"
+        },
+        {
+          "id": "818c252d-9ef8-473b-b203-794fd496d417",
+          "text": "Customers requested 500g to 1kg boxes of kaju katli for the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: customers",
+          "type": "world",
+          "when": "2024-10-28T00:00:00.010000+00:00"
+        },
+        {
+          "id": "cc38a64e-21ba-4e6e-8e42-0df57dcafb2f",
+          "text": "During Diwali 2024, inventory shortages included sugar stock-outs and a lack of kaju katli and sweet boxes.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "2cd1de3e-5269-43c3-8c89-f01f35e5a7a3",
+          "text": "Jalebi production was paused for the last hour of Diwali 2025 due to a Ghee stockout, with 15 kg of Ghee consumed over 4 days exceeding the 12 kg stock.",
+          "type": "observation",
+          "when": "2025-10-17T00:00:00.010000+00:00"
+        },
+        {
+          "id": "fec3b9f7-461d-4f26-8d4c-93b6e66eed83",
+          "text": "Ghee stockout occurred during Diwali 2025. | When: 2025-10-20",
+          "type": "world",
+          "when": "2025-10-20T16:00:00+00:00"
+        },
+        {
+          "id": "1875de5f-bbde-471b-953a-97e172511456",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu for the night due to sugar stockout during Diwali 2024. | When: 2024-11-01 | Sugar stockout during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "a02cbeea-4da7-4428-a30e-e3070c8aa96f",
+          "text": "Diwali 2025 sugar usage: 41 kg used out of 45 kg planned, no stock-out occurred. | When: 2025-10-23",
+          "type": "world",
+          "when": "2025-10-23T05:30:00+00:00"
+        },
+        {
+          "id": "35c5185e-c790-4730-a510-111ec7d46088",
+          "text": "15 walk-in and phone customers requested Diwali sweet gift boxes for corporate gifting, which the business does not offer. | When: 2024-10-28 | Involving: 15 walk-in and phone customers | Lost demand during Diwali 2024",
+          "type": "world",
+          "when": "2024-10-28T12:30:00+00:00"
+        },
+        {
+          "id": "3e72c06e-7cec-4e7e-86ef-59c2d3d7a211",
+          "text": "Deccan Wholesale Mart is designated as a backup supplier for Diwali 2025.",
+          "type": "observation",
+          "when": "2025-10-08T04:30:00.010000+00:00"
+        },
+        {
+          "id": "8f391f99-a2eb-4549-8a84-355aab212886",
+          "text": "15 kg of Ghee was consumed over 4 days during Diwali 2025, exceeding the 12 kg stock. | When: 2025-10-17 to 2025-10-20",
+          "type": "world",
+          "when": "2025-10-17T00:00:00.010000+00:00"
+        },
+        {
+          "id": "a3c51aea-b178-4539-a2eb-28d60e70f01b",
+          "text": "Jalebi production was paused for the last hour of Diwali 2025 due to Ghee stockout. | When: 2025-10-20",
+          "type": "world",
+          "when": "2025-10-20T15:00:00.020000+00:00"
+        },
+        {
+          "id": "71e00272-4f63-4029-9876-226ed9abbea5",
+          "text": "12 takeaway sweet orders were refused due to stockout during Diwali 2024. | When: 2024-11-01 | Stockout of sweet boxes and takeaway dessert containers.",
+          "type": "world",
+          "when": "2024-11-01T12:00:00.010000+00:00"
+        },
+        {
+          "id": "412d8d9c-db48-4767-96a6-d7893f57e6c5",
+          "text": "Diwali 2024 inventory shortages: sugar stock-out, no kaju katli available, and sweet boxes ran out. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "3ea730e0-16c0-4c93-b2ad-75d31365498f",
+          "text": "The business experienced lost demand during Diwali 2024, with 15 walk-in and phone customers requesting corporate Diwali sweet gift boxes that the business does not offer.",
+          "type": "observation",
+          "when": "2024-10-28T12:30:00+00:00"
+        },
+        {
+          "id": "ba9bb7e7-cacf-486e-a6b1-57122c29251e",
+          "text": "Three companies requested to book orders earlier for Diwali 2026 to avoid the late confirmation issues experienced in 2025.",
+          "type": "observation",
+          "when": "2025-10-17T09:30:00.020000+00:00"
+        },
+        {
+          "id": "692a7348-a6b9-49ff-a180-432dd372c4f2",
+          "text": "Ghee stock reached a low of 1.5 kg during Diwali 2024. | When: 2024-11-01 | Involving: Ravi (head chef)",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "e65c25b8-f4d1-4c17-817d-48fee1181b3f",
+          "text": "Ravi rationed ghee specifically for jalebi preparation during Diwali 2024. | When: 2024-11-01 | Involving: Ravi (head chef) | Ghee stock was low",
+          "type": "world",
+          "when": "2024-11-01T00:00:00.010000+00:00"
+        },
+        {
+          "id": "dab1613f-7288-4a00-a581-379101adcb80",
+          "text": "Sugar stock reached zero at 7:05pm during Diwali 2024. | When: 2024-11-01 | High consumption during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T19:05:00+00:00"
+        },
+        {
+          "id": "38bb2ba1-a2ea-4633-b82f-cfe7a1f8a296",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during Diwali 2024. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "e94ac48c-86e6-43d3-8b17-0a23a8756daa",
+          "text": "Ravi (head chef) plans to secure a backup dry-goods supplier for Diwali 2025. | When: 2025-10-01 to 2025-10-31 | Involving: Ravi (head chef) | Supply chain contingency for Diwali 2025",
+          "type": "world",
+          "when": "2025-10-01T00:00:00.010000+00:00"
+        },
+        {
+          "id": "5436e436-bd21-4674-97db-33cb9bbd424a",
+          "text": "Keep Deccan Wholesale Mart as a backup supplier for Diwali 2025. | Involving: Deccan Wholesale Mart",
+          "type": "world",
+          "when": "2025-10-08T04:30:00.010000+00:00"
+        },
+        {
+          "id": "0877d286-c1ca-4a18-a493-20bc71ba5220",
+          "text": "32 kg of sugar was consumed between October 29 and November 1, 2024, compared to the normal 8 kg for a 4-day period during Diwali 2024. | When: 2024-10-29 to 2024-11-01 | Increased demand during Diwali 2024.",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "94934ee1-9fbf-4b92-b9dc-f2c4be91832a",
+          "text": "During the 2024 Diwali festival, 40 customers requested kaju katli, which is not on the menu, specifically in 500g to 1kg box sizes.",
+          "type": "observation",
+          "when": "2024-10-28T00:00:00+00:00"
+        },
+        {
+          "id": "28c809fb-e516-445b-86ac-54d3b2033fc6",
+          "text": "Diwali 2025 paneer waste: zero waste achieved following a 20% reduction in planned quantity. | When: 2025-10-23",
+          "type": "world",
+          "when": "2025-10-23T05:30:00.030000+00:00"
+        },
+        {
+          "id": "295c1e54-375f-44bf-9c08-e8bf6cef1630",
+          "text": "Three companies requested to book orders earlier for Diwali 2026. | Involving: Three companies | To avoid late confirmation issues experienced in 2025",
+          "type": "world",
+          "when": "2025-10-17T09:30:00.020000+00:00"
+        },
+        {
+          "id": "4b958840-b6a1-46d3-b623-cbd0dec25972",
+          "text": "Ghee consumption during Diwali 2024 was approximately 2.5 times the normal usage. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T17:30:00.020000+00:00"
+        },
+        {
+          "id": "5bb0b060-8a0b-4f26-857f-9ed05030d0cf",
+          "text": "Diwali 2025 paneer waste was zero, following a 20% reduction in planned quantity.",
+          "type": "observation",
+          "when": "2025-10-23T05:30:00.030000+00:00"
+        },
+        {
+          "id": "b1e125f6-846b-4a28-b228-d8bb9882464e",
+          "text": "Customer demand for paneer mains fell by 15% during Diwali 2024 as customers preferred sweets and biryani. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T05:30:00.020000+00:00"
+        },
+        {
+          "id": "c0a72b88-d77b-49de-bb49-940001a604e1",
+          "text": "One company had to split its order with another shop because the booking was confirmed late for Diwali 2025. | When: 2025-10-17 | Involving: One company | Late confirmation of booking",
+          "type": "world",
+          "when": "2025-10-17T00:00:00.010000+00:00"
+        },
+        {
+          "id": "a7a13f43-671a-40f5-9d1e-955efb3af29e",
+          "text": "The procurement plan for Diwali 2025 includes ordering 45 kg of sugar, 12 kg of ghee, and 10 kg of khoya by October 11, 2025.",
+          "type": "observation",
+          "when": "2025-10-11T00:00:00+00:00"
+        },
+        {
+          "id": "0a447dfc-1128-48e0-bb9c-8d2eb95a4ad1",
+          "text": "Ravi, the head chef, is planning for Diwali 2025 by securing a backup dry-goods supplier, adding kaju katli boxes to the menu, and scheduling orders for sugar, ghee, and khoya for the week of October 20-27, 2025.",
+          "type": "observation",
+          "when": "2025-10-01T00:00:00.010000+00:00"
+        },
+        {
+          "id": "0c88ecab-bb07-4de7-9de6-4ddff980a500",
+          "text": "Three companies, including a Hitec City IT firm, ordered 120 boxes of kaju katli for Diwali 2025 employee gifts. | When: 2025-10-17 | Involving: Three companies (including a Hitec City IT firm) | Diwali 2025 employee gifts",
+          "type": "world",
+          "when": "2025-10-17T00:00:00+00:00"
+        },
+        {
+          "id": "ef1d8a4f-1533-431e-8796-a1459f4b1d03",
+          "text": "Sugar was purchased at ₹58/kg from a local kirana, compared to the Balaji supplier price of ₹44/kg for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency purchase for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00.010000+00:00"
+        },
+        {
+          "id": "e70bdc99-7082-4806-b917-7097676a2995",
+          "text": "Customer demand for paneer mains decreased by 15% during Diwali 2024, as customers shifted their preference toward sweets and biryani.",
+          "type": "observation",
+          "when": "2024-11-04T05:30:00.020000+00:00"
+        },
+        {
+          "id": "7451d665-d42c-4b33-b4ae-5ca2f1e62875",
+          "text": "During Diwali 2024, sweet boxes and takeaway dessert containers ran out of stock, leading to the refusal of 12 takeaway sweet orders.",
+          "type": "observation",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "a66c0a09-7542-4acc-b48b-0fb728792ca1",
+          "text": "One company had to split its Diwali 2025 order with another shop due to a late booking confirmation.",
+          "type": "observation",
+          "when": "2025-10-17T00:00:00.010000+00:00"
+        },
+        {
+          "id": "35f0b75a-6854-457e-9609-4063e1fe187a",
+          "text": "Balaji Traders delivered order late for Diwali 2025, arriving on October 14, 2025 after being ordered on October 10, 2025. | When: 2025-10-14 | Involving: Balaji Traders",
+          "type": "world",
+          "when": "2025-10-14T00:00:00+00:00"
+        },
+        {
+          "id": "a1eb521c-9922-4a94-8410-e55cc5e4eb85",
+          "text": "For Diwali 2025, the paneer order is to be reduced by 20%.",
+          "type": "observation",
+          "when": "2025-10-08T04:30:00.040000+00:00"
+        },
+        {
+          "id": "c89579ff-666e-480e-862b-44c26a21dfba",
+          "text": "Approximately 20 customers requested modak, but the item was out of stock. | When: 2025-08-30 | Involving: 20 customers | Lost demand during Ganesh Chaturthi 2025.",
+          "type": "world",
+          "when": "2025-08-30T00:00:00+00:00"
+        },
+        {
+          "id": "7a00f528-5a1c-4a40-b21a-9c0db9301f87",
+          "text": "During the first week of Ramzan 2025, 25 customers requested 1 kg haleem family packs for takeaway, but the demand was lost due to stock-out or unavailability.",
+          "type": "observation",
+          "when": "2025-03-01T00:00:00+00:00"
+        },
+        {
+          "id": "99c5cabb-75a9-4d30-a8f3-2d4334e0cbbd",
+          "text": "Balaji Traders delivered sugar and cashew order 2 days late for Diwali 2024. | When: 2024-10-29 | Involving: Balaji Traders | Begum Bazar wholesalers are overloaded the week before Diwali.",
+          "type": "world",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "c30cc9f9-73ee-4a50-b80b-d78e07754df5",
+          "text": "Diwali 2025 revenue reached ₹8.9L, a 39% increase from the ₹6.4L revenue recorded during Diwali 2024.",
+          "type": "observation",
+          "when": "2025-10-23T00:00:00+00:00"
+        },
+        {
+          "id": "70b6381f-851b-4796-8665-674bc3887f5b",
+          "text": "25 customers requested 1 kg haleem family packs for takeaway during the first week of Ramzan 2025. | When: 2025-03-01 to 2025-03-07 | Involving: 25 customers | Lost demand due to stock-out or unavailability during Ramzan 2025.",
+          "type": "world",
+          "when": "2025-03-01T00:00:00+00:00"
+        },
+        {
+          "id": "3e3b38e5-735e-4d68-aeb0-83557c351144",
+          "text": "Spice Garden purchased 26 kg of paneer for Diwali 2024 in anticipation of high demand. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T00:00:00.010000+00:00"
+        },
+        {
+          "id": "1d1d4236-703a-4ec8-96f2-e402836b83d7",
+          "text": "Purchased 8 kg of cashew from Deccan Wholesale Mart at ₹1,040 per kg for Diwali 2025. | When: 2025-10-16 | Involving: Deccan Wholesale Mart, Spice Garden | Cheaper price compared to Balaji Traders during Diwali 2025",
+          "type": "world",
+          "when": "2025-10-16T00:00:00.010000+00:00"
+        },
+        {
+          "id": "4fc9eac5-eb15-44d0-adfe-ab31ad478ec2",
+          "text": "Spice Garden ordered supplies one week early for Diwali 2025 to mitigate potential delivery delays. | When: 2025-10-03 | Involving: Spice Garden",
+          "type": "world",
+          "when": "2025-10-03T00:00:00.010000+00:00"
+        },
+        {
+          "id": "2f77c634-a7e2-4db3-8fc4-d9193f2f0301",
+          "text": "Imran purchased 10 kg of sugar as an emergency top-up for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency top-up for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00+00:00"
+        },
+        {
+          "id": "6f15e771-d3e5-4f6b-9cdd-d9a20683545b",
+          "text": "Spice Garden ordered supplies one week early for Diwali 2025 to mitigate potential delivery delays.",
+          "type": "observation",
+          "when": "2025-10-03T00:00:00.010000+00:00"
+        },
+        {
+          "id": "35bb944e-bccd-444a-9090-b6335504a163",
+          "text": "Reduce paneer order by 20% for Diwali 2025.",
+          "type": "world",
+          "when": "2025-10-08T04:30:00.040000+00:00"
+        },
+        {
+          "id": "29077dbb-3b4f-49a5-98a2-f53d47f14336",
+          "text": "Order 200 sweet boxes from PackRight for Diwali 2025. | Involving: PackRight",
+          "type": "world",
+          "when": "2025-10-08T04:30:00.030000+00:00"
+        },
+        {
+          "id": "153d3742-46a1-4246-8649-3153ae18c556",
+          "text": "Begum Bazar wholesalers experience high order volumes and are overloaded during the week leading up to Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T10:30:00.010000+00:00"
+        }
+      ],
+      "ms": 17052,
+      "notes": [
+        "Directives applied: safety-stock, admit-gaps, cite-evidence"
+      ]
+    },
+    "savedAt": "2026-09-27T13:14:43.605Z"
+  },
+  "plan:full:dussehra": {
+    "value": {
+      "mode": "full",
+      "plan": {
+        "headline": "Place all meat and dry goods orders early to avoid festival stock-outs and supply chain delays.",
+        "expectations": [
+          {
+            "title": "Meat demand",
+            "value": "High",
+            "detail": "Butchers will be sold out on Dasara, so pre-booking is mandatory."
+          },
+          {
+            "title": "Dessert revenue",
+            "value": "Growth driver",
+            "detail": "Kaju Katli and other sweets are primary revenue drivers during the festival."
+          },
+          {
+            "title": "Paneer demand",
+            "value": "Lower",
+            "detail": "Customers prefer biryani and sweets over paneer mains during the festival."
+          }
+        ],
+        "orders": [
+          {
+            "stockId": "mutton",
+            "item": "Mutton",
+            "quantity": 45,
+            "unit": "kg",
+            "expectedUse": 45,
+            "orderBy": "2026-10-16",
+            "supplierId": "hyderabad-meat-house",
+            "why": "Pre-book early because city butchers sell out on Dasara.",
+            "lastTime": "Used 27 kg in 2025 with no stock-out."
+          },
+          {
+            "stockId": "chicken",
+            "item": "Chicken",
+            "quantity": 50,
+            "unit": "kg",
+            "expectedUse": 50,
+            "orderBy": "2026-10-16",
+            "supplierId": "hyderabad-meat-house",
+            "why": "Ensure sufficient supply for high festival demand.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "sugar",
+            "item": "Sugar",
+            "quantity": 40,
+            "unit": "kg",
+            "expectedUse": 40,
+            "orderBy": "2026-10-12",
+            "supplierId": "balaji-traders",
+            "why": "Order early to avoid delivery delays and price spikes.",
+            "lastTime": "Experienced delivery delays during Diwali 2025."
+          },
+          {
+            "stockId": "ghee",
+            "item": "Ghee",
+            "quantity": 20,
+            "unit": "kg",
+            "expectedUse": 20,
+            "orderBy": "2026-10-12",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Secure pricing and stock before festival demand spikes.",
+            "lastTime": "Experienced delivery delays during Diwali 2025."
+          },
+          {
+            "stockId": "paneer",
+            "item": "Paneer",
+            "quantity": 20,
+            "unit": "kg",
+            "expectedUse": 20,
+            "orderBy": "2026-10-17",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Reduce stock as demand drops during festivals.",
+            "lastTime": "Demand for paneer mains dropped during Diwali 2024."
+          },
+          {
+            "stockId": "cashew",
+            "item": "Cashew",
+            "quantity": 8,
+            "unit": "kg",
+            "expectedUse": 8,
+            "orderBy": "2026-10-12",
+            "supplierId": "deccan-wholesale",
+            "why": "Avoid delivery delays and secure pricing.",
+            "lastTime": "Experienced delivery delays during Diwali 2025."
+          },
+          {
+            "stockId": "sweet-boxes",
+            "item": "Sweet Boxes",
+            "quantity": 100,
+            "unit": "pcs",
+            "expectedUse": 100,
+            "orderBy": "2026-10-12",
+            "supplierId": "packright",
+            "why": "Ensure packaging is ready for high sweet demand.",
+            "lastTime": ""
+          }
+        ],
+        "menu": [
+          {
+            "change": "Focus on Biryani and Sweets",
+            "why": "Customers strongly prefer these over paneer mains during the Dasara feast."
+          },
+          {
+            "change": "Ensure Kaju Katli availability",
+            "why": "Dessert revenue is a primary growth driver during festivals."
+          }
+        ],
+        "risks": [
+          {
+            "risk": "Supplier delays from Balaji Traders",
+            "mitigation": "Use deccan-wholesale as a backup supplier for dry goods."
+          },
+          {
+            "risk": "Ingredient stock-out of sugar or ghee",
+            "mitigation": "Never let levels fall below a 2-day supply."
+          },
+          {
+            "risk": "No same-day meat top-ups",
+            "mitigation": "Pre-book all meat orders at least 3 days in advance."
+          }
+        ],
+        "confidence": "high"
+      },
+      "evidence": [
+        {
+          "id": "diwali-playbook",
+          "text": "Diwali playbook: ## Diwali Playbook Overview\n\nThis playbook consolidates performance data and lessons learned from the Diwali festivals of 2024 and 2025. No records exist for Diwali at Spice Garden prior to 2024.\n\n## Ingredient and Packaging Performance\n\n| Item | 2024 Planned | 2024 Used | 2024 Outcome | 2025 Planned | 2025 Used | 2025 Outcome |\n| --- | --- | --- | --- | --- | --- | --- |\n| Sugar (kg) | 25 | ~32+ | Stock-out (Nov 1) | 45 | 41 | No stock-out |\n| Ghee (kg) | N/A | ~2.5x normal | Stock-out (Nov 1) | 12 | 15 | Stock-out (Oct 20) |\n| Paneer (kg) | 26 | 18 | 8 kg wasted | 20% reduction | - | No waste |\n| Kaju Katli (boxes) | 0 | 0 | 40 orders lost | - | 158 | Goal met |\n| Sweet Boxes | N/A | N/A | Stock-out (Nov 1) | 200 | 186 | Goal met |\n\n## Strategic Planning and Lessons Learned\n\n- **Order Timing**: Order at least one week before Diwali. In 2024, ordering 4 days prior (Oct 25) led to a 2-day delivery delay from Balaji Traders. In 2025, ordering one week early (Oct 3) successfully mitigated delivery delays.\n- **Supplier Reliability**: Balaji Traders is prone to delays during the pre-Diwali rush in Begum Bazar (2024, 2025). Always maintain Deccan Wholesale Mart as a backup supplier, as done in 2025.\n- **Prices**: Balaji Traders increased cashew prices by 18% (₹980 to ₹1,160/kg) one week before Diwali 2025. Procuring from Deccan Wholesale Mart at ₹1,040/kg saved costs (2025).\n- **Corporate Orders**: 120 boxes of kaju katli were sold for corporate gifts in 2025. Late confirmation in 2025 caused some companies to split their orders with other vendors.\n- **Menu Additions**: Adding kaju katli boxes in 2025 drove a 62% year-on-year increase in dessert revenue.\n- **Revenue Trends**: Revenue grew from ₹6.4L (2024) to ₹8.9L (2025), a 39% increase.\n- **Mistakes to Avoid**: \n  - Never allow sugar levels to fall below a 2-day supply: 55 dessert orders were lost in 2024 due to a total sugar stock-out.\n  - Do not overstock paneer: Demand for paneer mains decreased by 15% in 2024, resulting in 8 kg of waste.\n  - Ensure sufficient Ghee supply: 2025 Ghee consumption (15 kg) exceeded stock (12 kg), forcing a pause in jalebi preparation.\n",
+          "type": "mental model"
+        },
+        {
+          "id": "087c5a40-247f-47fa-a3ec-6e0c5f0333e3",
+          "text": "Dussehra 2025 mutton usage was 27 kg out of 28 kg pre-booked, with no stock-out. | When: 2025-10-03",
+          "type": "world",
+          "when": "2025-10-03T00:00:00+00:00"
+        },
+        {
+          "id": "8f391f99-a2eb-4549-8a84-355aab212886",
+          "text": "15 kg of Ghee was consumed over 4 days during Diwali 2025, exceeding the 12 kg stock. | When: 2025-10-17 to 2025-10-20",
+          "type": "world",
+          "when": "2025-10-17T00:00:00.010000+00:00"
+        },
+        {
+          "id": "88a4612f-bbe8-43eb-950c-a6bca8e44ef1",
+          "text": "Mutton for Dussehra 2024 must be pre-booked at least 3 days in advance. | High demand during the festival.",
+          "type": "world"
+        },
+        {
+          "id": "b1e125f6-846b-4a28-b228-d8bb9882464e",
+          "text": "Customer demand for paneer mains fell by 15% during Diwali 2024 as customers preferred sweets and biryani. | When: 2024-11-04",
+          "type": "world"
+        },
+        {
+          "id": "6a5407f6-7533-4c0f-9350-57148b4d3f7e",
+          "text": "Hyderabad Meat House could not provide same-day mutton top-up for Dussehra 2024. | When: 2024-10-12 | Involving: Hyderabad Meat House | Every butcher in the city was sold out due to the festival.",
+          "type": "world",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "090aad82-1355-45c4-890d-15838bf94a8a",
+          "text": "Sugar stock-out occurred during Diwali 2024, leading to 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "af69ebb5-062b-4c75-b7f8-f85d204f16fd",
+          "text": "Balaji Traders increased the price of cashew by 18%, from ₹980 to ₹1,160 per kg, during the week before Diwali 2025. | When: 2025-10-13 to 2025-10-19 | Involving: Balaji Traders | Price adjustment before Diwali 2025",
+          "type": "world",
+          "when": "2025-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "1d1d4236-703a-4ec8-96f2-e402836b83d7",
+          "text": "Purchased 8 kg of cashew from Deccan Wholesale Mart at ₹1,040 per kg for Diwali 2025. | When: 2025-10-16 | Involving: Deccan Wholesale Mart, Spice Garden | Cheaper price compared to Balaji Traders during Diwali 2025",
+          "type": "world",
+          "when": "2025-10-16T00:00:00.010000+00:00"
+        }
+      ],
+      "recalled": [
+        {
+          "id": "7a0f6509-f909-4a55-a91e-fb630dbd94c2",
+          "text": "During Dussehra 2025, 27 kg of mutton was used out of 28 kg pre-booked, with no stock-out.",
+          "type": "observation",
+          "when": "2025-10-03T00:00:00+00:00"
+        },
+        {
+          "id": "96aa86fa-7793-425d-b52a-8f290a22530a",
+          "text": "Mutton stock ran out during Dussehra 2024. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-12T20:00:00+00:00"
+        },
+        {
+          "id": "f1d6cf1d-67c1-4515-a34a-e09d123dd3fa",
+          "text": "22 mutton biryani orders were turned away or switched to chicken during Dussehra 2024. | When: 2024-10-12 | Mutton stockout",
+          "type": "world",
+          "when": "2024-10-12T20:00:00.020000+00:00"
+        },
+        {
+          "id": "ca0a9449-465e-40df-bb07-22238ce8d82e",
+          "text": "Foresight recommended pre-booking 28 kg of mutton with Hyderabad Meat House 3 days before the festival. | When: Dussehra 2025 | Involving: Foresight | Based on stock-out during Dussehra 2024.",
+          "type": "experience",
+          "when": "2025-09-25T04:30:00+00:00"
+        },
+        {
+          "id": "7a197589-56e2-48ca-b1c5-15fc0a58ac45",
+          "text": "For Dussehra 2024, 18 kg of mutton was available, but the stock ran out on October 12, 2024, resulting in 22 mutton biryani orders being turned away or switched to chicken.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00.010000+00:00"
+        },
+        {
+          "id": "b5a1d414-1175-4d45-9e98-50a4e670ab3d",
+          "text": "18 kg of mutton was available for Dussehra 2024. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-12T00:00:00.010000+00:00"
+        },
+        {
+          "id": "c85e0148-45cb-48bf-bbcc-c9b6c7bd07ae",
+          "text": "Customers have requested mutton biryani and mutton curry for the Dasara feast during the Dussehra 2024 festival.",
+          "type": "observation",
+          "when": "2024-10-10T05:30:00.020000+00:00"
+        },
+        {
+          "id": "087c5a40-247f-47fa-a3ec-6e0c5f0333e3",
+          "text": "Dussehra 2025 mutton usage was 27 kg out of 28 kg pre-booked, with no stock-out. | When: 2025-10-03",
+          "type": "world",
+          "when": "2025-10-03T00:00:00+00:00"
+        },
+        {
+          "id": "6723b8b7-4f63-4d76-9292-2d7e269da0a0",
+          "text": "Foresight recommended pre-booking 28 kg of mutton with Hyderabad Meat House 3 days before Dussehra 2025 to avoid the stock-out experienced during Dussehra 2024.",
+          "type": "observation",
+          "when": "2025-09-25T04:30:00+00:00"
+        },
+        {
+          "id": "5f3a34ce-4e53-45fb-b4ee-67811172ec6a",
+          "text": "Customers are requesting mutton biryani and mutton curry for the Dasara feast during Dussehra 2024. | When: 2024-10-12 | Involving: Priya (manager) | Dussehra 2024 festival",
+          "type": "world",
+          "when": "2024-10-10T05:30:00.020000+00:00"
+        },
+        {
+          "id": "7a00f528-5a1c-4a40-b21a-9c0db9301f87",
+          "text": "During the first week of Ramzan 2025, 25 customers requested 1 kg haleem family packs for takeaway, but the demand was lost due to stock-out or unavailability.",
+          "type": "observation",
+          "when": "2025-03-01T00:00:00+00:00"
+        },
+        {
+          "id": "090aad82-1355-45c4-890d-15838bf94a8a",
+          "text": "Sugar stock-out occurred during Diwali 2024, leading to 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "69a7cc0e-a272-4ea3-a3a7-86b57f2a917b",
+          "text": "Dussehra 2024 revenue reached ₹1.86L, exceeding the ₹1.1L typical for a Saturday.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "70b6381f-851b-4796-8665-674bc3887f5b",
+          "text": "25 customers requested 1 kg haleem family packs for takeaway during the first week of Ramzan 2025. | When: 2025-03-01 to 2025-03-07 | Involving: 25 customers | Lost demand due to stock-out or unavailability during Ramzan 2025.",
+          "type": "world",
+          "when": "2025-03-01T00:00:00+00:00"
+        },
+        {
+          "id": "6a5407f6-7533-4c0f-9350-57148b4d3f7e",
+          "text": "Hyderabad Meat House could not provide same-day mutton top-up for Dussehra 2024. | When: 2024-10-12 | Involving: Hyderabad Meat House | Every butcher in the city was sold out due to the festival.",
+          "type": "world",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "c89579ff-666e-480e-862b-44c26a21dfba",
+          "text": "Approximately 20 customers requested modak, but the item was out of stock. | When: 2025-08-30 | Involving: 20 customers | Lost demand during Ganesh Chaturthi 2025.",
+          "type": "world",
+          "when": "2025-08-30T00:00:00+00:00"
+        },
+        {
+          "id": "48b2b44a-955a-42dd-888f-0fe88cec1d6e",
+          "text": "A sugar stock-out occurred during Diwali 2024, resulting in 55 unserved dessert orders and approximately ₹9,500 in lost revenue.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "ab538a8b-bff2-46f8-8ce7-42956aa2f95b",
+          "text": "Sold 71 mutton biryani plates during Dussehra 2025 without turning away any orders. | When: 2025-10-03",
+          "type": "world",
+          "when": "2025-10-03T00:00:00.010000+00:00"
+        },
+        {
+          "id": "0d5fdf7b-032d-4ba9-9ad6-67eb9eedead1",
+          "text": "Dussehra 2024 demand for Double ka meetha was 30 portions.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.030000+00:00"
+        },
+        {
+          "id": "cdcbfeb1-1d00-41fe-8050-aa233902dfe3",
+          "text": "During Dussehra 2025, 71 mutton biryani plates were sold with no orders turned away.",
+          "type": "observation",
+          "when": "2025-10-03T00:00:00.010000+00:00"
+        },
+        {
+          "id": "71e00272-4f63-4029-9876-226ed9abbea5",
+          "text": "12 takeaway sweet orders were refused due to stockout during Diwali 2024. | When: 2024-11-01 | Stockout of sweet boxes and takeaway dessert containers.",
+          "type": "world",
+          "when": "2024-11-01T12:00:00.010000+00:00"
+        },
+        {
+          "id": "88a4612f-bbe8-43eb-950c-a6bca8e44ef1",
+          "text": "Mutton for Dussehra 2024 must be pre-booked at least 3 days in advance. | High demand during the festival.",
+          "type": "world",
+          "when": "2024-10-12T15:10:00.010000+00:00"
+        },
+        {
+          "id": "818c252d-9ef8-473b-b203-794fd496d417",
+          "text": "Customers requested 500g to 1kg boxes of kaju katli for the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: customers",
+          "type": "world",
+          "when": "2024-10-28T00:00:00.010000+00:00"
+        },
+        {
+          "id": "4bdfb5f0-44d7-4ad0-bd80-0218d97368bd",
+          "text": "Mutton for Dussehra requires pre-booking at least 3 days in advance due to high festival demand.",
+          "type": "observation",
+          "when": "2024-10-12T15:10:00.010000+00:00"
+        },
+        {
+          "id": "e65c25b8-f4d1-4c17-817d-48fee1181b3f",
+          "text": "Ravi rationed ghee specifically for jalebi preparation during Diwali 2024. | When: 2024-11-01 | Involving: Ravi (head chef) | Ghee stock was low",
+          "type": "world",
+          "when": "2024-11-01T00:00:00.010000+00:00"
+        },
+        {
+          "id": "99b26a79-21e2-4603-8d23-b2faaabebbda",
+          "text": "Paneer stock-out occurred twice during Ganesh Chaturthi 2025, specifically on August 29 and August 31.",
+          "type": "observation",
+          "when": "2025-08-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "a3c51aea-b178-4539-a2eb-28d60e70f01b",
+          "text": "Jalebi production was paused for the last hour of Diwali 2025 due to Ghee stockout. | When: 2025-10-20",
+          "type": "world",
+          "when": "2025-10-20T15:00:00.020000+00:00"
+        },
+        {
+          "id": "38bb2ba1-a2ea-4633-b82f-cfe7a1f8a296",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during Diwali 2024. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "d836e411-0d9f-4b28-a9bd-938ef593280c",
+          "text": "Paneer stock-out occurred twice during Ganesh Chaturthi 2025. | When: 2025-08-29 and 2025-08-31",
+          "type": "world",
+          "when": "2025-08-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "66b66b66-8326-4475-9573-29424c15b908",
+          "text": "Approximately 20 customers requested modak during Ganesh Chaturthi 2025, but the item was out of stock.",
+          "type": "observation",
+          "when": "2025-08-30T00:00:00+00:00"
+        },
+        {
+          "id": "692a7348-a6b9-49ff-a180-432dd372c4f2",
+          "text": "Ghee stock reached a low of 1.5 kg during Diwali 2024. | When: 2024-11-01 | Involving: Ravi (head chef)",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "8f391f99-a2eb-4549-8a84-355aab212886",
+          "text": "15 kg of Ghee was consumed over 4 days during Diwali 2025, exceeding the 12 kg stock. | When: 2025-10-17 to 2025-10-20",
+          "type": "world",
+          "when": "2025-10-17T00:00:00.010000+00:00"
+        },
+        {
+          "id": "cc38a64e-21ba-4e6e-8e42-0df57dcafb2f",
+          "text": "During Diwali 2024, inventory shortages included sugar stock-outs and a lack of kaju katli and sweet boxes.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "412d8d9c-db48-4767-96a6-d7893f57e6c5",
+          "text": "Diwali 2024 inventory shortages: sugar stock-out, no kaju katli available, and sweet boxes ran out. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "ff322b01-ec8d-4f52-9b0a-80f3a115ed3a",
+          "text": "Chicken stock ran out at 11:40 PM on New Year's Eve 2024; the restaurant had 20 kg but needed 30 kg. | When: 2024-12-31",
+          "type": "world",
+          "when": "2024-12-31T23:40:00.020000+00:00"
+        },
+        {
+          "id": "eb93e4d3-d701-4b60-b662-5b03c739150c",
+          "text": "Foresight recommended adding one evening cook for the festival. | When: Dussehra 2025 | Involving: Foresight",
+          "type": "experience",
+          "when": "2025-09-25T04:30:00.010000+00:00"
+        },
+        {
+          "id": "fec3b9f7-461d-4f26-8d4c-93b6e66eed83",
+          "text": "Ghee stockout occurred during Diwali 2025. | When: 2025-10-20",
+          "type": "world",
+          "when": "2025-10-20T16:00:00+00:00"
+        },
+        {
+          "id": "64ff5585-2f21-48fe-b3c3-d31dc9503a5d",
+          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates, compared to 25 plates on a normal Saturday.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.010000+00:00"
+        },
+        {
+          "id": "8c44befd-493f-4c3f-881f-d2b1669cd8da",
+          "text": "No paneer stock-out occurred during Ganesh Chaturthi 2026. | When: 2026-09-25",
+          "type": "world",
+          "when": "2026-09-25T00:00:00.010000+00:00"
+        },
+        {
+          "id": "6391c150-4c6f-4740-8149-02d3786e0a6a",
+          "text": "Chicken 65 and starters were in high demand during New Year's Eve 2024. | When: 2024-12-31",
+          "type": "world",
+          "when": "2024-12-31T00:00:00.010000+00:00"
+        },
+        {
+          "id": "d5c3fad9-5b3b-4a43-b460-69de0da98414",
+          "text": "Dussehra 2024 demand for Chicken was normal.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "3140d067-e0f8-4a31-a457-5e9dd45a1dca",
+          "text": "Dasara weekend bookings are double normal levels for the Dussehra 2024 festival. | When: 2024-10-12 to 2024-10-13 | Involving: Priya (manager) | Dussehra 2024 festival",
+          "type": "world",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "2b8a7625-ba33-4bf2-bd63-10ad590bb6e4",
+          "text": "Dussehra 2024 demand for Chicken was normal. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "1d14f1b5-f637-47ca-a872-ac79991436c6",
+          "text": "Dussehra 2024 revenue reached ₹1.86L compared to ₹1.1L on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival performance",
+          "type": "world",
+          "when": "2024-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "b01450b1-7176-4050-9dc4-d603ca64cefe",
+          "text": "14 family reservations confirmed for the Dasara feast during Dussehra 2024. | When: 2024-10-12 | Involving: Priya (manager) | Dussehra 2024 festival",
+          "type": "world",
+          "when": "2024-10-12T00:00:00.010000+00:00"
+        },
+        {
+          "id": "1875de5f-bbde-471b-953a-97e172511456",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu for the night due to sugar stockout during Diwali 2024. | When: 2024-11-01 | Sugar stockout during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "c0a72b88-d77b-49de-bb49-940001a604e1",
+          "text": "One company had to split its order with another shop because the booking was confirmed late for Diwali 2025. | When: 2025-10-17 | Involving: One company | Late confirmation of booking",
+          "type": "world",
+          "when": "2025-10-17T00:00:00.010000+00:00"
+        },
+        {
+          "id": "b57654af-60e6-4332-9dd6-2eec5ebd12a7",
+          "text": "Haleem sold out by 8:10pm on 4 of the first 5 days of Ramzan 2025. | When: 2025-03-01 to 2025-03-05",
+          "type": "world",
+          "when": "2025-03-01T00:00:00+00:00"
+        },
+        {
+          "id": "0877d286-c1ca-4a18-a493-20bc71ba5220",
+          "text": "32 kg of sugar was consumed between October 29 and November 1, 2024, compared to the normal 8 kg for a 4-day period during Diwali 2024. | When: 2024-10-29 to 2024-11-01 | Increased demand during Diwali 2024.",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "dab1613f-7288-4a00-a581-379101adcb80",
+          "text": "Sugar stock reached zero at 7:05pm during Diwali 2024. | When: 2024-11-01 | High consumption during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T19:05:00+00:00"
+        },
+        {
+          "id": "6b90c003-92e0-4fb4-bd69-bb7d721a5ae1",
+          "text": "Dussehra 2024 demand for Double ka meetha was 30 portions. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.030000+00:00"
+        },
+        {
+          "id": "2fc336bd-22f7-480f-96eb-993db990e8c5",
+          "text": "Dasara weekend bookings for the Dussehra 2024 festival are double normal levels.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "45003c49-2f96-4f0b-b051-e39182d75f16",
+          "text": "New Year's Eve 2024 experienced 2.3x normal dinner covers with peak demand between 10:00 PM and 12:30 AM. | When: 2024-12-31",
+          "type": "world",
+          "when": "2024-12-31T22:00:00+00:00"
+        },
+        {
+          "id": "a02cbeea-4da7-4428-a30e-e3070c8aa96f",
+          "text": "Diwali 2025 sugar usage: 41 kg used out of 45 kg planned, no stock-out occurred. | When: 2025-10-23",
+          "type": "world",
+          "when": "2025-10-23T05:30:00+00:00"
+        },
+        {
+          "id": "7be8cc45-4190-4d44-a5f4-4faff2e73183",
+          "text": "Used 30 kg of chicken for New Year's Eve 2025 with no stock-out. | When: 2025-12-31",
+          "type": "world",
+          "when": "2025-12-31T00:00:00.010000+00:00"
+        },
+        {
+          "id": "a7f3cfd5-606f-4a68-a0e1-f1545cb35956",
+          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates compared to 25 plates on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.010000+00:00"
+        }
+      ],
+      "ms": 9347,
+      "notes": [
+        "Directives applied: safety-stock, admit-gaps, cite-evidence"
+      ]
+    },
+    "savedAt": "2026-09-27T13:14:51.856Z"
+  },
+  "plan:firstSeason:dussehra": {
+    "value": {
+      "mode": "firstSeason",
+      "plan": {
+        "headline": "Increase inventory levels for mutton and sweets to prevent the stockouts experienced during the 2024 festival season.",
+        "expectations": [
+          {
+            "title": "Mutton demand",
+            "value": "64 plates",
+            "detail": "Demand for mutton biryani is expected to jump significantly based on 2024 performance."
+          },
+          {
+            "title": "Sweet demand",
+            "value": "High",
+            "detail": "Customer demand for sweets will be high, requiring extra packaging and ingredients."
+          },
+          {
+            "title": "Supply shortages",
+            "value": "City-wide",
+            "detail": "General market shortages for key ingredients like mutton are expected during the festival."
+          }
+        ],
+        "orders": [
+          {
+            "stockId": "mutton",
+            "item": "Mutton",
+            "quantity": 40,
+            "unit": "kg",
+            "expectedUse": 40,
+            "orderBy": "2026-10-17",
+            "supplierId": "hyderabad-meat-house",
+            "why": "To meet high festival demand and avoid an 8:00 PM stockout.",
+            "lastTime": "We ran out of mutton by 8:00 PM on 2024-10-12."
+          },
+          {
+            "stockId": "ghee",
+            "item": "Ghee",
+            "quantity": 10,
+            "unit": "kg",
+            "expectedUse": 10,
+            "orderBy": "2026-10-18",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "To ensure we can continue making sweets like kheer and gulab jamun.",
+            "lastTime": "Increased consumption was observed during Diwali 2024."
+          },
+          {
+            "stockId": "khoya",
+            "item": "Khoya",
+            "quantity": 5,
+            "unit": "kg",
+            "expectedUse": 5,
+            "orderBy": "2026-10-18",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "To maintain menu availability for traditional sweets.",
+            "lastTime": "Increased consumption was observed during Diwali 2024."
+          },
+          {
+            "stockId": "sugar",
+            "item": "Sugar",
+            "quantity": 30,
+            "unit": "kg",
+            "expectedUse": 30,
+            "orderBy": "2026-10-18",
+            "supplierId": "balaji-traders",
+            "why": "To prevent rationing or menu removals due to supply shortages.",
+            "lastTime": "Increased consumption was observed during Diwali 2024."
+          },
+          {
+            "stockId": "sweet-boxes",
+            "item": "Sweet boxes",
+            "quantity": 150,
+            "unit": "pcs",
+            "expectedUse": 150,
+            "orderBy": "2026-10-16",
+            "supplierId": "packright",
+            "why": "To ensure we have enough packaging for takeaway orders.",
+            "lastTime": "We experienced stockouts during Diwali 2024."
+          }
+        ],
+        "menu": [
+          {
+            "change": "Add Kaju Katli",
+            "why": "To meet the high customer demand noted during Diwali 2024."
+          },
+          {
+            "change": "Maintain existing sweets",
+            "why": "Ensure Double ka meetha, kheer, and gulab jamun remain available by securing ingredients."
+          }
+        ],
+        "risks": [
+          {
+            "risk": "Mutton stockout",
+            "mitigation": "Pre-book 40 kg with hyderabad-meat-house by 2026-10-17."
+          },
+          {
+            "risk": "Dry-goods supplier delay",
+            "mitigation": "Order from Balaji Traders by 2026-10-18 to avoid festival week delays."
+          },
+          {
+            "risk": "Packaging stockout",
+            "mitigation": "Order printed sweet boxes 4 days early by 2026-10-16."
+          }
+        ],
+        "confidence": "high"
+      },
+      "evidence": [
+        {
+          "id": "7f618de6-c7b7-452a-bc84-5e2611ec6461",
+          "text": "Dussehra 2024 sales for Double ka meetha reached 30 portions. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.030000+00:00"
+        },
+        {
+          "id": "535ada45-9326-4165-bd00-d6992b14e10b",
+          "text": "Dussehra 2024 revenue reached ₹1.86L compared to ₹1.1L on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival performance",
+          "type": "world",
+          "when": "2024-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "577d7086-59fb-4a95-8f63-41021d74fc6c",
+          "text": "Hyderabad Meat House could not provide same-day mutton top-up for Dussehra 2024. | When: 2024-10-12 | Involving: Hyderabad Meat House | Every butcher in the city was sold out due to the festival.",
+          "type": "world",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "ec81499f-41ce-472f-bf82-a5ccf6f1b5e1",
+          "text": "18 kg of mutton was fully consumed by 8:00pm during Dussehra 2024. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-12T20:00:00.010000+00:00"
+        },
+        {
+          "id": "d575eab7-fcea-4978-873b-8e574df77b52",
+          "text": "Mutton stock ran out during Dussehra 2024. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-12T20:15:00+00:00"
+        },
+        {
+          "id": "2571037f-a366-4d22-a1ba-1dbacee65191",
+          "text": "22 mutton biryani orders were turned away or switched to chicken during Dussehra 2024. | When: 2024-10-12 | Mutton stockout",
+          "type": "world",
+          "when": "2024-10-12T20:15:00.020000+00:00"
+        },
+        {
+          "id": "4e9563d2-9896-4768-86be-207d8d1bd4af",
+          "text": "Dasara weekend bookings are double normal levels for the 2024 Dussehra festival. | When: 2024-10-12 | Involving: Priya (manager)",
+          "type": "world",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "b8c9525c-9dda-4733-8b72-7a823f9a897c",
+          "text": "Sugar stock-out occurred during Diwali 2024, leading to 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "7bc564cf-0852-489d-9296-2bc27a1a6630",
+          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates compared to 25 plates on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.010000+00:00"
+        },
+        {
+          "id": "a6916a39-0d84-48a0-a6ee-d368e006630f",
+          "text": "14 family reservations confirmed for 12 Oct 2024 for the 2024 Dussehra festival. | When: 2024-10-12 | Involving: Priya (manager)",
+          "type": "world",
+          "when": "2024-10-12T00:00:00.010000+00:00"
+        },
+        {
+          "id": "11844eca-f875-4404-8e90-b2143e436813",
+          "text": "Dussehra 2024 demand for Chicken was normal. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "1a819e8d-77fc-4ee6-a8a2-9b94ef7ec7a5",
+          "text": "Customers requested 500g to 1kg boxes of kaju katli during the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: customers",
+          "type": "world",
+          "when": "2024-10-28T00:00:00.010000+00:00"
+        },
+        {
+          "id": "74876842-4cd3-4642-98e8-35aeb69ccb12",
+          "text": "Mutton for Dussehra 2024 must be pre-booked at least 3 days in advance. | High demand during the festival.",
+          "type": "world"
+        },
+        {
+          "id": "cfd5c31b-134f-4d95-8f47-4cd7c7eb7313",
+          "text": "Dessert sales increased by 210% and biryani sales increased by 60% during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "ab6c0d41-63a1-45bc-8f08-6caad7e8d5d4",
+          "text": "40 customers requested kaju katli, which is not on the menu, during the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: 40 customers | Customer demand not served due to item not being on the menu.",
+          "type": "world",
+          "when": "2024-10-28T00:00:00+00:00"
+        },
+        {
+          "id": "88b8647f-d91f-4cfd-a951-9b718aba760d",
+          "text": "Diwali 2024 revenue was ₹6.4L compared to ₹4.1L for a normal 5-day period. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "0d0ab8b1-bcaa-4d33-97c7-6c4b4eb948e3",
+          "text": "Paneer main course sales decreased by 15% during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "2c79c029-b6cc-4422-bb90-cfbcac53c452",
+          "text": "Ravi (head chef) plans to order sugar, ghee, and khoya one week before Diwali 2025. | When: 2025-10-20 to 2025-10-26 | Involving: Ravi (head chef) | Preparation for Diwali 2025",
+          "type": "world"
+        },
+        {
+          "id": "f6a64422-2291-4029-8ea8-589f35ef30e6",
+          "text": "Sugar stock reached zero at 7:05pm during Diwali 2024. | When: 2024-11-01 | High consumption during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T19:05:00+00:00"
+        },
+        {
+          "id": "a66a6403-c66a-4c7f-84c1-285555afeaf9",
+          "text": "Sugar was purchased at ₹58/kg from a local kirana, compared to the Balaji supplier price of ₹44/kg for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency top-up for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00.010000+00:00"
+        },
+        {
+          "id": "3198e435-7c44-4367-a4c8-fa69b1a84a58",
+          "text": "Sugar consumption was 32 kg between October 29 and November 1, 2024, compared to 8 kg in a normal 4-day period during Diwali 2024. | When: 2024-10-29 to 2024-11-01 | Increased demand during Diwali 2024.",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "b4e17131-3b76-40e2-9f99-46182c6e5830",
+          "text": "Spice Garden wasted 8 kg of expired paneer valued at approximately ₹2,700 after Diwali 2024. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T00:00:00+00:00"
+        },
+        {
+          "id": "268efc49-8802-4b4d-8778-cb7644fa4473",
+          "text": "15 walk-in and phone customers requested Diwali sweet gift boxes for corporate gifting, which the business does not offer. | When: 2024-10-28 | Involving: 15 walk-in and phone customers | Lost demand during Diwali 2024 festival.",
+          "type": "world",
+          "when": "2024-10-28T12:30:00+00:00"
+        },
+        {
+          "id": "64206cc9-78fa-4914-a2a8-48597313bb4a",
+          "text": "Ravi (head chef) plans to secure a backup dry-goods supplier for Diwali 2025. | When: 2025-10-01 to 2025-10-31 | Involving: Ravi (head chef) | Supply chain contingency for Diwali 2025",
+          "type": "world"
+        },
+        {
+          "id": "cbe540dd-a9bb-4679-a84d-91a23e471078",
+          "text": "Spice Garden purchased 26 kg of paneer for Diwali 2024 expecting high demand. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T00:00:00.010000+00:00"
+        },
+        {
+          "id": "b5de7d51-7b84-49d0-a0a3-857f3b2edfda",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu due to sugar stockout during Diwali 2024. | When: 2024-11-01 | Sugar stockout during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "38707789-e40c-4207-ac84-59b1238ee864",
+          "text": "Ghee stock reached 1.5 kg during Diwali 2024, causing head chef Ravi to ration it for jalebi. | When: 2024-11-01 | Involving: Ravi (head chef)",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "c1c4b12f-5495-43fc-bf0e-a7486f24d58a",
+          "text": "Customers are requesting mutton biryani and mutton curry for the 2024 Dussehra feast. | When: 2024-10-12",
+          "type": "world"
+        },
+        {
+          "id": "9a235e0b-35cc-4f73-8624-bcc9de75bcf0",
+          "text": "Balaji Traders delivered sugar and cashew order 2 days late for Diwali 2024. | When: 2024-10-29 | Involving: Balaji Traders",
+          "type": "world",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "90f826aa-d6ca-433e-a37f-894863623185",
+          "text": "Ravi (head chef) plans to add kaju katli boxes to the menu for Diwali 2025. | When: 2025-10-01 to 2025-10-31 | Involving: Ravi (head chef) | Menu expansion for Diwali 2025",
+          "type": "world"
+        },
+        {
+          "id": "2714ccd2-f43e-402d-9687-dd49f29f3295",
+          "text": "Imran purchased 10 kg of sugar as an emergency top-up for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency top-up for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00+00:00"
+        },
+        {
+          "id": "d796e70c-b4e9-4561-aed6-0317200e0031",
+          "text": "12 takeaway sweet orders were refused due to stockout during the Diwali 2024 festival. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00.010000+00:00"
+        },
+        {
+          "id": "1a422c52-e4bb-4ff0-917f-b7f083d9bbd0",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during the Diwali 2024 festival. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "4a512eb4-0de1-4d32-ad41-5a37c1dc9fc0",
+          "text": "Stock-out of sugar, kaju katli, and sweet boxes occurred during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.030000+00:00"
+        },
+        {
+          "id": "13dd81d0-a1da-4b98-b776-27c9f990a963",
+          "text": "Customer demand for paneer mains fell by 15% during Diwali 2024 as customers preferred sweets and biryani. | When: 2024-11-04",
+          "type": "world"
+        },
+        {
+          "id": "2552970c-91fb-484b-bb49-7c14ef480486",
+          "text": "Begum Bazar wholesalers are overloaded during the week before Diwali 2024. | When: 2024-10-22 to 2024-10-29 | Involving: Begum Bazar wholesalers",
+          "type": "world"
+        },
+        {
+          "id": "1758899f-57e7-4767-8aa9-3f9ecc9c0579",
+          "text": "Ghee consumption during Diwali 2024 was approximately 2.5 times the normal usage. | When: 2024-11-01",
+          "type": "world"
+        },
+        {
+          "id": "728941d9-e73b-4c08-9969-667b10057064",
+          "text": "Imran ordered 25 kg of sugar for Diwali 2024 from Balaji Traders, which is 5 kg more than a normal week. | When: 2024-10-25 | Involving: Imran (store keeper), Balaji Traders | Preparation for Diwali 2024",
+          "type": "world",
+          "when": "2024-10-25T00:00:00+00:00"
+        },
+        {
+          "id": "b989feb5-be37-4b48-bf6a-695d66f65ace",
+          "text": "Dussehra 2024 sales for Double ka meetha reached 30 portions.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.030000+00:00"
+        },
+        {
+          "id": "a6ed1e04-e560-44f8-aed3-5be79383c554",
+          "text": "Mutton for Dussehra must be pre-booked at least 3 days in advance due to high festival demand.",
+          "type": "observation"
+        },
+        {
+          "id": "be4c4add-f023-497a-a1e4-cb098beb0af9",
+          "text": "For the 2024 Dussehra festival on October 12, 2024, manager Priya reports that weekend bookings are double normal levels.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "d23c75bd-a0bb-4898-b5b9-adf3cef474ed",
+          "text": "Hyderabad Meat House was unable to provide same-day mutton for Dussehra 2024 because all city butchers were sold out due to high festival demand.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "12c9aed0-23a0-46f8-8e8d-2019c5aa6a12",
+          "text": "Chicken demand remained normal during the Dussehra 2024 festival.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "8f359e69-cd12-4b41-b331-e4bb718d3cdd",
+          "text": "Manager Priya confirmed 14 family reservations for the 2024 Dussehra festival on October 12, 2024.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00.010000+00:00"
+        },
+        {
+          "id": "92ab4725-414e-40f8-b657-9559dc3a8e59",
+          "text": "Dussehra 2024 revenue was ₹1.86L, compared to the ₹1.1L typically earned on a normal Saturday.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "a66d4730-057b-4d89-bfcb-36de8797256a",
+          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates, significantly higher than the 25 plates sold on a normal Saturday.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.010000+00:00"
+        },
+        {
+          "id": "b7f93c07-6607-4932-9f92-b890ffee13e3",
+          "text": "During Dussehra 2024, 18 kg of mutton was fully consumed by 8:00 PM, leading to a stockout by 8:15 PM that resulted in 22 mutton biryani orders being turned away or switched to chicken.",
+          "type": "observation",
+          "when": "2024-10-12T20:00:00.010000+00:00"
+        },
+        {
+          "id": "7e40659a-bf01-4041-a363-5ade9ead1212",
+          "text": "Customers are requesting mutton biryani and mutton curry for the 2024 Dussehra feast on October 12, 2024.",
+          "type": "observation"
+        },
+        {
+          "id": "2ea914dc-7eed-4307-b18d-d24a939ef559",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during the Diwali 2024 festival.",
+          "type": "observation",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "65ee7baa-14ae-4afe-9eb7-312706deca36",
+          "text": "12 takeaway sweet orders were refused due to a stockout of containers during the Diwali 2024 festival.",
+          "type": "observation",
+          "when": "2024-11-01T12:00:00.010000+00:00"
+        },
+        {
+          "id": "691e1654-654a-42e4-9c3b-63af8da78e9b",
+          "text": "During Diwali 2024, dessert sales increased by 210% and biryani sales increased by 60%.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "70606614-c246-43dc-a3e1-e291be109b8c",
+          "text": "The business experienced lost demand during the 2024 Diwali festival, with 15 walk-in and phone customers requesting corporate Diwali sweet gift boxes that the business does not offer.",
+          "type": "observation",
+          "when": "2024-10-28T12:30:00+00:00"
+        },
+        {
+          "id": "47b9bf21-15ff-4052-8aba-12bda4970fb9",
+          "text": "Paneer main course sales decreased by 15% during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.020000+00:00"
+        },
+        {
+          "id": "1deaccd5-9ee7-4b32-8f63-942c17ce38e6",
+          "text": "Ravi, the head chef, plans to order sugar, ghee, and khoya one week before Diwali 2025.",
+          "type": "observation"
+        },
+        {
+          "id": "77589098-c367-452e-a5cf-5ebbc39e1718",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu on November 1, 2024, due to a sugar stockout.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "b8318b74-6de5-4671-8c7c-80465bea71a6",
+          "text": "Sugar stock-out during Diwali 2024 resulted in 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "1178e5b4-dedc-4932-a4d5-c370e2f3995b",
+          "text": "During the 2024 Diwali festival, 40 customers requested kaju katli in 500g to 1kg boxes, but the item was not on the menu.",
+          "type": "observation",
+          "when": "2024-10-28T00:00:00+00:00"
+        },
+        {
+          "id": "d13b4c44-4fa3-4e65-855c-0107c0471550",
+          "text": "Customer demand for paneer mains at Spice Garden fell by 15% during Diwali 2024 due to a preference for sweets and biryani.",
+          "type": "observation"
+        },
+        {
+          "id": "554e60ae-7936-42a7-b18f-0fe741d5b648",
+          "text": "Spice Garden wasted 8 kg of expired paneer valued at approximately ₹2,700 following Diwali 2024.",
+          "type": "observation",
+          "when": "2024-11-04T00:00:00+00:00"
+        },
+        {
+          "id": "1d165c0c-7bb1-4496-a7a5-1a1565412d52",
+          "text": "Diwali 2024 revenue (Oct 29 - Nov 2) was ₹6.4L, compared to ₹4.1L for a normal 5-day period.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "5f57e6d0-0e23-47a1-b642-7bfc2e604854",
+          "text": "Stock-outs of sugar, kaju katli, and sweet boxes occurred during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.030000+00:00"
+        },
+        {
+          "id": "d624e9ea-d3ed-432c-92a3-7d4fa21181a6",
+          "text": "Ghee consumption during Diwali 2024 was approximately 2.5 times the normal usage.",
+          "type": "observation"
+        },
+        {
+          "id": "3f953a84-265c-4166-ad8d-4083c58a1ceb",
+          "text": "Ravi, the head chef, plans to secure a backup dry-goods supplier for Diwali 2025.",
+          "type": "observation"
+        },
+        {
+          "id": "2744c515-8111-46ac-ac7c-935a31923c77",
+          "text": "Imran, a store keeper, ordered 25 kg of sugar from Balaji Traders for Diwali 2024, which is 5 kg more than his typical weekly order.",
+          "type": "observation",
+          "when": "2024-10-25T00:00:00+00:00"
+        },
+        {
+          "id": "19b64575-29f2-4bbb-b3b6-bbbcb7a0f468",
+          "text": "Sugar stock reached zero at 7:05pm on November 1, 2024, due to high consumption during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-11-01T19:05:00+00:00"
+        },
+        {
+          "id": "7461da27-ddf1-4a4e-9892-891efb382c65",
+          "text": "Ravi, the head chef, plans to add kaju katli boxes to the menu for Diwali 2025.",
+          "type": "observation"
+        },
+        {
+          "id": "fdefd5a3-01bf-4d85-b28d-81d5335a1d60",
+          "text": "Spice Garden purchased 26 kg of paneer for Diwali 2024.",
+          "type": "observation",
+          "when": "2024-11-04T00:00:00.010000+00:00"
+        },
+        {
+          "id": "e4043b6a-5e3d-4709-ba41-e77020e1bef7",
+          "text": "Begum Bazar wholesalers experience high order volumes and are overloaded during the week leading up to Diwali 2024.",
+          "type": "observation"
+        },
+        {
+          "id": "320456e9-2927-4ae1-a28f-03e30dca8e81",
+          "text": "Balaji Traders delivered a sugar and cashew order 2 days late for Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "51450a1c-76a4-4e38-8aba-86047ab26145",
+          "text": "Imran purchased 10 kg of sugar at ₹58/kg from a local kirana as an emergency top-up for Diwali 2024, noting that the regular Balaji supplier price was ₹44/kg.",
+          "type": "observation",
+          "when": "2024-11-02T04:00:00+00:00"
+        },
+        {
+          "id": "709c35af-a506-461d-9879-673ba547489c",
+          "text": "Sugar consumption totaled 32 kg between October 29 and November 1, 2024, significantly higher than the normal 8 kg for a 4-day period during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "efbc5e76-0217-44b2-803f-e1816a5f896f",
+          "text": "Ghee stock reached 1.5 kg during Diwali 2024, leading head chef Ravi to ration it for jalebi.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00+00:00"
+        }
+      ],
+      "recalled": [
+        {
+          "id": "b7f93c07-6607-4932-9f92-b890ffee13e3",
+          "text": "During Dussehra 2024, 18 kg of mutton was fully consumed by 8:00 PM, leading to a stockout by 8:15 PM that resulted in 22 mutton biryani orders being turned away or switched to chicken.",
+          "type": "observation",
+          "when": "2024-10-12T20:00:00.010000+00:00"
+        },
+        {
+          "id": "7e40659a-bf01-4041-a363-5ade9ead1212",
+          "text": "Customers are requesting mutton biryani and mutton curry for the 2024 Dussehra feast on October 12, 2024.",
+          "type": "observation",
+          "when": "2024-10-10T05:30:00.020000+00:00"
+        },
+        {
+          "id": "d575eab7-fcea-4978-873b-8e574df77b52",
+          "text": "Mutton stock ran out during Dussehra 2024. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-12T20:15:00+00:00"
+        },
+        {
+          "id": "2571037f-a366-4d22-a1ba-1dbacee65191",
+          "text": "22 mutton biryani orders were turned away or switched to chicken during Dussehra 2024. | When: 2024-10-12 | Mutton stockout",
+          "type": "world",
+          "when": "2024-10-12T20:15:00.020000+00:00"
+        },
+        {
+          "id": "ec81499f-41ce-472f-bf82-a5ccf6f1b5e1",
+          "text": "18 kg of mutton was fully consumed by 8:00pm during Dussehra 2024. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-12T20:00:00.010000+00:00"
+        },
+        {
+          "id": "c1c4b12f-5495-43fc-bf0e-a7486f24d58a",
+          "text": "Customers are requesting mutton biryani and mutton curry for the 2024 Dussehra feast. | When: 2024-10-12",
+          "type": "world",
+          "when": "2024-10-10T05:30:00.020000+00:00"
+        },
+        {
+          "id": "a6ed1e04-e560-44f8-aed3-5be79383c554",
+          "text": "Mutton for Dussehra must be pre-booked at least 3 days in advance due to high festival demand.",
+          "type": "observation",
+          "when": "2024-10-12T15:10:00.010000+00:00"
+        },
+        {
+          "id": "b8c9525c-9dda-4733-8b72-7a823f9a897c",
+          "text": "Sugar stock-out occurred during Diwali 2024, leading to 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "92ab4725-414e-40f8-b657-9559dc3a8e59",
+          "text": "Dussehra 2024 revenue was ₹1.86L, compared to the ₹1.1L typically earned on a normal Saturday.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "577d7086-59fb-4a95-8f63-41021d74fc6c",
+          "text": "Hyderabad Meat House could not provide same-day mutton top-up for Dussehra 2024. | When: 2024-10-12 | Involving: Hyderabad Meat House | Every butcher in the city was sold out due to the festival.",
+          "type": "world",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "b989feb5-be37-4b48-bf6a-695d66f65ace",
+          "text": "Dussehra 2024 sales for Double ka meetha reached 30 portions.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.030000+00:00"
+        },
+        {
+          "id": "74876842-4cd3-4642-98e8-35aeb69ccb12",
+          "text": "Mutton for Dussehra 2024 must be pre-booked at least 3 days in advance. | High demand during the festival.",
+          "type": "world",
+          "when": "2024-10-12T15:10:00.010000+00:00"
+        },
+        {
+          "id": "8f359e69-cd12-4b41-b331-e4bb718d3cdd",
+          "text": "Manager Priya confirmed 14 family reservations for the 2024 Dussehra festival on October 12, 2024.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00.010000+00:00"
+        },
+        {
+          "id": "a66d4730-057b-4d89-bfcb-36de8797256a",
+          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates, significantly higher than the 25 plates sold on a normal Saturday.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.010000+00:00"
+        },
+        {
+          "id": "1a819e8d-77fc-4ee6-a8a2-9b94ef7ec7a5",
+          "text": "Customers requested 500g to 1kg boxes of kaju katli during the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: customers",
+          "type": "world",
+          "when": "2024-10-28T00:00:00.010000+00:00"
+        },
+        {
+          "id": "1a422c52-e4bb-4ff0-917f-b7f083d9bbd0",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during the Diwali 2024 festival. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "be4c4add-f023-497a-a1e4-cb098beb0af9",
+          "text": "For the 2024 Dussehra festival on October 12, 2024, manager Priya reports that weekend bookings are double normal levels.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "d796e70c-b4e9-4561-aed6-0317200e0031",
+          "text": "12 takeaway sweet orders were refused due to stockout during the Diwali 2024 festival. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T12:00:00.010000+00:00"
+        },
+        {
+          "id": "a6916a39-0d84-48a0-a6ee-d368e006630f",
+          "text": "14 family reservations confirmed for 12 Oct 2024 for the 2024 Dussehra festival. | When: 2024-10-12 | Involving: Priya (manager)",
+          "type": "world",
+          "when": "2024-10-12T00:00:00.010000+00:00"
+        },
+        {
+          "id": "4e9563d2-9896-4768-86be-207d8d1bd4af",
+          "text": "Dasara weekend bookings are double normal levels for the 2024 Dussehra festival. | When: 2024-10-12 | Involving: Priya (manager)",
+          "type": "world",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "7f618de6-c7b7-452a-bc84-5e2611ec6461",
+          "text": "Dussehra 2024 sales for Double ka meetha reached 30 portions. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.030000+00:00"
+        },
+        {
+          "id": "11844eca-f875-4404-8e90-b2143e436813",
+          "text": "Dussehra 2024 demand for Chicken was normal. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "535ada45-9326-4165-bd00-d6992b14e10b",
+          "text": "Dussehra 2024 revenue reached ₹1.86L compared to ₹1.1L on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival performance",
+          "type": "world",
+          "when": "2024-10-13T00:00:00+00:00"
+        },
+        {
+          "id": "b5de7d51-7b84-49d0-a0a3-857f3b2edfda",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu due to sugar stockout during Diwali 2024. | When: 2024-11-01 | Sugar stockout during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "ab6c0d41-63a1-45bc-8f08-6caad7e8d5d4",
+          "text": "40 customers requested kaju katli, which is not on the menu, during the Diwali festival in 2024. | When: 2024-10-28 to 2024-10-31 | Involving: 40 customers | Customer demand not served due to item not being on the menu.",
+          "type": "world",
+          "when": "2024-10-28T00:00:00+00:00"
+        },
+        {
+          "id": "3198e435-7c44-4367-a4c8-fa69b1a84a58",
+          "text": "Sugar consumption was 32 kg between October 29 and November 1, 2024, compared to 8 kg in a normal 4-day period during Diwali 2024. | When: 2024-10-29 to 2024-11-01 | Increased demand during Diwali 2024.",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "f6a64422-2291-4029-8ea8-589f35ef30e6",
+          "text": "Sugar stock reached zero at 7:05pm during Diwali 2024. | When: 2024-11-01 | High consumption during Diwali 2024.",
+          "type": "world",
+          "when": "2024-11-01T19:05:00+00:00"
+        },
+        {
+          "id": "5f57e6d0-0e23-47a1-b642-7bfc2e604854",
+          "text": "Stock-outs of sugar, kaju katli, and sweet boxes occurred during Diwali 2024.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00.030000+00:00"
+        },
+        {
+          "id": "4a512eb4-0de1-4d32-ad41-5a37c1dc9fc0",
+          "text": "Stock-out of sugar, kaju katli, and sweet boxes occurred during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.030000+00:00"
+        },
+        {
+          "id": "38707789-e40c-4207-ac84-59b1238ee864",
+          "text": "Ghee stock reached 1.5 kg during Diwali 2024, causing head chef Ravi to ration it for jalebi. | When: 2024-11-01 | Involving: Ravi (head chef)",
+          "type": "world",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "12c9aed0-23a0-46f8-8e8d-2019c5aa6a12",
+          "text": "Chicken demand remained normal during the Dussehra 2024 festival.",
+          "type": "observation",
+          "when": "2024-10-13T00:00:00.020000+00:00"
+        },
+        {
+          "id": "b8318b74-6de5-4671-8c7c-80465bea71a6",
+          "text": "Sugar stock-out during Diwali 2024 resulted in 55 unserved dessert orders (kheer, gulab jamun, double ka meetha) and approximately ₹9,500 in lost revenue.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "id": "7bc564cf-0852-489d-9296-2bc27a1a6630",
+          "text": "Dussehra 2024 demand for Mutton biryani was 64 plates compared to 25 plates on a normal Saturday. | When: 2024-10-13 | Dussehra 2024 festival demand",
+          "type": "world",
+          "when": "2024-10-13T00:00:00.010000+00:00"
+        },
+        {
+          "id": "77589098-c367-452e-a5cf-5ebbc39e1718",
+          "text": "Kheer, gulab jamun, and double ka meetha were removed from the menu on November 1, 2024, due to a sugar stockout.",
+          "type": "observation",
+          "when": "2024-11-01T00:00:00.020000+00:00"
+        },
+        {
+          "id": "d23c75bd-a0bb-4898-b5b9-adf3cef474ed",
+          "text": "Hyderabad Meat House was unable to provide same-day mutton for Dussehra 2024 because all city butchers were sold out due to high festival demand.",
+          "type": "observation",
+          "when": "2024-10-12T00:00:00+00:00"
+        },
+        {
+          "id": "65ee7baa-14ae-4afe-9eb7-312706deca36",
+          "text": "12 takeaway sweet orders were refused due to a stockout of containers during the Diwali 2024 festival.",
+          "type": "observation",
+          "when": "2024-11-01T12:00:00.010000+00:00"
+        },
+        {
+          "id": "13dd81d0-a1da-4b98-b776-27c9f990a963",
+          "text": "Customer demand for paneer mains fell by 15% during Diwali 2024 as customers preferred sweets and biryani. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T05:30:00.020000+00:00"
+        },
+        {
+          "id": "1758899f-57e7-4767-8aa9-3f9ecc9c0579",
+          "text": "Ghee consumption during Diwali 2024 was approximately 2.5 times the normal usage. | When: 2024-11-01",
+          "type": "world",
+          "when": "2024-11-01T17:30:00.010000+00:00"
+        },
+        {
+          "id": "268efc49-8802-4b4d-8778-cb7644fa4473",
+          "text": "15 walk-in and phone customers requested Diwali sweet gift boxes for corporate gifting, which the business does not offer. | When: 2024-10-28 | Involving: 15 walk-in and phone customers | Lost demand during Diwali 2024 festival.",
+          "type": "world",
+          "when": "2024-10-28T12:30:00+00:00"
+        },
+        {
+          "id": "a66a6403-c66a-4c7f-84c1-285555afeaf9",
+          "text": "Sugar was purchased at ₹58/kg from a local kirana, compared to the Balaji supplier price of ₹44/kg for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency top-up for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00.010000+00:00"
+        },
+        {
+          "id": "3f953a84-265c-4166-ad8d-4083c58a1ceb",
+          "text": "Ravi, the head chef, plans to secure a backup dry-goods supplier for Diwali 2025.",
+          "type": "observation",
+          "when": "2024-11-05T04:30:00.010000+00:00"
+        },
+        {
+          "id": "9a235e0b-35cc-4f73-8624-bcc9de75bcf0",
+          "text": "Balaji Traders delivered sugar and cashew order 2 days late for Diwali 2024. | When: 2024-10-29 | Involving: Balaji Traders",
+          "type": "world",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "2ea914dc-7eed-4307-b18d-d24a939ef559",
+          "text": "Sweet boxes and takeaway dessert containers ran out of stock during the Diwali 2024 festival.",
+          "type": "observation",
+          "when": "2024-11-01T12:00:00+00:00"
+        },
+        {
+          "id": "cbe540dd-a9bb-4679-a84d-91a23e471078",
+          "text": "Spice Garden purchased 26 kg of paneer for Diwali 2024 expecting high demand. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T00:00:00.010000+00:00"
+        },
+        {
+          "id": "64206cc9-78fa-4914-a2a8-48597313bb4a",
+          "text": "Ravi (head chef) plans to secure a backup dry-goods supplier for Diwali 2025. | When: 2025-10-01 to 2025-10-31 | Involving: Ravi (head chef) | Supply chain contingency for Diwali 2025",
+          "type": "world",
+          "when": "2024-11-05T04:30:00.010000+00:00"
+        },
+        {
+          "id": "70606614-c246-43dc-a3e1-e291be109b8c",
+          "text": "The business experienced lost demand during the 2024 Diwali festival, with 15 walk-in and phone customers requesting corporate Diwali sweet gift boxes that the business does not offer.",
+          "type": "observation",
+          "when": "2024-10-28T12:30:00+00:00"
+        },
+        {
+          "id": "2714ccd2-f43e-402d-9687-dd49f29f3295",
+          "text": "Imran purchased 10 kg of sugar as an emergency top-up for Diwali 2024. | When: 2024-11-02 | Involving: Imran | Emergency top-up for Diwali 2024",
+          "type": "world",
+          "when": "2024-11-02T04:00:00+00:00"
+        },
+        {
+          "id": "1178e5b4-dedc-4932-a4d5-c370e2f3995b",
+          "text": "During the 2024 Diwali festival, 40 customers requested kaju katli in 500g to 1kg boxes, but the item was not on the menu.",
+          "type": "observation",
+          "when": "2024-10-28T00:00:00+00:00"
+        },
+        {
+          "id": "b4e17131-3b76-40e2-9f99-46182c6e5830",
+          "text": "Spice Garden wasted 8 kg of expired paneer valued at approximately ₹2,700 after Diwali 2024. | When: 2024-11-04",
+          "type": "world",
+          "when": "2024-11-04T00:00:00+00:00"
+        },
+        {
+          "id": "2552970c-91fb-484b-bb49-7c14ef480486",
+          "text": "Begum Bazar wholesalers are overloaded during the week before Diwali 2024. | When: 2024-10-22 to 2024-10-29 | Involving: Begum Bazar wholesalers",
+          "type": "world",
+          "when": "2024-10-29T10:30:00.010000+00:00"
+        },
+        {
+          "id": "1d165c0c-7bb1-4496-a7a5-1a1565412d52",
+          "text": "Diwali 2024 revenue (Oct 29 - Nov 2) was ₹6.4L, compared to ₹4.1L for a normal 5-day period.",
+          "type": "observation",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "51450a1c-76a4-4e38-8aba-86047ab26145",
+          "text": "Imran purchased 10 kg of sugar at ₹58/kg from a local kirana as an emergency top-up for Diwali 2024, noting that the regular Balaji supplier price was ₹44/kg.",
+          "type": "observation",
+          "when": "2024-11-02T04:00:00+00:00"
+        },
+        {
+          "id": "cfd5c31b-134f-4d95-8f47-4cd7c7eb7313",
+          "text": "Dessert sales increased by 210% and biryani sales increased by 60% during Diwali 2024. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00.010000+00:00"
+        },
+        {
+          "id": "88b8647f-d91f-4cfd-a951-9b718aba760d",
+          "text": "Diwali 2024 revenue was ₹6.4L compared to ₹4.1L for a normal 5-day period. | When: 2024-10-29 to 2024-11-02",
+          "type": "world",
+          "when": "2024-10-29T00:00:00+00:00"
+        },
+        {
+          "id": "d13b4c44-4fa3-4e65-855c-0107c0471550",
+          "text": "Customer demand for paneer mains at Spice Garden fell by 15% during Diwali 2024 due to a preference for sweets and biryani.",
+          "type": "observation",
+          "when": "2024-11-04T05:30:00.020000+00:00"
+        }
+      ],
+      "ms": 17291,
+      "notes": [
+        "Directives applied: safety-stock, admit-gaps, cite-evidence"
+      ]
+    },
+    "savedAt": "2026-09-27T13:14:59.803Z"
+  },
+  "plan:none:dussehra": {
+    "value": {
+      "mode": "none",
+      "plan": {
+        "headline": "Secure extra pantry stock now to meet the Dussehra feast rush.",
+        "expectations": [
+          {
+            "title": "Sweet demand",
+            "value": "3x normal",
+            "detail": "Desserts sell three times faster during Dussehra."
+          },
+          {
+            "title": "Footfall rise",
+            "value": "2.5x normal",
+            "detail": "Expect 2.5 times more guests over the weekend."
+          },
+          {
+            "title": "Meat consumption",
+            "value": "2.5x normal",
+            "detail": "Mutton and chicken orders will jump to 2.5 × usual."
+          }
+        ],
+        "orders": [
+          {
+            "stockId": "khoya",
+            "item": "Khoya (mawa)",
+            "quantity": 2,
+            "unit": "kg",
+            "expectedUse": 4.5,
+            "orderBy": "2026-10-18",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Cover the shortfall and keep a safety buffer for sweets.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "paneer",
+            "item": "Paneer",
+            "quantity": 20,
+            "unit": "kg",
+            "expectedUse": 30,
+            "orderBy": "2026-10-19",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Needed for special Dussehra curries and to avoid running out.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "milk",
+            "item": "Milk",
+            "quantity": 150,
+            "unit": "L",
+            "expectedUse": 187.5,
+            "orderBy": "2026-10-19",
+            "supplierId": "sri-lakshmi-dairy",
+            "why": "Milk is essential for sweets and gravies; order extra to meet the surge.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "mutton",
+            "item": "Mutton",
+            "quantity": 40,
+            "unit": "kg",
+            "expectedUse": 52.5,
+            "orderBy": "2026-10-19",
+            "supplierId": "hyderabad-meat-house",
+            "why": "High demand for festive biryani and kebabs.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "chicken",
+            "item": "Chicken",
+            "quantity": 70,
+            "unit": "kg",
+            "expectedUse": 90,
+            "orderBy": "2026-10-19",
+            "supplierId": "hyderabad-meat-house",
+            "why": "Chicken dishes are a staple of the weekend menu.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "basmati",
+            "item": "Basmati rice",
+            "quantity": 50,
+            "unit": "kg",
+            "expectedUse": 105,
+            "orderBy": "2026-10-18",
+            "supplierId": "balaji-traders",
+            "why": "Rice is the base for all festive biryanis and pulaos.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "sweet-boxes",
+            "item": "Sweet boxes (500 g)",
+            "quantity": 20,
+            "unit": "pcs",
+            "expectedUse": 23,
+            "orderBy": "2026-10-16",
+            "supplierId": "packright",
+            "why": "Extra boxes for take‑away sweets and gifting.",
+            "lastTime": ""
+          },
+          {
+            "stockId": "cashew",
+            "item": "Cashew",
+            "quantity": 5,
+            "unit": "kg",
+            "expectedUse": 3.75,
+            "orderBy": "2026-10-19",
+            "supplierId": "deccan-wholesale",
+            "why": "Backup for sweets and garnish; price is only slightly higher.",
+            "lastTime": ""
+          }
+        ],
+        "menu": [
+          {
+            "change": "Add Dussehra special mutton biryani and chicken kebab platter",
+            "why": "Guests expect richer meat dishes during the festival."
+          },
+          {
+            "change": "Introduce a 500 g mithai box with assorted sweets",
+            "why": "High sweet demand; ready‑to‑gift option boosts sales."
+          }
+        ],
+        "risks": [
+          {
+            "risk": "Supplier delivery delays",
+            "mitigation": "Place orders by the latest dates and keep a small safety stock of critical items."
+          },
+          {
+            "risk": "Staff shortage during the weekend",
+            "mitigation": "Schedule extra kitchen helpers and cross‑train floor staff a week before."
+          },
+          {
+            "risk": "Over‑estimation of demand leading to waste",
+            "mitigation": "Monitor daily sales and adjust portion sizes for the second day if needed."
+          }
+        ],
+        "confidence": "medium"
+      },
+      "evidence": [],
+      "recalled": [],
+      "ms": 5551,
+      "notes": [
+        "Stateless LLM call — no memory"
+      ]
+    },
+    "savedAt": "2026-09-27T13:14:48.061Z"
+  }
+}

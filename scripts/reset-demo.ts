@@ -3,6 +3,7 @@
 // Usage: npm run demo:reset
 import 'dotenv/config';
 import { history } from '../data/history';
+import { cacheDelete, cacheKeys } from '../lib/cache';
 import { BANKS, hindsight, PLAYBOOK } from '../lib/hindsight';
 
 async function main() {
@@ -15,7 +16,9 @@ async function main() {
     console.log(`deleted ${doc.id} (${doc.created_at ?? ''})`);
   }
   await client.refreshMentalModel(BANKS.full, PLAYBOOK.id);
-  console.log(`${live.length} live note(s) removed; playbook refreshing.`);
+  // Saved results built on the removed notes are stale.
+  await cacheDelete('plan:full:', cacheKeys.memory(BANKS.full), cacheKeys.playbook);
+  console.log(`${live.length} live note(s) removed; playbook refreshing; saved full-memory results cleared.`);
 }
 
 main().catch((err) => {
