@@ -28,7 +28,8 @@ function situation(festival: Festival): string {
 
 const TASK =
   'Produce a festival prep plan: what to order (quantity, unit, order-by date, supplier), menu changes, and the main risks with mitigations. ' +
-  'Be specific with numbers. In each "why", explain the reasoning in one sentence.';
+  'Be specific with numbers. Write for a restaurant owner with no technical background: short plain sentences, no jargon. ' +
+  'Use supplier ids and stock ids exactly as listed. Dates as YYYY-MM-DD.';
 
 // Only given to the memory modes: how to use history, not what the history says.
 const MEMORY_GUIDANCE =

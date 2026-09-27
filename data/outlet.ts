@@ -59,3 +59,13 @@ export const upcomingFestivals: Festival[] = [
   { id: 'dussehra', name: 'Dussehra 2026', date: '2026-10-20', note: 'Dasara feast weekend' },
   { id: 'diwali', name: 'Diwali 2026', date: '2026-11-08', note: 'Main day Sunday 8 Nov; rush runs ~4 days around it' },
 ];
+
+// What the outlet actually used at the same festival last year, from restOS
+// inventory records. The comparison charts use it as the yardstick; the
+// planner never sees it directly (only the memory banks hold history).
+// growth = last year's festival revenue growth (Diwali ₹6.4L → ₹8.9L), used to
+// project this year's need from last year's use. 0 where we have no trend.
+export const lastFestivalActuals: Record<string, { label: string; growth: number; items: Record<string, number> }> = {
+  diwali: { label: 'Diwali 2025', growth: 0.39, items: { sugar: 41, ghee: 15, cashew: 8, 'sweet-boxes': 186 } },
+  dussehra: { label: 'Dussehra 2025', growth: 0, items: { mutton: 27 } },
+};

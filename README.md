@@ -10,6 +10,10 @@ Foresight is an agent for restOS outlets. It keeps the operational memory of eve
 
 ![Foresight comparing three Diwali plans](docs/screenshot.png)
 
+Each plan opens as cards an owner can act on: what to expect, what to order and by when, how it covers the likely need, what it costs, and what happened last time.
+
+![Plan cards](docs/plan-cards.png)
+
 ## The demo in one screen
 
 The Diwali 2026 plan is generated three ways from **the same stock, suppliers and model**:
@@ -23,6 +27,18 @@ The Diwali 2026 plan is generated three ways from **the same stock, suppliers an
 Then you **teach it** something new from the floor ("20 regulars asked for sugar-free sweets"), re-run, and the plan adds sugar-free and jaggery sweets, citing that note. `npm run demo:reset` removes live-taught notes so the demo can be repeated.
 
 Open `/?run=1` (or `/?run=1&festival=dussehra`) to plan all three columns on load.
+
+### Would each plan have been enough?
+
+The comparison scores every plan against the outlet's **likely need**: what it actually used last Diwali, plus last year's festival revenue growth (+39%), both from restOS records.
+
+| | Readiness | Short on |
+|---|---|---|
+| No memory | 37% (spends ₹69k, still short) | sugar, ghee, cashew, sweet boxes |
+| After 1 season | 86% | ghee, sweet boxes |
+| After 2 years | 100% | — |
+
+Readiness is computed in the browser from the plan and restOS stock ([`components/compare-charts.tsx`](components/compare-charts.tsx)), not by the model. Plans vary a little between runs, so exact numbers shift.
 
 ## How Hindsight is used
 
