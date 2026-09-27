@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Brain, CircleOff, Eye, EyeOff, History, Loader2, Play, RotateCw, type LucideIcon } from 'lucide-react';
 import type { PlanResult } from '@/lib/plan';
-import { ITEM_ICON, rupees, summarize, type OrderInsight, type Urgency } from '@/lib/insights';
+import { ITEM_ICON, rupees, summarize, tidy, type OrderInsight, type Urgency } from '@/lib/insights';
 
 export type Mode = PlanResult['mode'];
 export type ColumnState = { loading: boolean; result?: PlanResult; error?: string };
@@ -88,7 +88,7 @@ export function CompareCard({
 
       {!state.loading && result && summary && (
         <>
-          <p className="mt-3 line-clamp-2 min-h-[2.5rem] text-sm font-medium leading-snug">{result.plan.headline}</p>
+          <p className="mt-3 line-clamp-2 min-h-[2.5rem] text-sm font-medium leading-snug">{tidy(result.plan.headline)}</p>
           <div className="mt-3 grid grid-cols-3 gap-2 text-center">
             <Stat value={rupees(summary.totalCost)} label="to spend" />
             <Stat value={String(summary.itemCount)} label="items" />
@@ -119,7 +119,7 @@ function lessonCount(result: PlanResult) {
 
 // ── Detailed plan ───────────────────────────────────────────────────────────
 
-export function PlanDetail({ state, mode }: { state: ColumnState; mode: Mode }) {
+export function PlanDetail({ state, mode, festival }: { state: ColumnState; mode: Mode; festival: string }) {
   const meta = MODES.find((m) => m.mode === mode)!;
   if (state.loading) {
     return (
@@ -139,7 +139,7 @@ export function PlanDetail({ state, mode }: { state: ColumnState; mode: Mode }) 
   }
 
   const { plan } = state.result;
-  const summary = summarize(plan);
+  const summary = summarize(plan, festival);
   const noMemory = mode === 'none';
 
   return (
@@ -148,7 +148,7 @@ export function PlanDetail({ state, mode }: { state: ColumnState; mode: Mode }) 
         <div className="text-xs uppercase tracking-wide opacity-70">
           The plan · {meta.title} {noMemory ? '· generic guess' : `· confidence ${plan.confidence}`}
         </div>
-        <p className="mt-1 text-lg font-medium leading-snug sm:text-xl">{plan.headline}</p>
+        <p className="mt-1 text-lg font-medium leading-snug sm:text-xl">{tidy(plan.headline)}</p>
       </div>
 
       <Section title="What to expect" hint="How this festival will likely go">
@@ -157,7 +157,7 @@ export function PlanDetail({ state, mode }: { state: ColumnState; mode: Mode }) 
             <div key={i} className="rounded-xl border border-line bg-white p-4">
               <div className="text-xs font-medium text-muted">{e.title}</div>
               <div className="mt-1 text-2xl font-semibold tracking-tight">{e.value}</div>
-              <p className="mt-1 text-xs leading-relaxed text-muted">{e.detail}</p>
+              <p className="mt-1 text-xs leading-relaxed text-muted">{tidy(e.detail)}</p>
             </div>
           ))}
         </div>
@@ -192,8 +192,8 @@ export function PlanDetail({ state, mode }: { state: ColumnState; mode: Mode }) 
                 <div key={i} className="flex gap-3 rounded-xl border border-line bg-white p-3">
                   <div className="text-xl">🍽️</div>
                   <div>
-                    <div className="text-sm font-medium">{m.change}</div>
-                    <p className="text-xs text-muted">{m.why}</p>
+                    <div className="text-sm font-medium">{tidy(m.change)}</div>
+                    <p className="text-xs text-muted">{tidy(m.why)}</p>
                   </div>
                 </div>
               ))}
@@ -207,11 +207,11 @@ export function PlanDetail({ state, mode }: { state: ColumnState; mode: Mode }) 
                 <div key={i} className="rounded-xl border border-line bg-white p-3">
                   <div className="flex gap-2 text-sm font-medium">
                     <span>⚠️</span>
-                    <span>{r.risk}</span>
+                    <span>{tidy(r.risk)}</span>
                   </div>
                   <div className="mt-1 flex gap-2 text-xs text-muted">
                     <span>✅</span>
-                    <span>{r.mitigation}</span>
+                    <span>{tidy(r.mitigation)}</span>
                   </div>
                 </div>
               ))}
@@ -234,7 +234,7 @@ const URGENCY: Record<Urgency, { label: (d: number | null) => string; className:
 
 function OrderCard({ order: o, noMemory }: { order: OrderInsight; noMemory: boolean }) {
   const urgency = URGENCY[o.urgency];
-  const scale = Math.max(o.afterOrder ?? o.quantity, o.expectedUse, 1) * 1.08;
+  const scale = Math.max(o.afterOrder ?? o.quantity, o.need, 1) * 1.08;
   const pct = (n: number) => `${Math.min(100, (n / scale) * 100)}%`;
 
   return (
@@ -265,11 +265,11 @@ function OrderCard({ order: o, noMemory }: { order: OrderInsight; noMemory: bool
           <div className="relative h-2.5 rounded-full bg-stone-100">
             <div className="absolute inset-y-0 left-0 rounded-full bg-saffron/40" style={{ width: pct(o.afterOrder ?? 0) }} />
             <div className="absolute inset-y-0 left-0 rounded-full bg-stone-500" style={{ width: pct(o.onHand) }} />
-            {o.expectedUse > 0 && (
+            {o.need > 0 && (
               <div
                 className={`absolute -top-1 h-4.5 w-0.5 ${o.shortfall ? 'bg-chili' : 'bg-ink'}`}
-                style={{ left: pct(o.expectedUse) }}
-                title="Expected use"
+                style={{ left: pct(o.need) }}
+                title={o.needSource === 'records' ? 'Likely need: last year’s use + growth (restOS records)' : 'The plan’s own estimate'}
               />
             )}
           </div>
@@ -278,7 +278,7 @@ function OrderCard({ order: o, noMemory }: { order: OrderInsight; noMemory: bool
               <b className="text-ink">{fmt(o.onHand)}</b> in stock
             </span>
             <span>
-              need <b className={o.shortfall ? 'text-chili' : 'text-ink'}>~{fmt(o.expectedUse)}</b>
+              {o.needSource === 'records' ? 'likely need' : 'plan expects'} <b className={o.shortfall ? 'text-chili' : 'text-ink'}>~{fmt(o.need)}</b>
             </span>
             <span>
               <b className="text-ink">{fmt(o.afterOrder ?? 0)}</b> after order
@@ -287,13 +287,18 @@ function OrderCard({ order: o, noMemory }: { order: OrderInsight; noMemory: bool
         </div>
       )}
 
-      <p className="mt-3 text-xs leading-relaxed">{o.why}</p>
+      <p className="mt-3 text-xs leading-relaxed">{tidy(o.why)}</p>
 
       <div className="mt-auto pt-3">
         {o.lastTime.trim() ? (
           <div className="rounded-lg bg-leaf-soft/60 p-2 text-xs text-leaf">
             <span className="font-semibold">🧠 Last time: </span>
-            {o.lastTime}
+            {tidy(o.lastTime)}
+          </div>
+        ) : !noMemory && o.record ? (
+          <div className="rounded-lg bg-stone-100 p-2 text-xs text-stone-600">
+            <span className="font-semibold">📋 restOS records: </span>
+            {o.record}
           </div>
         ) : (
           <div className="rounded-lg bg-stone-100 p-2 text-xs text-muted">

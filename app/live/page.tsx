@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
 import { Flame, RefreshCw, Sparkles, WandSparkles, type LucideIcon } from 'lucide-react';
 import { outlet, stock, TODAY, upcomingFestivals } from '@/data/outlet';
+import { AtAGlance } from '@/components/at-a-glance';
 import { CompareCharts } from '@/components/compare-charts';
 import {
   BeliefsPanel,
@@ -119,6 +120,11 @@ export default function Home() {
 
   const busy = MODES.some((m) => columns[m.mode].loading);
 
+  function openFullPlan() {
+    setSelected('full');
+    document.getElementById('plan')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   const current = upcomingFestivals.find((f) => f.id === festival)!;
   const daysAway = Math.round((Date.parse(current.date) - Date.parse(TODAY)) / 86_400_000);
 
@@ -138,13 +144,16 @@ export default function Home() {
         </div>
       </header>
 
+      {/* First screen: the problem, what to do, and why to trust it. */}
       <section className="mt-6 flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            {current.name} is {daysAway} days away. What should we order?
+        <div className="max-w-3xl">
+          <p className="text-xs font-medium uppercase tracking-[0.16em] text-saffron">Festival stock planning with memory</p>
+          <h1 className="mt-1.5 text-2xl font-semibold tracking-tight sm:text-3xl">
+            {current.name} is {daysAway} days away. Here’s what to order.
           </h1>
-          <p className="mt-1 max-w-2xl text-sm text-muted">
-            Same stock, same suppliers, same AI. The only difference between the three plans is how much the agent remembers.
+          <p className="mt-1.5 text-sm leading-relaxed text-muted">
+            <span className="font-medium text-ink">{current.lesson}</span> Foresight remembers every festival (what ran out, what was
+            wasted, what customers asked for) and plans the next one from it.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
@@ -183,9 +192,16 @@ export default function Home() {
         </div>
       </section>
 
-      <StockStrip />
+      <div className="mt-5">
+        <AtAGlance festival={festival} columns={columns} onPlan={() => runAll(festival)} onOpenPlan={openFullPlan} />
+      </div>
 
-      <section className="mt-6 grid gap-3 lg:grid-cols-3">
+      {/* Supporting detail */}
+      <SectionHead
+        title="Same AI, different memory"
+        hint="Each plan saw the same stock and suppliers. Only what the agent remembers changes."
+      />
+      <section className="grid gap-3 lg:grid-cols-3">
         {MODES.map(({ mode }) => (
           <CompareCard
             key={mode}
@@ -197,61 +213,90 @@ export default function Home() {
           />
         ))}
       </section>
-
       <div className="mt-4">
         <CompareCharts festival={festival} columns={columns} />
       </div>
 
-      <div className="mt-8">
-        <div className="mb-3 flex flex-wrap items-center gap-2 text-sm">
-          <span className="text-muted">Showing plan:</span>
-          {MODES.map(({ mode, title }) => {
-            const Icon = MODE_ICON[mode];
-            return (
-              <button
-                key={mode}
-                onClick={() => setSelected(mode)}
-                className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 ${selected === mode ? 'border-ink bg-ink text-white' : 'border-line bg-white text-muted hover:text-ink'}`}
-              >
-                <Icon size={14} aria-hidden />
-                {title}
-              </button>
-            );
-          })}
-        </div>
-        <PlanDetail mode={selected} state={columns[selected]} />
+      <div id="plan" className="scroll-mt-4">
+        <SectionHead title="The full plan" hint="Every order, what to expect, menu moves and risks.">
+          <div className="flex flex-wrap items-center gap-2 text-sm">
+            {MODES.map(({ mode, title }) => {
+              const Icon = MODE_ICON[mode];
+              return (
+                <button
+                  key={mode}
+                  onClick={() => setSelected(mode)}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 ${selected === mode ? 'border-ink bg-ink text-white' : 'border-line bg-white text-muted hover:text-ink'}`}
+                >
+                  <Icon size={14} aria-hidden />
+                  {title}
+                </button>
+              );
+            })}
+          </div>
+        </SectionHead>
+        <StockSummary />
+        <PlanDetail mode={selected} state={columns[selected]} festival={festival} />
       </div>
 
-      <h2 className="mt-12 text-lg font-semibold">The memory behind it</h2>
-      <section className="mt-3 grid gap-4 lg:grid-cols-[1fr_1.2fr]">
+      <SectionHead title="The memory behind it" hint="Teach it something new, see what it has learned, and the history it plans from." />
+      <section className="grid gap-4 lg:grid-cols-[1fr_1.2fr]">
         <TeachPanel festival={festival} onTaught={() => loadMemory(true)} onReplan={() => runColumn('full', festival, true)} />
-        <BeliefsPanel memory={memory} onReload={() => loadMemory(true)} />
+        <BeliefsPanel memory={memory} onReload={() => loadMemory(true)} festival={festival} />
       </section>
       <section className="mt-4 grid gap-4 lg:grid-cols-[1.2fr_1fr]">
         <PlaybookPanel playbook={playbook} onReload={() => loadPlaybook(true)} />
-        <TimelinePanel />
+        <TimelinePanel festival={festival} festivalName={current.name} />
       </section>
     </main>
   );
 }
 
-function StockStrip() {
+function SectionHead({ title, hint, children }: { title: string; hint?: string; children?: React.ReactNode }) {
   return (
-    <section className="mt-5">
-      <div className="flex flex-wrap gap-2">
-        {stock.map((s) => {
-          const cover = s.onHand / s.normalDailyUse;
-          const tone = cover < 3 ? 'text-chili' : cover < 6 ? 'text-saffron' : 'text-leaf';
+    <div className="mb-3 mt-12 flex flex-wrap items-end justify-between gap-3 border-t border-line pt-6">
+      <div>
+        <h2 className="text-lg font-semibold">{title}</h2>
+        {hint && <p className="text-sm text-muted">{hint}</p>}
+      </div>
+      {children}
+    </div>
+  );
+}
+
+// Today's stock, collapsed to the one thing that matters: what is running low.
+function StockSummary() {
+  const withCover = stock.map((s) => ({ ...s, cover: s.onHand / s.normalDailyUse }));
+  const low = withCover.filter((s) => s.cover < 3).sort((a, b) => a.cover - b.cover);
+  return (
+    <details className="group mb-4 rounded-xl border border-line bg-white px-4 py-3 text-sm">
+      <summary className="flex cursor-pointer list-none flex-wrap items-center gap-x-2 gap-y-1">
+        <span className="font-medium">Stock today</span>
+        <span className="text-muted">
+          {low.length ? (
+            <>
+              · <span className="text-chili">{low.length} items under 3 days</span>: {low.map((s) => `${s.name} (${s.cover.toFixed(1)}d)`).join(', ')}
+            </>
+          ) : (
+            '· nothing under 3 days of cover'
+          )}
+        </span>
+        <span className="ml-auto text-xs text-muted underline underline-offset-2 group-open:hidden">Show all {stock.length}</span>
+        <span className="ml-auto hidden text-xs text-muted underline underline-offset-2 group-open:inline">Hide</span>
+      </summary>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {withCover.map((s) => {
+          const tone = s.cover < 3 ? 'text-chili' : s.cover < 6 ? 'text-saffron' : 'text-leaf';
           return (
-            <div key={s.id} className="rounded-lg border border-line bg-white px-3 py-2">
+            <div key={s.id} className="rounded-lg border border-line px-3 py-2">
               <div className="text-xs text-muted">{s.name}</div>
               <div className="text-sm font-medium">
-                {s.onHand} {s.unit} <span className={`text-xs font-normal ${tone}`}>· {cover.toFixed(1)} days left</span>
+                {s.onHand} {s.unit} <span className={`text-xs font-normal ${tone}`}>· {s.cover.toFixed(1)} days left</span>
               </div>
             </div>
           );
         })}
       </div>
-    </section>
+    </details>
   );
 }

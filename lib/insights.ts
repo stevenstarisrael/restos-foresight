@@ -1,5 +1,6 @@
 import { stock, suppliers, TODAY } from '@/data/outlet';
 import type { Plan, PlanOrder } from './plan';
+import { likelyNeed } from './readiness';
 
 // Numbers the cards show are computed here from restOS data (stock on hand,
 // unit costs, supplier names, today's date) rather than trusted from the model.
@@ -14,6 +15,11 @@ export type OrderInsight = PlanOrder & {
   daysLeft: number | null;
   urgency: Urgency;
   shortfall: boolean;
+  /** The yardstick shown on the card: restOS likely need when we have records, else the plan's own estimate. */
+  need: number;
+  needSource: 'records' | 'plan';
+  /** What restOS records say about this item last festival (independent of what the AI remembered). */
+  record: string | null;
 };
 
 const DAY = 86_400_000;
@@ -32,8 +38,10 @@ function urgencyFor(days: number | null): Urgency {
   return 'later';
 }
 
-export function orderInsight(o: PlanOrder): OrderInsight {
+export function orderInsight(o: PlanOrder, festival?: string): OrderInsight {
   const item = stock.find((s) => s.id === o.stockId);
+  const ref = festival ? likelyNeed(festival, o.stockId) : null;
+  const need = ref ? ref.need : o.expectedUse;
   const onHand = item ? item.onHand : null;
   const afterOrder = onHand !== null ? onHand + o.quantity : null;
   const daysLeft = daysFromToday(o.orderBy);
@@ -46,7 +54,10 @@ export function orderInsight(o: PlanOrder): OrderInsight {
     supplierName: suppliers.find((s) => s.id === o.supplierId)?.name ?? o.supplierId,
     daysLeft,
     urgency: urgencyFor(daysLeft),
-    shortfall: afterOrder !== null && o.expectedUse > 0 && afterOrder < o.expectedUse,
+    shortfall: afterOrder !== null && need > 0 && afterOrder < need,
+    need,
+    needSource: ref ? 'records' : 'plan',
+    record: ref && item ? `Used ${ref.actual} ${item.unit} at ${ref.label}` : null,
   };
 }
 
@@ -58,8 +69,8 @@ export type PlanSummary = {
   urgentCount: number;
 };
 
-export function summarize(plan: Plan): PlanSummary {
-  const orders = plan.orders.map(orderInsight).sort((a, b) => (a.daysLeft ?? 999) - (b.daysLeft ?? 999));
+export function summarize(plan: Plan, festival?: string): PlanSummary {
+  const orders = plan.orders.map((o) => orderInsight(o, festival)).sort((a, b) => (a.daysLeft ?? 999) - (b.daysLeft ?? 999));
   const days = orders.map((o) => o.daysLeft).filter((d): d is number => d !== null);
   return {
     orders,
@@ -68,6 +79,17 @@ export function summarize(plan: Plan): PlanSummary {
     firstOrderDays: days.length ? Math.min(...days) : null,
     urgentCount: orders.filter((o) => o.urgency === 'now' || o.urgency === 'late').length,
   };
+}
+
+// The model is asked for ids so orders link to restOS data; it sometimes
+// carries them into prose too ("balaji-traders"). Show names instead.
+const NAMES: [RegExp, string][] = [
+  ...suppliers.map((s): [RegExp, string] => [new RegExp(`\\b${s.id}\\b`, 'gi'), s.name.replace(/\s*\(.*\)$/, '')]),
+  ...stock.filter((s) => s.id.includes('-')).map((s): [RegExp, string] => [new RegExp(`\\b${s.id}\\b`, 'gi'), s.name.toLowerCase()]),
+];
+
+export function tidy(text: string): string {
+  return NAMES.reduce((t, [re, name]) => t.replace(re, name), text);
 }
 
 export function rupees(n: number): string {

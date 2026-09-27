@@ -30,7 +30,7 @@ body {
 .playbook p { margin: 0.4rem 0; }
 .playbook ul { list-style: disc; padding-left: 1.2rem; margin: 0.4rem 0; }
 .playbook li { margin: 0.2rem 0; }
-.playbook table { width: 100%; border-collapse: collapse; margin: 0.6rem 0; font-size: 0.75rem; }
+.playbook table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 0.6rem 0; font-size: 0.75rem; }
 .playbook th, .playbook td { border: 1px solid var(--color-line); padding: 0.3rem 0.4rem; text-align: left; }
 .playbook th { background: var(--color-paper); font-weight: 600; }
 .playbook > :first-child { margin-top: 0; }

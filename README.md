@@ -8,7 +8,7 @@ Next year nobody remembers any of it. Sales data only records what sold, not wha
 
 Foresight is an agent for restOS outlets. It keeps the operational memory of every festival: stock-outs, waste, supplier delays, unmet customer requests, and its own past plans with how they turned out. It then uses that memory to write the next festival's prep plan.
 
-![Foresight comparing three Diwali plans](docs/screenshot.png)
+![Foresight dashboard: what to order and why to trust it](docs/screenshot.png)
 
 Each plan opens as cards an owner can act on: what to expect, what to order and by when, how it covers the likely need, what it costs, and what happened last time.
 

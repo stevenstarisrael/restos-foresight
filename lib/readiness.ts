@@ -7,6 +7,14 @@ import type { Plan, PlanResult } from './plan';
 type Mode = PlanResult['mode'];
 const MODE_ORDER: Mode[] = ['none', 'firstSeason', 'full'];
 
+/** This festival's likely need for an item: last year's actual use + last year's growth. */
+export function likelyNeed(festival: string, stockId: string): { need: number; actual: number; label: string } | null {
+  const ref = lastFestivalActuals[festival];
+  const actual = ref?.items[stockId];
+  if (!ref || actual === undefined) return null;
+  return { need: Math.round(actual * (1 + ref.growth)), actual, label: ref.label };
+}
+
 // need = last year's actual use scaled by last year's growth trend.
 export type Row = { stockId: string; name: string; unit: string; actual: number; need: number; available: Partial<Record<Mode, number>> };
 
@@ -27,7 +35,7 @@ export function buildRows(festival: string, plans: Partial<Record<Mode, Plan>>):
       const plan = plans[mode];
       if (plan) available[mode] = availableFor(plan, stockId);
     }
-    return { stockId, name: item.name, unit: item.unit, actual, need: Math.round(actual * (1 + ref.growth)), available };
+    return { stockId, name: item.name, unit: item.unit, actual, need: likelyNeed(festival, stockId)!.need, available };
   });
 }
 

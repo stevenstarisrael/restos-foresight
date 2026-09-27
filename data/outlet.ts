@@ -53,11 +53,25 @@ export const stock: StockItem[] = [
   { id: 'sweet-boxes', name: 'Sweet boxes (500g)', unit: 'pcs', onHand: 40, normalDailyUse: 3, costPerUnit: 18, supplierId: 'packright' },
 ];
 
-export type Festival = { id: string; name: string; date: string; note: string };
+export type Festival = { id: string; name: string; date: string; note: string; lesson: string };
 
+// `lesson` is the one-line problem statement shown at the top of the dashboard,
+// taken from the outlet's history (data/history.ts).
 export const upcomingFestivals: Festival[] = [
-  { id: 'dussehra', name: 'Dussehra 2026', date: '2026-10-20', note: 'Dasara feast weekend' },
-  { id: 'diwali', name: 'Diwali 2026', date: '2026-11-08', note: 'Main day Sunday 8 Nov; rush runs ~4 days around it' },
+  {
+    id: 'dussehra',
+    name: 'Dussehra 2026',
+    date: '2026-10-20',
+    note: 'Dasara feast weekend',
+    lesson: 'On Dussehra 2024 the mutton ran out at 8:15 pm and 22 biryani orders were turned away.',
+  },
+  {
+    id: 'diwali',
+    name: 'Diwali 2026',
+    date: '2026-11-08',
+    note: 'Main day Sunday 8 Nov; rush runs ~4 days around it',
+    lesson: 'Last Diwali the sugar ran out at 7:05 pm and 55 desserts were turned away.',
+  },
 ];
 
 // What the outlet actually used at the same festival last year, from restOS

@@ -95,7 +95,21 @@ export function TeachPanel({ festival, onTaught, onReplan }: { festival: string;
   );
 }
 
-export function BeliefsPanel({ memory, onReload }: { memory: MemoryState; onReload: () => void }) {
+// Words that make a learned belief relevant to the festival being planned.
+const FESTIVAL_TERMS: Record<string, RegExp> = {
+  diwali: /diwali|kaju|sweet box|sugar|ghee|khoya|balaji|cashew|corporate/i,
+  dussehra: /dussehra|dasara|mutton|meat house|biryani/i,
+};
+
+export function BeliefsPanel({ memory, onReload, festival }: { memory: MemoryState; onReload: () => void; festival: string }) {
+  const [showAll, setShowAll] = useState(false);
+  const terms = FESTIVAL_TERMS[festival];
+  const ranked = [...memory.beliefs].sort((a, b) => {
+    const rel = Number(terms?.test(b.text) ?? 0) - Number(terms?.test(a.text) ?? 0);
+    return rel || b.proofCount - a.proofCount;
+  });
+  const relevant = ranked.filter((b) => terms?.test(b.text)).length;
+  const shown = showAll ? ranked : ranked.slice(0, 6);
   const max = Math.max(1, ...memory.beliefs.map((b) => b.proofCount));
   return (
     <div className="rounded-xl border border-line bg-white p-4">
@@ -103,7 +117,7 @@ export function BeliefsPanel({ memory, onReload }: { memory: MemoryState; onRelo
         <div>
           <h2 className="font-semibold">What it has learned</h2>
           <p className="mt-0.5 text-xs text-muted">
-            Observations Hindsight consolidated from raw events. The bar shows how many memories back each one.
+            Beliefs Hindsight formed from raw events, most relevant to this festival first. The bar shows how many memories back each one.
           </p>
         </div>
         <button onClick={onReload} className="inline-flex items-center gap-1 text-xs text-muted underline underline-offset-2">
@@ -119,8 +133,8 @@ export function BeliefsPanel({ memory, onReload }: { memory: MemoryState; onRelo
         </div>
       )}
       {memory.error && <p className="mt-3 rounded-md bg-chili-soft p-3 text-xs text-chili">{memory.error}</p>}
-      <ul className="mt-3 max-h-80 space-y-2 overflow-y-auto pr-1">
-        {memory.beliefs.map((b) => (
+      <ul className={`mt-3 space-y-2 pr-1 ${showAll ? 'max-h-80 overflow-y-auto' : ''}`}>
+        {shown.map((b) => (
           <li key={b.id} className="text-sm">
             <div>{b.text}</div>
             <div className="mt-1 flex items-center gap-2">
@@ -133,6 +147,11 @@ export function BeliefsPanel({ memory, onReload }: { memory: MemoryState; onRelo
         ))}
         {!memory.error && memory.beliefs.length === 0 && <li className="text-xs text-muted">No observations yet - run the seed script.</li>}
       </ul>
+      {ranked.length > 6 && (
+        <button onClick={() => setShowAll((v) => !v)} className="mt-2 text-xs text-muted underline underline-offset-2 hover:text-ink">
+          {showAll ? 'Show fewer' : `Show all ${ranked.length} (${relevant} about this festival)`}
+        </button>
+      )}
     </div>
   );
 }
@@ -155,8 +174,8 @@ export function PlaybookPanel({
     }, 8000);
   }
   return (
-    <div className="rounded-xl border border-line bg-white p-4">
-      <div className="flex items-center justify-between">
+    <div className="min-w-0 rounded-xl border border-line bg-white p-4">
+      <div className="flex flex-wrap items-start justify-between gap-2">
         <div>
           <h2 className="font-semibold">Diwali playbook</h2>
           <p className="mt-0.5 text-xs text-muted">
@@ -196,12 +215,25 @@ const KIND_STYLE: Record<string, string> = {
   summary: 'bg-stone-100 text-stone-700',
 };
 
-export function TimelinePanel() {
-  const events = [...history].reverse();
+export function TimelinePanel({ festival, festivalName }: { festival: string; festivalName: string }) {
+  const [all, setAll] = useState(false);
+  const events = [...history].reverse().filter((e) => all || e.festival === festival);
   return (
     <div className="rounded-xl border border-line bg-white p-4">
-      <h2 className="font-semibold">Memory feed</h2>
-      <p className="mt-0.5 text-xs text-muted">Two years of restOS events and Foresight’s own plans, retained with their real dates.</p>
+      <div className="flex items-start justify-between gap-2">
+        <div>
+          <h2 className="font-semibold">Memory feed</h2>
+          <p className="mt-0.5 text-xs text-muted">restOS events and Foresight’s own plans, retained with their real dates.</p>
+        </div>
+        <div className="flex shrink-0 rounded-md border border-line p-0.5 text-xs">
+          <button onClick={() => setAll(false)} className={`rounded px-2 py-0.5 ${!all ? 'bg-ink text-white' : 'text-muted'}`}>
+            {festivalName.replace(/\s\d{4}$/, '')}
+          </button>
+          <button onClick={() => setAll(true)} className={`rounded px-2 py-0.5 ${all ? 'bg-ink text-white' : 'text-muted'}`}>
+            All {history.length}
+          </button>
+        </div>
+      </div>
       <ul className="mt-3 max-h-96 space-y-2 overflow-y-auto pr-1">
         {events.map((e) => (
           <li key={e.id} className="text-sm">
