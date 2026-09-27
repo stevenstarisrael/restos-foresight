@@ -40,7 +40,7 @@ The comparison scores every plan against the outlet's **likely need**: what it a
 |---|---|---|
 | No memory | 37% (spends ₹69k, still short) | sugar, ghee, cashew, sweet boxes |
 | After 1 season | 86% | ghee, sweet boxes |
-| After 2 years | 100% | — |
+| After 2 years | 100% | - |
 
 Readiness is computed in the browser from the plan and restOS stock ([`components/compare-charts.tsx`](components/compare-charts.tsx)), not by the model. Plans vary a little between runs, so exact numbers shift.
 

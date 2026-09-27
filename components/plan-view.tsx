@@ -94,7 +94,7 @@ export function CompareCard({
             <Stat value={String(summary.itemCount)} label="items" />
             <Stat value={mode === 'none' ? '0' : String(lessons)} label="past lessons" tone={mode === 'none' ? 'muted' : 'leaf'} />
           </div>
-          <div className="mt-2 text-[11px] text-muted" title={result.cachedAt ? 'Served from saved results — no API credits used. Re-run to regenerate.' : undefined}>
+          <div className="mt-2 text-[11px] text-muted" title={result.cachedAt ? 'Served from saved results - no API credits used. Re-run to regenerate.' : undefined}>
             {result.cachedAt ? `💾 Saved result · ${timeAgo(result.cachedAt)}` : `⚡ Fresh · generated in ${(result.ms / 1000).toFixed(1)}s`}
           </div>
         </>
@@ -133,7 +133,7 @@ export function PlanDetail({ state, mode }: { state: ColumnState; mode: Mode }) 
   if (!state.result) {
     return (
       <div className="rounded-xl border border-dashed border-line bg-white p-10 text-center text-sm text-muted">
-        {state.error ? 'This plan failed — try Re-run.' : `Press “Plan all three” or Run on “${meta.title}” to see the plan.`}
+        {state.error ? 'This plan failed - try Re-run.' : `Press “Plan all three” or Run on “${meta.title}” to see the plan.`}
       </div>
     );
   }
@@ -226,7 +226,7 @@ export function PlanDetail({ state, mode }: { state: ColumnState; mode: Mode }) 
 }
 
 const URGENCY: Record<Urgency, { label: (d: number | null) => string; className: string }> = {
-  late: { label: () => 'Overdue — order today', className: 'bg-chili text-white' },
+  late: { label: () => 'Overdue - order today', className: 'bg-chili text-white' },
   now: { label: (d) => (d === 0 ? 'Order today' : `Order in ${d} day${d === 1 ? '' : 's'}`), className: 'bg-chili-soft text-chili' },
   soon: { label: (d) => `Order in ${d} days`, className: 'bg-saffron-soft text-amber-800' },
   later: { label: (d) => (d === null ? 'No date' : `Order in ${d} days`), className: 'bg-leaf-soft text-leaf' },
@@ -297,7 +297,7 @@ function OrderCard({ order: o, noMemory }: { order: OrderInsight; noMemory: bool
           </div>
         ) : (
           <div className="rounded-lg bg-stone-100 p-2 text-xs text-muted">
-            {noMemory ? '🤷 No history — this is a guess' : 'No past record for this item'}
+            {noMemory ? '🤷 No history - this is a guess' : 'No past record for this item'}
           </div>
         )}
       </div>
@@ -318,7 +318,7 @@ function BudgetTile({ label, value, note, tone }: { label: string; value: string
 function MemoryFooter({ result }: { result: PlanResult }) {
   const [open, setOpen] = useState(false);
   if (result.mode === 'none') {
-    return <p className="text-xs text-muted">This plan used no memory — the AI only saw today’s stock and supplier list.</p>;
+    return <p className="text-xs text-muted">This plan used no memory - the AI only saw today’s stock and supplier list.</p>;
   }
   const items = result.evidence.length ? result.evidence : result.recalled;
   const usedPlaybook = result.evidence.some((e) => e.type === 'mental model');

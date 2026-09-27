@@ -11,9 +11,9 @@ export type MemoryState = { counts?: Record<string, number>; beliefs: Belief[]; 
 export type PlaybookState = { content?: string; refreshedAt?: string | null; error?: string };
 
 const SUGGESTIONS = [
-  { kind: 'lost_demand', text: 'This week about 20 regulars asked if we will have sugar-free or jaggery sweets for Diwali — diabetic parents at home.' },
+  { kind: 'lost_demand', text: 'This week about 20 regulars asked if we will have sugar-free or jaggery sweets for Diwali - diabetic parents at home.' },
   { kind: 'supplier', text: 'Sri Lakshmi Dairy says ghee will be ₹680/kg from 15 Oct and they need 5 days notice for bulk orders above 10 kg this Diwali.' },
-  { kind: 'staff_note', text: 'Two corporate clients (Hitec City) already called asking to book Diwali kaju katli boxes — around 150 boxes together.' },
+  { kind: 'staff_note', text: 'Two corporate clients (Hitec City) already called asking to book Diwali kaju katli boxes - around 150 boxes together.' },
 ];
 
 export function TeachPanel({ festival, onTaught, onReplan }: { festival: string; onTaught: () => void; onReplan: () => void }) {
@@ -131,7 +131,7 @@ export function BeliefsPanel({ memory, onReload }: { memory: MemoryState; onRelo
             </div>
           </li>
         ))}
-        {!memory.error && memory.beliefs.length === 0 && <li className="text-xs text-muted">No observations yet — run the seed script.</li>}
+        {!memory.error && memory.beliefs.length === 0 && <li className="text-xs text-muted">No observations yet - run the seed script.</li>}
       </ul>
     </div>
   );

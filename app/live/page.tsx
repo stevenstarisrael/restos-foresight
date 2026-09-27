@@ -57,7 +57,7 @@ export default function Home() {
     [runColumn],
   );
 
-  // Fill the columns from saved plans only — never triggers a model call.
+  // Fill the columns from saved plans only - never triggers a model call.
   const loadSaved = useCallback(async (fest: string) => {
     try {
       const res = await fetch(`/api/plan?festival=${fest}`);

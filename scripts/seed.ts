@@ -1,6 +1,6 @@
 // Seeds two Hindsight banks from data/history.ts:
-//   season1 — only what happened before 2025 (one festival season of memory)
-//   full    — the full two years
+//   season1 - only what happened before 2025 (one festival season of memory)
+//   full    - the full two years
 // Usage: npm run seed            (idempotent: events are keyed by document id)
 //        npm run seed -- --reset (delete both banks first)
 import 'dotenv/config';
@@ -65,7 +65,7 @@ async function waitForProcessing(bankId: string, expectedDocs: number) {
     process.stdout.write(`  processing… ${docs.total}/${expectedDocs} docs, ${pending.total} pending consolidation\r`);
     await new Promise((r) => setTimeout(r, 5000));
   }
-  console.log('\n  still processing in the background — that is fine, the app will pick it up');
+  console.log('\n  still processing in the background - that is fine, the app will pick it up');
 }
 
 async function main() {

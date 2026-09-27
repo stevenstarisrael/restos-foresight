@@ -14,13 +14,14 @@ import {
   useTransform,
   type MotionValue,
 } from 'motion/react';
-import { Brain, CalendarRange, MessageSquareOff, RotateCcw, Search, Sparkles, UserX } from 'lucide-react';
+import { ArrowUpRight, Brain, CalendarRange, MessageSquareOff, RotateCcw, Search, Sparkles, UserX } from 'lucide-react';
 import type { PlanResult } from '@/lib/plan';
 
 type Mode = PlanResult['mode'];
 
 export type StoryData = {
   daysToDiwali: number;
+  memory: { events: number; festivals: number; since: string };
   curve: { mode: Mode; readiness: number; short: string[]; spend: number }[];
   sampleOrder: { item: string; quantity: number; unit: string; orderBy: string; lastTime: string; why: string } | null;
 };
@@ -38,6 +39,7 @@ export function Story({ data }: { data: StoryData }) {
         <HowItWorks sample={data.sampleOrder} />
         <LearningCurve curve={data.curve} />
         <FinalCta days={data.daysToDiwali} />
+        <Footer memory={data.memory} />
       </div>
     </MotionConfig>
   );
@@ -62,7 +64,7 @@ function Nav() {
 // ── 2. The night it happened (scroll-driven) ────────────────────────────────
 
 const NIGHT = [
-  { when: '25 Oct', time: '12:00', text: 'Imran orders 25 kg of sugar for Diwali week — a normal week plus 5 kg.', tag: 'The plan', sugar: 25 },
+  { when: '25 Oct', time: '12:00', text: 'Imran orders 25 kg of sugar for Diwali week - a normal week plus 5 kg.', tag: 'The plan', sugar: 25 },
   { when: '29 Oct', time: '16:00', text: 'Balaji Traders delivers two days late. Begum Bazar is overloaded before Diwali.', tag: 'Supplier', sugar: 25 },
   { when: '31 Oct', time: '21:00', text: '40 customers ask for kaju katli. It isn’t on the menu, so the POS never hears about it.', tag: 'Unseen demand', sugar: 13 },
   { when: '1 Nov', time: '15:30', text: 'Sweet boxes run out. 12 takeaway orders refused.', tag: 'Stock-out', sugar: 6 },
@@ -162,7 +164,7 @@ function Counter({ label, value, prefix = '', tone }: { label: string; value: Mo
 
 function WhyMissed() {
   return (
-    <section className="bg-paper py-24 text-ink sm:py-32">
+    <section id="why" className="scroll-mt-16 bg-paper py-24 text-ink sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">Why software never caught it</p>
@@ -173,7 +175,7 @@ function WhyMissed() {
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           <Reveal delay={0.05}>
             <WhyCard icon={<MessageSquareOff size={20} />} title="Sales only record what sold">
-              The 40 people who asked for kaju katli, the 55 desserts turned away — none of it reaches the POS. Lost demand is invisible.
+              The 40 people who asked for kaju katli, the 55 desserts turned away - none of it reaches the POS. Lost demand is invisible.
             </WhyCard>
           </Reveal>
           <Reveal delay={0.15}>
@@ -243,11 +245,11 @@ function MovingDiwali() {
 // ── 4. How it works ─────────────────────────────────────────────────────────
 
 const RETAINED = ['Sugar out 7:05pm · Diwali 2024', 'Balaji 2 days late', '40 asked for kaju katli', '8 kg paneer wasted', 'Plan vs outcome · 2025'];
-const SEARCHES = ['Meaning', 'Keywords', 'Connections', 'Time — “last Diwali”'];
+const SEARCHES = ['Meaning', 'Keywords', 'Connections', 'Time - “last Diwali”'];
 
 function HowItWorks({ sample }: { sample: StoryData['sampleOrder'] }) {
   return (
-    <section className="bg-paper pb-24 text-ink sm:pb-32">
+    <section id="how" className="scroll-mt-16 bg-paper pb-24 text-ink sm:pb-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">How Foresight remembers</p>
@@ -356,7 +358,7 @@ const CURVE_META: Record<Mode, { title: string; sub: string; color: string }> = 
 function LearningCurve({ curve }: { curve: StoryData['curve'] }) {
   const none = curve.find((c) => c.mode === 'none');
   return (
-    <section className="bg-white py-24 text-ink sm:py-32">
+    <section id="learn" className="scroll-mt-16 bg-white py-24 text-ink sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">Watch it learn · Diwali 2026</p>
@@ -364,7 +366,7 @@ function LearningCurve({ curve }: { curve: StoryData['curve'] }) {
             Same AI. Same stock. <span className="italic text-leaf">Only the memory changed.</span>
           </h2>
           <p className="mt-4 max-w-2xl text-muted">
-            How much of this Diwali’s likely need each plan covers — last Diwali’s actual use plus last year’s growth, from restOS records.
+            How much of this Diwali’s likely need each plan covers - last Diwali’s actual use plus last year’s growth, from restOS records.
           </p>
         </Reveal>
 
@@ -384,7 +386,7 @@ function LearningCurve({ curve }: { curve: StoryData['curve'] }) {
           <Reveal delay={0.2}>
             <p className="mt-8 max-w-3xl text-lg leading-relaxed">
               Without memory, the plan spends <b>₹{Math.round(none.spend / 1000)}k</b> and still runs short on{' '}
-              <b>{none.short.join(', ').toLowerCase()}</b>. It buys the wrong things — because it doesn’t know what happened last time.
+              <b>{none.short.join(', ').toLowerCase()}</b>. It buys the wrong things - because it doesn’t know what happened last time.
             </p>
           </Reveal>
         )}
@@ -471,12 +473,6 @@ function FinalCta({ days }: { days: number }) {
           </div>
         </Reveal>
       </div>
-      <footer className="relative mx-auto mt-24 flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 text-xs text-stone-500 sm:px-6">
-        <span>restOS Foresight · Spice Garden is a demo outlet with synthetic data</span>
-        <a href="https://github.com/vectorize-io/hindsight" target="_blank" rel="noreferrer" className="hover:text-stone-300">
-          Memory by Hindsight ↗
-        </a>
-      </footer>
     </section>
   );
 }
@@ -484,6 +480,119 @@ function FinalCta({ days }: { days: number }) {
 function shortDate(iso: string) {
   const t = Date.parse(iso);
   return Number.isNaN(t) ? iso : new Date(t).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' });
+}
+
+// ── Footer ──────────────────────────────────────────────────────────────────
+
+const LINKS: { title: string; items: { label: string; href: string; external?: boolean }[] }[] = [
+  {
+    title: 'The story',
+    items: [
+      { label: 'The night it happened', href: '#the-night' },
+      { label: 'Why it was missed', href: '#why' },
+      { label: 'How it remembers', href: '#how' },
+      { label: 'Watch it learn', href: '#learn' },
+    ],
+  },
+  {
+    title: 'Try it',
+    items: [
+      { label: 'Live dashboard', href: '/live' },
+      { label: 'Plan Diwali 2026', href: '/live?run=1' },
+      { label: 'Plan Dussehra 2026', href: '/live?run=1&festival=dussehra' },
+    ],
+  },
+  {
+    title: 'Built with',
+    items: [
+      { label: 'Hindsight on GitHub', href: 'https://github.com/vectorize-io/hindsight', external: true },
+      { label: 'Hindsight docs', href: 'https://hindsight.vectorize.io/', external: true },
+      { label: 'What is agent memory?', href: 'https://vectorize.io/what-is-agent-memory', external: true },
+      { label: 'Groq', href: 'https://groq.com/', external: true },
+    ],
+  },
+];
+
+function Footer({ memory }: { memory: StoryData['memory'] }) {
+  return (
+    <footer className="relative overflow-hidden border-t border-stone-800/80">
+      <div className="mx-auto max-w-6xl px-4 pt-16 sm:px-6">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div className="col-span-2 md:col-span-1">
+            <div className="flex items-center gap-2">
+              <span className="grid h-7 w-7 place-items-center rounded-md bg-saffron text-sm font-bold text-white">F</span>
+              <span className="font-medium">restOS Foresight</span>
+            </div>
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-stone-400">
+              Festival demand memory for restaurants. It remembers what ran out, what was wasted and what customers asked for, so the next festival goes better.
+            </p>
+            <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-900/70 bg-emerald-950/40 px-3 py-1.5 text-xs text-emerald-300">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              </span>
+              Remembering {memory.events} events across {memory.festivals} festivals since {memory.since}
+            </div>
+            <div className="mt-6">
+              <LiveButton size="sm" />
+            </div>
+          </div>
+
+          {LINKS.map((group) => (
+            <nav key={group.title} aria-label={group.title} className={group.title === 'Built with' ? 'col-span-2 md:col-span-1' : ''}>
+              <h3 className="text-xs font-medium uppercase tracking-[0.18em] text-stone-500">{group.title}</h3>
+              <ul className="mt-4 space-y-2.5 text-sm">
+                {group.items.map((l) => (
+                  <li key={l.href}>
+                    <a
+                      href={l.href}
+                      {...(l.external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                      className="group inline-flex items-center gap-1 text-stone-300 transition hover:text-white"
+                    >
+                      {l.label}
+                      {l.external && <ArrowUpRight size={13} className="text-stone-500 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" aria-hidden />}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
+        </div>
+
+        <div className="mt-14 flex flex-col gap-3 border-t border-stone-800/80 py-6 text-xs text-stone-500 md:flex-row md:items-center md:justify-between">
+          <p className="max-w-2xl">
+            Spice Garden · Banjara Hills is a demo outlet. Its history is synthetic, and every number on this page is consistent with it.
+          </p>
+          <div className="flex items-center gap-4">
+            <span>Made in Hyderabad</span>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="inline-flex items-center gap-1 text-stone-400 hover:text-white"
+            >
+              <RotateCcw size={12} aria-hidden /> Back to 7:05 pm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <motion.div
+        aria-hidden
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: EASE }}
+        className="pointer-events-none -mb-[3vw] select-none px-2 text-center font-display text-[22vw] leading-[0.9] tracking-tight md:text-[18vw]"
+        style={{
+          backgroundImage: 'linear-gradient(to bottom, rgba(217,119,6,0.45), rgba(217,119,6,0.02) 85%)',
+          WebkitBackgroundClip: 'text',
+          backgroundClip: 'text',
+          color: 'transparent',
+        }}
+      >
+        Foresight
+      </motion.div>
+    </footer>
+  );
 }
 
 // ── Shared ──────────────────────────────────────────────────────────────────

@@ -44,10 +44,10 @@ type Status = { kind: 'served' | 'away' | 'offmenu'; memory?: string };
 
 function statusOf(ticket: Ticket, memory: boolean): Status {
   if (ticket.kaju) {
-    return memory ? { kind: 'served', memory: '40 asked last Diwali — now on the menu' } : { kind: 'offmenu' };
+    return memory ? { kind: 'served', memory: '40 asked last Diwali - now on the menu' } : { kind: 'offmenu' };
   }
   if (ticket.sugar && ticket.t >= SUGAR_OUT_AT) {
-    return memory ? { kind: 'served', memory: 'Sugar ordered a week early — it ran out at 7:05 last year' } : { kind: 'away' };
+    return memory ? { kind: 'served', memory: 'Sugar ordered a week early - it ran out at 7:05 last year' } : { kind: 'away' };
   }
   return { kind: 'served' };
 }
@@ -142,7 +142,7 @@ export function HeroSim() {
               </h1>
               <p className="mt-5 max-w-lg text-lg leading-relaxed text-stone-300">
                 {memory
-                  ? 'Sugar ordered a week early. Kaju katli on the menu. Every dessert served — because it remembered last year.'
+                  ? 'Sugar ordered a week early. Kaju katli on the menu. Every dessert served - because it remembered last year.'
                   : '55 desserts turned away. ₹9,500 lost on the busiest night of the year. And nobody remembered why.'}
               </p>
             </motion.div>
@@ -277,7 +277,7 @@ function MemorySwitch({ on, onToggle, nudge }: { on: boolean; onToggle: () => vo
         </span>
         <span className="text-left">
           <span className="block text-sm font-medium text-stone-100">Hindsight memory</span>
-          <span className={`block text-xs ${on ? 'text-emerald-400' : 'text-stone-400'}`}>{on ? 'On — replaying with Foresight' : 'Off — how it really went'}</span>
+          <span className={`block text-xs ${on ? 'text-emerald-400' : 'text-stone-400'}`}>{on ? 'On - replaying with Foresight' : 'Off - how it really went'}</span>
         </span>
       </button>
       <AnimatePresence>

@@ -843,7 +843,7 @@
       "recalled": [],
       "ms": 4904,
       "notes": [
-        "Stateless LLM call — no memory"
+        "Stateless LLM call - no memory"
       ]
     },
     "savedAt": "2026-09-27T13:14:21.273Z"
@@ -3961,7 +3961,7 @@
       "recalled": [],
       "ms": 5551,
       "notes": [
-        "Stateless LLM call — no memory"
+        "Stateless LLM call - no memory"
       ]
     },
     "savedAt": "2026-09-27T13:14:48.061Z"

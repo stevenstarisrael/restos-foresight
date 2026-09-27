@@ -15,7 +15,7 @@ function situation(festival: Festival): string {
   const stockLines = stock.map(
     (s) => `- ${s.name}: ${s.onHand} ${s.unit} on hand, normal use ${s.normalDailyUse} ${s.unit}/day, ₹${s.costPerUnit}/${s.unit}, supplier ${s.supplierId}`,
   );
-  const supplierLines = suppliers.map((s) => `- ${s.id}: ${s.name} — ${s.supplies}; lead time ${s.leadTimeDays} day(s). ${s.note}`);
+  const supplierLines = suppliers.map((s) => `- ${s.id}: ${s.name} - ${s.supplies}; lead time ${s.leadTimeDays} day(s). ${s.note}`);
   return [
     `Today is ${TODAY}. Outlet: ${outlet.name}, ${outlet.city} (${outlet.covers} covers, ${outlet.cuisine}).`,
     `Upcoming festival: ${festival.name} on ${festival.date}. ${festival.note}.`,
@@ -46,7 +46,7 @@ export async function runPlan(mode: MemoryMode, festivalId: string): Promise<Pla
       'You are an inventory planner for a restaurant. You have no history for this outlet.',
       `${context}\n\n${TASK}`,
     );
-    return { mode, plan, evidence: [], recalled: [], ms: Date.now() - started, notes: ['Stateless LLM call — no memory'] };
+    return { mode, plan, evidence: [], recalled: [], ms: Date.now() - started, notes: ['Stateless LLM call - no memory'] };
   }
 
   const client = hindsight();
@@ -78,7 +78,7 @@ export async function runPlan(mode: MemoryMode, festivalId: string): Promise<Pla
   } else {
     // Reflect still produced a grounded answer in prose; convert it rather
     // than failing the demo.
-    notes.push('Structured output missing from reflect — converted reflect text with the LLM');
+    notes.push('Structured output missing from reflect - converted reflect text with the LLM');
     plan = await planFromLLM(
       'Convert this memory-grounded festival plan into the JSON schema. Keep every number, date, supplier and cited past event exactly as written.',
       reflect.text,

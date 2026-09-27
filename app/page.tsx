@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
+import { history } from '@/data/history';
 import { TODAY, upcomingFestivals } from '@/data/outlet';
 import { Story, type StoryData } from '@/components/story';
 import { summarize } from '@/lib/insights';
@@ -39,7 +40,15 @@ async function loadStoryData(): Promise<StoryData> {
   const sugar = plans.full?.orders.find((o) => o.stockId === 'sugar');
   const diwali = upcomingFestivals.find((f) => f.id === 'diwali')!;
 
+  const festivals = new Set(history.flatMap((e) => (e.festival ? [e.festival] : [])));
+  const first = history.map((e) => e.at).sort()[0];
+
   return {
+    memory: {
+      events: history.length,
+      festivals: festivals.size,
+      since: new Date(first).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' }),
+    },
     daysToDiwali: Math.round((Date.parse(diwali.date) - Date.parse(TODAY)) / 86_400_000),
     curve,
     sampleOrder: sugar

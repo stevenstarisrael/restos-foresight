@@ -21,7 +21,7 @@ export type MemoryMode = 'none' | 'firstSeason' | 'full';
 export const BANK_MISSION =
   'You are Foresight, the demand and inventory planner for Spice Garden, a Hyderabad restaurant running on restOS. ' +
   'You remember every festival: what sold, what ran out, what was wasted, which suppliers let us down, and what customers asked for that we could not serve. ' +
-  'Your job is to turn that history into concrete prep plans — quantities, order-by dates, suppliers and menu changes — for the next festival.';
+  'Your job is to turn that history into concrete prep plans - quantities, order-by dates, suppliers and menu changes - for the next festival.';
 
 export const RETAIN_MISSION =
   'Extract quantities (kg, portions, boxes), dates, festival names, ingredient names, supplier names, stock-out times, waste amounts, prices and customer requests. ' +
