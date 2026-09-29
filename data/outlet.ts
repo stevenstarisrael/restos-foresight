@@ -100,7 +100,16 @@ export const lastFestivalActuals: Record<
     preBookReason?: string;
   }
 > = {
-  diwali: { label: 'Diwali 2025', growth: 0.39, items: { sugar: 41, ghee: 15, cashew: 8, 'sweet-boxes': 186 }, staffNeeded: 25 },
+  diwali: {
+    label: 'Diwali 2025',
+    growth: 0.39,
+    items: { sugar: 41, ghee: 15, cashew: 8, 'sweet-boxes': 186 },
+    staffNeeded: 25,
+    // Begum Bazar deliveries arrived 2 days late before Diwali 2024 and 4 days
+    // late before 2025; the kitchen's lesson was to order a full week early.
+    preBookDays: { sugar: 7, ghee: 7, cashew: 7 },
+    preBookReason: 'wholesalers delivered 2 to 4 days late before Diwali 2024 and 2025',
+  },
   dussehra: {
     label: 'Dussehra 2025',
     growth: 0,

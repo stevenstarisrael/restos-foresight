@@ -3,7 +3,7 @@
 import { ArrowRight, Brain, CheckCircle2, ShieldCheck, XCircle } from 'lucide-react';
 import { daysFromToday, ITEM_ICON, rupees, summarize, tidy, type Urgency } from '@/lib/insights';
 import { lastFestivalActuals } from '@/data/outlet';
-import { buildRows, score } from '@/lib/readiness';
+import { buildRows, score, staffPlanned } from '@/lib/readiness';
 import { AREA_ICON, MODE_COLOR, MODES, type ColumnState, type Mode } from './plan-view';
 
 // The first screen of the dashboard: what to do (from the full-memory plan)
@@ -181,16 +181,15 @@ export function AtAGlance({
 
         {none?.s && none.s.short.length > 0 && (
           <p className="mt-4 rounded-lg bg-chili-soft/60 p-3 text-sm leading-snug text-ink">
-            Without memory, the AI spends <b>{rupees(none.spend)}</b> and still runs short on{' '}
-            <b>{none.s.short.map((x) => x.replace(/\s*\(.*\)$/, '').toLowerCase()).join(', ')}</b>
-            {none.s.tooLate.length > 0 ? (
+            Without memory, the AI spends <b>{rupees(none.spend)}</b>
+            {none.spend > summary.totalCost * 1.2 && ` (${(none.spend / summary.totalCost).toFixed(1)}× this plan)`} and still runs short on{' '}
+            <b>{list(none.s.short)}</b>.
+            {none.s.tooLate.length > 0 && (
               <>
                 {' '}
-                because it orders too late: {lastFestivalActuals[festival]?.preBookReason}, so {none.s.tooLate.map((x) => x.toLowerCase()).join(', ')} must be
-                pre-booked {rows.find((r) => r.name === none.s!.tooLate[0])?.preBookDays} days ahead.
+                Its {list(none.s.tooLate)} {none.s.tooLate.length === 1 ? 'order arrives' : 'orders arrive'} too late ({lastFestivalActuals[festival]?.preBookReason};
+                order {rows.find((r) => r.name === none.s!.tooLate[0])?.preBookDays}+ days ahead).
               </>
-            ) : (
-              '.'
             )}
           </p>
         )}
@@ -209,9 +208,8 @@ export function AtAGlance({
 function StaffLine({ festival, columns }: { festival: string; columns: Record<Mode, ColumnState> }) {
   const needed = lastFestivalActuals[festival]?.staffNeeded;
   const counts = MODES.map(({ mode, title }) => {
-    const staff = columns[mode].result?.plan.capacity?.find((c) => c.area === 'staff');
-    const n = staff ? Number(staff.target.match(/\d+/)?.[0]) : NaN;
-    return { mode, title, n: Number.isFinite(n) && n >= 10 ? n : null };
+    const plan = columns[mode].result?.plan;
+    return { mode, title, n: plan ? staffPlanned(plan) : null };
   });
   if (!needed || counts.every((c) => c.n === null)) return null;
   return (
@@ -229,6 +227,10 @@ function StaffLine({ festival, columns }: { festival: string; columns: Record<Mo
       </div>
     </div>
   );
+}
+
+function list(names: string[]) {
+  return names.map((x) => x.replace(/\s*\(.*\)$/, '').toLowerCase()).join(', ');
 }
 
 function fmt(n: number) {

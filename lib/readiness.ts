@@ -1,4 +1,4 @@
-import { lastFestivalActuals, stock, upcomingFestivals } from '@/data/outlet';
+import { lastFestivalActuals, outlet, stock, upcomingFestivals } from '@/data/outlet';
 import type { Plan, PlanResult } from './plan';
 
 // Scores plans against what the outlet actually needed, from restOS records.
@@ -45,11 +45,30 @@ function availableFor(plan: Plan, stockId: string, festivalDate: string | undefi
   return { available: onHand + arriving, late };
 }
 
+/**
+ * Peak-evening headcount a plan asks for. Plans say it either as a total
+ * ("25 staff") or as an addition ("6 extra staff"); with no staffing action the
+ * outlet runs its regular roster.
+ */
+export function staffPlanned(plan: Plan): number {
+  const roster = outlet.team.rostered;
+  for (const c of (plan.capacity ?? []).filter((x) => x.area === 'staff')) {
+    const text = `${c.action} ${c.target}`;
+    const n = Number(c.target.match(/\d+/)?.[0] ?? c.action.match(/\d+/)?.[0]);
+    if (!Number.isFinite(n) || /cook|rider/i.test(c.target)) continue;
+    if (/extra|additional|\badd\b|more|\+/i.test(text)) return roster + n;
+    if (n >= roster / 2) return n;
+  }
+  return roster;
+}
+
+export const STAFF_ROW_ID = 'staff';
+
 export function buildRows(festival: string, plans: Partial<Record<Mode, Plan>>): Row[] {
   const ref = lastFestivalActuals[festival];
   if (!ref) return [];
   const festivalDate = upcomingFestivals.find((f) => f.id === festival)?.date;
-  return Object.entries(ref.items).map(([stockId, actual]) => {
+  const rows: Row[] = Object.entries(ref.items).map(([stockId, actual]) => {
     const item = stock.find((s) => s.id === stockId)!;
     const preBookDays = ref.preBookDays?.[stockId];
     const available: Row['available'] = {};
@@ -63,6 +82,16 @@ export function buildRows(festival: string, plans: Partial<Record<Mode, Plan>>):
     }
     return { stockId, name: item.name, unit: item.unit, actual, need: likelyNeed(festival, stockId)!.need, preBookDays, available, late };
   });
+  // Readiness is festival readiness, not just stock: people on the floor count too.
+  if (ref.staffNeeded) {
+    const available: Row['available'] = {};
+    for (const mode of MODE_ORDER) {
+      const plan = plans[mode];
+      if (plan) available[mode] = staffPlanned(plan);
+    }
+    rows.push({ stockId: STAFF_ROW_ID, name: 'Peak-evening staff', unit: 'people', actual: ref.staffNeeded, need: ref.staffNeeded, available, late: {} });
+  }
+  return rows;
 }
 
 /** tooLate = items that are short only because the order misses the pre-booking deadline. */
@@ -85,7 +114,7 @@ export function score(rows: Row[], mode: Mode): Score | null {
       short.push(r.name);
       if (available + (r.late[mode] ?? 0) >= r.need) tooLate.push(r.name);
     }
-    const cost = stock.find((s) => s.id === r.stockId)!.costPerUnit;
+    const cost = stock.find((s) => s.id === r.stockId)?.costPerUnit ?? 0;
     wasteRisk += Math.max(0, available - r.need * 1.25) * cost;
   }
   return { readiness: Math.round((total / scored.length) * 100), short, tooLate, wasteRisk: Math.round(wasteRisk) };

@@ -115,6 +115,7 @@ export const ITEM_ICON: Record<string, string> = {
   mutton: '🍖',
   chicken: '🍗',
   basmati: '🌾',
+  staff: '👥',
   'sweet-boxes': '🎁',
   other: '📦',
 };

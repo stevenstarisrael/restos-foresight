@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { ChartBar, Table2 } from 'lucide-react';
-import { lastFestivalActuals, stock } from '@/data/outlet';
-import { buildRows, score, type Row, type Score } from '@/lib/readiness';
+import { lastFestivalActuals, outlet, stock } from '@/data/outlet';
+import { buildRows, score, STAFF_ROW_ID, type Row, type Score } from '@/lib/readiness';
 import { ITEM_ICON, rupees } from '@/lib/insights';
 import { MODE_COLOR, MODES, type ColumnState, type Mode } from './plan-view';
 
@@ -24,9 +24,12 @@ export function CompareCharts({ festival, columns }: { festival: string; columns
             Likely need = what we actually used at {ref.label}
             {ref.growth > 0 ? ` + ${Math.round(ref.growth * 100)}% growth (last year's festival revenue trend)` : ''}, from restOS records.
             {ref.preBookDays &&
-              ` Orders count only if placed ${Object.entries(ref.preBookDays)
-                .map(([id, d]) => `${d}+ days ahead for ${id}`)
-                .join(', ')}, as the records require.`}
+              ` Orders count only if placed ${Object.entries(
+                Object.entries(ref.preBookDays).reduce<Record<number, string[]>>((acc, [id, d]) => ({ ...acc, [d]: [...(acc[d] ?? []), id] }), {}),
+              )
+                .map(([d, ids]) => `${d}+ days ahead for ${ids.join(', ')}`)
+                .join('; ')}, as the records require.`}
+            {ref.staffNeeded && ` Peak-evening staff counts too: ${ref.staffNeeded} were needed.`}
           </p>
         </div>
         <button onClick={() => setAsTable((v) => !v)} className="inline-flex items-center gap-1 text-xs text-muted underline underline-offset-2">
@@ -66,7 +69,7 @@ function ReadinessRing({ title, color, score: s }: { title: string; color: strin
 
   return (
     <div className="flex items-center gap-4 rounded-xl bg-paper p-3">
-      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} role="img" aria-label={`${title}: ${s ? `${pct}% ready` : 'not planned'}`}>
+      <svg className="shrink-0" width={size} height={size} viewBox={`0 0 ${size} ${size}`} role="img" aria-label={`${title}: ${s ? `${pct}% ready` : 'not planned'}`}>
         <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="#e7e5e4" strokeWidth={stroke} />
         {s && (
           <circle
@@ -119,7 +122,7 @@ function ReadinessRing({ title, color, score: s }: { title: string; color: strin
 function Legend({ actualLabel }: { actualLabel: string }) {
   return (
     <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted">
-      <span className="font-medium text-ink">Stock after ordering:</span>
+      <span className="font-medium text-ink">After the plan:</span>
       {MODES.map(({ mode, title }) => (
         <span key={mode} className="flex items-center gap-1.5">
           <span className="inline-block h-2.5 w-4 rounded-sm" style={{ background: MODE_COLOR[mode] }} />
@@ -148,7 +151,9 @@ function ItemBars({ row }: { row: Row }) {
           {ITEM_ICON[row.stockId]} {row.name}
         </span>
         <span className="text-xs text-muted">
-          {hover && row.available[hover] !== undefined
+          {hover && row.available[hover] !== undefined && row.stockId === STAFF_ROW_ID
+            ? `${MODES.find((m) => m.mode === hover)!.title}: ${row.available[hover]} people on the peak evening (${outlet.team.rostered} on the roster today)`
+            : hover && row.available[hover] !== undefined
             ? `${MODES.find((m) => m.mode === hover)!.title}: ${onHand} in stock + ${row.available[hover]! - onHand} ordered = ${row.available[hover]} ${row.unit}`
             : row.need === row.actual ? `needed last year: ${row.actual} ${row.unit}` : `likely need ~${row.need} ${row.unit} (used ${row.actual} last year)`}
         </span>
