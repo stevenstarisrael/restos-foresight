@@ -2,11 +2,14 @@ import type { Metadata } from 'next';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { history } from '@/data/history';
-import { TODAY, upcomingFestivals } from '@/data/outlet';
+import { today, upcomingFestivals } from '@/data/outlet';
 import { Story, type StoryData } from '@/components/story';
 import { summarize } from '@/lib/insights';
 import type { PlanResult } from '@/lib/plan';
 import { buildRows, score } from '@/lib/readiness';
+
+// Days-to-Diwali and saved plans change over time; don't freeze them at build.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'restOS Foresight',
@@ -49,7 +52,7 @@ async function loadStoryData(): Promise<StoryData> {
       festivals: festivals.size,
       since: new Date(first).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' }),
     },
-    daysToDiwali: Math.round((Date.parse(diwali.date) - Date.parse(TODAY)) / 86_400_000),
+    daysToDiwali: Math.round((Date.parse(diwali.date) - Date.parse(today())) / 86_400_000),
     curve,
     sampleOrder: sugar
       ? { item: sugar.item, quantity: sugar.quantity, unit: sugar.unit, orderBy: sugar.orderBy, lastTime: sugar.lastTime, why: sugar.why }

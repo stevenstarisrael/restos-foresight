@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Flame, RefreshCw, Sparkles, WandSparkles, type LucideIcon } from 'lucide-react';
-import { outlet, stock, TODAY, upcomingFestivals } from '@/data/outlet';
+import { outlet, stock, today, upcomingFestivals } from '@/data/outlet';
 import { AtAGlance } from '@/components/at-a-glance';
 import { CompareCharts } from '@/components/compare-charts';
 import {
@@ -134,7 +134,7 @@ export default function Home() {
   }
 
   const current = upcomingFestivals.find((f) => f.id === festival)!;
-  const daysAway = Math.round((Date.parse(current.date) - Date.parse(TODAY)) / 86_400_000);
+  const daysAway = Math.round((Date.parse(current.date) - Date.parse(today())) / 86_400_000);
 
   return (
     <main className="mx-auto w-full max-w-[1400px] px-4 pb-24 sm:px-6">
@@ -148,7 +148,7 @@ export default function Home() {
         </Link>
         <div className="text-right text-sm">
           <div className="font-medium">{outlet.name}</div>
-          <div className="text-xs text-muted">Today {formatDate(TODAY)}</div>
+          <div className="text-xs text-muted">Today {formatDate(today())}</div>
         </div>
       </header>
 

@@ -1,4 +1,4 @@
-import { outlet, stock, suppliers, TODAY, upcomingFestivals, type Festival } from '@/data/outlet';
+import { outlet, stock, suppliers, today, upcomingFestivals, type Festival } from '@/data/outlet';
 import { BANKS, hindsight, PLAYBOOK, type MemoryMode } from './hindsight';
 
 const PLAYBOOK_FESTIVAL = 'diwali';
@@ -19,7 +19,7 @@ function situation(festival: Festival): string {
   );
   const supplierLines = suppliers.map((s) => `- ${s.id}: ${s.name} - ${s.supplies}; lead time ${s.leadTimeDays} day(s). ${s.note}`);
   return [
-    `Today is ${TODAY}. Outlet: ${outlet.name}, ${outlet.city} (${outlet.covers} covers, ${outlet.cuisine}).`,
+    `Today is ${today()}. Outlet: ${outlet.name}, ${outlet.city} (${outlet.covers} covers, ${outlet.cuisine}).`,
     `Upcoming festival: ${festival.name} on ${festival.date}. ${festival.note}.`,
     `Team: ${outlet.team.rostered} staff on the regular roster (${outlet.team.cooks} cooks, ${outlet.team.deliveryRiders} delivery riders). Online store: about ${outlet.onlineOrdersPerHourNormalPeak} orders/hour at a normal peak, hosted on restOS.`,
     'Current stock:',
@@ -60,7 +60,7 @@ export async function runPlan(mode: MemoryMode, festivalId: string): Promise<Pla
       types: ['observation', 'world', 'experience'],
       budget: 'mid',
       maxTokens: 2048,
-      queryTimestamp: `${TODAY}T10:00:00+05:30`,
+      queryTimestamp: `${today()}T10:00:00+05:30`,
     }),
     client.reflect(bank, query, {
       context,

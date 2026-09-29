@@ -1,6 +1,5 @@
 import { cacheDelete, cacheGet, cacheKeys, cacheSet } from '@/lib/cache';
 import { BANKS, hindsight } from '@/lib/hindsight';
-import { TODAY } from '@/data/outlet';
 
 // What the agent has learned: consolidated observations (with how many raw
 // memories back each one) plus counts per memory type.
@@ -47,7 +46,7 @@ export async function POST(request: Request) {
   if (typeof body.festival === 'string' && body.festival) tags.push(`festival:${body.festival}`);
   try {
     const result = await hindsight().retain(BANKS.full, text, {
-      timestamp: `${TODAY}T${new Date().toTimeString().slice(0, 8)}+05:30`,
+      timestamp: new Date().toISOString(),
       context: kind === 'lost_demand' ? 'Customer demand we could not serve (not visible in sales data)' : `restOS ${kind.replace('_', ' ')} log for Spice Garden · Banjara Hills`,
       tags,
       documentId: `live-${Date.now()}`,

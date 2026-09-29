@@ -1,4 +1,4 @@
-import { stock, suppliers, TODAY } from '@/data/outlet';
+import { stock, suppliers, today } from '@/data/outlet';
 import type { Plan, PlanOrder } from './plan';
 import { likelyNeed } from './readiness';
 
@@ -27,7 +27,7 @@ const DAY = 86_400_000;
 export function daysFromToday(date: string): number | null {
   const t = Date.parse(date);
   if (Number.isNaN(t)) return null;
-  return Math.round((t - Date.parse(TODAY)) / DAY);
+  return Math.round((t - Date.parse(today())) / DAY);
 }
 
 function urgencyFor(days: number | null): Urgency {

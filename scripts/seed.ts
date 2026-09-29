@@ -1,8 +1,9 @@
-// Seeds two Hindsight banks from data/history.ts:
+// Seeds three Hindsight banks from data/history.ts:
+//   empty   - nothing retained (the no-memory baseline)
 //   season1 - only what happened before 2025 (one festival season of memory)
 //   full    - the full two years
 // Usage: npm run seed            (only retains events the bank doesn't have yet)
-//        npm run seed -- --reset (delete both banks first)
+//        npm run seed -- --reset (delete the banks first)
 import 'dotenv/config';
 import { FIRST_SEASON_CUTOFF, history, type HistoryEvent } from '../data/history';
 import {

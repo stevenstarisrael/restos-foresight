@@ -2,7 +2,10 @@
 // inventory, purchase-order and supplier modules; here it is fixed so the demo
 // is reproducible.
 
-export const TODAY = '2026-09-27';
+/** Today's date in Hyderabad (YYYY-MM-DD). A function so a long-running server doesn't freeze it. */
+export function today(): string {
+  return new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' });
+}
 
 export const outlet = {
   id: 'spice-garden-banjara',
