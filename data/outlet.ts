@@ -87,18 +87,27 @@ export const upcomingFestivals: Festival[] = [
 // planner never sees it directly (only the memory banks hold history).
 // growth = last year's festival revenue growth (Diwali ₹6.4L → ₹8.9L), used to
 // project this year's need from last year's use. 0 where we have no trend.
-// staffNeeded = people on the floor the peak evening actually needed (Diwali 2025
-// outcome: 22 was still short, 25 would have been right).
-// preBookDays = minimum days before the festival an order must be placed to
-// actually arrive (Dussehra 2024: every butcher sold out on Dasara, so mutton
-// has to be pre-booked 3 days ahead).
+/**
+ * The staffing lesson on record for a festival. `ifUnmanaged` is what the
+ * records say happens when a plan takes no action (today's roster for Diwali;
+ * 3 of 9 cooks on leave for Dussehra), so doing nothing scores as it went.
+ */
+export type StaffRule = {
+  label: string;
+  unit: string;
+  needed: number;
+  ifUnmanaged: number;
+  kind: 'headcount' | 'cooks';
+  source: string;
+};
+
 export const lastFestivalActuals: Record<
   string,
   {
     label: string;
     growth: number;
     items: Record<string, number>;
-    staffNeeded?: number;
+    staff?: StaffRule;
     preBookDays?: Record<string, number>;
     preBookReason?: string;
   }
@@ -107,7 +116,14 @@ export const lastFestivalActuals: Record<
     label: 'Diwali 2025',
     growth: 0.39,
     items: { sugar: 41, ghee: 15, cashew: 8, 'sweet-boxes': 186 },
-    staffNeeded: 25,
+    staff: {
+      label: 'Peak-evening staff',
+      unit: 'people',
+      needed: 25,
+      ifUnmanaged: 18,
+      kind: 'headcount',
+      source: 'Diwali 2025: 22 on the floor was still short; 25 would have been right',
+    },
     // Begum Bazar deliveries arrived 2 days late before Diwali 2024 and 4 days
     // late before 2025; the kitchen's lesson was to order a full week early.
     preBookDays: { sugar: 7, ghee: 7, cashew: 7 },
@@ -119,5 +135,13 @@ export const lastFestivalActuals: Record<
     items: { mutton: 27 },
     preBookDays: { mutton: 3 },
     preBookReason: 'on Dussehra 2024 every butcher in the city was sold out',
+    staff: {
+      label: 'Cooks on Dasara night',
+      unit: 'cooks',
+      needed: 9,
+      ifUnmanaged: 6,
+      kind: 'cooks',
+      source: 'Dussehra 2024: 3 of 9 cooks were on leave; approving leave early kept all 9 in 2025',
+    },
   },
 };

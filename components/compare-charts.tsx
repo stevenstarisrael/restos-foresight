@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ChartBar, Table2 } from 'lucide-react';
-import { lastFestivalActuals, outlet, stock } from '@/data/outlet';
+import { lastFestivalActuals, stock } from '@/data/outlet';
 import { buildRows, score, STAFF_ROW_ID, type Row, type Score } from '@/lib/readiness';
 import { ITEM_ICON, rupees } from '@/lib/insights';
 import { MODE_COLOR, MODES, type ColumnState, type Mode } from './plan-view';
@@ -29,7 +29,7 @@ export function CompareCharts({ festival, columns }: { festival: string; columns
               )
                 .map(([d, ids]) => `${d}+ days ahead for ${ids.join(', ')}`)
                 .join('; ')}, as the records require.`}
-            {ref.staffNeeded && ` Peak-evening staff counts too: ${ref.staffNeeded} were needed.`}
+            {ref.staff && ` ${ref.staff.label} counts too: ${ref.staff.needed} ${ref.staff.unit} needed (${ref.staff.source}).`}
           </p>
         </div>
         <button onClick={() => setAsTable((v) => !v)} className="inline-flex items-center gap-1 text-xs text-muted underline underline-offset-2">
@@ -152,7 +152,7 @@ function ItemBars({ row }: { row: Row }) {
         </span>
         <span className="text-xs text-muted">
           {hover && row.available[hover] !== undefined && row.stockId === STAFF_ROW_ID
-            ? `${MODES.find((m) => m.mode === hover)!.title}: ${row.available[hover]} people on the peak evening (${outlet.team.rostered} on the roster today)`
+            ? `${MODES.find((m) => m.mode === hover)!.title}: ${row.available[hover]} ${row.unit} (${row.need} needed)`
             : hover && row.available[hover] !== undefined
             ? `${MODES.find((m) => m.mode === hover)!.title}: ${onHand} in stock + ${row.available[hover]! - onHand} ordered = ${row.available[hover]} ${row.unit}`
             : row.need === row.actual ? `needed last year: ${row.actual} ${row.unit}` : `likely need ~${row.need} ${row.unit} (used ${row.actual} last year)`}

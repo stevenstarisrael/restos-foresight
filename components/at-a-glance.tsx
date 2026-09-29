@@ -206,21 +206,23 @@ export function AtAGlance({
 
 // Peak-night headcount each plan asks for, against what records say was needed.
 function StaffLine({ festival, columns }: { festival: string; columns: Record<Mode, ColumnState> }) {
-  const needed = lastFestivalActuals[festival]?.staffNeeded;
+  const rule = lastFestivalActuals[festival]?.staff;
   const counts = MODES.map(({ mode, title }) => {
     const plan = columns[mode].result?.plan;
-    return { mode, title, n: plan ? staffPlanned(plan) : null };
+    return { mode, title, n: plan && rule ? staffPlanned(plan, rule) : null };
   });
-  if (!needed || counts.every((c) => c.n === null)) return null;
+  if (!rule || counts.every((c) => c.n === null)) return null;
   return (
     <div className="mt-4 rounded-lg border border-line p-3">
-      <div className="text-xs text-muted">
-        Staff on the peak evening · <span className="text-ink">{needed} needed</span> ({lastFestivalActuals[festival].label} records)
+      <div className="text-xs text-muted" title={rule.source}>
+        {rule.label} · <span className="text-ink">{rule.needed} needed</span> ({rule.source.split(':')[0]} records)
       </div>
       <div className="mt-2 grid grid-cols-3 gap-2 text-center">
         {counts.map((c) => (
           <div key={c.mode} className="rounded-md bg-paper px-2 py-1.5">
-            <div className={`text-lg font-semibold tabular-nums ${c.n === null ? 'text-muted' : c.n >= needed ? 'text-leaf' : 'text-chili'}`}>{c.n ?? '—'}</div>
+            <div className={`text-lg font-semibold tabular-nums ${c.n === null ? 'text-muted' : c.n >= rule.needed ? 'text-leaf' : 'text-chili'}`}>
+              {c.n ?? '—'}
+            </div>
             <div className="text-[11px] text-muted">{c.title}</div>
           </div>
         ))}

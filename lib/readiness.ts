@@ -1,4 +1,4 @@
-import { lastFestivalActuals, outlet, stock, upcomingFestivals } from '@/data/outlet';
+import { lastFestivalActuals, outlet, stock, upcomingFestivals, type StaffRule } from '@/data/outlet';
 import type { Plan, PlanResult } from './plan';
 
 // Scores plans against what the outlet actually needed, from restOS records.
@@ -46,20 +46,25 @@ function availableFor(plan: Plan, stockId: string, festivalDate: string | undefi
 }
 
 /**
- * Peak-evening headcount a plan asks for. Plans say it either as a total
- * ("25 staff") or as an addition ("6 extra staff"); with no staffing action the
- * outlet runs its regular roster.
+ * How many people (or cooks) a plan will actually have, judged against the
+ * festival's staffing lesson. With no relevant action, the outcome is what the
+ * records say happened without one.
  */
-export function staffPlanned(plan: Plan): number {
-  const roster = outlet.team.rostered;
-  for (const c of (plan.capacity ?? []).filter((x) => x.area === 'staff')) {
+export function staffPlanned(plan: Plan, rule: StaffRule): number {
+  const actions = (plan.capacity ?? []).filter((x) => x.area === 'staff');
+  for (const c of actions) {
     const text = `${c.action} ${c.target}`;
     const n = Number(c.target.match(/\d+/)?.[0] ?? c.action.match(/\d+/)?.[0]);
+    if (rule.kind === 'cooks') {
+      // Only managing cooks' leave or rostering cooks addresses the 2024 lesson.
+      if (!/cook|leave/i.test(text)) continue;
+      return Number.isFinite(n) && n >= rule.needed ? n : rule.needed;
+    }
     if (!Number.isFinite(n) || /cook|rider/i.test(c.target)) continue;
-    if (/extra|additional|\badd\b|more|\+/i.test(text)) return roster + n;
-    if (n >= roster / 2) return n;
+    if (/extra|additional|\badd\b|more|\+/i.test(text)) return outlet.team.rostered + n;
+    if (n >= outlet.team.rostered / 2) return n;
   }
-  return roster;
+  return rule.ifUnmanaged;
 }
 
 export const STAFF_ROW_ID = 'staff';
@@ -83,13 +88,14 @@ export function buildRows(festival: string, plans: Partial<Record<Mode, Plan>>):
     return { stockId, name: item.name, unit: item.unit, actual, need: likelyNeed(festival, stockId)!.need, preBookDays, available, late };
   });
   // Readiness is festival readiness, not just stock: people on the floor count too.
-  if (ref.staffNeeded) {
+  if (ref.staff) {
+    const rule = ref.staff;
     const available: Row['available'] = {};
     for (const mode of MODE_ORDER) {
       const plan = plans[mode];
-      if (plan) available[mode] = staffPlanned(plan);
+      if (plan) available[mode] = staffPlanned(plan, rule);
     }
-    rows.push({ stockId: STAFF_ROW_ID, name: 'Peak-evening staff', unit: 'people', actual: ref.staffNeeded, need: ref.staffNeeded, available, late: {} });
+    rows.push({ stockId: STAFF_ROW_ID, name: rule.label, unit: rule.unit, actual: rule.needed, need: rule.needed, available, late: {} });
   }
   return rows;
 }
